@@ -1,1 +1,29 @@
-{}
+{
+  "answers": {
+    "after-date": "After {{date}}",
+    "before-date": "Before {{date}}"
+  },
+  "buildingTypes": {
+    "adu": "Accessory Dwelling Unit",
+    "apartments": "Apartments (3+ units)",
+    "dorm": "Dorm",
+    "duplex": "Duplex (2 units)",
+    "hotel": "Hotel",
+    "senior": "Senior Living",
+    "sfh": "Single-Family Home"
+  },
+  "localQuestions": {
+    "berkeley-boarding-house": "Are 5+ rooms rented separately in your building?"
+  },
+  "questions": {
+    "building-type": "What type of building do you live in?",
+    "is-subsidized": "Do you live in subsidized housing?",
+    "when-built": "When was your building built?"
+  },
+  "eligible": "You are eligible",
+  "not-eligible": "You many not be eligible",
+  "no": "No",
+  "submit": "Submit",
+  "yes": "Yes",
+  "zip-code": "ZIP Code"
+}
