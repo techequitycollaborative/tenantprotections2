@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const ELIGIBLE_LINK = '/eligibility/eligible';
-const INELIGIBLE_LINK = '/elgibility/ineligible/building-type';
+const INELIGIBLE_LINK = '/eligibility/ineligible/building-type';
 
 interface AdditionalQuestionsSectionProps {
   questions: YesNoQuestion[];
