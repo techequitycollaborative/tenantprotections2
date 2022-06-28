@@ -148,7 +148,7 @@ export function makeBuildingTypeChooser(type: 'rentCap' | 'rentControl') {
     return (
       <div>
         <h2>{t('questions.building-type')}</h2>
-        <select onChange={onSelect}>
+        <select onChange={onSelect} value="">
           <option value="">{t('Select')}</option>
           <option value={BuildingType.ADU}>{t('buildingTypes.adu')}</option>
           <option value={BuildingType.Apartments}>
