@@ -3,6 +3,7 @@ import type { GetServerSideProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Location } from '@/types/location';
+import Layout from '@/components/layout';
 
 import { locationFromZip } from '@/utils/location';
 
@@ -54,7 +55,7 @@ export { getServerSideProps };
 const Eligibility: NextPage<Props> = function Eligibility({ location }) {
   const { t } = useTranslation();
   return (
-    <div>
+    <Layout>
       <form action="eligibility" method="post">
         <label htmlFor="zip">{t('zip-code')}</label>
         <input
@@ -69,7 +70,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
         {location?.type === 'unknown' &&
           `Could not find ZIP Code ${location.zip}`}
       </form>
-    </div>
+    </Layout>
   );
 };
 

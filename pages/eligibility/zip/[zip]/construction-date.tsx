@@ -7,6 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
+import Layout from '@/components/layout';
 
 const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -55,7 +56,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     DATE_OPTIONS,
   );
   return (
-    <div>
+    <Layout>
       <h2>{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
         <Link href={`/eligibility/zip/${props.location.zip}/rent-control`}>
@@ -77,7 +78,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           date: rentCapDateStr,
         })}
       </Link>
-    </div>
+    </Layout>
   );
 };
 

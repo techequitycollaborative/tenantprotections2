@@ -2,8 +2,12 @@
   padding: 0 2rem;
 }
 
+.navbar {
+  background-color: #ccc;
+}
+
 .main {
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -19,6 +23,7 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background-color: #ccc;
 }
 
 .footer a {

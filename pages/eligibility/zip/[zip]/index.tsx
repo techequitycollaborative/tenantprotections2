@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
+import Layout from '@/components/layout';
 
 interface Props {
   location: FullLocation;
@@ -43,11 +44,13 @@ const Zip: NextPage<Props> = function Zip(props) {
   const { t } = useTranslation(['common']);
 
   return (
-    <div>
+    <Layout>
       <h2>{t('questions.is-subsidized')}</h2>
       <Link href="/eligibility/ineligible/subsidized">{t('yes')}</Link>
-      <Link href={`/eligibility/zip/${props.location.zip}/2`}>{t('no')}</Link>
-    </div>
+      <Link href={`/eligibility/zip/${props.location.zip}/construction-date`}>
+        {t('no')}
+      </Link>
+    </Layout>
   );
 };
 

@@ -1,4 +1,32 @@
 {
+  "answers": {
+    "after-date": "Después {{date}}",
+    "before-date": "Antes de {{date}}"
+  },
+  "buildingTypes": {
+    "adu": "Unidad de Vivienda Accesoria",
+    "apartments": "Apartamento (3+ unidades)",
+    "dorm": "Residencia universitaria",
+    "duplex": "Dúplex (2 unidades)",
+    "hotel": "Hotel",
+    "senior": "Vida para personas mayores",
+    "sfh": "Casa unifamiliar"
+  },
+  "localQuestions": {
+    "berkeley-boarding-house": "¿Se alquilan más de 5 habitaciones por separado en su edificio?"
+  },
+  "questions": {
+    "building-type": "¿En qué tipo de edificio vives?",
+    "is-subsidized": "¿Vives en vivienda protegida?",
+    "when-built": "¿Cuándo se construyó su edificio?"
+  },
+  "eligible": "Eres elegible",
+  "not-eligible": "Es posible que no seas elegible",
   "no": "No",
-  "yes": "Sí"
+  "submit": "Enviar",
+  "yes": "Sí",
+  "zip-code": "Código postal",
+  "navbar": "Esta es la barra de navegación",
+  "footer": "Este es el pie de página",
+  "take-quiz": "Tomar el cuestionario de elegibilidad"
 }
