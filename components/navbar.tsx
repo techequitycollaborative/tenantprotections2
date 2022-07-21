@@ -7,9 +7,10 @@ function Navbar() {
   const router = useRouter();
   const { pathname, asPath, query } = router;
 
-  function onSelect(e) {
-    router.push({ pathname, query }, asPath, { locale: e.target.value });
-  }
+  const onSelect: React.ChangeEventHandler<HTMLSelectElement> =
+    function onSelectLocale(e) {
+      router.push({ pathname, query }, asPath, { locale: e.target.value });
+    };
 
   return (
     <div className={styles.navbar}>
