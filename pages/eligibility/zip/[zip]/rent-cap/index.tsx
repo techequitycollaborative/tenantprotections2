@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 import { FullLocation, YesNoQuestion } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
+import Layout from '@/components/layout';
 import { BuildingType, isBuildingType } from '@/types/building';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -146,7 +147,7 @@ export function makeBuildingTypeChooser(type: 'rentCap' | 'rentControl') {
       };
 
     return (
-      <div>
+      <Layout>
         <h2>{t('questions.building-type')}</h2>
         <select onChange={onSelect} value="">
           <option value="">{t('Select')}</option>
@@ -167,7 +168,7 @@ export function makeBuildingTypeChooser(type: 'rentCap' | 'rentControl') {
         {additionalQuestions?.length && (
           <AdditionalQuestionsSection questions={additionalQuestions} />
         )}
-      </div>
+      </Layout>
     );
   };
 

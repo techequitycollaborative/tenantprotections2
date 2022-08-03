@@ -5,7 +5,7 @@
   },
   "buildingTypes": {
     "adu": "Accessory Dwelling Unit",
-    "apartments": "Apartments (3+ units)",
+    "apartments": "Apartment (3+ units)",
     "dorm": "Dorm",
     "duplex": "Duplex (2 units)",
     "hotel": "Hotel",
@@ -25,5 +25,8 @@
   "no": "No",
   "submit": "Submit",
   "yes": "Yes",
-  "zip-code": "ZIP Code"
+  "zip-code": "ZIP Code",
+  "navbar": "This is the navbar",
+  "footer": "This is the footer",
+  "take-quiz": "Take the eligibility quiz"
 }

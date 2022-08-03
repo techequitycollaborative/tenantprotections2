@@ -18,7 +18,9 @@
     "paths": {
       "@/data/*": ["data/*"],
       "@/types/*": ["types/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"]
     },
     "typeRoots": ["./node_modules/@types", "./module-types"]
   },
