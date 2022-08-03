@@ -56,8 +56,10 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
   const { t } = useTranslation();
   return (
     <Layout>
+      <h1>{t('eligibility-title')}</h1>
+      <p>{t('zip-prompt')}</p>
       <form action="eligibility" method="post">
-        <label htmlFor="zip">{t('zip-code')}</label>
+        <label htmlFor="zip">{t('zip-label')}</label>
         <input
           id="zip"
           name="zip"

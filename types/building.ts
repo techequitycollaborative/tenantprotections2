@@ -1,10 +1,11 @@
 export enum BuildingType {
   ADU = 'adu',
-  Apartments = 'apartments',
+  Apartment = 'apartment',
+  Condo = 'condo',
   Dorm = 'dorm',
-  Duplex = 'duplex',
+  Duplex = 'duplex', //treated as subset of apartments with 2 units assumed
   Hotel = 'hotel',
-  Senior = 'Senior',
+  Senior = 'senior',
   SFH = 'sfh',
 }
 

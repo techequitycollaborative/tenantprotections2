@@ -4,6 +4,7 @@ export interface YesNoQuestion {
   i18nNamespace?: string;
   passingAnswer: 'yes' | 'no';
   promptKey: string;
+  promptVars?: {};
   yesAnswerKey: string;
   noAnswerKey: string;
 }
@@ -13,8 +14,9 @@ export type BuildingEligibilityQuestions = {
 };
 
 export interface EligibilityRules {
-  buildingEligibilityQuestions: BuildingEligibilityQuestions;
   builtBeforeMillis: number;
+  passingBuildingTypes: String[];
+  eligibilityQuestions: BuildingEligibilityQuestions;
 }
 
 export interface ZipData {
@@ -31,8 +33,8 @@ export interface RawLocation extends ZipData {
 
 export interface FullLocation extends ZipData {
   type: 'full';
-  rentCap: EligibilityRules;
-  rentControl?: EligibilityRules;
+  statewideRules: EligibilityRules;
+  localRules?: EligibilityRules;
 }
 
 export interface UnknownLocation {
