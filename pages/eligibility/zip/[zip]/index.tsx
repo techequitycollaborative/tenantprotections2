@@ -46,7 +46,7 @@ const Zip: NextPage<Props> = function Zip(props) {
   return (
     <Layout>
       <h2>{t('questions.is-subsidized')}</h2>
-      <Link href="/eligibility/ineligible/subsidized">{t('yes')}</Link>
+      <Link href={`/eligibility/ineligible`}>{t('yes')}</Link>
       <Link href={`/eligibility/zip/${props.location.zip}/2`}>{t('no')}</Link>
     </Layout>
   );

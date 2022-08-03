@@ -14,21 +14,21 @@ import Layout from '@/components/layout';
 import { BuildingType, isBuildingType } from '@/types/building';
 
 const ELIGIBLE_LINK = '/eligibility/eligible?s=';
-const INELIGIBLE_LINK = '/eligibility/ineligible/building-type';
+const INELIGIBLE_LINK = '/eligibility/ineligible';
 
 const LOCAL_SCOPE = 'local';
 const STATEWIDE_SCOPE = 'statewide';
 
 interface Props {
   location: FullLocation;
-  scope: String;
+  scope: string;
 }
 
 interface AdditionalQuestionsSectionProps {
-  localQuestions: YesNoQuestion[];
-  statewideQuestions: YesNoQuestion[];
+  localQuestions: YesNoQuestion[] | undefined;
+  statewideQuestions: YesNoQuestion[] | undefined;
   statewidePass: boolean;
-  baseScope: String;
+  baseScope: string;
 }
 
 function AdditionalQuestionsSection({
@@ -50,7 +50,7 @@ function AdditionalQuestionsSection({
   ) => {
     event.preventDefault();
 
-    if (index >= questions.length - 1) {
+    if (questions && index >= questions.length - 1) {
       if (currentScope === LOCAL_SCOPE) {
         // Passed all local questions
         router.push(ELIGIBLE_LINK + LOCAL_SCOPE);
@@ -63,9 +63,17 @@ function AdditionalQuestionsSection({
     }
   };
 
-  const question = questions[index];
+  const question = questions
+    ? questions[index]
+    : {
+        passingAnswer: '',
+        promptKey: '',
+        promptVars: '',
+        yesAnswerKey: '',
+        noAnswerKey: '',
+      };
 
-  const onClick = function click(event) {
+  const onClick = function click(event: any) {
     if (question.passingAnswer === event.target.value) {
       onNextQuestion(event);
     } else if (currentScope === LOCAL_SCOPE) {
@@ -129,9 +137,10 @@ export function makeBuildingTypeChooser() {
       }
 
       // Require valid query string based on construction date/location, otherwise return to last question
+      const scope = context.query.s as string;
       if (
-        !context.query.s?.match(/^(statewide|local)$/) ||
-        (context.query.s === LOCAL_SCOPE && location.localRules == null)
+        !scope?.match(/^(statewide|local)$/) ||
+        (scope === LOCAL_SCOPE && location.localRules == null)
       ) {
         return {
           redirect: {
@@ -145,7 +154,7 @@ export function makeBuildingTypeChooser() {
         props: {
           ...(await serverSideTranslations(locale, ['common'])),
           location: location,
-          scope: context.query.s,
+          scope: scope,
         },
       };
     };
@@ -168,13 +177,13 @@ export function makeBuildingTypeChooser() {
     const [statewidePass, setStatewidePass] = useState(false);
     const [baseScope, setBaseScope] = useState(scope);
 
-    function checkEligibility(selectedValue) {
+    function checkEligibility(selectedValue: string) {
       // Do local eligibility check/questions only if applicable
       if (scope === LOCAL_SCOPE) {
-        if (location.localRules.passingBuildingTypes.includes(selectedValue)) {
+        if (location.localRules?.passingBuildingTypes.includes(selectedValue)) {
           router.push(ELIGIBLE_LINK + scope);
           return;
-        } else if (location.localRules.eligibilityQuestions[selectedValue]) {
+        } else if (location.localRules?.eligibilityQuestions[selectedValue]) {
           setLocalQuestions(
             location.localRules.eligibilityQuestions[selectedValue],
           );

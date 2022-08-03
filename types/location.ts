@@ -10,12 +10,12 @@ export interface YesNoQuestion {
 }
 
 export type BuildingEligibilityQuestions = {
-  [t in BuildingType]?: YesNoQuestion[];
+  [t in BuildingType as string]?: YesNoQuestion[];
 };
 
 export interface EligibilityRules {
   builtBeforeMillis: number;
-  passingBuildingTypes: String[];
+  passingBuildingTypes: string[];
   eligibilityQuestions: BuildingEligibilityQuestions;
 }
 

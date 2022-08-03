@@ -1,10 +1,15 @@
 import eligibility from '@/data/eligibility.json';
 import { BuildingType } from '@/types/building';
+import { EligibilityRules } from '@/types/location';
 
 const ELIGIBLE = 'eligible';
 const EXEMPT = 'exempt';
 
-function getPassingBuildingTypes(rules) {
+interface Rules {
+  [key: string]: any;
+}
+
+function getPassingBuildingTypes(rules: Rules) {
   let passingBuildingTypes = [];
 
   // Basic eligiblity check for dorms, hotels, and senior care
@@ -39,7 +44,7 @@ function getPassingBuildingTypes(rules) {
   return passingBuildingTypes;
 }
 
-function getEligibilityQuestions(rules) {
+function getEligibilityQuestions(rules: Rules) {
   let eligibilityQuestions = {};
 
   // Apartments
@@ -64,19 +69,25 @@ function getEligibilityQuestions(rules) {
 
     switch (rules.landlord_occupancy_exemption_duration) {
       case 'start-of-tenancy':
-        question.promptKey = 'building-questions.landlord-onsite-tenancy-start';
+        Object.assign(question, {
+          promptKey: 'building-questions.landlord-onsite-tenancy-start',
+        });
         break;
       case 'one-year':
-        question.promptKey = 'building-questions.landlord-onsite-one-year';
-        question.promptVars = {
-          units: rules.landlord_occupancy_exemption_units,
-        };
+        Object.assign(question, {
+          promptKey: 'building-questions.landlord-onsite-one-year',
+        });
+        Object.assign(question, {
+          promptVars: { units: rules.landlord_occupancy_exemption_units },
+        });
         break;
       default:
-        question.promptKey = 'building-questions.landlord-onsite';
-        question.promptVars = {
-          units: rules.landlord_occupancy_exemption_units,
-        };
+        Object.assign(question, {
+          promptKey: 'building-questions.landlord-onsite',
+        });
+        Object.assign(question, {
+          promptVars: { units: rules.landlord_occupancy_exemption_units },
+        });
     }
 
     apartmentQuestions.push(question);
@@ -92,7 +103,9 @@ function getEligibilityQuestions(rules) {
     apartmentQuestions.push(question);
   }
   if (apartmentQuestions.length > 0) {
-    eligibilityQuestions[BuildingType.Apartment] = apartmentQuestions;
+    Object.assign(eligibilityQuestions, {
+      [BuildingType.Apartment]: apartmentQuestions,
+    });
   }
 
   // Duplexes
@@ -104,7 +117,7 @@ function getEligibilityQuestions(rules) {
       noAnswerKey: 'no',
     };
 
-    eligibilityQuestions[BuildingType.Duplex] = [question];
+    Object.assign(eligibilityQuestions, { [BuildingType.Duplex]: [question] });
   }
 
   // Condos/SFHs
@@ -116,8 +129,8 @@ function getEligibilityQuestions(rules) {
       noAnswerKey: 'building-questions.corp-ownership.no',
     };
 
-    eligibilityQuestions[BuildingType.SFH] = [question];
-    eligibilityQuestions[BuildingType.Condo] = [question];
+    Object.assign(eligibilityQuestions, { [BuildingType.SFH]: [question] });
+    Object.assign(eligibilityQuestions, { [BuildingType.Condo]: [question] });
   }
 
   // ADUs
@@ -129,7 +142,7 @@ function getEligibilityQuestions(rules) {
       noAnswerKey: 'no',
     };
 
-    eligibilityQuestions[BuildingType.ADU] = [question];
+    Object.assign(eligibilityQuestions, { [BuildingType.ADU]: [question] });
   }
 
   return eligibilityQuestions;
@@ -139,34 +152,49 @@ function getEligibilityQuestions(rules) {
 // Abstraction layer for converting raw eligiblity json file to structured data.
 //
 function EligibilityMatrix() {
+  const undefinedRuleset: EligibilityRules = {
+    builtBeforeMillis: Date.UTC(0, 0, 0, 0, 0, 0),
+    passingBuildingTypes: [],
+    eligibilityQuestions: {},
+  };
+
   let matrix = {
-    local: {},
+    statewide: undefinedRuleset,
+    local: undefinedRuleset,
   };
 
   Object.keys(eligibility).map((geography) => {
     let ruleset = {};
-    ruleset.passingBuildingTypes = getPassingBuildingTypes(
-      eligibility[geography],
-    );
-    ruleset.eligibilityQuestions = getEligibilityQuestions(
-      eligibility[geography],
-    );
+    Object.assign(ruleset, {
+      passingBuildingTypes: getPassingBuildingTypes(
+        (eligibility as any)[geography],
+      ),
+    });
+    Object.assign(ruleset, {
+      eligibilityQuestions: getEligibilityQuestions(
+        (eligibility as any)[geography],
+      ),
+    });
 
     if (geography === 'Statewide') {
       const now = new Date();
-      ruleset.builtBeforeMillis = Date.UTC(
-        now.getUTCFullYear() - 15,
-        now.getUTCMonth(),
-        now.getUTCDate(),
-      );
+      Object.assign(ruleset, {
+        builtBeforeMillis: Date.UTC(
+          now.getUTCFullYear() - 15,
+          now.getUTCMonth(),
+          now.getUTCDate(),
+        ),
+      });
 
-      matrix.statewide = ruleset;
+      Object.assign(matrix, { statewide: ruleset });
     } else {
-      ruleset.builtBeforeMillis = Date.parse(
-        eligibility[geography].construction_date,
-      );
+      Object.assign(ruleset, {
+        builtBeforeMillis: Date.parse(
+          (eligibility as any)[geography].construction_date,
+        ),
+      });
 
-      matrix.local[geography] = ruleset;
+      Object.assign(matrix.local, { [geography]: ruleset });
     }
   });
 
