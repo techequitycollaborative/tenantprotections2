@@ -49,8 +49,9 @@ export { getServerSideProps };
 
 const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   const { i18n, t } = useTranslation('common');
-  const rentControlDate = props.location.rentControl?.builtBeforeMillis;
-  const rentCapDate = props.location.rentCap.builtBeforeMillis;
+  const rentControlDate = props.location.localRules?.builtBeforeMillis;
+  const rentCapDate = props.location.statewideRules.builtBeforeMillis;
+
   const rentCapDateStr = new Date(rentCapDate).toLocaleDateString(
     i18n.language,
     DATE_OPTIONS,
@@ -59,7 +60,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     <Layout>
       <h2>{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
-        <Link href={`/eligibility/zip/${props.location.zip}/rent-control`}>
+        <Link href={`/eligibility/zip/${props.location.zip}/3?s=local`}>
           {t('answers.before-date', {
             date: new Date(rentControlDate).toLocaleDateString(
               i18n.language,
@@ -68,7 +69,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           })}
         </Link>
       )}
-      <Link href={`/eligibility/zip/${props.location.zip}/rent-cap`}>
+      <Link href={`/eligibility/zip/${props.location.zip}/3?s=statewide`}>
         {t('answers.before-date', {
           date: rentCapDateStr,
         })}

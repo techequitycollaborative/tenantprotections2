@@ -12,20 +12,31 @@
     "senior": "Vida para personas mayores",
     "sfh": "Casa unifamiliar"
   },
-  "localQuestions": {
-    "berkeley-boarding-house": "¿Se alquilan más de 5 habitaciones por separado en su edificio?"
-  },
   "questions": {
     "building-type": "¿En qué tipo de edificio vives?",
     "is-subsidized": "¿Vives en vivienda protegida?",
     "when-built": "¿Cuándo se construyó su edificio?"
+  },
+  "building-questions": {
+    "corp-ownership": {
+      "prompt": "¿Le alquila a una corporación, fideicomiso de bienes raíces u otro tipo de negocio, o el arrendador es un individuo?",
+      "yes": "Corp, REIT, LLC",
+      "no": "Individual"
+    },
+    "landlord-adu-exemption": "¿Vive el propietario en la propiedad donde se encuentra la ADU?",
+    "min-units": "¿La propiedad contiene {{units}} o más unidades?",
+    "landlord-onsite": "¿La propiedad contiene {{units}} o menos unidades y el propietario vive en el lugar?",
+    "landlord-onsite-one-year": "¿La propiedad contiene {{units}} o menos unidades y el propietario ha vivido en el lugar durante al menos un año?",
+    "landlord-onsite-tenancy-start": "¿Es la propiedad un dúplex y el propietario ha vivido en el lugar desde el comienzo del arrendamiento?",
+    "landlord-shared-exemption": "¿Comparte baño o cocina con el propietario?"
   },
   "eligible": "Eres elegible",
   "not-eligible": "Es posible que no seas elegible",
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
-  "zip-code": "Código postal",
+  "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
+  "zip-label": "¿Cuál es su código postal?",
   "navbar": "Esta es la barra de navegación",
   "footer": "Este es el pie de página",
   "take-quiz": "Tomar el cuestionario de elegibilidad"

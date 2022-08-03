@@ -3,29 +3,42 @@
     "after-date": "After {{date}}",
     "before-date": "Before {{date}}"
   },
-  "buildingTypes": {
-    "adu": "Accessory Dwelling Unit",
-    "apartments": "Apartment (3+ units)",
+  "building-types": {
+    "adu": "ADU",
+    "apartment": "Apartment",
+    "condo": "Condo",
     "dorm": "Dorm",
-    "duplex": "Duplex (2 units)",
+    "duplex": "Duplex",
     "hotel": "Hotel",
-    "senior": "Senior Living",
-    "sfh": "Single-Family Home"
-  },
-  "localQuestions": {
-    "berkeley-boarding-house": "Are 5+ rooms rented separately in your building?"
+    "senior": "Senior living",
+    "sfh": "Single-family home"
   },
   "questions": {
     "building-type": "What type of building do you live in?",
     "is-subsidized": "Do you live in subsidized housing?",
     "when-built": "When was your building built?"
   },
+  "building-questions": {
+    "corp-ownership": {
+      "prompt": "Do you rent from a corporation, real estate trust, or other kind of business, or is your landlord an individual?",
+      "yes": "Corp, REIT, LLC",
+      "no": "Individual"
+    },
+    "landlord-adu-exemption": "Does the owner live on the property where the ADU is located?",
+    "min-units": "Does the property contain {{units}} or more units?",
+    "landlord-onsite": "Does the property contain {{units}} or fewer units and the owner live on site?",
+    "landlord-onsite-one-year": "Does the property contain {{units}} or fewer units and has the owner lived on site for at least one year?",
+    "landlord-onsite-tenancy-start": "Is the property a duplex and has the owner lived on site since the beginning of the tenancy?",
+    "landlord-shared-exemption": "Do you share a bathroom or kitchen with the owner?"
+  },
   "eligible": "You are eligible",
   "not-eligible": "You may not be eligible",
   "no": "No",
-  "submit": "Submit",
+  "submit": "Next",
   "yes": "Yes",
-  "zip-code": "ZIP Code",
+  "eligibility-title": "Eligibility Quiz",
+  "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
+  "zip-label": "What is your zipcode?",
   "navbar": "This is the navbar",
   "footer": "This is the footer",
   "take-quiz": "Take the eligibility quiz"

@@ -14,9 +14,9 @@ const getServerSideProps: GetServerSideProps =
 
 export { getServerSideProps };
 
-const Eligible: NextPage = function Eligible() {
+const Ineligible: NextPage = function Ineligible() {
   const { t } = useTranslation('common');
-  return <Layout>{t('eligible')}</Layout>;
+  return <Layout>{t('not-eligible')}</Layout>;
 };
 
-export default Eligible;
+export default Ineligible;
