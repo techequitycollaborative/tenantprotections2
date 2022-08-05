@@ -31,8 +31,46 @@
     "landlord-onsite-tenancy-start": "Is the property a duplex and has the owner lived on site since the beginning of the tenancy?",
     "landlord-shared-exemption": "Do you share a bathroom or kitchen with the owner?"
   },
-  "eligible": "You are eligible",
-  "not-eligible": "You may not be eligible",
+  "eligibility-info": {
+    "subsidized": {
+      "title": "What is subsidized housing?",
+      "content": ""
+    },
+    "built": {
+      "title": "Find out when your rental was built",
+      "content": ""
+    },
+    "types": {
+      "title": "Learn more about building types",
+      "content": ""
+    },
+    "corp-ownership": {
+      "title": "Learn more",
+      "content": ""
+    }
+  },
+  "eligible": {
+    "title": "You're eligible!",
+    "text": [
+      "Congratulations, you are protected from unjust evictions under the Tenant Protection Act. You are protected by the new law. To fully understand these protections, as well as other protections that may be available to you, we recommend you seek legal counsel. If you need additional help, please reach out below.",
+      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation reach out to your local city or county government for support, or a local tenants rights group. We can connect you with them below."
+    ],
+    "footnote": "Are you being overcharged?",
+    "button": "Check the rent calculator"
+  },
+  "ineligible": {
+    "title": "You may not be eligible",
+    "text-1": [
+      "Unfortunately, we think that you are not covered by the Tenant Protection Act’s just cause protection or rent control clauses.",
+      "However, you may have other rights. If you are having issues with your housing situation check out these resources."
+    ],
+    "subtitle": "Why am I not eligible?",
+    "text-2": [
+      "Some kinds of buildings are ineligible such as government subsidized housing or university dorms, unless you pay with a voucher. You answered that you rent a type of housing which is ineligible, but if you live in subsidized housing, you may have other legal protections against evictions and rent increases."
+    ],
+    "footnote": "Still have issues with your tenancy?",
+    "button": "Explore our resources"
+  },
   "no": "No",
   "submit": "Next",
   "yes": "Yes",

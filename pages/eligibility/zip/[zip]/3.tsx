@@ -11,6 +11,9 @@ import { useState, useEffect } from 'react';
 import { FullLocation, YesNoQuestion } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
+import Accordion from '@/components/accordion';
+import Progress from '@/components/progress';
+import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
 
 const ELIGIBLE_LINK = '/eligibility/eligible?s=';
@@ -93,9 +96,19 @@ function AdditionalQuestionsSection({
     }
   };
 
+  let accordion = '';
+  if (question.promptKey.includes('corp-ownership')) {
+    accordion = (
+      <Accordion
+        title={t('eligibility-info.corp-ownership.title')}
+        content={t('eligibility-info.corp-ownership.content')}
+      />
+    );
+  }
+
   return (
     <>
-      <p>Checking on eligibility for {currentScope} rules</p>
+      <p>Checking on eligibility for {currentScope} rules.</p>
       <h2>
         {t(question.promptKey, question.promptVars)}
         <button value="yes" onClick={onClick}>
@@ -105,6 +118,7 @@ function AdditionalQuestionsSection({
           {t(question.noAnswerKey)}
         </button>
       </h2>
+      {accordion}
     </>
   );
 }
@@ -234,6 +248,13 @@ export function makeBuildingTypeChooser() {
 
     return (
       <Layout>
+        <Progress progress="3" />
+        <EligibilityNav
+          back={`/eligibility/zip/${location.zip}/2`}
+          zip={location.zip}
+          city={location.city}
+          startOver="/eligibility"
+        />
         <h2>{t('questions.building-type')}</h2>
         <select onChange={onSelect}>
           <option value="">{t('Select')}</option>
@@ -256,6 +277,10 @@ export function makeBuildingTypeChooser() {
           </option>
           <option value={BuildingType.SFH}>{t('building-types.sfh')}</option>
         </select>
+        <Accordion
+          title={t('eligibility-info.types.title')}
+          content={t('eligibility-info.types.content')}
+        />
         {(localQuestions?.length || statewideQuestions?.length) && (
           <AdditionalQuestionsSection
             localQuestions={localQuestions}
