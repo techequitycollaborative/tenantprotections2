@@ -96,7 +96,7 @@ function AdditionalQuestionsSection({
     }
   };
 
-  let accordion = '';
+  let accordion = undefined;
   if (question.promptKey.includes('corp-ownership')) {
     accordion = (
       <Accordion

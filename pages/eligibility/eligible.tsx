@@ -23,9 +23,11 @@ const Eligible: NextPage = function Eligible() {
     <Layout>
       <Progress progress="4" />
       <h2>{t('eligible.title')}</h2>
-      {t('eligible.text', { returnObjects: true }).map((x, i) => (
-        <p>{x}</p>
-      ))}
+      {(t('eligible.text', { returnObjects: true }) as Array<string>).map(
+        (x, i) => (
+          <p key={i}>{x}</p>
+        ),
+      )}
       <h3>{t('eligible.footnote')}</h3>
       <Link href="/calculator">{t('eligible.button')}</Link>
     </Layout>

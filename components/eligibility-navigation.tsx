@@ -1,3 +1,4 @@
+import { NextPage } from 'next';
 import Link from 'next/link';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   startOver: string;
 }
 
-const EligibilityNav: NextPage = function EligibilityNav(props) {
+const EligibilityNav: NextPage<Props> = function EligibilityNav(props) {
   return (
     <p>
       <Link href={props.back}>Back</Link>

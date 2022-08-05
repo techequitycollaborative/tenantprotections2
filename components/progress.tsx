@@ -1,8 +1,10 @@
+import { NextPage } from 'next';
+
 interface Props {
-  amount: number;
+  progress: string;
 }
 
-const Progress: NextPage = function Progress(props) {
+const Progress: NextPage<Props> = function Progress(props) {
   return <meter value={props.progress} min="0" max="4" />;
 };
 
