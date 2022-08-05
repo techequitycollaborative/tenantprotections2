@@ -70,12 +70,17 @@
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explora nuestros recursos"
   },
+  "navbar": {
+    "calculator": "Calculadora",
+    "eligibility": "Elegibilidad",
+    "resources": "Recursos",
+    "about": "Acerca de"
+  },
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
-  "navbar": "Esta es la barra de navegación",
   "footer": "Este es el pie de página",
   "take-quiz": "Tomar el cuestionario de elegibilidad"
 }

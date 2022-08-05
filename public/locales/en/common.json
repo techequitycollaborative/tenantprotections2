@@ -71,13 +71,18 @@
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
   },
+  "navbar": {
+    "calculator": "Calculator",
+    "eligibility": "Eligibility",
+    "resources": "Resources",
+    "about": "About"
+  },
   "no": "No",
   "submit": "Next",
   "yes": "Yes",
   "eligibility-title": "Eligibility Quiz",
   "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
-  "navbar": "This is the navbar",
   "footer": "This is the footer",
   "take-quiz": "Take the eligibility quiz"
 }
