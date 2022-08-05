@@ -8,6 +8,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
+import Accordion from '@/components/accordion';
+import Progress from '@/components/progress';
+import EligibilityNav from '@/components/eligibility-navigation';
 
 const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -58,6 +61,13 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   );
   return (
     <Layout>
+      <Progress progress="2" />
+      <EligibilityNav
+        back={`/eligibility/zip/${props.location.zip}`}
+        zip={props.location.zip}
+        city={props.location.city}
+        startOver="/eligibility"
+      />
       <h2>{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
         <Link href={`/eligibility/zip/${props.location.zip}/3?s=local`}>
@@ -74,11 +84,15 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           date: rentCapDateStr,
         })}
       </Link>
-      <Link href="/eligibility/ineligible/built">
+      <Link href="/eligibility/ineligible">
         {t('answers.after-date', {
           date: rentCapDateStr,
         })}
       </Link>
+      <Accordion
+        title={t('eligibility-info.built.title')}
+        content={t('eligibility-info.built.content')}
+      />
     </Layout>
   );
 };

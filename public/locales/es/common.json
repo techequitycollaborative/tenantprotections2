@@ -30,14 +30,57 @@
     "landlord-onsite-tenancy-start": "¿Es la propiedad un dúplex y el propietario ha vivido en el lugar desde el comienzo del arrendamiento?",
     "landlord-shared-exemption": "¿Comparte baño o cocina con el propietario?"
   },
-  "eligible": "Eres elegible",
-  "not-eligible": "Es posible que no seas elegible",
+  "eligibility-info": {
+    "subsidized": {
+      "title": "¿Qué es la vivienda protegida?",
+      "content": ""
+    },
+    "built": {
+      "title": "Averigüe cuándo se construyó su alquiler",
+      "content": ""
+    },
+    "types": {
+      "title": "Obtenga más información sobre los tipos de edificios",
+      "content": ""
+    },
+    "corp-ownership": {
+      "title": "Aprende más",
+      "content": ""
+    }
+  },
+  "eligible": {
+    "title": "¡Eres elegible!",
+    "text": [
+      "Felicitaciones, está protegido contra desalojos injustos bajo la Ley de Protección de Inquilinos. Usted está protegido por la nueva ley. Para comprender completamente estas protecciones, así como otras protecciones que pueden estar disponibles para usted, le recomendamos que busque asesoría legal. Si necesita ayuda adicional, comuníquese a continuación.",
+      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado para obtener apoyo, o con un grupo local de derechos de los inquilinos. Podemos conectarlo con ellos a continuación."
+    ],
+    "footnote": "¿Le están cobrando de más?",
+    "button": "Consulta la calculadora de alquiler"
+  },
+  "ineligible": {
+    "title": "Es posible que no seas elegible",
+    "text-1": [
+      "Desafortunadamente, creemos que usted no está cubierto por las cláusulas de control de renta o protección por causa justa de la Ley de Protección de Inquilinos.",
+      "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte estos recursos."
+    ],
+    "subtitle": "¿Por qué no soy elegible?",
+    "text-2": [
+      "Algunos tipos de edificios no son elegibles, como viviendas subsidiadas por el gobierno o residencias universitarias, a menos que pague con un cupón. Respondió que alquila un tipo de vivienda que no es elegible, pero si vive en una vivienda subsidiada, puede tener otras protecciones legales contra desalojos y aumentos de alquiler."
+    ],
+    "footnote": "¿Aún tiene problemas con su arrendamiento?",
+    "button": "Explora nuestros recursos"
+  },
+  "navbar": {
+    "calculator": "Calculadora",
+    "eligibility": "Elegibilidad",
+    "resources": "Recursos",
+    "about": "Acerca de"
+  },
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
-  "navbar": "Esta es la barra de navegación",
   "footer": "Este es el pie de página",
   "take-quiz": "Tomar el cuestionario de elegibilidad"
 }
