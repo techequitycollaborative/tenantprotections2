@@ -1,14 +1,13 @@
 import rentcap from '@/data/rentcap.json';
 import { BuildingType } from '@/types/building';
-import { RentCap } from '@/types/location';
 
 //
 // Abstraction layer for converting raw rentcap json file to structured data.
 //
 function RentCapMatrix() {
   let matrix = {
-    statewide: {},
-    local: {},
+    statewide: {} as any,
+    local: {} as any,
   };
 
   Object.keys(rentcap).map((id) => {

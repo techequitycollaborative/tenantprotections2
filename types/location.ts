@@ -20,9 +20,9 @@ export interface EligibilityRules {
 }
 
 export interface RentCapEntry {
-  start: date;
-  end: date;
-  rate: float;
+  start: Date;
+  end: Date;
+  rate: number;
 }
 
 export interface RentCapHistory extends Array<RentCapEntry> {}
@@ -42,9 +42,9 @@ export interface RawLocation extends ZipData {
 export interface FullLocation extends ZipData {
   type: 'full';
   statewideRules: EligibilityRules;
-  localRules?: EligibilityRules;
-  statewideRentCap: RentCap;
-  localRentCap?: RentCap;
+  localRules?: EligibilityRules | null;
+  statewideRentCap: RentCapHistory;
+  localRentCap?: RentCapHistory | null;
 }
 
 export interface UnknownLocation {

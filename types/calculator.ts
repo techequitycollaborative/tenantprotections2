@@ -1,4 +1,4 @@
 export interface RentHistory {
-  currentRent: { startDate: date; rent: float } | undefined;
-  previousRent: { startDate: date; rent: float } | undefined;
+  currentRent: { startDate: Date; rent: number } | undefined;
+  previousRent: { startDate: Date; rent: number } | undefined;
 }

@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
 
 interface Props {
-  startDate: date;
-  rent: float;
+  startDate: Date;
+  rent: number;
 }
 
 const RentEntry: NextPage<Props> = function RentEntry(props) {
   return (
     <div>
       <p>
-        {props.startDate} ... ${props.rent}
+        {props.startDate.toString()} ... ${props.rent}
       </p>
     </div>
   );

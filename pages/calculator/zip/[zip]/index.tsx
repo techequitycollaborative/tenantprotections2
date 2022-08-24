@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect, useRef } from 'react';
 
 import { FullLocation } from '@/types/location';
-import { RentHistory } from '@/types/renthistory';
+import { RentHistory } from '@/types/calculator';
 import { locationFromZip, lookupRentCap } from '@/utils/location';
 import Layout from '@/components/layout';
 import RentEntry from '@/components/rententry';
@@ -14,7 +14,6 @@ import RentAlert from '@/components/rentalert';
 
 interface Props {
   location: FullLocation;
-  scope: string;
 }
 
 interface RentProps {
@@ -24,8 +23,8 @@ interface RentProps {
 
 interface RentUpdateProps {
   rentHistory: RentHistory;
-  addCurrentRent: () => void;
-  addPreviousRent: () => void;
+  addCurrentRent: (startDate: Date, rent: number) => void;
+  addPreviousRent: (startDate: Date, rent: number) => void;
 }
 
 function RentTimeline(props: RentProps) {
@@ -52,22 +51,28 @@ function RentTimeline(props: RentProps) {
 }
 
 function RentBox(props: RentUpdateProps) {
-  const rentRef = useRef(null);
-  const startDateRef = useRef(null);
+  const rentRef = useRef<HTMLInputElement>(null);
+  const startDateRef = useRef<HTMLInputElement>(null);
 
   const onClick = function () {
     if (props.rentHistory.currentRent) {
-      props.addPreviousRent(startDateRef.current.value, rentRef.current.value);
+      props.addPreviousRent(
+        new Date(startDateRef.current!.value),
+        parseFloat(rentRef.current!.value),
+      );
     } else {
-      props.addCurrentRent(startDateRef.current.value, rentRef.current.value);
+      props.addCurrentRent(
+        new Date(startDateRef.current!.value),
+        parseFloat(rentRef.current!.value),
+      );
     }
 
-    startDateRef.current.value = null;
-    rentRef.current.value = null;
+    startDateRef.current!.value = '';
+    rentRef.current!.value = '';
   };
 
   if (props.rentHistory.previousRent) {
-    return;
+    return null;
   } else {
     return (
       <div>
@@ -117,7 +122,7 @@ function Results(props: RentProps) {
       </>
     );
   } else {
-    return;
+    return null;
   }
 }
 
@@ -149,14 +154,14 @@ export { getServerSideProps };
 
 const Zip: NextPage<Props> = function Zip(props) {
   assert(props.location, 'Location is required');
-  const [rentHistory, setRentHistory] = useState({
+  const [rentHistory, setRentHistory] = useState<RentHistory>({
     currentRent: undefined,
     previousRent: undefined,
   });
 
   const { t } = useTranslation(['common']);
 
-  const addCurrentRent = function (startDate, rent) {
+  const addCurrentRent = function (startDate: Date, rent: number) {
     let currentRent = { startDate: startDate, rent: rent };
     setRentHistory({
       currentRent: currentRent,
@@ -164,7 +169,7 @@ const Zip: NextPage<Props> = function Zip(props) {
     });
   };
 
-  const addPreviousRent = function (startDate, rent) {
+  const addPreviousRent = function (startDate: Date, rent: number) {
     let previousRent = { startDate: startDate, rent: rent };
     setRentHistory({
       currentRent: rentHistory.currentRent,

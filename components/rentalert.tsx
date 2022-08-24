@@ -9,28 +9,32 @@ interface Props {
 }
 
 const RentAlert: NextPage<Props> = function RentAlert(props) {
-  const currentRent = parseFloat(props.rentHistory.currentRent.rent);
-  const previousRent = parseFloat(props.rentHistory.previousRent.rent);
+  const currentRent = props.rentHistory.currentRent!.rent;
+  const previousRent = props.rentHistory.previousRent!.rent;
+  const currentRentStartDate = props.rentHistory.currentRent!.startDate;
   const statewideRentCap = lookupRentCap(
     props.location.statewideRentCap,
-    new Date(props.rentHistory.currentRent.startDate),
+    new Date(currentRentStartDate),
   );
-  const statewideMaxRent = ((1 + statewideRentCap) * previousRent).toFixed(2);
+  const statewideMaxRent = (1 + statewideRentCap) * previousRent;
+  const statewideMaxRentDisplay = statewideMaxRent.toFixed(2);
 
   let localRentCap = null;
-  let localMaxRent = null;
+  let localMaxRent = 0;
+  let localMaxRentDisplay = null;
   if (props.location.localRentCap) {
     localRentCap = lookupRentCap(
       props.location.localRentCap,
-      new Date(props.rentHistory.currentRent.startDate),
+      currentRentStartDate,
     );
-    localMaxRent = ((1 + localRentCap) * previousRent).toFixed(2);
+    localMaxRent = (1 + localRentCap) * previousRent;
+    localMaxRentDisplay = localMaxRent.toFixed(2);
   }
 
   return (
     <div>
       <p>
-        {props.rentHistory.currentRent.startDate} ... ${currentRent}
+        {currentRentStartDate.toString()} ... ${currentRent}
       </p>
       {currentRent > statewideMaxRent || currentRent > localMaxRent ? (
         <p>
@@ -45,7 +49,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
       {localRentCap && (
         <>
           <p>
-            {props.location.city} Max Rent: ${localMaxRent}
+            {props.location.city} Max Rent: ${localMaxRentDisplay}
           </p>
           <p>
             {(localRentCap * 100).toFixed(2)}% max increase per year * $
@@ -53,7 +57,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
           </p>
         </>
       )}
-      <p>Statewide Max Rent: ${statewideMaxRent}</p>
+      <p>Statewide Max Rent: ${statewideMaxRentDisplay}</p>
       <p>
         {(statewideRentCap * 100).toFixed(2)}% max increase per year * $
         {previousRent} =
