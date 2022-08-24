@@ -19,6 +19,14 @@ export interface EligibilityRules {
   eligibilityQuestions: BuildingEligibilityQuestions;
 }
 
+export interface RentCapEntry {
+  start: Date;
+  end: Date;
+  rate: number;
+}
+
+export interface RentCapHistory extends Array<RentCapEntry> {}
+
 export interface ZipData {
   // Metropolitan Statistical Area (MSA)
   area: string;
@@ -34,7 +42,9 @@ export interface RawLocation extends ZipData {
 export interface FullLocation extends ZipData {
   type: 'full';
   statewideRules: EligibilityRules;
-  localRules?: EligibilityRules;
+  localRules?: EligibilityRules | null;
+  statewideRentCap: RentCapHistory;
+  localRentCap?: RentCapHistory | null;
 }
 
 export interface UnknownLocation {

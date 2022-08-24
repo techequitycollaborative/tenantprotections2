@@ -1,27 +1,81 @@
-import { GetStaticProps, NextPage } from 'next';
+import formidable from 'formidable';
+import type { GetServerSideProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Link from 'next/link';
+import { Location } from '@/types/location';
 import Layout from '@/components/layout';
 
-const getStaticProps: GetStaticProps = async function getStaticProps(context) {
-  return {
-    props: {
-      ...(await serverSideTranslations(context.locale!, ['common'])),
-    },
+import { locationFromZip } from '@/utils/location';
+
+interface Props {
+  location: Location | null;
+}
+
+const getServerSideProps: GetServerSideProps<Props> =
+  async function getServerSideProps(context) {
+    const form = formidable();
+    const zip = await new Promise<string | undefined>((resolve, reject) => {
+      form.parse(context.req, (err, fields) => {
+        if (err) {
+          return reject(err);
+        }
+        if (typeof fields.zip === 'string') {
+          resolve(fields.zip);
+        } else {
+          resolve(undefined);
+        }
+      });
+    });
+
+    const location = typeof zip === 'undefined' ? null : locationFromZip(zip);
+
+    if (location && 'county' in location) {
+      return {
+        props: {
+          location: null,
+        },
+        redirect: {
+          destination: `/calculator/zip/${zip}`,
+        },
+      };
+    }
+
+    return {
+      props: {
+        ...(await serverSideTranslations(context.locale!)),
+        location,
+      },
+    };
   };
-};
 
-export { getStaticProps };
+export { getServerSideProps };
 
-const Calculator: NextPage = () => {
-  const { t } = useTranslation('common');
-
+// For validation pattern source, see:
+// https://css-tricks.com/html-for-zip-codes/
+const Calculator: NextPage<Props> = function Calculator({ location }) {
+  const { t } = useTranslation();
   return (
     <Layout>
-      <div>
-        <p>This is the calculator page.</p>
-      </div>
+      <h1>{t('calculator.title')}</h1>
+      {(t('calculator.text', { returnObjects: true }) as Array<string>).map(
+        (x, i) => (
+          <p key={i}>{x}</p>
+        ),
+      )}
+      <form action="calculator" method="post">
+        <label htmlFor="zip">{t('zip-label')}</label>
+        <input
+          id="zip"
+          name="zip"
+          type="text"
+          inputMode="numeric"
+          pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
+          required
+        />
+        <button type="submit">{t('submit')}</button>
+        {location?.type === 'unknown' &&
+          `Could not find ZIP Code ${location.zip}`}
+      </form>
     </Layout>
   );
 };

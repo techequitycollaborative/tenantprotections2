@@ -49,6 +49,13 @@
       "content": ""
     }
   },
+  "calculator": {
+    "title": "Rent Calculator",
+    "text": [
+      "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
+      "Before using this calculator make sure you check your eligibility here!"
+    ]
+  },
   "eligible": {
     "title": "You're eligible!",
     "text": [
