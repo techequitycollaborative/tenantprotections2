@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { FullLocation } from '@/types/location';
 import { RentHistory } from '@/types/calculator';
 import { lookupRentCap } from '@/utils/location';
+import { getCurrentRent, getPreviousRent } from '@/utils/calculator';
 
 interface Props {
   location: FullLocation;
@@ -9,15 +10,19 @@ interface Props {
 }
 
 const RentAlert: NextPage<Props> = function RentAlert(props) {
-  const currentRent = props.rentHistory.currentRent!.rent;
-  const previousRent = props.rentHistory.previousRent!.rent;
-  const currentRentStartDate = props.rentHistory.currentRent!.startDate;
+  const currentRent = getCurrentRent(props.rentHistory).rent;
+  const previousRent = getPreviousRent(props.rentHistory).rent;
+  const currentRentStartDate = getCurrentRent(props.rentHistory).startDate;
+
   const statewideRentCap = lookupRentCap(
     props.location.statewideRentCap,
     new Date(currentRentStartDate),
   );
   const statewideMaxRent = (1 + statewideRentCap) * previousRent;
   const statewideMaxRentDisplay = statewideMaxRent.toFixed(2);
+
+  console.log(currentRent);
+  console.log(previousRent);
 
   let localRentCap = null;
   let localMaxRent = 0;

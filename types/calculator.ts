@@ -1,4 +1,6 @@
-export interface RentHistory {
-  currentRent: { startDate: Date; rent: number } | undefined;
-  previousRent: { startDate: Date; rent: number } | undefined;
+export interface RentEntry {
+  startDate: Date;
+  rent: number;
 }
+
+export interface RentHistory extends Array<RentEntry> {}
