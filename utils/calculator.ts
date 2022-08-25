@@ -1,4 +1,4 @@
-import { RentRow, RentHistory } from '@/types/calculator';
+import { RentEntry, RentHistory } from '@/types/calculator';
 
 export function addRent(
   rentHistory: RentHistory,
@@ -10,11 +10,11 @@ export function addRent(
   );
 }
 
-export function getCurrentRent(rentHistory: RentHistory): RentRow {
+export function getCurrentRent(rentHistory: RentHistory): RentEntry {
   return rentHistory[0];
 }
 
-export function getPreviousRent(rentHistory: RentHistory): RentRow {
+export function getPreviousRent(rentHistory: RentHistory): RentEntry {
   return rentHistory[1];
 }
 

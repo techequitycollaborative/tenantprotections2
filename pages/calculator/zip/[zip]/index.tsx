@@ -55,8 +55,8 @@ function RentBox(props: RentUpdateProps) {
       parseFloat(rentRef.current!.value),
     );
 
-    startDateRef.current!.value = null;
-    rentRef.current!.value = null;
+    startDateRef.current!.value = '';
+    rentRef.current!.value = '';
   };
 
   if (getRentHistoryState(props.rentHistory) === 'complete') {
