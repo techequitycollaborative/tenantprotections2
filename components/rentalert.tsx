@@ -1,7 +1,10 @@
 import { NextPage } from 'next';
+import { useTranslation } from 'next-i18next';
+
 import { FullLocation } from '@/types/location';
 import { RentHistory } from '@/types/calculator';
 import { lookupRentCap } from '@/utils/location';
+import { getCurrentRent, getPreviousRent } from '@/utils/calculator';
 
 interface Props {
   location: FullLocation;
@@ -9,9 +12,12 @@ interface Props {
 }
 
 const RentAlert: NextPage<Props> = function RentAlert(props) {
-  const currentRent = props.rentHistory.currentRent!.rent;
-  const previousRent = props.rentHistory.previousRent!.rent;
-  const currentRentStartDate = props.rentHistory.currentRent!.startDate;
+  const { t, i18n } = useTranslation('common');
+
+  const currentRent = getCurrentRent(props.rentHistory).rent;
+  const previousRent = getPreviousRent(props.rentHistory).rent;
+  const currentRentStartDate = getCurrentRent(props.rentHistory).startDate;
+
   const statewideRentCap = lookupRentCap(
     props.location.statewideRentCap,
     new Date(currentRentStartDate),
@@ -37,30 +43,34 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
         {currentRentStartDate.toString()} ... ${currentRent}
       </p>
       {currentRent > statewideMaxRent || currentRent > localMaxRent ? (
-        <p>
-          This rent increase may be illegal if you qualify for state or local
-          rent control.
-        </p>
+        <p>{t('calculator.alert.illegal')}</p>
       ) : (
-        <p>
-          This rent increase looks legal under state and local rent control.
-        </p>
+        <p>{t('calculator.alert.legal')}</p>
       )}
-      {localRentCap && (
+      {localRentCap != null && (
         <>
           <p>
-            {props.location.city} Max Rent: ${localMaxRentDisplay}
+            {t('calculator.alert.local-max-rent', {
+              city: props.location.city,
+              max: localMaxRentDisplay,
+            })}
           </p>
           <p>
-            {(localRentCap * 100).toFixed(2)}% max increase per year * $
-            {previousRent} =
+            {t('calculator.alert.max-increase', {
+              cap: (localRentCap * 100).toFixed(2),
+              rent: previousRent,
+            })}
           </p>
         </>
       )}
-      <p>Statewide Max Rent: ${statewideMaxRentDisplay}</p>
       <p>
-        {(statewideRentCap * 100).toFixed(2)}% max increase per year * $
-        {previousRent} =
+        {t('calculator.alert.statewide-max-rent', { max: localMaxRentDisplay })}
+      </p>
+      <p>
+        {t('calculator.alert.max-increase', {
+          cap: (statewideRentCap * 100).toFixed(2),
+          rent: previousRent,
+        })}
       </p>
     </div>
   );

@@ -54,7 +54,27 @@
     "text": [
       "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
       "Before using this calculator make sure you check your eligibility here!"
-    ]
+    ],
+    "alert": {
+      "legal": "This rent increase looks legal under state and local rent control.",
+      "illegal": "This rent increase may be illegal if you qualify for state or local rent control.",
+      "statewide-max-rent": "Statewide Max Rent: ${{max}}",
+      "local-max-rent": "{{city}} Max Rent: ${{max}}",
+      "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
+      "issues": "Having issues with your tenancy?",
+      "resources": "Explore our resources",
+      "take-quiz": "Take eligibility quiz"
+    },
+    "timeline": {
+      "change": "Date of rent change",
+      "rent": "Rent"
+    },
+    "history": {
+      "new-rent": "What is your newest rent increase?",
+      "prev-rent": "What is your previous rent?",
+      "new-start": "What is the start date of the rent increase?",
+      "prev-start": "What is the start date of your previous rent?"
+    }
   },
   "eligible": {
     "title": "You're eligible!",
@@ -88,6 +108,7 @@
   "submit": "Next",
   "yes": "Yes",
   "eligibility-title": "Eligibility Quiz",
+  "zipcode": "Zipcode: {{zip}}",
   "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
   "footer": "This is the footer",

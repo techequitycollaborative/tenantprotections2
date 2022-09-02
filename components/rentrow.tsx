@@ -5,7 +5,7 @@ interface Props {
   rent: number;
 }
 
-const RentEntry: NextPage<Props> = function RentEntry(props) {
+const RentRow: NextPage<Props> = function RentEntry(props) {
   return (
     <div>
       <p>
@@ -15,4 +15,4 @@ const RentEntry: NextPage<Props> = function RentEntry(props) {
   );
 };
 
-export default RentEntry;
+export default RentRow;

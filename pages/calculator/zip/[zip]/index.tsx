@@ -6,11 +6,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect, useRef } from 'react';
 
 import { FullLocation } from '@/types/location';
-import { RentHistory } from '@/types/calculator';
+import { RentEntry, RentHistory } from '@/types/calculator';
 import { locationFromZip, lookupRentCap } from '@/utils/location';
 import Layout from '@/components/layout';
-import RentEntry from '@/components/rententry';
+import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
+import { addRent, getRentHistoryState } from '@/utils/calculator';
 
 interface Props {
   location: FullLocation;
@@ -19,33 +20,32 @@ interface Props {
 interface RentProps {
   location: FullLocation;
   rentHistory: RentHistory;
+  translation: (s: string, args?: {}) => string;
 }
 
 interface RentUpdateProps {
   rentHistory: RentHistory;
-  addCurrentRent: (startDate: Date, rent: number) => void;
-  addPreviousRent: (startDate: Date, rent: number) => void;
+  onAddRent: (startDate: Date, rent: number) => void;
+  translation: (s: string, args?: {}) => string;
 }
 
 function RentTimeline(props: RentProps) {
-  const currentRent = props.rentHistory.currentRent;
-  const previousRent = props.rentHistory.previousRent;
+  const t = props.translation;
 
   return (
     <div>
       <p>
-        Zipcode {props.location.zip} <i>{props.location.city}, CA</i>
+        {t('zipcode', { zip: props.location.zip })}{' '}
+        <i>{props.location.city}, CA</i>
       </p>
-      {currentRent && <p>Date of rent change Rent</p>}
-      {currentRent && (
-        <RentEntry startDate={currentRent.startDate} rent={currentRent.rent} />
+      {getRentHistoryState(props.rentHistory) !== 'empty' && (
+        <p>
+          {t('calculator.timeline.change')} ... {t('calculator.timeline.rent')}
+        </p>
       )}
-      {previousRent && (
-        <RentEntry
-          startDate={previousRent.startDate}
-          rent={previousRent.rent}
-        />
-      )}
+      {(props.rentHistory as Array<RentEntry>).map((x, i) => (
+        <RentRow key={i} startDate={x.startDate} rent={x.rent} />
+      ))}
     </div>
   );
 }
@@ -53,33 +53,29 @@ function RentTimeline(props: RentProps) {
 function RentBox(props: RentUpdateProps) {
   const rentRef = useRef<HTMLInputElement>(null);
   const startDateRef = useRef<HTMLInputElement>(null);
+  const t = props.translation;
 
-  const onClick = function () {
-    if (props.rentHistory.currentRent) {
-      props.addPreviousRent(
-        new Date(startDateRef.current!.value),
-        parseFloat(rentRef.current!.value),
-      );
-    } else {
-      props.addCurrentRent(
-        new Date(startDateRef.current!.value),
-        parseFloat(rentRef.current!.value),
-      );
-    }
+  const handleSubmit = function (e: any) {
+    e.preventDefault();
+
+    props.onAddRent(
+      new Date(startDateRef.current!.value),
+      parseFloat(rentRef.current!.value),
+    );
 
     startDateRef.current!.value = '';
     rentRef.current!.value = '';
   };
 
-  if (props.rentHistory.previousRent) {
+  if (getRentHistoryState(props.rentHistory) === 'complete') {
     return null;
   } else {
     return (
-      <div>
-        {props.rentHistory.currentRent ? (
-          <p>What is your previous rent?</p>
+      <form onSubmit={handleSubmit}>
+        {getRentHistoryState(props.rentHistory) === 'partial' ? (
+          <p>{t('calculator.history.prev-rent')}</p>
         ) : (
-          <p>What is your newest rent increase?</p>
+          <p>{t('calculator.history.new-rent')}</p>
         )}
         <input
           id="rent"
@@ -89,10 +85,10 @@ function RentBox(props: RentUpdateProps) {
           ref={rentRef}
           required
         />
-        {props.rentHistory.currentRent ? (
-          <p>What is the start date of your previous rent?</p>
+        {getRentHistoryState(props.rentHistory) === 'partial' ? (
+          <p>{t('calculator.history.prev-start')}</p>
         ) : (
-          <p>What is the start date of the rent increase?</p>
+          <p>{t('calculator.history.new-start')}</p>
         )}
         <input
           id="startDate"
@@ -102,23 +98,22 @@ function RentBox(props: RentUpdateProps) {
           ref={startDateRef}
           required
         />
-        <button onClick={onClick}>Next</button>
-      </div>
+        <button type="submit">{t('submit')}</button>
+      </form>
     );
   }
 }
 
 function Results(props: RentProps) {
-  const currentRent = props.rentHistory.currentRent;
-  const previousRent = props.rentHistory.previousRent;
+  if (getRentHistoryState(props.rentHistory) === 'complete') {
+    const t = props.translation;
 
-  if (currentRent && previousRent) {
     return (
       <>
         <RentAlert location={props.location} rentHistory={props.rentHistory} />
-        <p>Having issues with your tenancy?</p>
-        <Link href="/resources">Explore our resources</Link>
-        <Link href="/eligibility">Take eligibility quiz</Link>
+        <p>{t('calculator.alert.issues')}</p>
+        <Link href="/resources">{t('calculator.alert.resources')}</Link>
+        <Link href="/eligibility">{t('calculator.alert.take-quiz')}</Link>
       </>
     );
   } else {
@@ -154,39 +149,32 @@ export { getServerSideProps };
 
 const Zip: NextPage<Props> = function Zip(props) {
   assert(props.location, 'Location is required');
-  const [rentHistory, setRentHistory] = useState<RentHistory>({
-    currentRent: undefined,
-    previousRent: undefined,
-  });
+  const [rentHistory, setRentHistory] = useState<RentHistory>([]);
 
   const { t } = useTranslation(['common']);
 
-  const addCurrentRent = function (startDate: Date, rent: number) {
-    let currentRent = { startDate: startDate, rent: rent };
-    setRentHistory({
-      currentRent: currentRent,
-      previousRent: rentHistory.previousRent,
-    });
-  };
-
-  const addPreviousRent = function (startDate: Date, rent: number) {
-    let previousRent = { startDate: startDate, rent: rent };
-    setRentHistory({
-      currentRent: rentHistory.currentRent,
-      previousRent: previousRent,
-    });
+  const onAddRent = function (startDate: Date, rent: number) {
+    setRentHistory(addRent(rentHistory, startDate, rent));
   };
 
   return (
     <Layout>
       <h2>{t('calculator.title')}</h2>
-      <RentTimeline location={props.location} rentHistory={rentHistory} />
+      <RentTimeline
+        location={props.location}
+        rentHistory={rentHistory}
+        translation={t}
+      />
       <RentBox
         rentHistory={rentHistory}
-        addCurrentRent={addCurrentRent}
-        addPreviousRent={addPreviousRent}
+        onAddRent={onAddRent}
+        translation={t}
       />
-      <Results location={props.location} rentHistory={rentHistory} />
+      <Results
+        location={props.location}
+        rentHistory={rentHistory}
+        translation={t}
+      />
     </Layout>
   );
 };
