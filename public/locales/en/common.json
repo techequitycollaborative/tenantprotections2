@@ -74,6 +74,12 @@
       "prev-rent": "What is your previous rent?",
       "new-start": "What is the start date of the rent increase?",
       "prev-start": "What is the start date of your previous rent?"
+    },
+    "errors": {
+      "rent": "Please enter a number between 100 and 9999.",
+      "date-high": "This date is too far in the future.",
+      "date-low": "Please enter a date within the past 3 years.",
+      "sequence": "It looks like your rent did not increase; please check the dates and amounts."
     }
   },
   "eligible": {

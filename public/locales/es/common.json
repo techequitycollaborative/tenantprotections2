@@ -73,6 +73,12 @@
       "prev-rent": "¿Cuál es su renta anterior?",
       "new-start": "¿Cuál es la fecha de inicio del aumento de la renta?",
       "prev-start": "¿Cuál es la fecha de inicio de su alquiler anterior?"
+    },
+    "errors": {
+      "rent": "Introduzca un número entre 100 y 9999.",
+      "date-high": "Esta fecha es demasiado lejana en el futuro.",
+      "date-low": "Ingrese una fecha dentro de los últimos 3 años.",
+      "sequence": "Parece que su alquiler no aumentó; Por favor, consulte las fechas y las cantidades."
     }
   },
   "eligible": {
