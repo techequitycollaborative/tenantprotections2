@@ -51,20 +51,80 @@ function RentTimeline(props: RentProps) {
 }
 
 function RentBox(props: RentUpdateProps) {
-  const rentRef = useRef<HTMLInputElement>(null);
-  const startDateRef = useRef<HTMLInputElement>(null);
+  //const rentRef = useRef<HTMLInputElement>(null);
+  //const startDateRef = useRef<HTMLInputElement>(null);
+  const [rent, setRent] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [rentError, setRentError] = useState('');
+  const [dateError, setDateError] = useState('');
   const t = props.translation;
 
   const handleSubmit = function (e: any) {
     e.preventDefault();
 
-    props.onAddRent(
-      new Date(startDateRef.current!.value),
-      parseFloat(rentRef.current!.value),
-    );
+    if (validateForm()) {
+      props.onAddRent(new Date(startDate), parseFloat(rent));
 
-    startDateRef.current!.value = '';
-    rentRef.current!.value = '';
+      setRent('');
+      setStartDate('');
+    }
+  };
+
+  const validateForm = function () {
+    const parseRent = /(\d+)$/.test(rent) ? Number(rent) : NaN;
+    const parseDate = new Date(startDate);
+
+    const now = new Date();
+    const dateMax = new Date(new Date().setFullYear(now.getFullYear() + 1));
+    const dateMin = new Date(new Date().setFullYear(now.getFullYear() - 3));
+
+    let pass = true;
+
+    // Validate rent
+    if (Number.isNaN(parseRent) || parseRent < 100 || parseRent > 9999) {
+      setRentError(t('calculator.errors.rent'));
+      pass = false;
+    } else if (!checkRentSequence(parseRent, parseDate)) {
+      setRentError(t('calculator.errors.sequence'));
+      pass = false;
+    } else {
+      setRentError('');
+    }
+
+    // Validate date
+    if (parseDate > dateMax) {
+      setDateError(t('calculator.errors.date-high'));
+      pass = false;
+    } else if (parseDate < dateMin) {
+      setDateError(t('calculator.errors.date-low'));
+      pass = false;
+    } else {
+      setDateError('');
+    }
+
+    return pass;
+  };
+
+  const checkRentSequence = function (newRent: number, newStartDate: Date) {
+    if (props.rentHistory.length > 0) {
+      let prevRent = props.rentHistory[0];
+      if (
+        (prevRent.startDate > newStartDate && prevRent.rent <= newRent) ||
+        (prevRent.startDate < newStartDate && prevRent.rent >= newRent)
+      ) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  const onRentChange = function (e: any) {
+    setRent(e.target.value);
+  };
+
+  const onStartDateChange = function (e: any) {
+    setStartDate(e.target.value);
   };
 
   if (getRentHistoryState(props.rentHistory) === 'complete') {
@@ -82,9 +142,11 @@ function RentBox(props: RentUpdateProps) {
           name="rent"
           type="text"
           inputMode="numeric"
-          ref={rentRef}
+          value={rent}
+          onChange={onRentChange}
           required
         />
+        <span>{rentError}</span>
         {getRentHistoryState(props.rentHistory) === 'partial' ? (
           <p>{t('calculator.history.prev-start')}</p>
         ) : (
@@ -95,10 +157,12 @@ function RentBox(props: RentUpdateProps) {
           name="startDate"
           type="date"
           inputMode="numeric"
-          ref={startDateRef}
+          value={startDate}
+          onChange={onStartDateChange}
           required
         />
         <button type="submit">{t('submit')}</button>
+        <span>{dateError}</span>
       </form>
     );
   }
