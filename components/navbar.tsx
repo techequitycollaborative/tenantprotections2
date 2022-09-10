@@ -16,7 +16,7 @@ function Navbar() {
     };
 
   return (
-    <nav className={` relative bg-blue`}>
+    <nav className={`relative bg-blue`}>
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="p-4">
@@ -26,7 +26,7 @@ function Navbar() {
             </h1>
           </Link>
         </div>
-        <div className="hidden text-xl space-x-12 ml-auto mr-32 lg:mr-64 text-white md:flex">
+        <div className="hidden text-xl space-x-12 ml-auto mr-16 lg:mr-32 xl:mr-64 text-white md:flex">
           <Link href="/calculator">{t('navbar.calculator')}</Link>
           <Link href="/eligibility">{t('navbar.eligibility')}</Link>
           <Link href="/resources">{t('navbar.resources')}</Link>

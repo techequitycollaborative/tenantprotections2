@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="container">
         <p>This is the front page.</p>
         <Link href={`/eligibility`}>{t('take-quiz')}</Link>
       </div>
