@@ -18,18 +18,25 @@ interface Props {
 }
 
 interface RentProps {
+  rentHistory: RentHistory;
+  translation: (s: string, args?: {}) => string;
+}
+
+interface RentResultsProps extends RentProps {
   location: FullLocation;
-  rentHistory: RentHistory;
-  translation: (s: string, args?: {}) => string;
 }
 
-interface RentUpdateProps {
-  rentHistory: RentHistory;
+interface RentTimelineProps extends RentProps {
+  location: FullLocation;
+  onEditRent: (index: number) => void;
+}
+
+interface RentBoxProps extends RentProps {
   onAddRent: (startDate: Date, rent: number) => void;
-  translation: (s: string, args?: {}) => string;
+  editRow: RentEntry | undefined;
 }
 
-function RentTimeline(props: RentProps) {
+function RentTimeline(props: RentTimelineProps) {
   const t = props.translation;
 
   const handleEdit = function (index: number) {
@@ -57,9 +64,7 @@ function RentTimeline(props: RentProps) {
   );
 }
 
-function RentBox(props: RentUpdateProps) {
-  //const rentRef = useRef<HTMLInputElement>(null);
-  //const startDateRef = useRef<HTMLInputElement>(null);
+function RentBox(props: RentBoxProps) {
   const [rent, setRent] = useState('');
   const [startDate, setStartDate] = useState('');
   const [editRender, setEditRender] = useState(false);
@@ -138,8 +143,21 @@ function RentBox(props: RentUpdateProps) {
 
   if (props.editRow && !editRender) {
     setStartDate(props.editRow.startDate.toISOString().split('T')[0]);
-    setRent(props.editRow.rent);
+    setRent(props.editRow.rent.toString());
     setEditRender(true);
+  }
+
+  let rentLabel = null;
+  let dateLabel = null;
+  if (props.editRow) {
+    rentLabel = <p>{t('calculator.history.generic-rent')}</p>;
+    dateLabel = <p>{t('calculator.history.generic-start')}</p>;
+  } else if (getRentHistoryState(props.rentHistory) === 'partial') {
+    rentLabel = <p>{t('calculator.history.prev-rent')}</p>;
+    dateLabel = <p>{t('calculator.history.prev-start')}</p>;
+  } else {
+    rentLabel = <p>{t('calculator.history.new-rent')}</p>;
+    dateLabel = <p>{t('calculator.history.new-start')}</p>;
   }
 
   if (getRentHistoryState(props.rentHistory) === 'complete') {
@@ -147,12 +165,8 @@ function RentBox(props: RentUpdateProps) {
   } else {
     return (
       <form onSubmit={handleSubmit}>
-        {props.editRow && <p>You chose to edit a previously entered value.</p>}
-        {getRentHistoryState(props.rentHistory) === 'partial' ? (
-          <p>{t('calculator.history.prev-rent')}</p>
-        ) : (
-          <p>{t('calculator.history.new-rent')}</p>
-        )}
+        {props.editRow && <p>{t('calculator.history.edit')}</p>}
+        {rentLabel}
         <input
           id="rent"
           name="rent"
@@ -163,11 +177,7 @@ function RentBox(props: RentUpdateProps) {
           required
         />
         <span>{rentError}</span>
-        {getRentHistoryState(props.rentHistory) === 'partial' ? (
-          <p>{t('calculator.history.prev-start')}</p>
-        ) : (
-          <p>{t('calculator.history.new-start')}</p>
-        )}
+        {dateLabel}
         <input
           id="startDate"
           name="startDate"
@@ -184,7 +194,7 @@ function RentBox(props: RentUpdateProps) {
   }
 }
 
-function Results(props: RentProps) {
+function Results(props: RentResultsProps) {
   if (getRentHistoryState(props.rentHistory) === 'complete') {
     const t = props.translation;
 
@@ -230,7 +240,7 @@ export { getServerSideProps };
 const Zip: NextPage<Props> = function Zip(props) {
   assert(props.location, 'Location is required');
   const [rentHistory, setRentHistory] = useState<RentHistory>([]);
-  const [editRow, setEditRow] = useState<RentRow>(undefined);
+  const [editRow, setEditRow] = useState<RentEntry | undefined>(undefined);
 
   const { t } = useTranslation(['common']);
 
