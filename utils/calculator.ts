@@ -10,6 +10,16 @@ export function addRent(
   );
 }
 
+export function removeRent(
+  rentHistory: RentHistory,
+  index: number,
+): RentHistory {
+  let startIndex = 1 - index;
+  let newLength = rentHistory.length - 1;
+
+  return [...rentHistory.splice(startIndex, newLength)];
+}
+
 export function getCurrentRent(rentHistory: RentHistory): RentEntry {
   return rentHistory[0];
 }

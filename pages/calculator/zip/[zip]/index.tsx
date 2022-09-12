@@ -3,7 +3,7 @@ import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 import { FullLocation } from '@/types/location';
 import { RentEntry, RentHistory } from '@/types/calculator';
@@ -11,7 +11,7 @@ import { locationFromZip, lookupRentCap } from '@/utils/location';
 import Layout from '@/components/layout';
 import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
-import { addRent, getRentHistoryState } from '@/utils/calculator';
+import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
 
 interface Props {
   location: FullLocation;
@@ -32,6 +32,10 @@ interface RentUpdateProps {
 function RentTimeline(props: RentProps) {
   const t = props.translation;
 
+  const handleEdit = function (index: number) {
+    props.onEditRent(index);
+  };
+
   return (
     <div>
       <p>
@@ -44,7 +48,10 @@ function RentTimeline(props: RentProps) {
         </p>
       )}
       {(props.rentHistory as Array<RentEntry>).map((x, i) => (
-        <RentRow key={i} startDate={x.startDate} rent={x.rent} />
+        <div key={i}>
+          <RentRow startDate={x.startDate} rent={x.rent} />
+          <button onClick={() => handleEdit(i)}>edit</button>
+        </div>
       ))}
     </div>
   );
@@ -55,6 +62,7 @@ function RentBox(props: RentUpdateProps) {
   //const startDateRef = useRef<HTMLInputElement>(null);
   const [rent, setRent] = useState('');
   const [startDate, setStartDate] = useState('');
+  const [editRender, setEditRender] = useState(false);
   const [rentError, setRentError] = useState('');
   const [dateError, setDateError] = useState('');
   const t = props.translation;
@@ -67,6 +75,7 @@ function RentBox(props: RentUpdateProps) {
 
       setRent('');
       setStartDate('');
+      setEditRender(false);
     }
   };
 
@@ -127,11 +136,18 @@ function RentBox(props: RentUpdateProps) {
     setStartDate(e.target.value);
   };
 
+  if (props.editRow && !editRender) {
+    setStartDate(props.editRow.startDate.toISOString().split('T')[0]);
+    setRent(props.editRow.rent);
+    setEditRender(true);
+  }
+
   if (getRentHistoryState(props.rentHistory) === 'complete') {
     return null;
   } else {
     return (
       <form onSubmit={handleSubmit}>
+        {props.editRow && <p>You chose to edit a previously entered value.</p>}
         {getRentHistoryState(props.rentHistory) === 'partial' ? (
           <p>{t('calculator.history.prev-rent')}</p>
         ) : (
@@ -214,11 +230,21 @@ export { getServerSideProps };
 const Zip: NextPage<Props> = function Zip(props) {
   assert(props.location, 'Location is required');
   const [rentHistory, setRentHistory] = useState<RentHistory>([]);
+  const [editRow, setEditRow] = useState<RentRow>(undefined);
 
   const { t } = useTranslation(['common']);
 
   const onAddRent = function (startDate: Date, rent: number) {
     setRentHistory(addRent(rentHistory, startDate, rent));
+    setEditRow(undefined);
+  };
+
+  const onEditRent = function (index: number) {
+    setEditRow({
+      startDate: rentHistory[index].startDate,
+      rent: rentHistory[index].rent,
+    });
+    setRentHistory(removeRent(rentHistory, index));
   };
 
   return (
@@ -227,12 +253,14 @@ const Zip: NextPage<Props> = function Zip(props) {
       <RentTimeline
         location={props.location}
         rentHistory={rentHistory}
+        onEditRent={onEditRent}
         translation={t}
       />
       <RentBox
         rentHistory={rentHistory}
         onAddRent={onAddRent}
         translation={t}
+        editRow={editRow}
       />
       <Results
         location={props.location}
