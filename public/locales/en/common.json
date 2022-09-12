@@ -70,10 +70,13 @@
       "rent": "Rent"
     },
     "history": {
+      "edit": "You chose to edit a previously entered value.",
       "new-rent": "What is your newest rent increase?",
       "prev-rent": "What is your previous rent?",
       "new-start": "What is the start date of the rent increase?",
-      "prev-start": "What is the start date of your previous rent?"
+      "prev-start": "What is the start date of your previous rent?",
+      "generic-rent": "What is the rent?",
+      "generic-start": "What is the start date?"
     },
     "errors": {
       "rent": "Please enter a number between 100 and 9999.",
