@@ -68,6 +68,7 @@ a {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
-/* .container {
-  
-} */
+meter::-webkit-meter-optimum-value {
+  background: #85ca83;
+  z-index: -1;
+}

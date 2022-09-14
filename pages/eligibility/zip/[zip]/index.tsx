@@ -48,16 +48,27 @@ const Zip: NextPage<Props> = function Zip(props) {
 
   return (
     <Layout>
-      <Progress progress="1" />
       <EligibilityNav
         back="/eligibility"
         zip={props.location.zip}
         city={props.location.city}
         startOver="/eligibility"
       />
-      <h2>{t('questions.is-subsidized')}</h2>
-      <Link href={`/eligibility/ineligible`}>{t('yes')}</Link>
-      <Link href={`/eligibility/zip/${props.location.zip}/2`}>{t('no')}</Link>
+      <Progress progress="1" />
+
+      <h1 className="text-blue text-2xl py-4">
+        {t('questions.is-subsidized')}
+      </h1>
+      <Link href={`/eligibility/ineligible`}>
+        <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+          {t('yes')}
+        </button>
+      </Link>
+      <Link href={`/eligibility/zip/${props.location.zip}/2`}>
+        <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+          {t('no')}
+        </button>
+      </Link>
       <Accordion
         title={t('eligibility-info.subsidized.title')}
         content={t('eligibility-info.subsidized.content')}

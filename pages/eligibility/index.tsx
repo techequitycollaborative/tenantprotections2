@@ -77,7 +77,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           />
           <button
             type="submit"
-            className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3"
+            className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
           >
             {t('submit')}
           </button>

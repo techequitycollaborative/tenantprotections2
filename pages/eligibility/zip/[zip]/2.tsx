@@ -61,13 +61,14 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   );
   return (
     <Layout>
-      <Progress progress="2" />
       <EligibilityNav
         back={`/eligibility/zip/${props.location.zip}`}
         zip={props.location.zip}
         city={props.location.city}
         startOver="/eligibility"
       />
+      <Progress progress="2" />
+
       <h2>{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
         <Link href={`/eligibility/zip/${props.location.zip}/3?s=local`}>
