@@ -33,7 +33,7 @@ module.exports = {
           dark: '#414247',
           DEFAULT: '#4F515A',
           light: '#777f87',
-          lighter: 'e8e9eb',
+          lighter: '#E8E9EB',
           lightest: '#F5F5F5',
         },
       },
