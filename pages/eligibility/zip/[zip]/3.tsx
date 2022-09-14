@@ -255,8 +255,10 @@ export function makeBuildingTypeChooser() {
           city={location.city}
           startOver="/eligibility"
         />
-        <h2>{t('questions.building-type')}</h2>
-        <select onChange={onSelect}>
+        <h2 className="text-blue text-2xl py-4">
+          {t('questions.building-type')}
+        </h2>
+        <select onChange={onSelect} className="w-full border-2 border-blue">
           <option value="">{t('Select')}</option>
           <option value={BuildingType.ADU}>{t('building-types.adu')}</option>
           <option value={BuildingType.Apartment}>

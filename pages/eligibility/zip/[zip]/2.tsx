@@ -69,26 +69,32 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
       />
       <Progress progress="2" />
 
-      <h2>{t('questions.when-built')}</h2>
+      <h2 className="text-blue text-2xl py-4">{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
         <Link href={`/eligibility/zip/${props.location.zip}/3?s=local`}>
-          {t('answers.before-date', {
-            date: new Date(rentControlDate).toLocaleDateString(
-              i18n.language,
-              DATE_OPTIONS,
-            ),
-          })}
+          <div className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+            {t('answers.before-date', {
+              date: new Date(rentControlDate).toLocaleDateString(
+                i18n.language,
+                DATE_OPTIONS,
+              ),
+            })}
+          </div>
         </Link>
       )}
       <Link href={`/eligibility/zip/${props.location.zip}/3?s=statewide`}>
-        {t('answers.before-date', {
-          date: rentCapDateStr,
-        })}
+        <div className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+          {t('answers.before-date', {
+            date: rentCapDateStr,
+          })}
+        </div>
       </Link>
       <Link href="/eligibility/ineligible">
-        {t('answers.after-date', {
-          date: rentCapDateStr,
-        })}
+        <div className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+          {t('answers.after-date', {
+            date: rentCapDateStr,
+          })}
+        </div>
       </Link>
       <Accordion
         title={t('eligibility-info.built.title')}
