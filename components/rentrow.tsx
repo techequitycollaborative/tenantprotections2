@@ -4,7 +4,7 @@ interface Props {
   startDate: Date;
   rent: number;
 }
-
+// Timeline entry
 const RentRow: NextPage<Props> = function RentEntry(props) {
   return (
     <div>

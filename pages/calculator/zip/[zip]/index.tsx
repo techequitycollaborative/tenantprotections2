@@ -44,11 +44,33 @@ function RentTimeline(props: RentTimelineProps) {
   };
 
   return (
-    <div>
-      <p>
-        {t('zipcode', { zip: props.location.zip })}{' '}
-        <i>{props.location.city}, CA</i>
-      </p>
+    <div className="w-full">
+      <div className="flex flex-row">
+        <img
+          src="/img/house-illustration.svg"
+          alt="house illustration"
+          className="w-24 h-24 mr-8 sm:w-44 sm:h-44"
+        />
+        <div className="flex-col w-2/3 ml-auto">
+          <p className="text-gray-darkest">ZIPCODE</p>
+          <button className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2">
+            <p className="text-left text-gray-darkest font-medium">
+              {t('zipcode', { zip: props.location.zip })}
+            </p>
+            <p className="flex flex-row justify-between text-gray-darkest font-light">
+              {props.location.city}, CA
+              <img
+                src="/img/edit-icon.svg"
+                alt="edit button"
+                width="15"
+                height="15"
+              />
+            </p>
+          </button>
+        </div>
+      </div>
+
+      {/* Timeline part */}
       {getRentHistoryState(props.rentHistory) !== 'empty' && (
         <p>
           {t('calculator.timeline.change')} ... {t('calculator.timeline.rent')}
@@ -150,21 +172,48 @@ function RentBox(props: RentBoxProps) {
   let rentLabel = null;
   let dateLabel = null;
   if (props.editRow) {
-    rentLabel = <p>{t('calculator.history.generic-rent')}</p>;
-    dateLabel = <p>{t('calculator.history.generic-start')}</p>;
+    rentLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.generic-rent')}
+      </p>
+    );
+    dateLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.generic-start')}
+      </p>
+    );
   } else if (getRentHistoryState(props.rentHistory) === 'partial') {
-    rentLabel = <p>{t('calculator.history.prev-rent')}</p>;
-    dateLabel = <p>{t('calculator.history.prev-start')}</p>;
+    rentLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.prev-rent')}
+      </p>
+    );
+    dateLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.prev-start')}
+      </p>
+    );
   } else {
-    rentLabel = <p>{t('calculator.history.new-rent')}</p>;
-    dateLabel = <p>{t('calculator.history.new-start')}</p>;
+    rentLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.new-rent')}
+      </p>
+    );
+    dateLabel = (
+      <p className="text-gray-dark text-lg mt-1">
+        {t('calculator.history.new-start')}
+      </p>
+    );
   }
 
   if (getRentHistoryState(props.rentHistory) === 'complete') {
     return null;
   } else {
     return (
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col w-full border border-gray p-6 mb-6 bg-gray-lighter rounded md:p-10"
+      >
         {props.editRow && <p>{t('calculator.history.edit')}</p>}
         {rentLabel}
         <input
@@ -174,6 +223,8 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={rent}
           onChange={onRentChange}
+          placeholder="$1,350"
+          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
         />
         <span>{rentError}</span>
@@ -185,9 +236,15 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={startDate}
           onChange={onStartDateChange}
+          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
         />
-        <button type="submit">{t('submit')}</button>
+        <button
+          type="submit"
+          className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
+        >
+          {t('submit')}
+        </button>
         <span>{dateError}</span>
       </form>
     );
@@ -259,7 +316,9 @@ const Zip: NextPage<Props> = function Zip(props) {
 
   return (
     <Layout>
-      <h2>{t('calculator.title')}</h2>
+      <h2 className="text-blue text-3xl font-bold my-8">
+        {t('calculator.title')}
+      </h2>
       <RentTimeline
         location={props.location}
         rentHistory={rentHistory}
