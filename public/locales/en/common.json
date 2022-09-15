@@ -53,7 +53,7 @@
     "title": "Rent Calculator",
     "text": [
       "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
-      "Before using this calculator make sure you check your eligibility here!"
+      "Before using this calculator make sure you <a href='/eligibility' style='color: #074DCF'><u>check your eligibility</u></a> here!"
     ],
     "alert": {
       "legal": "This rent increase looks legal under state and local rent control.",

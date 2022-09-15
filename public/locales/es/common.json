@@ -52,7 +52,7 @@
     "title": "Calculadora de alquiler",
     "text": [
       "Si recibió un aumento de alquiler, puede usar nuestra calculadora para ayudarlo a determinar cuál es el aumento permitido según la ley y si su aumento de alquiler excede el límite.",
-      "¡Antes de usar esta calculadora, asegúrese de verificar su elegibilidad aquí!"
+      "¡Antes de usar esta calculadora, asegúrese de <a href='/es/eligibility' style='color: #074DCF'><u>verificar su elegibilidad</u></a> aquí!"
     ],
     "alert": {
       "legal": "Este aumento de alquiler parece legal bajo el control de alquiler estatal y local.",

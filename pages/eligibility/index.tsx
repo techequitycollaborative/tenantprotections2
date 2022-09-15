@@ -60,30 +60,32 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
         {t('eligibility-title')}
       </h1>
       <p className="text-gray-dark text-lg pb-8">{t('zip-prompt')}</p>
-      <form action="eligibility" method="post" className="w-full">
-        <div className="flex flex-col pt-2">
-          <label htmlFor="zip" className="text-blue text-2xl">
-            {t('zip-label')}
-          </label>
-          <input
-            id="zip"
-            name="zip"
-            type="text"
-            inputMode="numeric"
-            pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
-            placeholder="94110"
-            className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
-          >
-            {t('submit')}
-          </button>
-          {location?.type === 'unknown' &&
-            `Could not find ZIP Code ${location.zip}`}
-        </div>
+      <form
+        action="eligibility"
+        method="post"
+        className="w-full flex flex-col pt-2"
+      >
+        <label htmlFor="zip" className="text-blue text-2xl">
+          {t('zip-label')}
+        </label>
+        <input
+          id="zip"
+          name="zip"
+          type="text"
+          inputMode="numeric"
+          pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
+          placeholder="94110"
+          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
+        >
+          {t('submit')}
+        </button>
+        {location?.type === 'unknown' &&
+          `Could not find ZIP Code ${location.zip}`}
       </form>
     </Layout>
   );
