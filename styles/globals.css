@@ -72,3 +72,11 @@ meter::-webkit-meter-optimum-value {
   background: #85ca83;
   z-index: -1;
 }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(../public/img/caret-down-solid.svg) 96% no-repeat;
+  background-size: 10px;
+}

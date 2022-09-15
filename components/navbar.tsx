@@ -34,7 +34,7 @@ function Navbar() {
           <select
             onChange={onSelect}
             defaultValue={i18n.language}
-            className="text-black outline-none"
+            className="text-white outline-none"
           >
             <option value="en">EN</option>
             <option value="es">ES</option>

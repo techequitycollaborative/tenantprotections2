@@ -88,7 +88,7 @@
   "eligible": {
     "title": "You're eligible!",
     "text": [
-      "Congratulations, you are protected from unjust evictions under the Tenant Protection Act. You are protected by the new law. To fully understand these protections, as well as other protections that may be available to you, we recommend you seek legal counsel. If you need additional help, please reach out below.",
+      "<b>Congratulations</b>, you are protected from unjust evictions under the Tenant Protection Act. You are protected by the new law. To fully understand these protections, as well as other protections that may be available to you, we recommend you seek legal counsel. If you need additional help, please reach out below.",
       "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation reach out to your local city or county government for support, or a local tenants rights group. We can connect you with them below."
     ],
     "footnote": "Are you being overcharged?",
@@ -97,8 +97,8 @@
   "ineligible": {
     "title": "You may not be eligible",
     "text-1": [
-      "Unfortunately, we think that you are not covered by the Tenant Protection Act’s just cause protection or rent control clauses.",
-      "However, you may have other rights. If you are having issues with your housing situation check out these resources."
+      "<b>Unfortunately</b>, we think that you are not covered by the Tenant Protection Act’s just cause protection or rent control clauses.",
+      "However, you may have other rights. If you are having issues with your housing situation check out <a href='/resources' style='color: #074DCF'><u>these resources</u>.</a>"
     ],
     "subtitle": "Why am I not eligible?",
     "text-2": [
