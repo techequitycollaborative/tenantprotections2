@@ -30,12 +30,14 @@ const getServerSideProps: GetServerSideProps<Props> =
     const location = typeof zip === 'undefined' ? null : locationFromZip(zip);
 
     if (location && 'county' in location) {
+      //let destination = (context.locale != 'en' && context.locale) + `/calculator/zip/${zip}`;
+
       return {
         props: {
           location: null,
         },
         redirect: {
-          destination: `/calculator/zip/${zip}`,
+          destination: `calculator/zip/${zip}`,
         },
       };
     }
