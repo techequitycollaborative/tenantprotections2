@@ -1,5 +1,6 @@
 import styles from '@/styles/Home.module.css';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 function Footer() {
   const { t } = useTranslation('common');
@@ -7,7 +8,10 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <p>{t('footer')}</p>
+        <p>
+          {t('footer.text')}
+          <Link href="/about">{t('footer.link-text')}</Link>
+        </p>
       </div>
     </footer>
   );

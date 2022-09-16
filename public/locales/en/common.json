@@ -107,6 +107,55 @@
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
   },
+  "about": {
+    "title-1": "About Us",
+    "text-1": [
+      "This updated version of tenantprotections.org is a collaborative project between Alliance of Californians for Community Empowerment (ACCE) and TechEquity Collaborative.",
+      "We are deeply grateful to the many volunteers who generously donated the skills to design, research, and build this website, and to ensure renters in California have access to reliable information about state and local rent control and eviction protection."
+    ],
+    "volunteer-title": "Volunteers",
+    "volunteer-info": [
+      { "name": "[name 1]", "url": "https://tenantprotections.org" },
+      { "name": "[name 2]", "url": "https://tenantprotections.org" },
+      { "name": "[name 3]", "url": "https://tenantprotections.org" }
+    ],
+    "title-2": "Our Mission",
+    "text-2": [
+      "This site exists to provide renters in California with high quality information about their rights under both California law and local ordinances. We connect renters with local and state-wide non-profits to help them deal with housing issues in their communities."
+    ],
+    "title-3": "More about Our Organizations",
+    "text-3": [
+      {
+        "name": "Alliance of Californians for Community Empowerment (ACCE)",
+        "url": "https://www.acceaction.org/",
+        "text": [
+          "The Alliance of Californians for Community Empowerment (ACCE) Action is a grassroots, member-led, statewide community organization working with more than 15,000 members across California. ACCE is dedicated to raising the voices of everyday Californians, neighborhood by neighborhood, to fight for the policies and programs we need to improve our communities and create a brighter future.",
+          "Change from the bottom up: We take seriously our commitment to ground-up organizing to build a strong people’s movement that can create transformative community change. Our local neighborhood chapters and issue committees, led by ACCE Action member leaders, meet regularly to strategize and plan campaigns. Central to this work is the belief that there’s power in numbers and in collective action – ACCE Action members and their allies frequently “take to the streets” with rallies, town halls, and other actions to make their voices heard.",
+          "In 2019, ACCE Action worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
+        ]
+      },
+      {
+        "name": "TechEquity Collaborative",
+        "url": "https://techequitycollaborative.org",
+        "text": [
+          "TechEquity Collaborative is a non-profit organization that believes the tech industry can and should contribute to broad-based growth that benefits everyone. That instead of being a force for displacement and inequality, tech can create opportunity and widespread prosperity. TechEquity is a member-driven organization made up of individuals and companies that share our values.",
+          "We educate people in the tech sector around housing and workforce & labor issues and activate them to make change in those key areas. In 2019, TechEquity worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle-1": "Get Help Defending Your Rights",
+    "text-1": "If you believe your rights are being violated, you are currently facing an unjust eviction or unfair rent increase, or are under threat of either, the below legal services organizations can help you free of charge or at a low cost.",
+    "subtitle-2": "Tenant Hotline",
+    "text-2": "The Alliance of Californians for Community Empowerment (ACCE) has set up a Tenant Hotline: 1-888-428-7615",
+    "subtitle-3": "Find Legal Help",
+    "text-3": "To find a lawyer, local groups, other resources and get involved, go to ",
+    "subtitle-4": "Fight for Your Rights",
+    "text-4-1": "To get involved in a statewide coalition fighting for tenants rights, Housing Now!, sign-up here: ",
+    "text-4-2": "More information at Housing Now!'s Know Your Rights page: "
+  },
   "navbar": {
     "calculator": "Calculator",
     "eligibility": "Eligibility",
@@ -120,6 +169,9 @@
   "zipcode": "Zipcode: {{zip}}",
   "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
-  "footer": "This is the footer",
+  "footer": {
+    "text": "The information contained on this website is provided for informational purposes only, and should not be considered legal advice on any matter.",
+    "link-text": "About us"
+  },
   "take-quiz": "Take the eligibility quiz"
 }
