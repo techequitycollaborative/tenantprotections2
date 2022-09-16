@@ -20,7 +20,37 @@ const About: NextPage = () => {
   return (
     <Layout>
       <div>
-        <p>This is the about page.</p>
+        <h1>{t('about.title-1')}</h1>
+        {(t('about.text-1', { returnObjects: true }) as Array<string>).map(
+          (x, i) => (
+            <p key={i}>{x}</p>
+          ),
+        )}
+        <h2>{t('about.volunteer-title')}</h2>
+        {(t('about.volunteer-info', { returnObjects: true }) as Array<any>).map(
+          (x, i) => (
+            <p key={i}>{x.name + ' ' + x.url}</p>
+          ),
+        )}
+        <h2>{t('about.title-2')}</h2>
+        {(t('about.text-2', { returnObjects: true }) as Array<string>).map(
+          (x, i) => (
+            <p key={i}>{x}</p>
+          ),
+        )}
+        <h2>{t('about.title-3')}</h2>
+        {(t('about.text-3', { returnObjects: true }) as Array<any>).map(
+          (x, i) => (
+            <div key={i}>
+              <h3>
+                <Link href={x.url}>{x.name}</Link>
+              </h3>
+              {x.text.map((y: String, j: number) => (
+                <p key={j}>{y}</p>
+              ))}
+            </div>
+          ),
+        )}
       </div>
     </Layout>
   );
