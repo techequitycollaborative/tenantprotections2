@@ -43,6 +43,8 @@ function RentTimeline(props: RentTimelineProps) {
     props.onEditRent(index);
   };
 
+  const editZip = function () {};
+
   return (
     <div className="w-full">
       <div className="flex flex-row">
@@ -53,7 +55,10 @@ function RentTimeline(props: RentTimelineProps) {
         />
         <div className="flex-col w-2/3 ml-auto">
           <p className="text-gray-darkest">ZIPCODE</p>
-          <button className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2">
+          <button
+            className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2"
+            onClick={() => editZip()}
+          >
             <p className="text-left text-gray-darkest font-medium">
               {t('zipcode', { zip: props.location.zip })}
             </p>
@@ -71,17 +76,38 @@ function RentTimeline(props: RentTimelineProps) {
       </div>
 
       {/* Timeline part */}
-      {getRentHistoryState(props.rentHistory) !== 'empty' && (
-        <p>
-          {t('calculator.timeline.change')} ... {t('calculator.timeline.rent')}
-        </p>
-      )}
-      {(props.rentHistory as Array<RentEntry>).map((x, i) => (
-        <div key={i}>
-          <RentRow startDate={x.startDate} rent={x.rent} />
-          <button onClick={() => handleEdit(i)}>edit</button>
+
+      <div className="timeline ml-12 pl-5 sm:ml-[5.5rem] sm:pl-12">
+        {getRentHistoryState(props.rentHistory) !== 'empty' && (
+          <div className="flex flex-row justify-between w-1/2 mx-auto text-center">
+            <p className="ml-2">{t('calculator.timeline.change')}</p>
+            <p className="">{t('calculator.timeline.rent')}</p>
+          </div>
+        )}
+        <div className="timeline-container">
+          {/* <div className="timeline-icon"></div>
+
+          <div className="timeline-body">
+            <p className="timeline-title"> */}
+
+          {(props.rentHistory as Array<RentEntry>).map((x, i) => (
+            <div key={i} className="flex">
+              <div className="timeline-icon -left-7 sm:-left-14"></div>
+              <div className="timeline-body w-full pb-3 mt-1 mb-4">
+                <RentRow
+                  startDate={x.startDate}
+                  rent={x.rent}
+                  onClick={() => handleEdit(i)}
+                />
+
+                {/* <button onClick={() => handleEdit(i)}>edit</button> */}
+              </div>
+            </div>
+          ))}
+          {/* </p>
+          </div> */}
         </div>
-      ))}
+      </div>
     </div>
   );
 }

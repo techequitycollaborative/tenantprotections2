@@ -30,6 +30,7 @@ module.exports = {
         // #e8e9eb - dropdown background color/ progress bar background (lighter)
         gray: {
           darkest: '#3C3E47',
+          darker: '#112353',
           dark: '#414247',
           DEFAULT: '#4F515A',
           light: '#777F87',
