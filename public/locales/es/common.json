@@ -4,7 +4,7 @@
     "before-date": "Antes de {{date}}"
   },
   "buildingTypes": {
-    "adu": "Unidad de Vivienda Accesoria",
+    "adu": "Unidad de vivienda accesoria",
     "apartments": "Apartamento (3+ unidades)",
     "dorm": "Residencia universitaria",
     "duplex": "Dúplex (2 unidades)",
@@ -106,11 +106,60 @@
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explora nuestros recursos"
   },
+  "about": {
+    "title-1": "Sobre nosotros",
+    "text-1": [
+      "Esta versión actualizada de tentprotections.org es un proyecto colaborativo entre Alliance of Californians for Community Empowerment (ACCE) y TechEquity Collaborative.",
+      "Estamos profundamente agradecidos con los muchos voluntarios que generosamente donaron las habilidades para diseñar, investigar y construir este sitio web, y para garantizar que los inquilinos en California tengan acceso a información confiable sobre el control de alquileres estatal y local y la protección contra desalojos."
+    ],
+    "volunteer-title": "Voluntarios",
+    "volunteer-info": [
+      { "name": "[name 1]", "url": "https://tenantprotections.org" },
+      { "name": "[name 2]", "url": "https://tenantprotections.org" },
+      { "name": "[name 3]", "url": "https://tenantprotections.org" }
+    ],
+    "title-2": "Nuestra misión",
+    "text-2": [
+      "Este sitio existe para proporcionar a los inquilinos en California información de alta calidad sobre sus derechos bajo las leyes de California y las ordenanzas locales. Conectamos a los inquilinos con organizaciones sin fines de lucro locales y estatales para ayudarlos a lidiar con los problemas de vivienda en sus comunidades."
+    ],
+    "title-3": "Más sobre nuestras organizaciones",
+    "text-3": [
+      {
+        "name": "Alliance of Californians for Community Empowerment (ACCE)",
+        "url": "https://www.acceaction.org/",
+        "text": [
+          "La Acción de la Alianza de Californianos para el Empoderamiento de la Comunidad (ACCE) es una organización comunitaria estatal, de base, dirigida por sus miembros, que trabaja con más de 15,000 miembros en todo California. ACCE se dedica a alzar las voces de los californianos cotidianos, vecindario por vecindario, para luchar por las políticas y los programas que necesitamos para mejorar nuestras comunidades y crear un futuro más brillante.",
+          "Cambio de abajo hacia arriba: tomamos en serio nuestro compromiso con la organización desde cero para construir un movimiento popular fuerte que pueda crear un cambio comunitario transformador. Nuestros capítulos de vecindarios locales y comités temáticos, dirigidos por líderes miembros de ACCE Action, se reúnen regularmente para diseñar estrategias y planificar campañas. Un elemento central de este trabajo es la creencia de que hay poder en los números y en la acción colectiva: los miembros de ACCE Action y sus aliados frecuentemente “toman las calles” con mítines, ayuntamientos y otras acciones para hacer oír su voz.",
+          "En 2019, ACCE Action trabajó con una coalición de socios para copatrocinar la Ley de Protección de Inquilinos de 2019 (AB 1482)."
+        ]
+      },
+      {
+        "name": "TechEquity Collaborative",
+        "url": "https://techequitycollaborative.org",
+        "text": [
+          "TechEquity Collaborative ies una organización sin fines de lucro que cree que la industria de la tecnología puede y debe contribuir a un crecimiento de base amplia que beneficie a todos. Que en lugar de ser una fuerza para el desplazamiento y la desigualdad, la tecnología puede crear oportunidades y prosperidad generalizada. TechEquity es una organización impulsada por miembros formada por personas y empresas que comparten nuestros valores.",
+          "Educamos a las personas en el sector de la tecnología acerca de la vivienda y la mano de obra y los problemas laborales y los activamos para hacer cambios en esas áreas clave. En 2019, TechEquity trabajó con una coalición de socios para copatrocinar la Ley de protección de inquilinos de 2019 (AB 1482)."
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "title": "Recursos",
+    "subtitle-1": "Obtenga ayuda para defender sus derechos",
+    "text-1": "Si cree que sus derechos están siendo violados, actualmente enfrenta un desalojo injusto o un aumento de alquiler injusto, o está bajo amenaza de cualquiera de los dos, las siguientes organizaciones de servicios legales pueden ayudarlo de forma gratuita o a bajo costo.",
+    "subtitle-2": "Línea directa para inquilinos",
+    "text-2": "The Alliance of Californians for Community Empowerment (ACCE) ha establecido una línea directa para inquilinos: 1-888-428-7615",
+    "subtitle-3": "Encuentre ayuda legal",
+    "text-3": "Para encontrar un abogado, grupos locales, otros recursos y participar, vaya a ",
+    "subtitle-4": "Lucha por tus derechos",
+    "text-4-1": "Para participar en una coalición estatal que lucha por los derechos de los inquilinos, Housing Now!, regístrese aquí: ",
+    "text-4-2": "Más información en la página Conozca sus derechos de Housing Now!: "
+  },
   "navbar": {
     "calculator": "Calculadora",
     "eligibility": "Elegibilidad",
     "resources": "Recursos",
-    "about": "Acerca de"
+    "about": "Sobre nosotros"
   },
   "no": "No",
   "submit": "Enviar",
@@ -118,6 +167,9 @@
   "zipcode": "{{zip}}",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
-  "footer": "Este es el pie de página",
+  "footer": {
+    "text": "La información contenida en este sitio web se proporciona únicamente con fines informativos y no debe considerarse asesoramiento legal sobre ningún asunto.",
+    "link-text": "Sobre nosotros"
+  },
   "take-quiz": "Tomar el cuestionario de elegibilidad"
 }

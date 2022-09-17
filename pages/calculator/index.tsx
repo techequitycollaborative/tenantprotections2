@@ -35,7 +35,7 @@ const getServerSideProps: GetServerSideProps<Props> =
           location: null,
         },
         redirect: {
-          destination: `/calculator/zip/${zip}`,
+          destination: `calculator/zip/${zip}`,
         },
       };
     }
