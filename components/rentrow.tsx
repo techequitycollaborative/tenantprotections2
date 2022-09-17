@@ -3,16 +3,19 @@ import { NextPage } from 'next';
 interface Props {
   startDate: Date;
   rent: number;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  handleClick: () => void;
 }
-// Timeline entry
-const RentRow: NextPage<Props> = function RentEntry(props) {
+
+const RentRow: NextPage<Props> = function RentEntry(props: Props) {
   return (
-    // <div className="">
     <div className="flex flex-row justify-between px-4">
-      <p>{props.startDate.toLocaleDateString()}</p>
+      {props.startDate.toLocaleDateString('en-US', {
+        month: '2-digit',
+        day: '2-digit',
+        year: 'numeric',
+      })}
       <p>${props.rent}</p>
-      <button onClick={props.onClick}>
+      <button onClick={props.handleClick}>
         <img
           src="/img/edit-icon.svg"
           alt="edit button"
@@ -21,7 +24,6 @@ const RentRow: NextPage<Props> = function RentEntry(props) {
         />
       </button>
     </div>
-    // </div>
   );
 };
 

@@ -58,8 +58,8 @@
     "alert": {
       "legal": "This rent increase looks legal under state and local rent control.",
       "illegal": "This rent increase may be illegal if you qualify for state or local rent control.",
-      "statewide-max-rent": "Statewide Max Rent: ${{max}}",
-      "local-max-rent": "{{city}} Max Rent: ${{max}}",
+      "statewide-max-rent": "Statewide Max Rent",
+      "local-max-rent": "{{city}} Max Rent",
       "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
       "issues": "Having issues with your tenancy?",
       "resources": "Explore our resources",

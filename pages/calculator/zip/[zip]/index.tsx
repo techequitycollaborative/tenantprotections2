@@ -40,6 +40,7 @@ function RentTimeline(props: RentTimelineProps) {
   const t = props.translation;
 
   const handleEdit = function (index: number) {
+    console.log(index, 'inside');
     props.onEditRent(index);
   };
 
@@ -97,15 +98,15 @@ function RentTimeline(props: RentTimelineProps) {
                 <RentRow
                   startDate={x.startDate}
                   rent={x.rent}
-                  onClick={() => handleEdit(i)}
+                  handleClick={() => {
+                    console.log('button clicked!');
+                  }}
                 />
 
                 {/* <button onClick={() => handleEdit(i)}>edit</button> */}
               </div>
             </div>
           ))}
-          {/* </p>
-          </div> */}
         </div>
       </div>
     </div>
@@ -284,9 +285,19 @@ function Results(props: RentResultsProps) {
     return (
       <>
         <RentAlert location={props.location} rentHistory={props.rentHistory} />
-        <p>{t('calculator.alert.issues')}</p>
-        <Link href="/resources">{t('calculator.alert.resources')}</Link>
-        <Link href="/eligibility">{t('calculator.alert.take-quiz')}</Link>
+        <p className="text-blue font-medium my-4 text-xl sm:text-2xl">
+          {t('calculator.alert.issues')}
+        </p>
+        <Link href="/resources">
+          <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">
+            {t('calculator.alert.resources')}
+          </button>
+        </Link>
+        <Link href="/eligibility">
+          <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+            {t('calculator.alert.take-quiz')}
+          </button>
+        </Link>
       </>
     );
   } else {
