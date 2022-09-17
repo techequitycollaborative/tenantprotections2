@@ -117,7 +117,7 @@
   "submit": "Next",
   "yes": "Yes",
   "eligibility-title": "Eligibility Quiz",
-  "zipcode": "Zipcode: {{zip}}",
+  "zipcode": "{{zip}}",
   "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
   "footer": "This is the footer",

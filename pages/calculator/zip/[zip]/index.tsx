@@ -80,9 +80,10 @@ function RentTimeline(props: RentTimelineProps) {
 
       <div className="timeline ml-12 pl-5 sm:ml-[5.5rem] sm:pl-12">
         {getRentHistoryState(props.rentHistory) !== 'empty' && (
-          <div className="flex flex-row justify-between w-1/2 mx-auto text-center">
-            <p className="ml-2">{t('calculator.timeline.change')}</p>
-            <p className="">{t('calculator.timeline.rent')}</p>
+          <div className="flex flex-row justify-between sm:text-black font-light text-sm relative">
+            <p className="ml-6">{t('calculator.timeline.change')}</p>
+            <p className="mr-20">{t('calculator.timeline.rent')}</p>
+            <p>{''}</p>
           </div>
         )}
         <div className="timeline-container">
