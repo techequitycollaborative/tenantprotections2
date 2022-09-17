@@ -86,11 +86,6 @@ function RentTimeline(props: RentTimelineProps) {
           </div>
         )}
         <div className="timeline-container">
-          {/* <div className="timeline-icon"></div>
-
-          <div className="timeline-body">
-            <p className="timeline-title"> */}
-
           {(props.rentHistory as Array<RentEntry>).map((x, i) => (
             <div key={i} className="flex">
               <div className="timeline-icon -left-7 sm:-left-14"></div>
@@ -99,11 +94,9 @@ function RentTimeline(props: RentTimelineProps) {
                   startDate={x.startDate}
                   rent={x.rent}
                   handleClick={() => {
-                    console.log('button clicked!');
+                    handleEdit(i);
                   }}
                 />
-
-                {/* <button onClick={() => handleEdit(i)}>edit</button> */}
               </div>
             </div>
           ))}

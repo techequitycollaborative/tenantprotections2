@@ -90,7 +90,6 @@ select {
 .timeline {
   position: relative;
   color: white;
-  z-index: -1;
 }
 
 .timeline:before {
