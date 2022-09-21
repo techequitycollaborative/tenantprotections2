@@ -13,7 +13,9 @@ export default function Layout({ children, ...props }: Props) {
     <div className={styles.container}>
       <Header />
       <Navbar />
-      <main className={styles.main}>{children}</main>
+      <main className="flex flex-col items-start mx-auto px-[5%] md:w-3/4 lg:max-w-3xl">
+        {children}
+      </main>
       <Footer />
     </div>
   );

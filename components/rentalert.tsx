@@ -38,40 +38,71 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
   }
 
   return (
-    <div>
-      <p>
-        {currentRentStartDate.toString()} ... ${currentRent}
-      </p>
+    <div className="border border-blue rounded p-6 flex flex-col bg-blue-lighter mb-3">
+      <div className="flex flex-row justify-between text-blue font-medium text-lg">
+        {currentRentStartDate.toLocaleDateString('en-US', {
+          month: '2-digit',
+          day: '2-digit',
+          year: 'numeric',
+        })}
+        <p>${currentRent}</p>
+      </div>
       {currentRent > statewideMaxRent || currentRent > localMaxRent ? (
-        <p>{t('calculator.alert.illegal')}</p>
+        <p className="text-blue font-medium py-2 text-lg">
+          {t('calculator.alert.illegal')}
+        </p>
       ) : (
-        <p>{t('calculator.alert.legal')}</p>
+        <p className="text-blue font-medium py-2 text-lg">
+          {t('calculator.alert.legal')}
+        </p>
       )}
       {localRentCap != null && (
-        <>
-          <p>
+        <div className="mb-4">
+          <div className="flex flex-row text-blue text-lg font-bold">
+            <img
+              src="/img/warning-icon.svg"
+              alt="warning icon"
+              className="pr-2"
+            />
             {t('calculator.alert.local-max-rent', {
               city: props.location.city,
               max: localMaxRentDisplay,
             })}
-          </p>
-          <p>
+          </div>
+          <div className="flex flex-col pl-7">
+            <p className="text-gray font-light">
+              {t('calculator.alert.max-increase', {
+                cap: (localRentCap * 100).toFixed(2),
+                rent: previousRent,
+              })}
+            </p>
+            <p className="border border-blue rounded text-blue text-lg font-medium px-4 py-2 my-1">
+              ${localMaxRentDisplay}
+            </p>
+          </div>
+        </div>
+      )}
+      <div>
+        <div className="flex flex-row text-blue text-lg font-bold">
+          <img
+            src="/img/warning-icon.svg"
+            alt="warning icon"
+            className="pr-2"
+          />
+          {t('calculator.alert.statewide-max-rent')}
+        </div>
+        <div className="flex flex-col pl-7">
+          <p className="text-gray font-light">
             {t('calculator.alert.max-increase', {
-              cap: (localRentCap * 100).toFixed(2),
+              cap: (statewideRentCap * 100).toFixed(2),
               rent: previousRent,
             })}
           </p>
-        </>
-      )}
-      <p>
-        {t('calculator.alert.statewide-max-rent', { max: localMaxRentDisplay })}
-      </p>
-      <p>
-        {t('calculator.alert.max-increase', {
-          cap: (statewideRentCap * 100).toFixed(2),
-          rent: previousRent,
-        })}
-      </p>
+          <p className="border border-blue rounded text-blue text-lg font-medium px-4 py-2 my-1">
+            ${statewideMaxRentDisplay}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

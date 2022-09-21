@@ -107,19 +107,27 @@ function AdditionalQuestionsSection({
   }
 
   return (
-    <>
+    <div>
       <p>Checking on eligibility for {currentScope} rules.</p>
-      <h2>
+      <h2 className="text-blue text-2xl py-4 flex flex-col">
         {t(question.promptKey, question.promptVars)}
-        <button value="yes" onClick={onClick}>
+        <button
+          value="yes"
+          onClick={onClick}
+          className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest"
+        >
           {t(question.yesAnswerKey)}
         </button>
-        <button value="no" onClick={onClick}>
+        <button
+          value="no"
+          onClick={onClick}
+          className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest"
+        >
           {t(question.noAnswerKey)}
         </button>
       </h2>
       {accordion}
-    </>
+    </div>
   );
 }
 
@@ -248,16 +256,24 @@ export function makeBuildingTypeChooser() {
 
     return (
       <Layout>
-        <Progress progress="3" />
         <EligibilityNav
           back={`/eligibility/zip/${location.zip}/2`}
           zip={location.zip}
           city={location.city}
           startOver="/eligibility"
         />
-        <h2>{t('questions.building-type')}</h2>
-        <select onChange={onSelect}>
-          <option value="">{t('Select')}</option>
+        <Progress progress="3" />
+
+        <h2 className="text-blue text-2xl py-4">
+          {t('questions.building-type')}
+        </h2>
+        <select
+          onChange={onSelect}
+          className="w-full border-2 border-blue rounded py-4 px-4 text-blue"
+        >
+          <option value="" className="text-blue">
+            {t('Select')}
+          </option>
           <option value={BuildingType.ADU}>{t('building-types.adu')}</option>
           <option value={BuildingType.Apartment}>
             {t('building-types.apartment')}

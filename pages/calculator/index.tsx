@@ -56,23 +56,44 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
   const { t } = useTranslation();
   return (
     <Layout>
-      <h1>{t('calculator.title')}</h1>
-      {(t('calculator.text', { returnObjects: true }) as Array<string>).map(
-        (x, i) => (
-          <p key={i}>{x}</p>
-        ),
-      )}
-      <form action="calculator" method="post">
-        <label htmlFor="zip">{t('zip-label')}</label>
+      <h1 className="text-blue text-3xl font-bold my-8">
+        {t('calculator.title')}
+      </h1>
+      <div className="text-gray text-lg">
+        {(t('calculator.text', { returnObjects: true }) as Array<string>).map(
+          (x, i) => (
+            <p
+              key={i}
+              dangerouslySetInnerHTML={{ __html: x }}
+              className="mb-4"
+            ></p>
+          ),
+        )}
+      </div>
+      <form
+        action="calculator"
+        method="post"
+        className="w-full flex flex-col pt-2"
+      >
+        <label htmlFor="zip" className="text-blue text-2xl">
+          {t('zip-label')}
+        </label>
         <input
           id="zip"
           name="zip"
           type="text"
           inputMode="numeric"
           pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
+          placeholder="94110"
+          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
         />
-        <button type="submit">{t('submit')}</button>
+        <button
+          type="submit"
+          className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
+        >
+          {t('submit')}
+        </button>
         {location?.type === 'unknown' &&
           `Could not find ZIP Code ${location.zip}`}
       </form>

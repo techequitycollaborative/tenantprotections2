@@ -52,13 +52,13 @@
     "title": "Calculadora de alquiler",
     "text": [
       "Si recibió un aumento de alquiler, puede usar nuestra calculadora para ayudarlo a determinar cuál es el aumento permitido según la ley y si su aumento de alquiler excede el límite.",
-      "¡Antes de usar esta calculadora, asegúrese de verificar su elegibilidad aquí!"
+      "¡Antes de usar esta calculadora, asegúrese de <a href='/es/eligibility' style='color: #074DCF'><u>verificar su elegibilidad</u></a> aquí!"
     ],
     "alert": {
       "legal": "Este aumento de alquiler parece legal bajo el control de alquiler estatal y local.",
       "illegal": "Este aumento de alquiler puede ser ilegal si califica para el control de alquiler estatal o local.",
-      "statewide-max-rent": "Alquiler máximo en todo el estado: ${{max}}",
-      "local-max-rent": "Alquiler máximo de {{city}}: ${{max}}",
+      "statewide-max-rent": "Alquiler máximo en todo el estado",
+      "local-max-rent": "Alquiler máximo de {{city}}",
       "max-increase": "{{cap}}% de aumento máximo por año * ${{rent}} =",
       "issues": "¿Tiene problemas con su arrendamiento?",
       "resources": "Explora nuestros recursos",
@@ -87,7 +87,7 @@
   "eligible": {
     "title": "¡Eres elegible!",
     "text": [
-      "Felicitaciones, está protegido contra desalojos injustos bajo la Ley de Protección de Inquilinos. Usted está protegido por la nueva ley. Para comprender completamente estas protecciones, así como otras protecciones que pueden estar disponibles para usted, le recomendamos que busque asesoría legal. Si necesita ayuda adicional, comuníquese a continuación.",
+      "<b>Felicitaciones</b>, está protegido contra desalojos injustos bajo la Ley de Protección de Inquilinos. Usted está protegido por la nueva ley. Para comprender completamente estas protecciones, así como otras protecciones que pueden estar disponibles para usted, le recomendamos que busque asesoría legal. Si necesita ayuda adicional, comuníquese a continuación.",
       "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado para obtener apoyo, o con un grupo local de derechos de los inquilinos. Podemos conectarlo con ellos a continuación."
     ],
     "footnote": "¿Le están cobrando de más?",
@@ -96,8 +96,8 @@
   "ineligible": {
     "title": "Es posible que no seas elegible",
     "text-1": [
-      "Desafortunadamente, creemos que usted no está cubierto por las cláusulas de control de renta o protección por causa justa de la Ley de Protección de Inquilinos.",
-      "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte estos recursos."
+      "<b>Desafortunadamente</b>, creemos que usted no está cubierto por las cláusulas de control de renta o protección por causa justa de la Ley de Protección de Inquilinos.",
+      "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <a href='/resources' style='color: #074DCF'><u>estos recursos</u>.</a>"
     ],
     "subtitle": "¿Por qué no soy elegible?",
     "text-2": [
@@ -164,7 +164,7 @@
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
-  "zipcode": "Código postal: {{zip}}",
+  "zipcode": "{{zip}}",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
   "footer": {

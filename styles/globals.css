@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -13,4 +17,128 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+  margin: 0 1.5rem;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 24px;
+  height: 2.5px;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+  border-radius: 9px;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+meter::-webkit-meter-optimum-value {
+  background: #85ca83;
+  z-index: -1;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: url(../public/img/caret-down-solid.svg) 96% no-repeat;
+  background-size: 10px;
+}
+
+.timeline,
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline {
+  position: relative;
+  color: white;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #fbfbfb 1%, #172f6e 40%);
+}
+
+.timeline .timeline-container {
+  /* position: relative; */
+  margin-bottom: 1.5rem;
+}
+
+.timeline .timeline-container .timeline-icon {
+  position: relative;
+  top: 1.25rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  background: #172f6e;
+}
+
+.timeline .timeline-container .timeline-body {
+  background: #f5f5f5;
+  color: #3c3e47;
+  border-radius: 3px;
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.1);
+  border: 1px solid #112353;
+  /* padding: 5px 5px; */
+}
+
+/* left arrow for box */
+.timeline .timeline-container .timeline-body:before {
+  content: '';
+  background: #f5f5f5;
+  width: 13px;
+  height: 13px;
+  display: block;
+  position: relative;
+  left: -7px;
+  transform: rotate(135deg);
+  border-radius: 0px 0px 2px 0px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  top: 17px;
 }
