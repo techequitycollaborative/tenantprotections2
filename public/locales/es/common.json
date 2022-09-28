@@ -27,7 +27,7 @@
     "min-units": "¿La propiedad contiene {{units}} o más unidades?",
     "landlord-onsite": "¿La propiedad contiene {{units}} o menos unidades y el propietario vive en el lugar?",
     "landlord-onsite-one-year": "¿La propiedad contiene {{units}} o menos unidades y el propietario ha vivido en el lugar durante al menos un año?",
-    "landlord-onsite-tenancy-start": "¿Es la propiedad un dúplex y el propietario ha vivido en el lugar desde el comienzo del arrendamiento?",
+    "duplex-landlord-onsite-tenancy-start": "¿Ha vivido el propietario en el lugar desde el comienzo del arrendamiento?",
     "landlord-shared-exemption": "¿Comparte baño o cocina con el propietario?"
   },
   "eligibility-info": {
