@@ -34,19 +34,19 @@
   "eligibility-info": {
     "subsidized": {
       "title": "What is subsidized housing?",
-      "content": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum voluptate eos ratione vero modi possimus ut adipisci provident dignissimos in? Voluptates provident laboriosam harum quae, optio dolorem molestiae expedita totam!"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "built": {
       "title": "Find out when your rental was built",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "types": {
       "title": "Learn more about building types",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "corp-ownership": {
       "title": "Learn more",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   },
   "calculator": {
@@ -87,9 +87,13 @@
   },
   "eligible": {
     "title": "You're eligible!",
-    "text": [
-      "<b>Congratulations</b>, you are protected from unjust evictions under the Tenant Protection Act. You are protected by the new law. To fully understand these protections, as well as other protections that may be available to you, we recommend you seek legal counsel. If you need additional help, please reach out below.",
-      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation reach out to your local city or county government for support, or a local tenants rights group. We can connect you with them below."
+    "local-text": [
+      "<b>Congratulations</b>, you are covered by local rent control in your city. This means that there is a limit to how much your landlord can raise your rent. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
+      "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to your local city or county government or a local tenants rights group for support."
+    ],
+    "statewide-text": [
+      "<b>Congratulations</b>, you are covered by the California Tenant Protection Act. This means that there is a limit to how much your landlord can raise your rent, and you are also protected from unjust evictions. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
+      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation, reach out to your local city or county government or a local tenants rights group for support."
     ],
     "footnote": "Are you being overcharged?",
     "button": "Check the rent calculator"

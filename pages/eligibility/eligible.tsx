@@ -5,19 +5,30 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 
+interface Props {
+  scope: string;
+}
+
 const getServerSideProps: GetServerSideProps =
   async function getServerSideProps(context) {
+    let scope = context.query.s as string;
+    if (!scope?.match(/^(statewide|local)$/)) {
+      scope = 'statewide'; // If this is empty or malformed, default to statewide
+    }
+
     return {
       props: {
         ...(await serverSideTranslations(context.locale!, ['common'])),
+        scope: scope,
       },
     };
   };
 
 export { getServerSideProps };
 
-const Eligible: NextPage = function Eligible() {
+const Eligible: NextPage<Props> = function Eligible({ scope }) {
   const { t } = useTranslation('common');
+  const textKey = 'eligible.' + scope + '-text';
 
   return (
     <Layout>
@@ -33,15 +44,13 @@ const Eligible: NextPage = function Eligible() {
         {t('eligible.title')}
       </h2>
       <div className="text-gray-dark text-lg">
-        {(t('eligible.text', { returnObjects: true }) as Array<string>).map(
-          (x, i) => (
-            <p
-              key={i}
-              dangerouslySetInnerHTML={{ __html: x }}
-              className="py-2"
-            ></p>
-          ),
-        )}
+        {(t(textKey, { returnObjects: true }) as Array<string>).map((x, i) => (
+          <p
+            key={i}
+            dangerouslySetInnerHTML={{ __html: x }}
+            className="py-2"
+          ></p>
+        ))}
       </div>
       <h3 className="text-blue text-2xl mt-6 mb-4">{t('eligible.footnote')}</h3>
       <Link href="/calculator">
