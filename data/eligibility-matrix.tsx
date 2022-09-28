@@ -22,20 +22,21 @@ function getPassingBuildingTypes(rules: Rules) {
   if (rules.senior_care === ELIGIBLE) {
     passingBuildingTypes.push(BuildingType.Senior);
   }
+  if (rules.duplex === ELIGIBLE && !rules.landlord_duplex_exemption) {
+    passingBuildingTypes.push(BuildingType.Duplex);
+  }
 
   // ADUs automatically eligible unless there is an exemption for landlord living on main property
   if (rules.landlord_adu_exemption !== EXEMPT) {
     passingBuildingTypes.push(BuildingType.ADU);
   }
 
-  // Duplexes eligible unless there is a landlord shared occupancy exemption
+  // If there is no unit minimum (effectively 2, otherwise it would be a different building type)
+  // and no landlord occupancy exemptions, then apartments are eligible with no further questions.
   if (
     !rules.landlord_shared_exemption &&
     !rules.landlord_occupancy_exemption_units
   ) {
-    passingBuildingTypes.push(BuildingType.Duplex);
-
-    // Also apartments as long as min_units is not higher than 2
     if (rules.min_units == 2) {
       passingBuildingTypes.push(BuildingType.Apartment);
     }
@@ -67,27 +68,20 @@ function getEligibilityQuestions(rules: Rules) {
       noAnswerKey: 'no',
     };
 
-    switch (rules.landlord_occupancy_exemption_duration) {
-      case 'start-of-tenancy':
-        Object.assign(question, {
-          promptKey: 'building-questions.landlord-onsite-tenancy-start',
-        });
-        break;
-      case 'one-year':
-        Object.assign(question, {
-          promptKey: 'building-questions.landlord-onsite-one-year',
-        });
-        Object.assign(question, {
-          promptVars: { units: rules.landlord_occupancy_exemption_units },
-        });
-        break;
-      default:
-        Object.assign(question, {
-          promptKey: 'building-questions.landlord-onsite',
-        });
-        Object.assign(question, {
-          promptVars: { units: rules.landlord_occupancy_exemption_units },
-        });
+    if (rules.landlord_occupancy_exemption_duration === 'one-year') {
+      Object.assign(question, {
+        promptKey: 'building-questions.landlord-onsite-one-year',
+      });
+      Object.assign(question, {
+        promptVars: { units: rules.landlord_occupancy_exemption_units },
+      });
+    } else {
+      Object.assign(question, {
+        promptKey: 'building-questions.landlord-onsite',
+      });
+      Object.assign(question, {
+        promptVars: { units: rules.landlord_occupancy_exemption_units },
+      });
     }
 
     apartmentQuestions.push(question);
@@ -109,10 +103,10 @@ function getEligibilityQuestions(rules: Rules) {
   }
 
   // Duplexes
-  if (rules.landlord_occupancy_exemption_units == 2) {
+  if (rules.landlord_duplex_exemption) {
     let question = {
       passingAnswer: 'no',
-      promptKey: 'building-questions.landlord-onside-tenancy-start',
+      promptKey: 'building-questions.duplex-landlord-onsite-tenancy-start',
       yesAnswerKey: 'yes',
       noAnswerKey: 'no',
     };

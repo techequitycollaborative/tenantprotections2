@@ -28,7 +28,7 @@
     "min-units": "Does the property contain {{units}} or more units?",
     "landlord-onsite": "Does the property contain {{units}} or fewer units and the owner live on site?",
     "landlord-onsite-one-year": "Does the property contain {{units}} or fewer units and has the owner lived on site for at least one year?",
-    "landlord-onsite-tenancy-start": "Is the property a duplex and has the owner lived on site since the beginning of the tenancy?",
+    "duplex-landlord-onsite-tenancy-start": "Has the owner lived on site since the beginning of the tenancy?",
     "landlord-shared-exemption": "Do you share a bathroom or kitchen with the owner?"
   },
   "eligibility-info": {
