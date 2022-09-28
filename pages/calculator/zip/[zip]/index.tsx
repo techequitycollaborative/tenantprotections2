@@ -44,8 +44,6 @@ function RentTimeline(props: RentTimelineProps) {
     props.onEditRent(index);
   };
 
-  const editZip = function () {};
-
   return (
     <div className="w-full">
       <div className="flex flex-row">
@@ -56,23 +54,24 @@ function RentTimeline(props: RentTimelineProps) {
         />
         <div className="flex-col w-2/3 ml-auto">
           <p className="text-gray-darkest">ZIPCODE</p>
-          <button
-            className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2"
-            onClick={() => editZip()}
-          >
+          <div className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2">
             <p className="text-left text-gray-darkest font-medium">
               {t('zipcode', { zip: props.location.zip })}
             </p>
             <p className="flex flex-row justify-between text-gray-darkest font-light">
               {props.location.city}, CA
-              <img
-                src="/img/edit-icon.svg"
-                alt="edit button"
-                width="15"
-                height="15"
-              />
+              <button>
+                <Link href="/calculator">
+                  <img
+                    src="/img/edit-icon.svg"
+                    alt="edit button"
+                    width="15"
+                    height="15"
+                  />
+                </Link>
+              </button>
             </p>
-          </button>
+          </div>
         </div>
       </div>
 

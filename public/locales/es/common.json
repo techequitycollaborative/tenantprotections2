@@ -33,19 +33,19 @@
   "eligibility-info": {
     "subsidized": {
       "title": "¿Qué es la vivienda protegida?",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "built": {
       "title": "Averigüe cuándo se construyó su alquiler",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "types": {
       "title": "Obtenga más información sobre los tipos de edificios",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     "corp-ownership": {
       "title": "Aprende más",
-      "content": ""
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
   },
   "calculator": {
@@ -86,9 +86,13 @@
   },
   "eligible": {
     "title": "¡Eres elegible!",
-    "text": [
-      "<b>Felicitaciones</b>, está protegido contra desalojos injustos bajo la Ley de Protección de Inquilinos. Usted está protegido por la nueva ley. Para comprender completamente estas protecciones, así como otras protecciones que pueden estar disponibles para usted, le recomendamos que busque asesoría legal. Si necesita ayuda adicional, comuníquese a continuación.",
-      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado para obtener apoyo, o con un grupo local de derechos de los inquilinos. Podemos conectarlo con ellos a continuación."
+    "local-text": [
+      "<b>Felicitaciones</b>, está cubierto por el control local de alquileres en su ciudad. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
+      "Además del control de alquiler local, también puede calificar para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado o con un grupo local de derechos de los inquilinos para obtener ayuda."
+    ],
+    "statewide-text": [
+      "<b>Felicitaciones</b>, está cubierto por la Ley de Protección de Inquilinos de California. Esto significa que hay un límite en cuanto a cuánto puede aumentar su arrendador su alquiler, y también está protegido contra desalojos injustos. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
+      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado o con un grupo local de derechos de los inquilinos para obtener ayuda."
     ],
     "footnote": "¿Le están cobrando de más?",
     "button": "Consulta la calculadora de alquiler"
