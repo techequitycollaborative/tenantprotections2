@@ -6,12 +6,12 @@ function Footer() {
   const { t } = useTranslation('common');
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer + ' bg-blue'}>
       <div>
-        <p>
-          {t('footer.text')}
+        <p className="text-white">{t('footer.text')}</p>
+        <span className="font-black text-white">
           <Link href="/about">{t('footer.link-text')}</Link>
-        </p>
+        </span>
       </div>
     </footer>
   );

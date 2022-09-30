@@ -19,14 +19,14 @@ const EligibilityNav: NextPage<Props> = function EligibilityNav(props) {
           <p>BACK</p>
         </div>
       </Link>
-      &nbsp;&nbsp;
-      <i className="w-1/3 mx-auto">
+      <p className="w-1/3 mx-auto italic pt-2 text-blue">
         {props.zip}: {props.city}
-      </i>
-      &nbsp;&nbsp;
-      <Link href={props.startOver} className="w-1/3">
-        Start Over
-      </Link>
+      </p>
+      <div className="flex flex-row text-xl items-center text-blue space-x-2 cursor-pointer">
+        <Link href={props.startOver} className="w-1/3">
+          START OVER
+        </Link>
+      </div>
     </div>
   );
 };

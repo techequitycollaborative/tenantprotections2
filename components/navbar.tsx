@@ -16,10 +16,10 @@ function Navbar() {
     };
 
   return (
-    <nav className={`relative bg-blue`}>
+    <nav className="relative bg-blue">
       <div className="flex items-center justify-between">
-        {/* Logo */}
-        <div className="p-4">
+        <img src="/img/logo.png" alt="warning icon" className="p-2 pr-0 h-12" />
+        <div className="pt-2 pb-2">
           <Link href="/">
             <h1 className="text-2xl font-black text-white cursor-pointer">
               CTP
@@ -34,7 +34,7 @@ function Navbar() {
           <select
             onChange={onSelect}
             defaultValue={i18n.language}
-            className="text-white outline-none"
+            className="text-blue outline-none border-2 border-white rounded bg-white px-2 text-blue"
           >
             <option value="en">EN</option>
             <option value="es">ES</option>
@@ -56,7 +56,7 @@ function Navbar() {
       <div className="md:hidden">
         <div
           id="menu"
-          className={`absolute text-xl left-6 right-6 mt-10 flex-col items-center space-y-6 self-end z-10 bg-white py-8 drop-shadow-md sm:w-auto sm:self-center ${
+          className={`absolute text-xl left-20 right-0 flex-col items-center space-y-6 self-end z-10 bg-gray-50 drop-shadow-xl py-8 sm:w-auto sm:self-center ${
             toggle ? 'flex' : 'hidden'
           }`}
         >

@@ -168,6 +168,7 @@
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
+  "eligibility-title": "Cuestionario de elegibilidad",
   "zipcode": "{{zip}}",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
