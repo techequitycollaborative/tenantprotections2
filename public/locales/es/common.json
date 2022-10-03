@@ -1,4 +1,22 @@
 {
+  "home": {
+    "title-1": "¡Inquilinos, conozcan sus derechos!",
+    "text-1": [
+      "La Ley de Protección de Inquilinos de 2019 protege a la mayoría de los inquilinos de California contra aumentos de alquiler ilegales y desalojos injustos. Muchas ciudades también tienen medidas locales de control de alquileres con topes más restrictivos sobre cuánto puede aumentar su alquiler el arrendador.",
+      "Averigüe si está protegido por leyes estatales o locales."
+    ],
+    "button-1": "Tome la prueba de elegibilidad",
+    "title-2": "Verifique el aumento de su alquiler",
+    "text-2": [
+      "Si ya realizó el cuestionario y sabe que está protegido por las leyes estatales o locales, nuestra calculadora lo ayudará a verificar su último aumento de alquiler y asegurarse de que no le cobren de más."
+    ],
+    "button-2": "Consulta la calculadora de alquiler",
+    "title-3": "¿Necesitas ayuda?",
+    "text-3": [
+      "¡No estás solo y estamos aquí para apoyarte! ¿Aún tienes preguntas y necesitas más ayuda? Si enfrenta un desalojo injusto, un aumento ilegal de la renta o si está bajo amenaza de cualquiera de los dos, nuestros recursos pueden ayudarlo a obtener el apoyo que necesita para ayudarlo a permanecer en su hogar y defender sus derechos."
+    ],
+    "button-3": "Explora nuestros recursos"
+  },
   "answers": {
     "after-date": "Después {{date}}",
     "before-date": "Antes de {{date}}"
@@ -6,6 +24,7 @@
   "buildingTypes": {
     "adu": "Unidad de vivienda accesoria",
     "apartments": "Apartamento (3+ unidades)",
+    "condo": "Condominio",
     "dorm": "Residencia universitaria",
     "duplex": "Dúplex (2 unidades)",
     "hotel": "Hotel",
@@ -60,6 +79,7 @@
       "statewide-max-rent": "Alquiler máximo en todo el estado",
       "local-max-rent": "Alquiler máximo de {{city}}",
       "max-increase": "{{cap}}% de aumento máximo por año * ${{rent}} =",
+      "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento de la renta.",
       "issues": "¿Tiene problemas con su arrendamiento?",
       "resources": "Explora nuestros recursos",
       "take-quiz": "Tome la prueba de elegibilidad"
@@ -168,9 +188,12 @@
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
+  "eligibility-title": "Cuestionario de elegibilidad",
   "zipcode": "{{zip}}",
   "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
+  "back": "REGRESAR",
+  "start-over": "EMPEZAR DE NUEVO",
   "footer": {
     "text": "La información contenida en este sitio web se proporciona únicamente con fines informativos y no debe considerarse asesoramiento legal sobre ningún asunto.",
     "link-text": "Sobre nosotros"

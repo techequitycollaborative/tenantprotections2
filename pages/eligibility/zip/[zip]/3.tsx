@@ -257,10 +257,12 @@ export function makeBuildingTypeChooser() {
     return (
       <Layout>
         <EligibilityNav
-          back={`/eligibility/zip/${location.zip}/2`}
+          backLabel={t('back')}
+          backUrl={`/eligibility/zip/${location.zip}/2`}
           zip={location.zip}
           city={location.city}
-          startOver="/eligibility"
+          startOverLabel={t('start-over')}
+          startOverUrl="/eligibility"
         />
         <Progress progress="3" />
 

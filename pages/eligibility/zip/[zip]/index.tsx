@@ -49,10 +49,12 @@ const Zip: NextPage<Props> = function Zip(props) {
   return (
     <Layout>
       <EligibilityNav
-        back="/eligibility"
+        backLabel={t('back')}
+        backUrl="/eligibility"
         zip={props.location.zip}
         city={props.location.city}
-        startOver="/eligibility"
+        startOverLabel={t('start-over')}
+        startOverUrl="/eligibility"
       />
       <Progress progress="1" />
 
