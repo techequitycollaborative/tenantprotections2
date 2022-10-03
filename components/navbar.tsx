@@ -26,7 +26,7 @@ function Navbar() {
             </h1>
           </Link>
         </div>
-        <div className="hidden text-xl space-x-12 ml-auto mr-16 lg:mr-32 xl:mr-64 text-white md:flex">
+        <div className="hidden text-xl space-x-12 ml-auto mr-16 lg:mr-32 xl:mr-64 text-white md:flex pt-1">
           <Link href="/calculator">{t('navbar.calculator')}</Link>
           <Link href="/eligibility">{t('navbar.eligibility')}</Link>
           <Link href="/resources">{t('navbar.resources')}</Link>
@@ -34,7 +34,7 @@ function Navbar() {
           <select
             onChange={onSelect}
             defaultValue={i18n.language}
-            className="text-blue outline-none border-2 border-white rounded bg-white px-2 text-blue"
+            className="text-blue text-lg outline-none border-2 border-white rounded bg-white px-2 text-blue"
           >
             <option value="en">EN</option>
             <option value="es">ES</option>

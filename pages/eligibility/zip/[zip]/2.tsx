@@ -62,10 +62,12 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   return (
     <Layout>
       <EligibilityNav
-        back={`/eligibility/zip/${props.location.zip}`}
+        backLabel={t('back')}
+        backUrl={`/eligibility/zip/${props.location.zip}`}
         zip={props.location.zip}
         city={props.location.city}
-        startOver="/eligibility"
+        startOverLabel={t('start-over')}
+        startOverUrl="/eligibility"
       />
       <Progress progress="2" />
 

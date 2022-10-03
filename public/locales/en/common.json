@@ -1,4 +1,22 @@
 {
+  "home": {
+    "title-1": "Tenants, Know Your Rights!",
+    "text-1": [
+      "The Tenant Protection Act of 2019 protects a majority of California’s renters against unlawful rent increases and unfair evictions. Many cities also have local rent control measures with more restrictive caps on how much your landlord can increase your rent.",
+      "Find out if you're protected by state or local laws."
+    ],
+    "button-1": "Take eligibility quiz",
+    "title-2": "Check Your Rent Increase",
+    "text-2": [
+      "If you already took the quiz and know you're protected under state or local laws, our calculator will help you check your last rent increase and make sure you're not being overcharged."
+    ],
+    "button-2": "Check the rent calculator",
+    "title-3": "Need Help?",
+    "text-3": [
+      "You’re not alone and we’re here to support! Do you still have questions and need further support? If you are facing an unfair eviction, illegal rent increase, or if you are under threat of either, our resources can help you get the support you need to help you stay in your home and defend your rights."
+    ],
+    "button-3": "Explore our resources"
+  },
   "answers": {
     "after-date": "After {{date}}",
     "before-date": "Before {{date}}"
@@ -61,6 +79,7 @@
       "statewide-max-rent": "Statewide Max Rent",
       "local-max-rent": "{{city}} Max Rent",
       "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
+      "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
       "issues": "Having issues with your tenancy?",
       "resources": "Explore our resources",
       "take-quiz": "Take eligibility quiz"
@@ -173,6 +192,8 @@
   "zipcode": "{{zip}}",
   "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
+  "back": "BACK",
+  "start-over": "START OVER",
   "footer": {
     "text": "The information contained on this website is provided for informational purposes only, and should not be considered legal advice on any matter.",
     "link-text": "About us"
