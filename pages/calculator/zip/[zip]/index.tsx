@@ -118,7 +118,7 @@ function RentBox(props: RentBoxProps) {
     e.preventDefault();
 
     if (validateForm()) {
-      props.onAddRent(new Date(startDate), parseFloat(rent));
+      props.onAddRent(new Date(startDate + 'T00:00:00'), parseFloat(rent));
 
       setRent('');
       setStartDate('');
@@ -128,7 +128,7 @@ function RentBox(props: RentBoxProps) {
 
   const validateForm = function () {
     const parseRent = /(\d+)$/.test(rent) ? Number(rent) : NaN;
-    const parseDate = new Date(startDate);
+    const parseDate = new Date(startDate + 'T00:00:00');
 
     const now = new Date();
     const dateMax = new Date(new Date().setFullYear(now.getFullYear() + 1));
