@@ -41,12 +41,26 @@ function AdditionalQuestionsSection({
   baseScope,
 }: AdditionalQuestionsSectionProps) {
   const router = useRouter();
-  let [questions, setQuestions] = useState(
-    baseScope === LOCAL_SCOPE ? localQuestions : statewideQuestions,
-  );
-  let [currentScope, setCurrentScope] = useState(baseScope);
-  let [index, setIndex] = useState(0);
+  const emptyQuestion = {
+    passingAnswer: '',
+    promptKey: '',
+    promptVars: '',
+    yesAnswerKey: '',
+    noAnswerKey: '',
+  };
   const { t } = useTranslation('common');
+
+  let [index, setIndex] = useState(0);
+  let currentScope = baseScope;
+  let questions =
+    currentScope === LOCAL_SCOPE ? localQuestions : statewideQuestions;
+  let question = questions ? questions[index] : emptyQuestion;
+
+  useEffect(() => {
+    questions =
+      currentScope === LOCAL_SCOPE ? localQuestions : statewideQuestions;
+    question = questions ? questions[index] : emptyQuestion;
+  }, [index, questions, currentScope]);
 
   const onNextQuestion: React.MouseEventHandler<HTMLAnchorElement> = (
     event,
@@ -66,16 +80,6 @@ function AdditionalQuestionsSection({
     }
   };
 
-  const question = questions
-    ? questions[index]
-    : {
-        passingAnswer: '',
-        promptKey: '',
-        promptVars: '',
-        yesAnswerKey: '',
-        noAnswerKey: '',
-      };
-
   const onClick = function click(event: any) {
     if (question.passingAnswer === event.target.value) {
       onNextQuestion(event);
@@ -84,9 +88,9 @@ function AdditionalQuestionsSection({
       if (statewidePass) {
         router.push(ELIGIBLE_LINK + STATEWIDE_SCOPE);
       } else if (statewideQuestions) {
-        setQuestions(statewideQuestions);
-        setCurrentScope(STATEWIDE_SCOPE);
-        setIndex(0);
+        questions = statewideQuestions;
+        currentScope = STATEWIDE_SCOPE;
+        index = 0;
       } else {
         router.push(INELIGIBLE_LINK);
       }
@@ -239,6 +243,11 @@ export function makeBuildingTypeChooser() {
 
     const onSelect: React.ChangeEventHandler<HTMLSelectElement> =
       function onSelectBldgType(event) {
+        setLocalQuestions(undefined);
+        setStatewideQuestions(undefined);
+        setStatewidePass(false);
+        setBaseScope(scope);
+
         const value = event.target.value;
         if (!value) {
           setBldgType(undefined);
