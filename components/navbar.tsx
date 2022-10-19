@@ -66,7 +66,7 @@ function Navbar() {
       <div className="md:hidden">
         <div
           id="menu"
-          className={`absolute text-xl z-20 left-20 right-0 flex-col items-center space-y-6 self-end z-10 bg-gray-50 drop-shadow-xl py-8 sm:w-auto sm:self-center ${
+          className={`absolute text-xl z-20 left-20 right-0 flex-col items-center space-y-6 self-end bg-gray-50 drop-shadow-xl py-8 sm:w-auto sm:self-center ${
             toggle ? 'flex' : 'hidden'
           }`}
         >
