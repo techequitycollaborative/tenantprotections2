@@ -91,7 +91,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           })}
         </button>
       </Link>
-      <Link href="/eligibility/ineligible">
+      <Link href={`/eligibility/zip/${props.location.zip}/ineligible`}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('answers.after-date', {
             date: rentCapDateStr,

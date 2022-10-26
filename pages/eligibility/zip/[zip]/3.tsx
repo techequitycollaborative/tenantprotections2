@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect } from 'react';
+import { format } from 'react-string-format';
 
 import { FullLocation, YesNoQuestion } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
@@ -16,8 +17,8 @@ import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
 
-const ELIGIBLE_LINK = '/eligibility/eligible?s=';
-const INELIGIBLE_LINK = '/eligibility/ineligible';
+const ELIGIBLE_LINK = '/eligibility/zip/{0}/eligible?s={1}';
+const INELIGIBLE_LINK = '/eligibility/zip/{0}/ineligible';
 
 const LOCAL_SCOPE = 'local';
 const STATEWIDE_SCOPE = 'statewide';
@@ -32,6 +33,7 @@ interface AdditionalQuestionsSectionProps {
   statewideQuestions: YesNoQuestion[] | undefined;
   statewidePass: boolean;
   baseScope: string;
+  zip: string;
 }
 
 function AdditionalQuestionsSection({
@@ -39,6 +41,7 @@ function AdditionalQuestionsSection({
   statewideQuestions,
   statewidePass,
   baseScope,
+  zip,
 }: AdditionalQuestionsSectionProps) {
   const router = useRouter();
   const emptyQuestion = {
@@ -70,10 +73,10 @@ function AdditionalQuestionsSection({
     if (questions && index >= questions.length - 1) {
       if (currentScope === LOCAL_SCOPE) {
         // Passed all local questions
-        router.push(ELIGIBLE_LINK + LOCAL_SCOPE);
+        router.push(format(ELIGIBLE_LINK, zip, LOCAL_SCOPE));
       } else {
         // Passed all statewide questions
-        router.push(ELIGIBLE_LINK + STATEWIDE_SCOPE);
+        router.push(format(ELIGIBLE_LINK, zip, STATEWIDE_SCOPE));
       }
     } else {
       setIndex(index + 1);
@@ -86,17 +89,17 @@ function AdditionalQuestionsSection({
     } else if (currentScope === LOCAL_SCOPE) {
       // Failed a local question, fall back to statewide check
       if (statewidePass) {
-        router.push(ELIGIBLE_LINK + STATEWIDE_SCOPE);
+        router.push(format(ELIGIBLE_LINK, zip, STATEWIDE_SCOPE));
       } else if (statewideQuestions) {
         questions = statewideQuestions;
         currentScope = STATEWIDE_SCOPE;
         index = 0;
       } else {
-        router.push(INELIGIBLE_LINK);
+        router.push(format(INELIGIBLE_LINK, zip));
       }
     } else {
       // Failed statewide check
-      router.push(INELIGIBLE_LINK);
+      router.push(format(INELIGIBLE_LINK, zip));
     }
   };
 
@@ -207,7 +210,7 @@ export function makeBuildingTypeChooser() {
       // Do local eligibility check/questions only if applicable
       if (scope === LOCAL_SCOPE) {
         if (location.localRules?.passingBuildingTypes.includes(selectedValue)) {
-          router.push(ELIGIBLE_LINK + scope);
+          router.push(format(ELIGIBLE_LINK, location.zip, scope));
           return;
         } else if (location.localRules?.eligibilityQuestions[selectedValue]) {
           setLocalQuestions(
@@ -225,7 +228,7 @@ export function makeBuildingTypeChooser() {
       ) {
         // If base scope is statewide, pass; otherwise, defer to allow local check first
         if (scope === STATEWIDE_SCOPE) {
-          router.push(ELIGIBLE_LINK + scope);
+          router.push(format(ELIGIBLE_LINK, location.zip, scope));
           return;
         } else {
           setStatewidePass(true);
@@ -236,7 +239,7 @@ export function makeBuildingTypeChooser() {
           location.statewideRules.eligibilityQuestions[selectedValue],
         );
       } else {
-        router.push(INELIGIBLE_LINK);
+        router.push(format(INELIGIBLE_LINK, location.zip));
         return;
       }
     }
@@ -314,6 +317,7 @@ export function makeBuildingTypeChooser() {
             statewideQuestions={statewideQuestions}
             statewidePass={statewidePass}
             baseScope={baseScope}
+            zip={location.zip}
           />
         )}
       </Layout>

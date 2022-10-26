@@ -105,27 +105,33 @@
     }
   },
   "eligible": {
-    "title": "¡Es usted elegible!",
+    "title-local": "¡Eres elegible para el control de alquiler de {{city}}!",
+    "title-statewide": "¡Eres elegible para las protecciones estatales!",
     "local-text": [
-      "<b>Enhorabuena</b>, está cubierto por el control local de alquileres en su ciudad. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
-      "Además del control de alquiler local, también puede cumplir los requisitos para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o le preocupa su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado o con un grupo local de protección de los derechos de los inquilinos para obtener ayuda."
+      "<b>Felicitaciones</b>, está cubierto por el control de alquiler local en {{city}}. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
+      "Además del control de alquiler local, también puede calificar para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
     ],
     "statewide-text": [
       "<b>Enhorabuena</b>, está cubierto por la Ley de Protección de Inquilinos de California. Esto significa que hay un límite en cuanto a cuánto puede aumentar su arrendador su alquiler, y también está protegido contra desalojos injustos. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
-      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con el gobierno local de su ciudad o condado o con un grupo local de derechos de los inquilinos para obtener ayuda."
+      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
     ],
     "footnote": "¿Le están cobrando de más?",
     "button": "Consulte la calculadora de alquiler"
   },
   "ineligible": {
     "title": "Es posible que usted no sea elegible",
+    "text-subsidized": [
+      "<b>Desafortunadamente</b>, debido a que vive en una vivienda subsidiada, es posible que no sea elegible para los límites de alquiler locales o estatales. Sin embargo, puede tener otras protecciones legales contra desalojos y aumentos de alquiler.",
+      "Los requisitos de elegibilidad en torno a la vivienda subvencionada son complejos. Si le preocupa un aumento de alquiler reciente u otro problema con su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
+    ],
     "text-1": [
-      "<b>Desafortunadamente</b>, creemos que usted no está cubierto por las cláusulas de control de renta o protección por causa justa de la Ley de Protección de Inquilinos.",
+      "<b>Desafortunadamente</b>, creemos que no está cubierto por las protecciones locales o estatales, incluidas las cláusulas de control de alquileres o de protección de causa justa de la Ley de Protección de Inquilinos.",
       "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <a href='/resources' style='color: #074DCF'><u>estos recursos</u>.</a>"
     ],
     "subtitle": "¿Por qué no soy elegible?",
     "text-2": [
-      "Algunos tipos de edificios no son elegibles, como viviendas subsidiadas por el gobierno o residencias universitarias, a menos que pague con un cupón. Respondió que alquila un tipo de vivienda que no es elegible, pero si vive en una vivienda subsidiada, puede tener otras protecciones legales contra desalojos y aumentos de alquiler."
+      "Según las respuestas que proporcionó con respecto a la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que no está cubierto. Los condominios, las viviendas unifamiliares y los edificios construidos antes de una fecha determinada a menudo están exentos de las leyes de tope de alquiler.",
+      "Las ordenanzas varían según la ciudad y se pueden aplicar otras exenciones para el tamaño del edificio, el tipo o el estado de ocupación del propietario."
     ],
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explore nuestros recursos"
