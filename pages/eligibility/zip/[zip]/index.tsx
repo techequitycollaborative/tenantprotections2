@@ -61,7 +61,9 @@ const Zip: NextPage<Props> = function Zip(props) {
       <h1 className="text-blue text-2xl py-4">
         {t('questions.is-subsidized')}
       </h1>
-      <Link href={`/eligibility/ineligible`}>
+      <Link
+        href={`/eligibility/zip/${props.location.zip}/ineligible?t=subsidized`}
+      >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('yes')}
         </button>

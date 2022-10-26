@@ -105,27 +105,33 @@
     }
   },
   "eligible": {
-    "title": "You're eligible!",
+    "title-local": "You're eligible for {{city}} rent control!",
+    "title-statewide": "You're eligible for the statewide protections!",
     "local-text": [
-      "<b>Congratulations</b>, you are covered by local rent control in your city. This means that there is a limit to how much your landlord can raise your rent. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
-      "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to your local city or county government or a local tenants rights group for support."
+      "<b>Congratulations</b>, you are covered by local rent control in {{city}}. This means that there is a limit to how much your landlord can raise your rent. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
+      "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
     ],
     "statewide-text": [
       "<b>Congratulations</b>, you are covered by the California Tenant Protection Act. This means that there is a limit to how much your landlord can raise your rent, and you are also protected from unjust evictions. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
-      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation, reach out to your local city or county government or a local tenants rights group for support."
+      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
     ],
     "footnote": "Are you being overcharged?",
     "button": "Check the rent calculator"
   },
   "ineligible": {
     "title": "You may not be eligible",
+    "text-subsidized": [
+      "<b>Unfortunately</b>, because you live in subsidized housing you may not be eligible for local or statewide rent caps. However, you may have other legal protections against evictions and rent increases.",
+      "Eligibility requirements around subsidized housing are complex. If you are concerned about a recent rent increase or other issue with your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
+    ],
     "text-1": [
-      "<b>Unfortunately</b>, we think that you are not covered by the Tenant Protection Act’s just cause protection or rent control clauses.",
+      "<b>Unfortunately</b>, we think that you are not covered by local or statewide protections, including the Tenant Protection Act’s just cause protection or rent control clauses.",
       "However, you may have other rights. If you are having issues with your housing situation check out <a href='/resources' style='color: #074DCF'><u>these resources</u>.</a>"
     ],
     "subtitle": "Why am I not eligible?",
     "text-2": [
-      "Some kinds of buildings are ineligible such as government subsidized housing or university dorms, unless you pay with a voucher. You answered that you rent a type of housing which is ineligible, but if you live in subsidized housing, you may have other legal protections against evictions and rent increases."
+      "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed before a certain date are often exempt from rent cap laws.",
+      "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply."
     ],
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
