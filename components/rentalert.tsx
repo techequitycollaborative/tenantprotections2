@@ -68,7 +68,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
               alt="warning icon"
               className="pt-1 pr-2 absolute"
             />
-            <div className="flex flex-col pl-8">
+            <div className="flex flex-col pl-8 pr-24">
               <p>
                 {t('calculator.alert.local-max-rent', {
                   city: props.location.city,
@@ -82,7 +82,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
                 })}
               </p>
             </div>
-            <p className="border border-blue absolute  rounded text-blue text-lg font-medium py-2 my-1 px-2 right-[3em] md:right-[5em] lg:px-10 lg:right-[8em]">
+            <p className="border border-blue absolute rounded text-blue text-lg font-medium py-2 my-1 px-2 right-[3em] md:right-[5em] lg:px-10 lg:right-[8em]">
               ${localMaxRentDisplay}
             </p>
           </div>
@@ -99,7 +99,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
             alt="warning icon"
             className="pt-1 pr-2 absolute"
           />
-          <div className="flex flex-col pl-8">
+          <div className="flex flex-col pl-8 pr-24">
             <p>{t('calculator.alert.statewide-max-rent')}</p>
             <p className="text-gray font-light text-sm italic">
               {t('calculator.alert.max-increase', {
