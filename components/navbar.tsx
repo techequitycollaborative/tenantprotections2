@@ -18,7 +18,13 @@ function Navbar() {
   return (
     <nav className="relative bg-blue">
       <div className="flex items-center justify-between">
-        <img src="/img/logo.png" alt="warning icon" className="p-2 pr-0 h-12" />
+        <Link href="/">
+          <img
+            src="/img/logo.png"
+            alt="warning icon"
+            className="p-2 pr-0 h-12 cursor-pointer"
+          />
+        </Link>
         <div className="pt-2 pb-2">
           <Link href="/">
             <h1 className="text-2xl font-black text-white cursor-pointer">
