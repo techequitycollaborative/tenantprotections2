@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect } from 'react';
+import { RiErrorWarningLine } from 'react-icons/ri';
+import Image from 'next/image';
 
 import { FullLocation } from '@/types/location';
 import { RentEntry, RentHistory } from '@/types/calculator';
@@ -47,10 +49,12 @@ function RentTimeline(props: RentTimelineProps) {
   return (
     <div className="w-full">
       <div className="flex flex-row">
-        <img
+        <Image
           src="/img/house-illustration.svg"
           alt="house illustration"
           className="w-24 h-24 mr-8 sm:w-44 sm:h-44"
+          width="100"
+          height="100"
         />
         <div className="flex-col w-2/3 ml-auto">
           <p className="text-gray-darkest">ZIPCODE</p>
@@ -62,7 +66,7 @@ function RentTimeline(props: RentTimelineProps) {
               {props.location.city}, CA
               <button>
                 <Link href="/calculator">
-                  <img
+                  <Image
                     src="/img/edit-icon.svg"
                     alt="edit button"
                     width="15"
@@ -243,11 +247,14 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={rent}
           onChange={onRentChange}
-          placeholder="$1,350"
+          placeholder="$"
           className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
         />
-        <span>{rentError}</span>
+        <span className="text-red-600 text-2xl p-2 my-3">
+          <RiErrorWarningLine />
+          {rentError}
+        </span>
         {dateLabel}
         <input
           id="startDate"
@@ -265,7 +272,10 @@ function RentBox(props: RentBoxProps) {
         >
           {t('submit')}
         </button>
-        <span>{dateError}</span>
+        <span className="text-red-600 text-2xl p-2 my-3">
+          <RiErrorWarningLine />
+          {dateError}
+        </span>
       </form>
     );
   }

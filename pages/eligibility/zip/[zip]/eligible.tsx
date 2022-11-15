@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { format } from 'react-string-format';
+import Image from 'next/image';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
@@ -54,11 +55,11 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
   return (
     <Layout>
       <Progress progress="4" margin="mt-6 mb-4" />
-      <img
+      <Image
         src="/img/success-icon.svg"
         alt="check mark to signify you are eligible"
-        width="15%"
-        height="15%"
+        width="40"
+        height="40"
         className="mx-auto"
       />
       <h2 className="text-blue text-2xl font-bold mx-auto mb-6">

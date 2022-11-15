@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 import { FullLocation } from '@/types/location';
 import { RentHistory } from '@/types/calculator';
@@ -59,7 +60,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
       {localRentCap != null && (
         <div className="mb-4">
           <div className="flex flex-row text-blue text-lg font-bold">
-            <img
+            <Image
               src={
                 currentRent > localMaxRent
                   ? '/img/warning-icon.svg'
@@ -67,6 +68,8 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
               }
               alt="warning icon"
               className="pt-1 pr-2 absolute"
+              width="20"
+              height="20"
             />
             <div className="flex flex-col pl-8 pr-24">
               <p>
@@ -90,7 +93,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
       )}
       <div className="mb-4">
         <div className="flex flex-row text-blue text-lg font-bold">
-          <img
+          <Image
             src={
               currentRent > statewideMaxRent
                 ? '/img/warning-icon.svg'
@@ -98,6 +101,8 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
             }
             alt="warning icon"
             className="pt-1 pr-2 absolute"
+            width="20"
+            height="20"
           />
           <div className="flex flex-col pl-8 pr-24">
             <p>{t('calculator.alert.statewide-max-rent')}</p>

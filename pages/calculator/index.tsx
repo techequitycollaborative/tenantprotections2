@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Location } from '@/types/location';
 import Layout from '@/components/layout';
+import { RiErrorWarningLine } from 'react-icons/ri';
 
 import { locationFromZip } from '@/utils/location';
 
@@ -94,8 +95,10 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
         >
           {t('submit')}
         </button>
-        {location?.type === 'unknown' &&
-          `Could not find ZIP Code ${location.zip}`}
+        <span className="text-red-600 text-2xl p-2 my-3">
+          {location?.type === 'unknown' && <RiErrorWarningLine /> &&
+            `Could not find ZIP Code ${location.zip}`}
+        </span>
       </form>
     </Layout>
   );

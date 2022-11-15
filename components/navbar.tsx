@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function Navbar() {
   const { t, i18n } = useTranslation('common');
@@ -19,10 +20,12 @@ function Navbar() {
     <nav className="relative bg-blue">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <img
+          <Image
             src="/img/logo.png"
             alt="warning icon"
             className="p-2 pr-0 h-12 cursor-pointer"
+            width="20"
+            height="20"
           />
         </Link>
         <div className="pt-2 pb-2">
