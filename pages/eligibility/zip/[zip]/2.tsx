@@ -2,7 +2,7 @@ import assert from 'assert';
 
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
@@ -11,6 +11,9 @@ import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
+import LinkWrapper from '@/components/link-wrapper';
+
+const LINK_PROPERTY_LOOKUP = 'https://www.propertyshark.com/mason/';
 
 const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
   year: 'numeric',
@@ -100,7 +103,14 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
       </Link>
       <Accordion
         title={t('eligibility-info.built.title')}
-        content={t('eligibility-info.built.content')}
+        content={
+          <Trans
+            i18nKey="eligibility-info.built.content"
+            components={{
+              link1: <LinkWrapper to={LINK_PROPERTY_LOOKUP} />,
+            }}
+          />
+        }
       />
     </Layout>
   );

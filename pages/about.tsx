@@ -31,16 +31,6 @@ const About: NextPage = () => {
           ),
         )}
         <h2 className="text-blue text-2xl font-bold py-4">
-          {t('about.volunteer-title')}
-        </h2>
-        {(t('about.volunteer-info', { returnObjects: true }) as Array<any>).map(
-          (x, i) => (
-            <p key={i} className="text-gray-dark text-lg pb-8">
-              {x.name + ' ' + x.url}
-            </p>
-          ),
-        )}
-        <h2 className="text-blue text-2xl font-bold py-4">
           {t('about.title-2')}
         </h2>
         {(t('about.text-2', { returnObjects: true }) as Array<string>).map(

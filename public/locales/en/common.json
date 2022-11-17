@@ -39,7 +39,7 @@
   "building-questions": {
     "corp-ownership": {
       "prompt": "Do you rent from a corporation, real estate trust, or other kind of business, or is your landlord an individual?",
-      "yes": "Corp, REIT, LLC",
+      "yes": "Corporation or REIT",
       "no": "Individual"
     },
     "landlord-adu-exemption": "Does the owner live on the property where the ADU is located?",
@@ -52,19 +52,28 @@
   "eligibility-info": {
     "subsidized": {
       "title": "What is subsidized housing?",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "content": "Subsidized housing is government sponsored economic assistance aimed towards alleviating housing costs and expenses for people with low to moderate incomes. Forms of subsidies include direct housing subsidies, non-profit housing, public housing, rent supplements/vouchers, and other forms of assistance."
     },
     "built": {
       "title": "Find out when your rental was built",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "content": "Property websites often display key details about your rental property, including the year it was built. <link1>Look up your property details here</link1>."
     },
     "types": {
       "title": "Learn more about building types",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "content": [
+        "ADU: A self-contained apartment, cottage, or small residential unit, that is located on a property that has a separate main, single-family home, duplex, or other residential unit.",
+        "Apartment: A self-contained housing unit that occupies part of a building.",
+        "Condo: A separately owned unit within a multi-unit building. Condos differ from apartments in that each unit within the building may have a different owner.",
+        "Dorm: Student housing with shared amenities, typically located in a building on a college campus.",
+        "Duplex: A house with two separate units.",
+        "Hotel: A building that provides lodging on a short-term basis. This includes SROs and extended stay properties.",
+        "Senior living: Housing specifically dedicated to older adults, often with shared services or amenities and assisted living.",
+        "Single-family home: A building on a dedicated lot with a single dwelling unit, no shared walls, and one owner."
+      ]
     },
     "corp-ownership": {
       "title": "Learn more",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      "content": "Some properties are owned by corporations or real estate investment trusts (REIT), and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
     }
   },
   "calculator": {
@@ -140,13 +149,8 @@
     "title-1": "About Us",
     "text-1": [
       "This updated version of tenantprotections.org is a collaborative project between Alliance of Californians for Community Empowerment (ACCE) and TechEquity Collaborative.",
-      "We are deeply grateful to the many volunteers who generously donated the skills to design, research, and build this website, and to ensure renters in California have access to reliable information about state and local rent control and eviction protection."
-    ],
-    "volunteer-title": "Volunteers",
-    "volunteer-info": [
-      { "name": "[name 1]", "url": "https://tenantprotections.org" },
-      { "name": "[name 2]", "url": "https://tenantprotections.org" },
-      { "name": "[name 3]", "url": "https://tenantprotections.org" }
+      "We are deeply grateful to the many volunteers who generously donated the skills to design, research, and build this website, and to ensure renters in California have access to reliable information about state and local rent control and eviction protection.",
+      "Thank you [NAME], [NAME], [NAME], [NAME] for making this website possible."
     ],
     "title-2": "Our Mission",
     "text-2": [
@@ -175,15 +179,113 @@
   },
   "resources": {
     "title": "Resources",
-    "subtitle-1": "Get Help Defending Your Rights",
-    "text-1": "If you believe your rights are being violated, you are currently facing an unjust eviction or unfair rent increase, or are under threat of either, the below legal services organizations can help you free of charge or at a low cost.",
-    "subtitle-2": "Tenant Hotline",
-    "text-2": "The Alliance of Californians for Community Empowerment (ACCE) has set up a Tenant Hotline: 1-888-428-7615",
-    "subtitle-3": "Find Legal Help",
-    "text-3": "To find a lawyer, local groups, other resources and get involved, go to ",
-    "subtitle-4": "Fight for Your Rights",
-    "text-4-1": "To get involved in a statewide coalition fighting for tenants rights, Housing Now!, sign-up here: ",
-    "text-4-2": "More information at Housing Now!'s Know Your Rights page: "
+    "section1": {
+      "title": "Rent Cap and Just Cause Protections",
+      "text": "The Tenant Protections Act extends protections to millions of California renters. <link1>See our explainer for more details about the law</link1>."
+    },
+    "section2": {
+      "title": "Get Help Defending Your Rights",
+      "text": "If you believe your rights are being violated, you are currently facing an unjust eviction or unfair rent increase, or are under threat of either, the below legal services organizations can help you free of charge or at a low cost."
+    },
+    "section3": {
+      "title": "Tenant Hotline",
+      "text": "The Alliance of Californians for Community Empowerment (ACCE) has set up a Tenant Hotline: 1-888-428-7615"
+    },
+    "section4": {
+      "title": "Find Legal Help",
+      "text": "To find a lawyer, local groups, other resources and get involved, go to the <link1>Tenants Together Directory</link1>."
+    },
+    "section5": {
+      "title": "Fight for Your Rights",
+      "text1": "To get involved in a statewide coalition fighting for tenants rights, Housing Now!, <link1>sign-up here</link1>.",
+      "text2": "More information at Housing Now!'s <link1>Know Your Rights page</link1>."
+    }
+  },
+  "about-bill": {
+    "title": "What is the Tenant Protection Act",
+    "section1": {
+      "text1": "The Tenant Protection Act <link1>(Assembly Bill 1482)</link1> takes effect January 1, 2020 providing unprecedented new protections for a majority of California renters. The law was sponsored by a broad coalition of tenant advocates across the state.",
+      "text2": "Under the Tenant Protection Act, eligible renters are covered in two major ways:",
+      "items": [
+        "Renters are protected from unjust evictions.",
+        "Renters are protected against unfair rent increases."
+      ]
+    },
+    "section2": {
+      "title": "Protections from Unjust Evictions",
+      "text1": "As per Senate Bill 91 (SB 91), the eviction protections in AB 1482 are extended to all tenants in California until June 30, 2021. SB 91 also temporarily changes some of the just causes for eviction in AB 1482. See below for more information.",
+      "text2": "Under the Tenant Protection Act, eligible renters are protected from unjust evictions. This means your landlord must have a valid reason for evicting you as outlined below.",
+      "list1-label": "At Fault",
+      "list1-items": [
+        "Failure to pay rent.",
+        "Breach of a material term of a lease that continues after a written notice of the right to cure. The written notice must provide at least three days to cure. If the tenant does not cure, then a non-curable notice of termination may be served.",
+        "Maintaining, committing, or permitting a nuisance.",
+        "Destruction of property or creating a nuisance.",
+        "Failure to sign a lease with similar terms after the expiration of a lease.",
+        "Criminal activity on the property, or criminal activity or criminal threat directed at an owner or manager of the property.",
+        "Assigning and subletting in violation of the lease.",
+        "Refusal to provide the owner access to the unit.",
+        "Using the premises for an illegal purpose.",
+        "Failure of a licensee, agent or employee of the landlord to vacate after termination of the relationship.",
+        "Failure of a tenant to deliver possession after the tenant gives a notice to move out or after the landlord and tenant agree in writing that the tenant will vacate."
+      ],
+      "list2-label": "Not At Fault",
+      "list2-items": [
+        "Owner or relative move in only where the original lease or a new lease allows for an owner or relative to move in. The eviction must be done by an owner or the owner’s spouse, domestic partner, children, grandchildren, parents, or grandparents. The original lease or new lease must reserve the right to move in an owner or the owner’s spouse, domestic partner, children, grandchildren, parents, or grandparents.",
+        "Withdrawal of the unit from the rental market.",
+        "Where a city or county agency requires the unit to be vacated due to uninhabitable conditions.",
+        "Intent to demolish or substantially remodel a unit. “Substantially remodel” means the replacement or substantial modification of any structural, electrical, plumbing or mechanical system that requires a permit, or the abatement of hazardous material, including lead, mold or asbestos that cannot be reasonably accomplished in a safe manner with the tenant in the unit and that requires the tenant to vacate for more than thirty days. Cosmetic improvements alone, including painting, decorating, and minor repairs, do not qualify, nor does any work that can be done safely with the tenant in the unit."
+      ]
+    },
+    "section3": {
+      "title": "Protections Against Unfair Rent Increases",
+      "text1": "Eligible renters are protected against rent increases that exceed 10% in a one year period or the cost of living + 5%, whichever is lower. This is often referred to as a “rent-cap” because it caps the amount your landlord can legally increase your rent year after year.",
+      "text2": "If you’re unsure if your rent increase exceeds the limit set by the law, our <link1>rent calculator</link1> can help you do the math."
+    },
+    "section4": {
+      "title": "COVID-19 Tenant Protections",
+      "text": [
+        "Senate Bill (SB) 91, passed on January 28, 2021, extended eviction protections for tenants who have lost income due to the COVID-19 pandemic.",
+        "Rent debt owed between March 2020 through June 30, 2020 is converted into consumer debt and can never be the basis for an eviction (if the tenant follows all requirements). The debt is however, collectable through other means such as small claims and regular civil court. However, the landlord may not seek the debt owed until July 1, 2021.",
+        "Meanwhile, rent assistance is available for tenants to apply for to cover their rent debts during the pandemic. If a tenant receives rent assistance, it may cancel out all debts and they may no longer be at risk of eviction or any kind of collections actions."
+      ]
+    },
+    "section5": {
+      "title": "Is the Rent Cancelled?",
+      "text": [
+        "Sort of. SB 91 created a rental assistance program for tenants under a certain income amount.",
+        "In most areas, landlords participate in the rental assistance program and if they agree to waive 20% of the rent owed, the government program will pay the other 80% of the money owed. If they do, then the tenant’s consumer debt for that period will be gone. This means that rent debt you owe could be entirely cancelled if your landlord agrees to participate in the rent relief program. You can also apply for help paying your utilities.",
+        "If the landlord refuses the program, a tenant will be able to apply to the same fund for 25% of the rent they owe.",
+        "This program may be extended to offer a larger amount of rent assistance and apply it for a longer period of time."
+      ]
+    },
+    "section6": {
+      "title": "How to Apply for Rental Assistance",
+      "text1": "You may qualify for rent relief funds if you owe rent that you could not pay during the COVID-19 pandemic, from April 1, 2020 to June 30, 2021. A full list of eligibility criteria is available <link1>here</link1>.",
+      "text2": "Apply online! The application will ask for your landlord’s email address to notify your landlord to fill out their portion. Both landlords and tenants can fill out the rent relief application <link1>here</link1>.",
+      "text3": "If you live in a city or county that has its own separate rent assistance program, you can apply for rent relief from your local program rather than the state site. A link to your local program is available <link1>here</link1>. Some of these local programs have different terms, such as covering 100% of the rental debt or lower income thresholds."
+    },
+    "section7": {
+      "title": "COVID-19 Eviction Protections",
+      "subtitle1": "1. Tenants must provide a signed declaration of COVID-19 related financial distress",
+      "text1": [
+        "If you can’t pay your rent because of the COVID-19 pandemic ,before filing an eviction lawsuit for failure to pay rent. your landlord must give you a 15-day notice to pay rent or quit The notice will include a hardship declaration form to fill out.",
+        "If you receive a 15-day notice, within 15 days you must give your landlord the signed hardship declaration.",
+        "Even if you have not received a 15-day notice, it is a good idea to give your landlord a copy of the declaration if it applies to you. You should still give it to your landlord again if you receive an eviction notice.",
+        "If you give this declaration to your landlord, we recommend sending it by certified mail so that you have evidence that you send it. You should send this declaration to your landlord each time you receive a 15-day notice to pay rent or quit. Make a copy of the declaration after you sign it and keep proof that you sent this notice each time -- like your certified mail receipt."
+      ],
+      "subtitle2": "2. Paying your Rent",
+      "text2": [
+        "If you owe rent that was due from March 1, 2020 - August 31, 2020: If you return the declaration to your landlord in time, you cannot be evicted for not paying this rent.",
+        "If you owe rent that was due from September 1, 2020 - June 30, 2021: You will need to pay 25% of the total rent between September 2020 and June 2021 no later than June 30, 2021. The other 75% of rent is converted into consumer debt. You may be able to qualify for a rent assistance program through your city, county, or the state that will pay some or all of your back rent, including the 25% payment.",
+        "If you receive an eviction notice or summons for an eviction lawsuit, or notice to vacate, seek legal help immediately."
+      ],
+      "subtitle3": "3. Other Types of Evictions",
+      "text3": [
+        "State law protects tenants from “no cause” evictions until July 1, 2021 by extending the eviction protections in AB 1482.",
+        "Your city or county may also have passed stronger protections than state law for other types of evictions or even for tenants who can’t pay rent."
+      ]
+    }
   },
   "navbar": {
     "calculator": "Calculator",
