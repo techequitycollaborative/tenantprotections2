@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const LinkWrapper = (props) => {
+const LinkWrapper = (props: any) => {
   return (
     <Link href={props.to}>
       <a>{props.children}</a>

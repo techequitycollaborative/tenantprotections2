@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 interface Props {
   title: string;
-  content: string;
+  content: any;
 }
 
 const Accordion: NextPage<Props> = function Accordion(props) {
