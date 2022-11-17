@@ -309,7 +309,19 @@ export function makeBuildingTypeChooser() {
         </select>
         <Accordion
           title={t('eligibility-info.types.title')}
-          content={t('eligibility-info.types.content')}
+          content={
+            <ul>
+              {(
+                t('eligibility-info.types.content', {
+                  returnObjects: true,
+                }) as Array<string>
+              ).map((x, i) => (
+                <li key={i} className="list-disc list-outside ml-6 mb-2">
+                  {x}
+                </li>
+              ))}
+            </ul>
+          }
         />
         {(localQuestions?.length || statewideQuestions?.length) && (
           <AdditionalQuestionsSection

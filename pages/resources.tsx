@@ -1,8 +1,15 @@
 import { GetStaticProps, NextPage } from 'next';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import Layout from '@/components/layout';
+import LinkWrapper from '@/components/link-wrapper';
+
+const LINK_ABOUT_THE_BILL = '/about-the-bill';
+const LINK_TENANTS_TOGETHER =
+  'https://www.tenantstogether.org/resource-directory';
+const LINK_HOUSING_NOW = 'https://www.housingnowca.org';
+const LINK_KNOW_YOUR_RIGHTS = 'https://www.housingnowca.org/knowyourrights';
 
 const getStaticProps: GetStaticProps = async function getStaticProps(context) {
   return {
@@ -24,34 +31,57 @@ const Resources: NextPage = () => {
           {t('resources.title')}
         </h1>
         <h2 className="text-blue text-2xl font-bold py-4">
-          {t('resources.subtitle-1')}
-        </h2>
-        <p className="text-gray-dark text-lg pb-8">{t('resources.text-1')}</p>
-        <h2 className="text-blue text-2xl font-bold py-4">
-          {t('resources.subtitle-2')}
-        </h2>
-        <p className="text-gray-dark text-lg pb-8">{t('resources.text-2')}</p>
-        <h2 className="text-blue text-2xl font-bold py-4">
-          {t('resources.subtitle-3')}
+          {t('resources.section1.title')}
         </h2>
         <p className="text-gray-dark text-lg pb-8">
-          {t('resources.text-3')}{' '}
-          <Link href="https://www.tenantstogether.org/resource-directory">
-            Tenants Together&apos;s Directory
-          </Link>
+          <Trans
+            i18nKey="resources.section1.text"
+            components={{
+              link1: <LinkWrapper to={LINK_ABOUT_THE_BILL} />,
+            }}
+          />
         </p>
         <h2 className="text-blue text-2xl font-bold py-4">
-          {t('resources.subtitle-4')}
+          {t('resources.section2.title')}
         </h2>
         <p className="text-gray-dark text-lg pb-8">
-          {t('resources.text-4-1')}{' '}
-          <Link href="https://www.housingnowca.org">housingnowca.org</Link>
+          {t('resources.section2.text')}
+        </p>
+        <h2 className="text-blue text-2xl font-bold py-4">
+          {t('resources.section3.title')}
+        </h2>
+        <p className="text-gray-dark text-lg pb-8">
+          {t('resources.section3.text')}
+        </p>
+        <h2 className="text-blue text-2xl font-bold py-4">
+          {t('resources.section4.title')}
+        </h2>
+        <p className="text-gray-dark text-lg pb-8">
+          <Trans
+            i18nKey="resources.section4.text"
+            components={{
+              link1: <LinkWrapper to={LINK_TENANTS_TOGETHER} />,
+            }}
+          />
+        </p>
+        <h2 className="text-blue text-2xl font-bold py-4">
+          {t('resources.section5.title')}
+        </h2>
+        <p className="text-gray-dark text-lg pb-8">
+          <Trans
+            i18nKey="resources.section5.text1"
+            components={{
+              link1: <LinkWrapper to={LINK_HOUSING_NOW} />,
+            }}
+          />
         </p>
         <p className="text-gray-dark text-lg pb-8">
-          {t('resources.text-4-2')}{' '}
-          <Link href="https://www.housingnowca.org/knowyourrights">
-            housingnowca.org/knowyourrights
-          </Link>
+          <Trans
+            i18nKey="resources.section5.text2"
+            components={{
+              link1: <LinkWrapper to={LINK_KNOW_YOUR_RIGHTS} />,
+            }}
+          />
         </p>
       </div>
     </Layout>
