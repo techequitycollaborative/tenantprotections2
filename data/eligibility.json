@@ -14,6 +14,21 @@
     "landlord_occupancy_exemption_units": null,
     "landlord_occupancy_exemption_duration": null
   },
+  "Antioch": {
+    "reit_corp_llc": null,
+    "construction_date": "1995-02-01",
+    "min_units": 2,
+    "sec8_subsidized": "exempt",
+    "duplex": "eligible",
+    "dorms": "exempt",
+    "hotels": "exempt",
+    "senior_care": "exempt",
+    "landlord_adu_exemption": null,
+    "landlord_shared_exemption": "exempt",
+    "landlord_duplex_exemption": "exempt",
+    "landlord_occupancy_exemption_units": null,
+    "landlord_occupancy_exemption_duration": null
+  },
   "Baldwin Park": {
     "reit_corp_llc": null,
     "construction_date": "1994-12-31",
@@ -23,6 +38,21 @@
     "dorms": "eligible",
     "hotels": "eligible",
     "senior_care": "eligible",
+    "landlord_adu_exemption": null,
+    "landlord_shared_exemption": null,
+    "landlord_duplex_exemption": null,
+    "landlord_occupancy_exemption_units": 3,
+    "landlord_occupancy_exemption_duration": null
+  },
+  "Bell Gardens": {
+    "reit_corp_llc": null,
+    "construction_date": "1995-02-01",
+    "min_units": 2,
+    "sec8_subsidized": "exempt",
+    "duplex": "eligible",
+    "dorms": "eligible",
+    "hotels": "exempt",
+    "senior_care": "exempt",
     "landlord_adu_exemption": null,
     "landlord_shared_exemption": null,
     "landlord_duplex_exemption": null,
@@ -179,19 +209,19 @@
     "landlord_occupancy_exemption_units": null,
     "landlord_occupancy_exemption_duration": null
   },
-  "Palm Springs": {
-    "reit_corp_llc": null,
-    "construction_date": "1979-03-31",
+  "Oxnard": {
+    "reit_corp_llc": "eligible",
+    "construction_date": "1995-02-01",
     "min_units": 2,
     "sec8_subsidized": "exempt",
     "duplex": "eligible",
     "dorms": "exempt",
-    "hotels": "exempt",
-    "senior_care": "exempt",
+    "hotels": "eligible",
+    "senior_care": "eligible",
     "landlord_adu_exemption": null,
     "landlord_shared_exemption": null,
-    "landlord_duplex_exemption": null,
-    "landlord_occupancy_exemption_units": 4,
+    "landlord_duplex_exemption": "exempt",
+    "landlord_occupancy_exemption_units": null,
     "landlord_occupancy_exemption_duration": null
   },
   "Richmond": {
