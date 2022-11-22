@@ -78,10 +78,8 @@
   },
   "calculator": {
     "title": "Calculadora de alquiler",
-    "text": [
-      "Si recibió un aumento de alquiler, puede usar nuestra calculadora para ayudarlo a determinar cuál es el aumento permitido según la ley y si su aumento de alquiler excede el límite.",
-      "¡Antes de usar esta calculadora, asegúrese de <a href='/es/eligibility' style='color: #074DCF'><u>verificar su elegibilidad</u></a> aquí!"
-    ],
+    "text1": "Si recibió un aumento de alquiler, puede usar nuestra calculadora para ayudarlo a determinar cuál es el aumento permitido según la ley y si su aumento de alquiler excede el límite.",
+    "text2": "¡Antes de usar esta calculadora, asegúrese de <link1>verificar su elegibilidad</link1> aquí!",
     "alert": {
       "legal": "Este aumento de alquiler parece legal bajo el control de alquiler estatal y local.",
       "illegal": "Este aumento de alquiler puede ser ilegal si cumple los requisitos para para el control de alquiler estatal o local.",
@@ -298,8 +296,12 @@
   "yes": "Sí",
   "eligibility-title": "Cuestionario de elegibilidad",
   "zipcode": "{{zip}}",
-  "zip-prompt": "Según el lugar donde viva, se pueden aplicar diferentes leyes. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
+  "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todas partes de California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
   "zip-label": "¿Cuál es su código postal?",
+  "eligibility-more": {
+    "title": "¿Qué ciudades tienen protecciones locales?",
+    "content": "Aquí hay una lista de ciudades de California con control de alquiler local:"
+  },
   "back": "REGRESAR",
   "start-over": "EMPEZAR DE NUEVO",
   "footer": {

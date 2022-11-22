@@ -1,9 +1,10 @@
 import formidable from 'formidable';
 import type { GetServerSideProps, NextPage } from 'next';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Location } from '@/types/location';
 import Layout from '@/components/layout';
+import LinkWrapper from '@/components/link-wrapper';
 
 import { locationFromZip } from '@/utils/location';
 
@@ -60,15 +61,15 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
         {t('calculator.title')}
       </h1>
       <div className="text-gray text-lg">
-        {(t('calculator.text', { returnObjects: true }) as Array<string>).map(
-          (x, i) => (
-            <p
-              key={i}
-              dangerouslySetInnerHTML={{ __html: x }}
-              className="mb-4"
-            ></p>
-          ),
-        )}
+        <p className="mb-4">{t('calculator.text1')}</p>
+        <p className="mb-4">
+          <Trans
+            i18nKey="calculator.text2"
+            components={{
+              link1: <LinkWrapper to="/eligibility" />,
+            }}
+          />
+        </p>
       </div>
       <form
         action="calculator"

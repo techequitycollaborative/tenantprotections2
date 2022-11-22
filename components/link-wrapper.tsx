@@ -3,7 +3,7 @@ import Link from 'next/link';
 const LinkWrapper = (props: any) => {
   return (
     <Link href={props.to}>
-      <a>{props.children}</a>
+      <a className="text-blue-lighter underline">{props.children}</a>
     </Link>
   );
 };

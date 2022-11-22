@@ -38,7 +38,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
   }
 
   return (
-    <div className="border border-blue rounded p-6 flex flex-col bg-blue-lighter mb-3">
+    <div className="border border-blue rounded p-6 flex flex-col bg-blue-lightest mb-3">
       <div className="flex flex-row justify-between text-blue font-medium text-lg">
         {currentRentStartDate.toLocaleDateString('en-US', {
           month: '2-digit',
