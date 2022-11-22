@@ -1,13 +1,14 @@
 import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
+import LinkWrapper from '@/components/link-wrapper';
 
 interface Props {
   buildingType: string;
@@ -65,20 +66,43 @@ const Ineligible: NextPage<Props> = function Ineligible({
         {t('ineligible.title')}
       </h2>
       <div className="text-gray-dark text-lg text-justify">
-        {(
-          t(
-            buildingType === 'subsidized'
-              ? 'ineligible.text-subsidized'
-              : 'ineligible.text-1',
-            { returnObjects: true, city: location.city },
-          ) as Array<string>
-        ).map((x, i) => (
-          <p
-            key={i}
-            dangerouslySetInnerHTML={{ __html: x }}
-            className="py-2"
-          ></p>
-        ))}
+        {buildingType === 'subsidized' ? (
+          <>
+            <p className="py-2">
+              <Trans
+                i18nKey="ineligible.text-subsidized-p1"
+                components={{
+                  bold: <span className="font-bold" />,
+                }}
+              />
+            </p>
+            <p className="py-2">
+              {t('ineligible.text-subsidized-p2', {
+                returnObjects: true,
+                city: location.city,
+              })}
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="py-2">
+              <Trans
+                i18nKey="ineligible.text-1-p1"
+                components={{
+                  bold: <span className="font-bold" />,
+                }}
+              />
+            </p>
+            <p className="py-2">
+              <Trans
+                i18nKey="ineligible.text-1-p2"
+                components={{
+                  link1: <LinkWrapper to="/resources" />,
+                }}
+              />
+            </p>
+          </>
+        )}
       </div>
       {buildingType === 'subsidized' ? (
         <></>

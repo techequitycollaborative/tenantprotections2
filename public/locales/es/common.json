@@ -127,14 +127,10 @@
   },
   "ineligible": {
     "title": "Es posible que usted no sea elegible",
-    "text-subsidized": [
-      "<b>Desafortunadamente</b>, debido a que vive en una vivienda subsidiada, es posible que no sea elegible para los límites de alquiler locales o estatales. Sin embargo, puede tener otras protecciones legales contra desalojos y aumentos de alquiler.",
-      "Los requisitos de elegibilidad en torno a la vivienda subvencionada son complejos. Si le preocupa un aumento de alquiler reciente u otro problema con su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
-    ],
-    "text-1": [
-      "<b>Desafortunadamente</b>, creemos que no está cubierto por las protecciones locales o estatales, incluidas las cláusulas de control de alquileres o de protección de causa justa de la Ley de Protección de Inquilinos.",
-      "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <a href='/resources' style='color: #074DCF'><u>estos recursos</u>.</a>"
-    ],
+    "text-subsidized-p1": "<bold>Desafortunadamente</bold>, debido a que vive en una vivienda subsidiada, es posible que no sea elegible para los límites de alquiler locales o estatales. Sin embargo, puede tener otras protecciones legales contra desalojos y aumentos de alquiler.",
+    "text-subsidized-p2": "Los requisitos de elegibilidad en torno a la vivienda subvencionada son complejos. Si le preocupa un aumento de alquiler reciente u otro problema con su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda.",
+    "text-1-p1": "<bold>Desafortunadamente</bold>, creemos que no está cubierto por las protecciones locales o estatales, incluidas las cláusulas de control de alquileres o de protección de causa justa de la Ley de Protección de Inquilinos.",
+    "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>.",
     "subtitle": "¿Por qué no soy elegible?",
     "text-2": [
       "Según las respuestas que proporcionó con respecto a la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que no está cubierto. Los condominios, las viviendas unifamiliares y los edificios construidos antes de una fecha determinada a menudo están exentos de las leyes de tope de alquiler.",
