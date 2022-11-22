@@ -154,7 +154,7 @@ function EligibilityMatrix() {
 
   let matrix = {
     statewide: undefinedRuleset,
-    local: undefinedRuleset,
+    local: {},
   };
 
   Object.keys(eligibility).map((geography) => {

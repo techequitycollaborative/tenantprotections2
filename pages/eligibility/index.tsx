@@ -4,6 +4,8 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Location } from '@/types/location';
 import Layout from '@/components/layout';
+import Accordion from '@/components/accordion';
+import EligibilityMatrix from '@/data/eligibility-matrix';
 
 import { locationFromZip } from '@/utils/location';
 
@@ -54,6 +56,7 @@ export { getServerSideProps };
 // https://css-tricks.com/html-for-zip-codes/
 const Eligibility: NextPage<Props> = function Eligibility({ location }) {
   const { t } = useTranslation();
+  const eligibilityMatrix = EligibilityMatrix();
   return (
     <Layout>
       <h1 className="text-blue text-3xl font-bold py-8">
@@ -87,6 +90,21 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
         {location?.type === 'unknown' &&
           `Could not find ZIP Code ${location.zip}`}
       </form>
+      <Accordion
+        title={t('eligibility-more.title')}
+        content={
+          <div>
+            <p className="mb-4">{t('eligibility-more.content')}</p>
+            <ul>
+              {Object.entries(eligibilityMatrix.local).map(([key, value]) => (
+                <li key={key} className="list-disc list-outside ml-6 mb-2">
+                  {key}
+                </li>
+              ))}
+            </ul>
+          </div>
+        }
+      />
     </Layout>
   );
 };

@@ -78,10 +78,8 @@
   },
   "calculator": {
     "title": "Rent Calculator",
-    "text": [
-      "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
-      "Before using this calculator make sure you <a href='/eligibility' style='color: #074DCF'><u>check your eligibility</u></a> here!"
-    ],
+    "text1": "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
+    "text2": "Before using this calculator make sure you <link1>check your eligibility</link1> here!",
     "alert": {
       "legal": "This rent increase looks legal under state and local rent control.",
       "illegal": "This rent increase may be illegal if you qualify for state or local rent control.",
@@ -298,8 +296,12 @@
   "yes": "Yes",
   "eligibility-title": "Eligibility Quiz",
   "zipcode": "{{zip}}",
-  "zip-prompt": "Depending on where you live, different laws may apply. Your zip code helps us figure out which protections apply to you.",
+  "zip-prompt": "The Tenant Protections Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
+  "eligibility-more": {
+    "title": "Which cities have local protections?",
+    "content": "Here is a list of California cities with local rent control:"
+  },
   "back": "BACK",
   "start-over": "START OVER",
   "footer": {

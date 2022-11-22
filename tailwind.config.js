@@ -13,12 +13,12 @@ module.exports = {
 
     extend: {
       colors: {
-        // button colors
+        // TechEquity theme colors
         blue: {
-          dark: '#07246F',
+          dark: '#112353',
           DEFAULT: '#172F6E',
-          light: '#1B3C93',
-          lighter: '#DEE7FF',
+          light: '#45598b',
+          lighter: '#006ac3',
           lightest: '#E3EBFF',
         },
         green: '#85CA83',
