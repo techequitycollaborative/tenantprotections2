@@ -11,6 +11,18 @@ module.exports = {
       xl: '1440px',
     },
 
+    fontSize: {
+      xs: '.75rem',
+      sm: '.875rem',
+      base: '1rem',
+      md: '1rem',
+      lg: '1.2rem',
+      xl: '1.4rem',
+      '2xl': '1.6rem',
+      '3xl': '2rem',
+      '4xl': '2.25rem',
+    },
+
     extend: {
       colors: {
         // TechEquity theme colors
