@@ -1,5 +1,6 @@
 import formidable from 'formidable';
 import type { GetServerSideProps, NextPage } from 'next';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Location } from '@/types/location';
@@ -57,7 +58,15 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
   const { t } = useTranslation();
   return (
     <Layout>
-      <h1 className="text-blue text-3xl font-bold my-8">
+      <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
+        <Image
+          src="/img/apartment.svg"
+          alt="Protected apartments in a building with tenants standing outside"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <h1 className="text-blue text-3xl font-bold pt-4 pb-8 text-center">
         {t('calculator.title')}
       </h1>
       <div className="text-gray text-lg">

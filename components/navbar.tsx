@@ -25,14 +25,14 @@ function Navbar() {
             className="p-2 pr-0 h-12 cursor-pointer"
           />
         </Link>
-        <div className="pt-2 pb-2">
+        <div className="pt-2 pb-2 md:ml-2">
           <Link href="/">
-            <h1 className="text-2xl font-black text-white cursor-pointer">
-              CTP
+            <h1 className="text-xl mr-4 md:text-2xl md:mr-0 font-black text-white cursor-pointer">
+              Tenant Protections
             </h1>
           </Link>
         </div>
-        <div className="hidden text-xl space-x-12 ml-auto mr-16 lg:mr-32 xl:mr-64 text-white md:flex pt-1">
+        <div className="hidden text-xl space-x-12 ml-auto mr-4 text-white md:flex pt-1">
           <Link href="/eligibility">{t('navbar.eligibility')}</Link>
           <Link href="/calculator">{t('navbar.calculator')}</Link>
           <Link href="/resources">{t('navbar.resources')}</Link>

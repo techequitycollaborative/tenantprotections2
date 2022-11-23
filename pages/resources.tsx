@@ -1,4 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
@@ -26,10 +27,18 @@ const Resources: NextPage = () => {
 
   return (
     <Layout>
+      <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
+        <Image
+          src="/img/tenant.svg"
+          alt="Tenant putting paperwork into envelopes"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <h1 className="text-blue text-3xl font-bold pt-4 pb-8">
+        {t('resources.title')}
+      </h1>
       <div>
-        <h1 className="text-blue text-3xl font-bold py-8">
-          {t('resources.title')}
-        </h1>
         <h2 className="text-blue text-2xl font-bold py-4">
           {t('resources.section1.title')}
         </h2>

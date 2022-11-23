@@ -2,15 +2,16 @@
   "home": {
     "title-1": "Tenants, Know Your Rights!",
     "text-1": [
+      "How much can your landlord increase your rent?",
       "The Tenant Protection Act of 2019 protects a majority of California’s renters against unlawful rent increases and unfair evictions. Many cities also have local rent control measures with more restrictive caps on how much your landlord can increase your rent.",
       "Find out if you're protected by state or local laws."
     ],
-    "button-1": "Take eligibility quiz",
+    "button-1": "Take protections quiz",
     "title-2": "Check Your Rent Increase",
     "text-2": [
       "If you already took the quiz and know you're protected under state or local laws, our calculator will help you check your last rent increase and make sure you're not being overcharged."
     ],
-    "button-2": "Check the rent calculator",
+    "button-2": "Use the rent calculator",
     "title-3": "Need Help?",
     "text-3": [
       "You’re not alone and we’re here to support! Do you still have questions and need further support? If you are facing an unfair eviction, illegal rent increase, or if you are under threat of either, our resources can help you get the support you need to help you stay in your home and defend your rights."
@@ -89,7 +90,7 @@
       "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
       "issues": "Having issues with your tenancy?",
       "resources": "Explore our resources",
-      "take-quiz": "Take eligibility quiz"
+      "take-quiz": "Take protections quiz"
     },
     "timeline": {
       "change": "Date of rent change",
@@ -112,8 +113,8 @@
     }
   },
   "eligible": {
-    "title-local": "You're eligible for {{city}} rent control!",
-    "title-statewide": "You're eligible for the statewide protections!",
+    "title-local": "You're protected by {{city}} rent control!",
+    "title-statewide": "You're covered by statewide protections!",
     "local-text": [
       "<b>Congratulations</b>, you are covered by local rent control in {{city}}. This means that there is a limit to how much your landlord can raise your rent. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
       "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
@@ -151,25 +152,20 @@
       "This site exists to provide renters in California with high quality information about their rights under both California law and local ordinances. We connect renters with local and state-wide non-profits to help them deal with housing issues in their communities."
     ],
     "title-3": "More about Our Organizations",
-    "text-3": [
-      {
-        "name": "Alliance of Californians for Community Empowerment (ACCE)",
-        "url": "https://www.acceaction.org/",
-        "text": [
-          "The Alliance of Californians for Community Empowerment (ACCE) Action is a grassroots, member-led, statewide community organization working with more than 15,000 members across California. ACCE is dedicated to raising the voices of everyday Californians, neighborhood by neighborhood, to fight for the policies and programs we need to improve our communities and create a brighter future.",
-          "Change from the bottom up: We take seriously our commitment to ground-up organizing to build a strong people’s movement that can create transformative community change. Our local neighborhood chapters and issue committees, led by ACCE Action member leaders, meet regularly to strategize and plan campaigns. Central to this work is the belief that there’s power in numbers and in collective action – ACCE Action members and their allies frequently “take to the streets” with rallies, town halls, and other actions to make their voices heard.",
-          "In 2019, ACCE Action worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
-        ]
-      },
-      {
-        "name": "TechEquity Collaborative",
-        "url": "https://techequitycollaborative.org",
-        "text": [
-          "TechEquity Collaborative is a non-profit organization that believes the tech industry can and should contribute to broad-based growth that benefits everyone. That instead of being a force for displacement and inequality, tech can create opportunity and widespread prosperity. TechEquity is a member-driven organization made up of individuals and companies that share our values.",
-          "We educate people in the tech sector around housing and workforce & labor issues and activate them to make change in those key areas. In 2019, TechEquity worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
-        ]
-      }
-    ]
+    "organizations": {
+      "acce-name": "Alliance of Californians for Community Empowerment (ACCE)",
+      "acce-text": [
+        "The Alliance of Californians for Community Empowerment (ACCE) Action is a grassroots, member-led, statewide community organization working with more than 15,000 members across California. ACCE is dedicated to raising the voices of everyday Californians, neighborhood by neighborhood, to fight for the policies and programs we need to improve our communities and create a brighter future.",
+        "Change from the bottom up: We take seriously our commitment to ground-up organizing to build a strong people’s movement that can create transformative community change. Our local neighborhood chapters and issue committees, led by ACCE Action member leaders, meet regularly to strategize and plan campaigns. Central to this work is the belief that there’s power in numbers and in collective action – ACCE Action members and their allies frequently “take to the streets” with rallies, town halls, and other actions to make their voices heard.",
+        "In 2019, ACCE Action worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
+      ],
+      "tec-name": "TechEquity Collaborative",
+      "tec-text": [
+        "TechEquity Collaborative is a non-profit organization that believes the growing tech-driven economy can and should create opportunity for everyone. TechEquity mobilizes tech workers and companies to address inequities within the tech industry and the inequities caused by the tech industry.",
+        "We educate tech workers on deep structural inequities and bring them into longstanding movements for justice, accelerating the pace of change.",
+        "In 2019, TechEquity worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
+      ]
+    }
   },
   "resources": {
     "title": "Resources",
@@ -282,15 +278,15 @@
     }
   },
   "navbar": {
-    "calculator": "Calculator",
-    "eligibility": "Eligibility",
+    "calculator": "Rent Calculator",
+    "eligibility": "Protections Quiz",
     "resources": "Resources",
     "about": "About"
   },
   "no": "No",
   "submit": "Next",
   "yes": "Yes",
-  "eligibility-title": "Eligibility Quiz",
+  "eligibility-title": "Protections Quiz",
   "zipcode": "{{zip}}",
   "zip-prompt": "The Tenant Protections Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
@@ -304,5 +300,5 @@
     "text": "The information contained on this website is provided for informational purposes only, and should not be considered legal advice on any matter.",
     "link-text": "About us"
   },
-  "take-quiz": "Take the eligibility quiz"
+  "take-quiz": "Take the protections quiz"
 }
