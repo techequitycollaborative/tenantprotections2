@@ -2,15 +2,16 @@
   "home": {
     "title-1": "¡Inquilinos, conozcan sus derechos!",
     "text-1": [
+      "¿Cuánto puede aumentar su arrendador su alquiler?",
       "La Ley de Protección de Inquilinos de 2019 protege a la mayoría de los inquilinos de California contra aumentos de alquiler ilegales y desalojos injustos. Muchas ciudades también tienen medidas locales de control de alquileres con topes más restrictivos sobre cuánto puede aumentar su alquiler el arrendador.",
       "Averigüe si está protegido por leyes estatales o locales."
     ],
-    "button-1": "Tome la prueba de elegibilidad",
+    "button-1": "Hacer el cuestionario de protecciones",
     "title-2": "Verifique el aumento de su alquiler",
     "text-2": [
       "Si ya realizó el cuestionario y sabe que está protegido por las leyes estatales o locales, nuestra calculadora lo ayudará a verificar su último aumento de alquiler y asegurarse de que no le cobren de más."
     ],
-    "button-2": "Consulte la calculadora de alquiler",
+    "button-2": "Utilice la calculadora de alquiler",
     "title-3": "¿Necesita ayuda?",
     "text-3": [
       "¡No está solo y estamos aquí para apoyarlo! ¿Aún tiene preguntas y necesita más ayuda? Si se enfrenta a un desalojo injusto, un aumento ilegal de la renta o si está bajo amenaza de cualquiera de los dos, nuestros recursos pueden ayudarlo a obtener el apoyo que necesita para ayudarlo a permanecer en su hogar y defender sus derechos."
@@ -89,7 +90,7 @@
       "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento de la renta.",
       "issues": "¿Tiene problemas con su arrendamiento?",
       "resources": "Explore nuestros recursos",
-      "take-quiz": "Haga la prueba de elegibilidad"
+      "take-quiz": "Tome la prueba de protecciones"
     },
     "timeline": {
       "change": "Cambio de fecha de alquiler",
@@ -112,8 +113,8 @@
     }
   },
   "eligible": {
-    "title-local": "¡Eres elegible para el control de alquiler de {{city}}!",
-    "title-statewide": "¡Eres elegible para las protecciones estatales!",
+    "title-local": "¡Eres protegido por el control de alquiler de {{city}}!",
+    "title-statewide": "¡Eres cubierto por las protecciones estatales!",
     "local-text": [
       "<b>Felicitaciones</b>, está cubierto por el control de alquiler local en {{city}}. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
       "Además del control de alquiler local, también puede calificar para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
@@ -151,25 +152,21 @@
       "Este sitio existe para proporcionar a los inquilinos en California información de alta calidad sobre sus derechos bajo las leyes de California y las ordenanzas locales. Conectamos a los inquilinos con organizaciones sin fines de lucro locales y estatales para ayudarlos a lidiar con los problemas de vivienda en sus comunidades."
     ],
     "title-3": "Más sobre nuestras organizaciones",
-    "text-3": [
-      {
-        "name": "Alliance of Californians for Community Empowerment (ACCE)",
-        "url": "https://www.acceaction.org/",
-        "text": [
-          "La Acción de la Alianza de Californianos para el Empoderamiento de la Comunidad (ACCE) es una organización comunitaria estatal, de base, dirigida por sus miembros, que trabaja con más de 15,000 miembros en todo California. ACCE se dedica a alzar las voces de los californianos cotidianos, vecindario por vecindario, para luchar por las políticas y los programas que necesitamos para mejorar nuestras comunidades y crear un futuro más brillante.",
-          "Cambio de abajo hacia arriba: tomamos en serio nuestro compromiso con la organización desde cero para construir un movimiento popular fuerte que pueda crear un cambio comunitario transformador. Nuestros capítulos de vecindarios locales y comités temáticos, dirigidos por líderes miembros de ACCE Action, se reúnen regularmente para diseñar estrategias y planificar campañas. Un elemento central de este trabajo es la creencia de que la acción colectiva y la unión hacen la fuerza: los miembros de ACCE Action y sus aliados frecuentemente “toman las calles” con mítines, foros abiertos y otras acciones para hacer oír su voz.",
-          "En 2019, ACCE Action trabajó con una coalición de socios para copatrocinar la Ley de Protección de Inquilinos de 2019 (AB 1482)."
-        ]
-      },
-      {
-        "name": "TechEquity Collaborative",
-        "url": "https://techequitycollaborative.org",
-        "text": [
-          "TechEquity Collaborative ies una organización sin fines de lucro que cree que la industria de la tecnología puede y debe contribuir a un crecimiento de base amplia que beneficie a todos. Que en lugar de ser una fuerza para el desplazamiento y la desigualdad, la tecnología puede crear oportunidades y prosperidad generalizada. TechEquity es una organización impulsada por miembros, formada por personas y empresas que comparten nuestros valores.",
-          "Educamos a las personas en el sector de la tecnología acerca de la vivienda, así como los problemas laborales y de mano de obra, y los activamos para hacer cambios en esas áreas clave. En 2019, TechEquity trabajó con una coalición de socios para copatrocinar la Ley de Protección de Inquilinos de 2019 (AB 1482)."
-        ]
-      }
-    ]
+    "title-3": "More about Our Organizations",
+    "organizations": {
+      "acce-name": "Alliance of Californians for Community Empowerment (ACCE)",
+      "acce-text": [
+        "La Acción de la Alianza de Californianos para el Empoderamiento de la Comunidad (ACCE) es una organización comunitaria estatal, de base, dirigida por sus miembros, que trabaja con más de 15,000 miembros en todo California. ACCE se dedica a alzar las voces de los californianos cotidianos, vecindario por vecindario, para luchar por las políticas y los programas que necesitamos para mejorar nuestras comunidades y crear un futuro más brillante.",
+        "Cambio de abajo hacia arriba: tomamos en serio nuestro compromiso con la organización desde cero para construir un movimiento popular fuerte que pueda crear un cambio comunitario transformador. Nuestros capítulos de vecindarios locales y comités temáticos, dirigidos por líderes miembros de ACCE Action, se reúnen regularmente para diseñar estrategias y planificar campañas. Un elemento central de este trabajo es la creencia de que la acción colectiva y la unión hacen la fuerza: los miembros de ACCE Action y sus aliados frecuentemente “toman las calles” con mítines, foros abiertos y otras acciones para hacer oír su voz.",
+        "En 2019, ACCE Action trabajó con una coalición de socios para copatrocinar la Ley de Protección de Inquilinos de 2019 (AB 1482)."
+      ],
+      "tec-name": "TechEquity Collaborative",
+      "tec-text": [
+        "TechEquity Collaborative es una organización sin fines de lucro que cree que la creciente economía impulsada por la tecnología puede y debe crear oportunidades para todos. TechEquity moviliza a los trabajadores y empresas de tecnología para abordar las desigualdades dentro de la industria tecnológica y las desigualdades causadas por la industria tecnológica.",
+        "Educamos a los trabajadores tecnológicos sobre las profundas desigualdades estructurales y los llevamos a movimientos de larga data por la justicia, acelerando el ritmo del cambio.",
+        "En 2019, TechEquity trabajó con una coalición de socios para copatrocinar la Ley de protección de inquilinos de 2019 (AB 1482)."
+      ]
+    }
   },
   "resources": {
     "title": "Recursos",
@@ -282,15 +279,15 @@
     }
   },
   "navbar": {
-    "calculator": "Calculadora",
-    "eligibility": "Elegibilidad",
+    "calculator": "Calculadora de alquiler",
+    "eligibility": "Cuestionario de protecciones",
     "resources": "Recursos",
     "about": "Sobre nosotros"
   },
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
-  "eligibility-title": "Cuestionario de elegibilidad",
+  "eligibility-title": "Cuestionario de protecciones",
   "zipcode": "{{zip}}",
   "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todas partes de California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
   "zip-label": "¿Cuál es su código postal?",
@@ -304,5 +301,5 @@
     "text": "La información contenida en este sitio web se proporciona únicamente con fines informativos y no debe considerarse asesoramiento legal sobre ningún asunto.",
     "link-text": "Sobre nosotros"
   },
-  "take-quiz": "Hacer el cuestionario de elegibilidad"
+  "take-quiz": "Hacer el cuestionario de protecciones"
 }
