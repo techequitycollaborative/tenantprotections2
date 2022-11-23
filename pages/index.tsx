@@ -28,12 +28,12 @@ const Home: NextPage = () => {
           objectFit="cover"
         />
       </div>
-      <h1 className="text-blue text-3xl font-bold pt-4 pb-8 text-center">
+      <h1 className="text-blue text-3xl font-bold py-4 text-center">
         {t('home.title-1')}
       </h1>
       {(t('home.text-1', { returnObjects: true }) as Array<string>).map(
         (x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
+          <p key={i} className="text-gray-dark text-lg pb-4 text-left w-full">
             {x}
           </p>
         ),
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           objectFit="cover"
         />
       </div>
-      <h2 className="text-blue text-3xl font-bold py-8 text-center">
+      <h2 className="text-blue text-3xl font-bold py-4 text-center">
         {t('home.title-2')}
       </h2>
       {(t('home.text-2', { returnObjects: true }) as Array<string>).map(
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           objectFit="cover"
         />
       </div>
-      <h2 className="text-blue text-3xl font-bold py-8 text-center">
+      <h2 className="text-blue text-3xl font-bold py-4 text-center">
         {t('home.title-3')}
       </h2>
       {(t('home.text-3', { returnObjects: true }) as Array<string>).map(
