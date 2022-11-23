@@ -127,12 +127,12 @@
     "button": "Check the rent calculator"
   },
   "ineligible": {
-    "title": "You may not be eligible",
+    "title": "You may not be protected",
     "text-subsidized-p1": "<bold>Unfortunately</bold>, because you live in subsidized housing you may not be eligible for local or statewide rent caps. However, you may have other legal protections against evictions and rent increases.",
     "text-subsidized-p2": "Eligibility requirements around subsidized housing are complex. If you are concerned about a recent rent increase or other issue with your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support.",
     "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local or statewide protections, including the Tenant Protection Act’s just cause protection or rent control clauses.",
     "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
-    "subtitle": "Why am I not eligible?",
+    "subtitle": "Why am I not protected?",
     "text-2": [
       "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed before a certain date are often exempt from rent cap laws.",
       "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply."

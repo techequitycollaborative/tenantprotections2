@@ -23,7 +23,7 @@ const About: NextPage = () => {
 
   return (
     <Layout>
-      <h1 className="text-blue text-3xl font-bold py-8">
+      <h1 className="text-blue text-3xl font-bold py-8 text-center">
         {t('about.title-1')}
       </h1>
       <div>
@@ -34,7 +34,7 @@ const About: NextPage = () => {
             </p>
           ),
         )}
-        <h2 className="text-blue text-2xl font-bold py-4">
+        <h2 className="text-blue text-2xl font-bold py-4 text-center">
           {t('about.title-2')}
         </h2>
         {(t('about.text-2', { returnObjects: true }) as Array<string>).map(
@@ -44,10 +44,10 @@ const About: NextPage = () => {
             </p>
           ),
         )}
-        <h2 className="text-blue text-2xl font-bold py-4">
+        <h2 className="text-blue text-2xl font-bold py-4 text-center">
           {t('about.title-3')}
         </h2>
-        <div className="w-32 h-32 relative">
+        <div className="w-52 h-52 relative m-auto">
           <Image
             src="/img/acce-logo.png"
             alt="ACCE Logo"
@@ -55,7 +55,7 @@ const About: NextPage = () => {
             objectFit="cover"
           />
         </div>
-        <h3 className="text-blue text-xl font-bold py-2">
+        <h3 className="text-blue text-xl font-bold pb-2 text-center">
           <Link href={ACCE_URL}>{t('about.organizations.acce-name')}</Link>
         </h3>
         {(
@@ -67,15 +67,15 @@ const About: NextPage = () => {
             {x}
           </p>
         ))}
-        <div className="w-60 h-14 my-2 relative">
+        <div className="w-52 h-36 mt-2 relative m-auto">
           <Image
-            src="/img/techequity-logo.jpg"
+            src="/img/techequity-logo.png"
             alt="TechEquity Logo"
             layout="fill"
             objectFit="cover"
           />
         </div>
-        <h3 className="text-blue text-xl font-bold py-2">
+        <h3 className="text-blue text-xl font-bold py-2 text-center">
           <Link href={TEC_URL}>{t('about.organizations.tec-name')}</Link>
         </h3>
         {(
