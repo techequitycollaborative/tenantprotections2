@@ -3,11 +3,11 @@ import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { FullLocation } from '@/types/location';
 import { RentEntry, RentHistory } from '@/types/calculator';
-import { locationFromZip, lookupRentCap } from '@/utils/location';
+import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
 import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';

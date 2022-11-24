@@ -18,14 +18,19 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
   const previousRent = getPreviousRent(props.rentHistory).rent;
   const currentRentStartDate = getCurrentRent(props.rentHistory).startDate;
 
+  let statewideMaxRent = 0;
+  let statewideMaxRentDisplay = null;
   const statewideRentCap = lookupRentCap(
     props.location.statewideRentCap,
     new Date(currentRentStartDate),
   );
-  const statewideMaxRent = (1 + statewideRentCap) * previousRent;
-  const statewideMaxRentDisplay = statewideMaxRent.toFixed(2);
 
-  let localRentCap = null;
+  if (statewideRentCap) {
+    statewideMaxRent = (1 + statewideRentCap) * previousRent;
+    statewideMaxRentDisplay = statewideMaxRent.toFixed(2);
+  }
+
+  let localRentCap = undefined;
   let localMaxRent = 0;
   let localMaxRentDisplay = null;
   if (props.location.localRentCap) {
@@ -33,8 +38,10 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
       props.location.localRentCap,
       currentRentStartDate,
     );
-    localMaxRent = (1 + localRentCap) * previousRent;
-    localMaxRentDisplay = localMaxRent.toFixed(2);
+    if (localRentCap) {
+      localMaxRent = (1 + localRentCap) * previousRent;
+      localMaxRentDisplay = localMaxRent.toFixed(2);
+    }
   }
 
   return (
@@ -47,7 +54,8 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
         })}
         <p className="font-bold pr-4">${currentRent}</p>
       </div>
-      {currentRent > statewideMaxRent || currentRent > localMaxRent ? (
+      {(statewideMaxRent && currentRent > statewideMaxRent) ||
+      (localMaxRent && currentRent > localMaxRent) ? (
         <p className="text-blue font-medium py-2 text-lg">
           {t('calculator.alert.illegal')}
         </p>
@@ -56,7 +64,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
           {t('calculator.alert.legal')}
         </p>
       )}
-      {localRentCap != null && (
+      {localRentCap != undefined && (
         <div className="mb-4">
           <div className="flex flex-row text-blue text-lg font-bold">
             <img
@@ -88,31 +96,33 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
           </div>
         </div>
       )}
-      <div className="mb-4">
-        <div className="flex flex-row text-blue text-lg font-bold">
-          <img
-            src={
-              currentRent > statewideMaxRent
-                ? '/img/warning-icon.svg'
-                : '/img/check-icon.svg'
-            }
-            alt="warning icon"
-            className="pt-1 pr-2 absolute"
-          />
-          <div className="flex flex-col pl-8 pr-24">
-            <p>{t('calculator.alert.statewide-max-rent')}</p>
-            <p className="text-gray font-light text-sm italic">
-              {t('calculator.alert.max-increase', {
-                cap: (statewideRentCap * 100).toFixed(2),
-                rent: previousRent,
-              })}
+      {statewideRentCap != undefined && (
+        <div className="mb-4">
+          <div className="flex flex-row text-blue text-lg font-bold">
+            <img
+              src={
+                currentRent > statewideMaxRent
+                  ? '/img/warning-icon.svg'
+                  : '/img/check-icon.svg'
+              }
+              alt="warning icon"
+              className="pt-1 pr-2 absolute"
+            />
+            <div className="flex flex-col pl-8 pr-24">
+              <p>{t('calculator.alert.statewide-max-rent')}</p>
+              <p className="text-gray font-light text-sm italic">
+                {t('calculator.alert.max-increase', {
+                  cap: (statewideRentCap * 100).toFixed(2),
+                  rent: previousRent,
+                })}
+              </p>
+            </div>
+            <p className="border border-blue absolute  rounded text-blue text-lg font-medium py-2 my-1 px-2 right-[3em] md:right-[5em] lg:px-10 lg:right-[8em]">
+              ${statewideMaxRentDisplay}
             </p>
           </div>
-          <p className="border border-blue absolute  rounded text-blue text-lg font-medium py-2 my-1 px-2 right-[3em] md:right-[5em] lg:px-10 lg:right-[8em]">
-            ${statewideMaxRentDisplay}
-          </p>
         </div>
-      </div>
+      )}
       <div>
         <p className="text-blue font-medium py-2 text-md">
           {t('calculator.alert.rate-explanation')}
