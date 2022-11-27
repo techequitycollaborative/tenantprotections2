@@ -97,7 +97,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           {t('submit')}
         </button>
         {location?.type === 'unknown' &&
-          `Could not find ZIP Code ${location.zip}`}
+          `Could not find California ZIP Code ${location.zip}`}
       </form>
       <Accordion
         title={t('eligibility-more.title')}

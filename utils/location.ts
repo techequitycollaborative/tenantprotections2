@@ -49,8 +49,8 @@ export function locationFromZip(zip: string): Location {
 export function lookupRentCap(
   rentCapHistory: RentCapHistory,
   date: Date,
-): number {
-  let rate = 0;
+): number | undefined {
+  let rate = undefined;
 
   rentCapHistory.map((x, i) => {
     const start = new Date(x.start);
