@@ -12,7 +12,6 @@ import Layout from '@/components/layout';
 import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
 import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
-import { assertIsString } from '../../../../../../utils/assert';
 import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {

@@ -1,15 +1,13 @@
-import formidable from 'formidable';
 import type { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { FullLocation, Location, RawLocation, ZipData } from '@/types/location';
+import { FullLocation, Location } from '@/types/location';
 import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 
 import { locationFromZip } from '@/utils/location';
-import { assertIsString } from '../../utils/assert';
 import { zipAndCityFromForm as zipAndCityFromForm } from '../../utils/zip-and-city';
 import { Scope } from './zip/[zip]/city/[city]/3';
 

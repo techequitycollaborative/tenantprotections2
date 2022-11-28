@@ -1,4 +1,3 @@
-import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { Trans, useTranslation } from 'next-i18next';
@@ -9,7 +8,6 @@ import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 import LinkWrapper from '@/components/link-wrapper';
-import { assertIsString } from '../../../../../../utils/assert';
 import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {

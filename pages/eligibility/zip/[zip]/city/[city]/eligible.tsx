@@ -1,9 +1,7 @@
-import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { format } from 'react-string-format';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';

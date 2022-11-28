@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { Trans, useTranslation } from 'next-i18next';
@@ -13,7 +11,6 @@ import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import LinkWrapper from '@/components/link-wrapper';
 import { getEligibilityPath } from '../../../..';
-import { assertIsString } from '../../../../../../utils/assert';
 import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 const LINK_PROPERTY_LOOKUP = 'https://www.propertyshark.com/mason/';

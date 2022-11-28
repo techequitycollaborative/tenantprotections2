@@ -1,14 +1,12 @@
-import formidable from 'formidable';
 import type { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { FullLocation, Location, RawLocation } from '@/types/location';
+import { FullLocation, Location } from '@/types/location';
 import Layout from '@/components/layout';
 import LinkWrapper from '@/components/link-wrapper';
 
 import { locationFromZip } from '@/utils/location';
-import { assertIsString } from '../../utils/assert';
 import { zipAndCityFromForm } from '../../utils/zip-and-city';
 
 interface Props {
@@ -113,8 +111,6 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
 
 export default Calculator;
 
-export function getCalculatorPathFromLocation(
-  location: FullLocation,
-) {
+export function getCalculatorPathFromLocation(location: FullLocation) {
   return `/calculator/zip/${location.zip}/city/${location.city}`;
 }

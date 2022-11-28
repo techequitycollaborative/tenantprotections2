@@ -11,7 +11,6 @@ import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { getEligibilityPath } from '../../../..';
-import { assertIsString } from '../../../../../../utils/assert';
 import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {
