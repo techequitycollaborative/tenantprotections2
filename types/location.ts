@@ -1,3 +1,4 @@
+import { RawZipData } from '@/data/zipcodes.json';
 import { BuildingType } from './building';
 
 export interface YesNoQuestion {
@@ -27,7 +28,7 @@ export interface RentCapEntry {
 
 export interface RentCapHistory extends Array<RentCapEntry> {}
 
-export interface ZipData {
+export interface ZipData extends RawZipData {
   // Metropolitan Statistical Area (MSA)
   area: string;
   city: string;
@@ -35,12 +36,13 @@ export interface ZipData {
   zip: string;
 }
 
-export interface RawLocation extends ZipData {
+export interface RawLocation extends RawZipData {
   readonly type: 'raw';
 }
 
 export interface FullLocation extends ZipData {
   readonly type: 'full';
+  city: string;
   statewideRules: EligibilityRules;
   localRules?: EligibilityRules | null;
   statewideRentCap: RentCapHistory;

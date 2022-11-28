@@ -3,12 +3,15 @@ import type { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Location } from '@/types/location';
+import { FullLocation, Location, RawLocation, ZipData } from '@/types/location';
 import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 
 import { locationFromZip } from '@/utils/location';
+import { assertIsString } from '../../utils/assert';
+import { zipAndCityFromForm as zipAndCityFromForm } from '../../utils/zip-and-city';
+import { Scope } from './zip/[zip]/city/[city]/3';
 
 interface Props {
   location: Location | null;
@@ -16,39 +19,26 @@ interface Props {
 
 const getServerSideProps: GetServerSideProps<Props> =
   async function getServerSideProps(context) {
-    const form = formidable();
-    const zip = await new Promise<string | undefined>((resolve, reject) => {
-      form.parse(context.req, (err, fields) => {
-        if (err) {
-          return reject(err);
-        }
-        if (typeof fields.zip === 'string') {
-          resolve(fields.zip);
-        } else {
-          resolve(undefined);
-        }
-      });
-    });
+    const { zip, city } = await zipAndCityFromForm(context);
+    const location = !zip ? null : locationFromZip(zip, city);
 
-    const location = typeof zip === 'undefined' ? null : locationFromZip(zip);
-
-    if (location && 'county' in location) {
+    if (location?.type === 'full') {
       return {
         props: {
           location: null,
         },
         redirect: {
-          destination: `eligibility/zip/${zip}`,
+          destination: getEligibilityPath(location),
+        },
+      };
+    } else {
+      return {
+        props: {
+          ...(await serverSideTranslations(context.locale!)),
+          location,
         },
       };
     }
-
-    return {
-      props: {
-        ...(await serverSideTranslations(context.locale!)),
-        location,
-      },
-    };
   };
 
 export { getServerSideProps };
@@ -89,7 +79,19 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           placeholder="94110"
           className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
+          defaultValue={location?.zip}
         />
+        {location?.type === 'raw' && (
+          <input
+            id="city"
+            name="city"
+            type="text"
+            inputMode="text"
+            placeholder="What city do you live in?"
+            className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+            autoFocus
+          />
+        )}
         <button
           type="submit"
           className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
@@ -119,3 +121,17 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
 };
 
 export default Eligibility;
+
+export function getEligibilityPath(location: FullLocation | RawLocation) {
+  return `/eligibility/zip/${location.zip}/city/${location.city}`;
+}
+export function getEligibilityPathWithScope(
+  zip: string,
+  city: string,
+  scope: Scope,
+) {
+  return `/eligibility/zip/${zip}/city/${city}/eligible?s=${scope}`;
+}
+export function getIneligibilePath(zip: string, city: string) {
+  return `/eligibility/zip/${zip}/city/${city}/ineligible`;
+}

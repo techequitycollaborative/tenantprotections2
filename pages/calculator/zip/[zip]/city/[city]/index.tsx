@@ -12,6 +12,8 @@ import Layout from '@/components/layout';
 import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
 import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
+import { assertIsString } from '../../../../../../utils/assert';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {
   location: FullLocation;
@@ -300,10 +302,8 @@ function Results(props: RentResultsProps) {
 
 const getServerSideProps: GetServerSideProps<Props> =
   async function getServerSideProps(context) {
-    const { zip } = context.query;
-    assert(typeof zip === 'string');
-
-    const location = locationFromZip(zip);
+    const { zip, city } = zipAndCityFromUrl(context);
+    const location = locationFromZip(zip, city);
 
     if (location.type !== 'full') {
       return {

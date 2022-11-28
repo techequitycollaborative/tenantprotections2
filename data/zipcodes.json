@@ -10826,7 +10826,7 @@
   "94608": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "Alameda",
-    "city": "Emeryville",
+    "city": ["Oakland", "Emeryville"],
     "zip": "94608"
   },
   "94609": {

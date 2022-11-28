@@ -9,6 +9,8 @@ import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 import LinkWrapper from '@/components/link-wrapper';
+import { assertIsString } from '../../../../../../utils/assert';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {
   buildingType: string;
@@ -17,10 +19,8 @@ interface Props {
 
 const getServerSideProps: GetServerSideProps =
   async function getServerSideProps(context) {
-    const { zip } = context.query;
-    assert(typeof zip === 'string');
-
-    const location = locationFromZip(zip);
+    const { zip, city } = zipAndCityFromUrl(context);
+    const location = locationFromZip(zip, city);
 
     if (location.type !== 'full') {
       return {

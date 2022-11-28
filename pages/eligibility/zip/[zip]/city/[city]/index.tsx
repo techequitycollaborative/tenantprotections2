@@ -10,6 +10,9 @@ import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
+import { getEligibilityPath } from '../../../..';
+import { assertIsString } from '../../../../../../utils/assert';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {
   location: FullLocation;
@@ -17,10 +20,8 @@ interface Props {
 
 const getServerSideProps: GetServerSideProps<Props> =
   async function getServerSideProps(context) {
-    const { zip } = context.query;
-    assert(typeof zip === 'string');
-
-    const location = locationFromZip(zip);
+    const { zip, city } = zipAndCityFromUrl(context);
+    const location = locationFromZip(zip, city);
 
     if (location.type !== 'full') {
       return {
@@ -62,13 +63,13 @@ const Zip: NextPage<Props> = function Zip(props) {
         {t('questions.is-subsidized')}
       </h1>
       <Link
-        href={`/eligibility/zip/${props.location.zip}/ineligible?t=subsidized`}
+        href={`${getEligibilityPath(props.location)}/ineligible?t=subsidized`}
       >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('yes')}
         </button>
       </Link>
-      <Link href={`/eligibility/zip/${props.location.zip}/2`}>
+      <Link href={`${getEligibilityPath(props.location)}/2`}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('no')}
         </button>
