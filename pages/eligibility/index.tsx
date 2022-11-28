@@ -89,7 +89,6 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
             inputMode="text"
             placeholder="What city do you live in?"
             className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
-            autoFocus
           />
         )}
         <button

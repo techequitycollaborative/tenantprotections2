@@ -94,9 +94,8 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
             name="city"
             type="text"
             inputMode="text"
-            placeholder="Los Angeles"
+            placeholder="What city do you live in?"
             className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
-            autoFocus
           />
         )}
         <button
