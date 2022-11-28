@@ -36,11 +36,11 @@ export interface ZipData {
 }
 
 export interface RawLocation extends ZipData {
-  type: 'raw';
+  readonly type: 'raw';
 }
 
 export interface FullLocation extends ZipData {
-  type: 'full';
+  readonly type: 'full';
   statewideRules: EligibilityRules;
   localRules?: EligibilityRules | null;
   statewideRentCap: RentCapHistory;
@@ -48,7 +48,7 @@ export interface FullLocation extends ZipData {
 }
 
 export interface UnknownLocation {
-  type: 'unknown';
+  readonly type: 'unknown';
   zip: string;
 }
 
