@@ -1,13 +1,13 @@
-import formidable from 'formidable';
 import type { GetServerSideProps, NextPage } from 'next';
 import Image from 'next/image';
 import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Location } from '@/types/location';
+import { FullLocation, Location } from '@/types/location';
 import Layout from '@/components/layout';
 import LinkWrapper from '@/components/link-wrapper';
 
 import { locationFromZip } from '@/utils/location';
+import { zipAndCityFromForm } from '../../utils/zip-and-city';
 
 interface Props {
   location: Location | null;
@@ -15,39 +15,26 @@ interface Props {
 
 const getServerSideProps: GetServerSideProps<Props> =
   async function getServerSideProps(context) {
-    const form = formidable();
-    const zip = await new Promise<string | undefined>((resolve, reject) => {
-      form.parse(context.req, (err, fields) => {
-        if (err) {
-          return reject(err);
-        }
-        if (typeof fields.zip === 'string') {
-          resolve(fields.zip);
-        } else {
-          resolve(undefined);
-        }
-      });
-    });
+    const { zip, city } = await zipAndCityFromForm(context);
+    const location = !zip ? null : locationFromZip(zip, city);
 
-    const location = typeof zip === 'undefined' ? null : locationFromZip(zip);
-
-    if (location && 'county' in location) {
+    if (location?.type === 'full') {
       return {
         props: {
           location: null,
         },
         redirect: {
-          destination: `calculator/zip/${zip}`,
+          destination: getCalculatorPathFromLocation(location),
+        },
+      };
+    } else {
+      return {
+        props: {
+          ...(await serverSideTranslations(context.locale!)),
+          location,
         },
       };
     }
-
-    return {
-      props: {
-        ...(await serverSideTranslations(context.locale!)),
-        location,
-      },
-    };
   };
 
 export { getServerSideProps };
@@ -97,7 +84,18 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
           placeholder="94110"
           className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
           required
+          defaultValue={location?.zip}
         />
+        {location?.type === 'raw' && (
+          <input
+            id="city"
+            name="city"
+            type="text"
+            inputMode="text"
+            placeholder="What city do you live in?"
+            className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          />
+        )}
         <button
           type="submit"
           className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
@@ -112,3 +110,7 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
 };
 
 export default Calculator;
+
+export function getCalculatorPathFromLocation(location: FullLocation) {
+  return `/calculator/zip/${location.zip}/city/${location.city}`;
+}

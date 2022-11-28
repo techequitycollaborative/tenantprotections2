@@ -9,11 +9,30 @@ import {
   EligibilityRules,
   RentCapHistory,
 } from '@/types/location';
+import { assertIsString } from './assert';
 
 const ELIGIBLE = 'eligible';
 const EXEMPT = 'exempt';
 
-function enrichLocation(location: RawLocation): FullLocation {
+/**
+ * Convert RawLocation to FullLocation if only one city within the RawLocation
+ * or the provided city exists with the RawLocation city array.
+ * Else, return RawLocation and request user to confirm correct city.
+ */
+function tryEnrichLocation(
+  location: RawLocation,
+  city?: string,
+): FullLocation | RawLocation {
+  if (!Array.isArray(location.city)) {
+    city = location.city;
+  }
+  if (
+    !city ||
+    (Array.isArray(location.city) && !location.city.includes(city))
+  ) {
+    return location;
+  }
+
   const now = new Date();
   const eligibilityMatrix = EligibilityMatrix();
   const localRules = eligibilityMatrix.local[
@@ -26,6 +45,7 @@ function enrichLocation(location: RawLocation): FullLocation {
 
   return {
     ...location,
+    city: city,
     type: 'full',
     statewideRules: eligibilityMatrix.statewide,
     localRules: localRules ? localRules : null,
@@ -34,7 +54,7 @@ function enrichLocation(location: RawLocation): FullLocation {
   };
 }
 
-export function locationFromZip(zip: string): Location {
+export function locationFromZip(zip: string, city?: string): Location {
   if (!(zip in zipcodes)) {
     return { zip, type: 'unknown' };
   }
@@ -43,7 +63,7 @@ export function locationFromZip(zip: string): Location {
     ...zipcodes[zip],
     type: 'raw',
   };
-  return enrichLocation(data);
+  return tryEnrichLocation(data, city);
 }
 
 export function lookupRentCap(

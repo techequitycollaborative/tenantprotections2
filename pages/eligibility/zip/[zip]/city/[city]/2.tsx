@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { Trans, useTranslation } from 'next-i18next';
@@ -12,6 +10,8 @@ import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import LinkWrapper from '@/components/link-wrapper';
+import { getEligibilityPath } from '../../../..';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 const LINK_PROPERTY_LOOKUP = 'https://www.propertyshark.com/mason/';
 
@@ -29,10 +29,8 @@ interface Props {
 const getServerSideProps: GetServerSideProps<Props> =
   async function getServerSideProps(context) {
     const locale = context.locale!;
-    const { zip } = context.query;
-    assert(typeof zip === 'string');
-
-    const location = locationFromZip(zip);
+    const { zip, city } = zipAndCityFromUrl(context);
+    const location = locationFromZip(zip, city);
 
     if (location.type !== 'full') {
       return {
@@ -47,6 +45,7 @@ const getServerSideProps: GetServerSideProps<Props> =
       props: {
         ...(await serverSideTranslations(locale, ['common'])),
         location,
+        city,
       },
     };
   };
@@ -66,7 +65,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     <Layout>
       <EligibilityNav
         backLabel={t('back')}
-        backUrl={`/eligibility/zip/${props.location.zip}`}
+        backUrl={getEligibilityPath(props.location)}
         zip={props.location.zip}
         city={props.location.city}
         startOverLabel={t('start-over')}
@@ -76,7 +75,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
 
       <h2 className="text-blue text-2xl py-4">{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
-        <Link href={`/eligibility/zip/${props.location.zip}/3?s=local`}>
+        <Link href={`${getEligibilityPath(props.location)}/3?s=local`}>
           <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
             {t('answers.before-date', {
               date: new Date(rentControlDate).toLocaleDateString(
@@ -87,14 +86,14 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           </button>
         </Link>
       )}
-      <Link href={`/eligibility/zip/${props.location.zip}/3?s=statewide`}>
+      <Link href={`${getEligibilityPath(props.location)}/3?s=statewide`}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('answers.before-date', {
             date: rentCapDateStr,
           })}
         </button>
       </Link>
-      <Link href={`/eligibility/zip/${props.location.zip}/ineligible`}>
+      <Link href={`${getEligibilityPath(props.location)}/ineligible`}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('answers.after-date', {
             date: rentCapDateStr,

@@ -2,12 +2,9 @@ import assert from 'assert';
 
 import { GetServerSideProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect } from 'react';
-import { format } from 'react-string-format';
 
 import { FullLocation, YesNoQuestion } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
@@ -16,24 +13,30 @@ import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
+import {
+  getEligibilityPath,
+  getEligibilityPathWithScope,
+  getIneligibilePath,
+} from '../../../..';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
-const ELIGIBLE_LINK = '/eligibility/zip/{0}/eligible?s={1}';
-const INELIGIBLE_LINK = '/eligibility/zip/{0}/ineligible';
-
-const LOCAL_SCOPE = 'local';
-const STATEWIDE_SCOPE = 'statewide';
+export enum Scope {
+  LOCAL_SCOPE = 'local',
+  STATEWIDE_SCOPE = 'statewide',
+}
 
 interface Props {
   location: FullLocation;
-  scope: string;
+  scope: Scope;
 }
 
 interface AdditionalQuestionsSectionProps {
   localQuestions: YesNoQuestion[] | undefined;
   statewideQuestions: YesNoQuestion[] | undefined;
   statewidePass: boolean;
-  baseScope: string;
+  baseScope: Scope;
   zip: string;
+  city: string;
 }
 
 function AdditionalQuestionsSection({
@@ -42,6 +45,7 @@ function AdditionalQuestionsSection({
   statewidePass,
   baseScope,
   zip,
+  city,
 }: AdditionalQuestionsSectionProps) {
   const router = useRouter();
   const emptyQuestion = {
@@ -56,12 +60,12 @@ function AdditionalQuestionsSection({
   let [index, setIndex] = useState(0);
   let currentScope = baseScope;
   let questions =
-    currentScope === LOCAL_SCOPE ? localQuestions : statewideQuestions;
+    currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
   let question = questions ? questions[index] : emptyQuestion;
 
   useEffect(() => {
     questions =
-      currentScope === LOCAL_SCOPE ? localQuestions : statewideQuestions;
+      currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
     question = questions ? questions[index] : emptyQuestion;
   }, [index, questions, currentScope]);
 
@@ -71,12 +75,14 @@ function AdditionalQuestionsSection({
     event.preventDefault();
 
     if (questions && index >= questions.length - 1) {
-      if (currentScope === LOCAL_SCOPE) {
+      if (currentScope === Scope.LOCAL_SCOPE) {
         // Passed all local questions
-        router.push(format(ELIGIBLE_LINK, zip, LOCAL_SCOPE));
+        router.push(getEligibilityPathWithScope(zip, city, Scope.LOCAL_SCOPE));
       } else {
         // Passed all statewide questions
-        router.push(format(ELIGIBLE_LINK, zip, STATEWIDE_SCOPE));
+        router.push(
+          getEligibilityPathWithScope(zip, city, Scope.STATEWIDE_SCOPE),
+        );
       }
     } else {
       setIndex(index + 1);
@@ -86,20 +92,22 @@ function AdditionalQuestionsSection({
   const onClick = function click(event: any) {
     if (question.passingAnswer === event.target.value) {
       onNextQuestion(event);
-    } else if (currentScope === LOCAL_SCOPE) {
+    } else if (currentScope === Scope.LOCAL_SCOPE) {
       // Failed a local question, fall back to statewide check
       if (statewidePass) {
-        router.push(format(ELIGIBLE_LINK, zip, STATEWIDE_SCOPE));
+        router.push(
+          getEligibilityPathWithScope(zip, city, Scope.STATEWIDE_SCOPE),
+        );
       } else if (statewideQuestions) {
         questions = statewideQuestions;
-        currentScope = STATEWIDE_SCOPE;
+        currentScope = Scope.STATEWIDE_SCOPE;
         index = 0;
       } else {
-        router.push(format(INELIGIBLE_LINK, zip));
+        router.push(getIneligibilePath(zip, city));
       }
     } else {
       // Failed statewide check
-      router.push(format(INELIGIBLE_LINK, zip));
+      router.push(getIneligibilePath(zip, city));
     }
   };
 
@@ -149,15 +157,13 @@ export function makeBuildingTypeChooser() {
   const getServerSideProps: GetServerSideProps<Props> =
     async function getServerSideProps(context) {
       const locale = context.locale!;
-      const { zip } = context.query;
-      assert(typeof zip === 'string');
-
-      const location = locationFromZip(zip);
+      const { zip, city } = zipAndCityFromUrl(context);
+      const location = locationFromZip(zip, city);
 
       // Ensures that rent cap or rent control data is available for the given endpoint
       if (location.type !== 'full' || !location['statewideRules']) {
         return {
-          props: { location: null as any },
+          props: { location: null as any, scope: null as any },
           redirect: {
             permanent: false,
             destination: '/eligibility',
@@ -166,15 +172,19 @@ export function makeBuildingTypeChooser() {
       }
 
       // Require valid query string based on construction date/location, otherwise return to last question
-      const scope = context.query.s as string;
+      let scope: Scope | undefined = undefined;
+      if (Object.values(Scope).some((scope) => scope == context.query.s)) {
+        scope = context.query.s as Scope;
+      }
+
       if (
-        !scope?.match(/^(statewide|local)$/) ||
-        (scope === LOCAL_SCOPE && location.localRules == null)
+        !scope ||
+        (scope === Scope.LOCAL_SCOPE && location.localRules == null)
       ) {
         return {
           redirect: {
             permanent: false,
-            destination: `/eligibility/zip/${location.zip}/2`,
+            destination: `${getEligibilityPath(location)}/2`,
           },
         };
       }
@@ -208,16 +218,18 @@ export function makeBuildingTypeChooser() {
 
     function checkEligibility(selectedValue: string) {
       // Do local eligibility check/questions only if applicable
-      if (scope === LOCAL_SCOPE) {
+      if (scope === Scope.LOCAL_SCOPE) {
         if (location.localRules?.passingBuildingTypes.includes(selectedValue)) {
-          router.push(format(ELIGIBLE_LINK, location.zip, scope));
+          router.push(
+            getEligibilityPathWithScope(location.zip, location.city, scope),
+          );
           return;
         } else if (location.localRules?.eligibilityQuestions[selectedValue]) {
           setLocalQuestions(
             location.localRules.eligibilityQuestions[selectedValue],
           );
         } else {
-          setBaseScope(STATEWIDE_SCOPE);
+          setBaseScope(Scope.STATEWIDE_SCOPE);
         }
       }
 
@@ -227,8 +239,10 @@ export function makeBuildingTypeChooser() {
         location.statewideRules.passingBuildingTypes.includes(selectedValue)
       ) {
         // If base scope is statewide, pass; otherwise, defer to allow local check first
-        if (scope === STATEWIDE_SCOPE) {
-          router.push(format(ELIGIBLE_LINK, location.zip, scope));
+        if (scope === Scope.STATEWIDE_SCOPE) {
+          router.push(
+            getEligibilityPathWithScope(location.zip, location.city, scope),
+          );
           return;
         } else {
           setStatewidePass(true);
@@ -239,7 +253,7 @@ export function makeBuildingTypeChooser() {
           location.statewideRules.eligibilityQuestions[selectedValue],
         );
       } else {
-        router.push(format(INELIGIBLE_LINK, location.zip));
+        router.push(getIneligibilePath(location.zip, location.city));
         return;
       }
     }
@@ -270,7 +284,7 @@ export function makeBuildingTypeChooser() {
       <Layout>
         <EligibilityNav
           backLabel={t('back')}
-          backUrl={`/eligibility/zip/${location.zip}/2`}
+          backUrl={`${getEligibilityPath(location)}/2`}
           zip={location.zip}
           city={location.city}
           startOverLabel={t('start-over')}
@@ -330,6 +344,7 @@ export function makeBuildingTypeChooser() {
             statewidePass={statewidePass}
             baseScope={baseScope}
             zip={location.zip}
+            city={location.city}
           />
         )}
       </Layout>

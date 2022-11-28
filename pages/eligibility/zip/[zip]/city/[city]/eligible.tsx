@@ -1,14 +1,14 @@
-import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { format } from 'react-string-format';
 
 import { FullLocation } from '@/types/location';
 import { locationFromZip } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
+import { getCalculatorPathFromLocation } from '../../../../../calculator';
+import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
 interface Props {
   scope: string;
@@ -17,10 +17,8 @@ interface Props {
 
 const getServerSideProps: GetServerSideProps =
   async function getServerSideProps(context) {
-    const { zip } = context.query;
-    assert(typeof zip === 'string');
-
-    const location = locationFromZip(zip);
+    const { zip, city } = zipAndCityFromUrl(context);
+    const location = locationFromZip(zip, city);
 
     if (location.type !== 'full') {
       return {
@@ -81,7 +79,7 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
         ))}
       </div>
       <h3 className="text-blue text-2xl mt-6 mb-4">{t('eligible.footnote')}</h3>
-      <Link href={`/calculator/zip/${location.zip}`}>
+      <Link href={getCalculatorPathFromLocation(location)}>
         <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">
           {t('eligible.button')}
         </button>
