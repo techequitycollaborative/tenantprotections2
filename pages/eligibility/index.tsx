@@ -121,7 +121,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
 
 export default Eligibility;
 
-export function getEligibilityPath(location: FullLocation | RawLocation) {
+export function getEligibilityPath(location: FullLocation) {
   return `/eligibility/zip/${location.zip}/city/${location.city}`;
 }
 export function getEligibilityPathWithScope(

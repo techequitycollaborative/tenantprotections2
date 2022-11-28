@@ -114,7 +114,7 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
 export default Calculator;
 
 export function getCalculatorPathFromLocation(
-  location: FullLocation | RawLocation,
+  location: FullLocation,
 ) {
   return `/calculator/zip/${location.zip}/city/${location.city}`;
 }
