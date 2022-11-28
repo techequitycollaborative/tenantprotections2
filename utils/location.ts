@@ -15,7 +15,8 @@ const ELIGIBLE = 'eligible';
 const EXEMPT = 'exempt';
 
 /**
- * Convert RawLocation to FullLocation if only one city within the RawLocation.
+ * Convert RawLocation to FullLocation if only one city within the RawLocation
+ * or the provided city exists with the RawLocation city array.
  * Else, return RawLocation and request user to confirm correct city.
  */
 function tryEnrichLocation(
