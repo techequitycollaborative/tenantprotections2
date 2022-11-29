@@ -2,7 +2,7 @@
   "90001": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Firestone Park", "Firestone Pk"],
+    "city": ["Los Angeles", "Firestone Park"],
     "zip": "90001"
   },
   "90002": {
@@ -50,7 +50,7 @@
   "90009": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Los Angeles AFB", "Los Angls AFB"],
+    "city": ["Los Angeles", "Los Angeles AFB"],
     "zip": "90009"
   },
   "90010": {
@@ -128,7 +128,7 @@
   "90022": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Commerce", "E Los Angeles", "East Los Angeles"],
+    "city": ["Los Angeles", "Commerce", "East Los Angeles"],
     "zip": "90022"
   },
   "90023": {
@@ -146,7 +146,7 @@
   "90025": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "W Los Angeles", "West Los Angeles"],
+    "city": ["Los Angeles", "West Los Angeles"],
     "zip": "90025"
   },
   "90026": {
@@ -182,7 +182,7 @@
   "90031": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Lincoln Heights", "Lincoln Hts"],
+    "city": ["Los Angeles", "Lincoln Heights"],
     "zip": "90031"
   },
   "90032": {
@@ -224,7 +224,7 @@
   "90038": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "W Hollywood", "West Hollywood"],
+    "city": ["Los Angeles", "West Hollywood"],
     "zip": "90038"
   },
   "90039": {
@@ -272,7 +272,7 @@
   "90046": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "W Hollywood", "West Hollywood"],
+    "city": ["Los Angeles", "West Hollywood"],
     "zip": "90046"
   },
   "90047": {
@@ -284,7 +284,7 @@
   "90048": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "W Hollywood", "West Hollywood"],
+    "city": ["Los Angeles", "West Hollywood"],
     "zip": "90048"
   },
   "90049": {
@@ -410,7 +410,7 @@
   "90069": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["West Hollywood", "Los Angeles", "W Hollywood"],
+    "city": ["West Hollywood", "Los Angeles"],
     "zip": "90069"
   },
   "90070": {
@@ -434,13 +434,7 @@
   "90073": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Los Angeles",
-      "Veterans Adm",
-      "Veterans Admin",
-      "Veterans Administration",
-      "Veterans Admn"
-    ],
+    "city": ["Los Angeles", "Veterans Administration"],
     "zip": "90073"
   },
   "90074": {
@@ -650,13 +644,13 @@
   "90220": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Compton", "Crystal City", "Rancho Dominguez", "Rncho Domingz"],
+    "city": ["Compton", "Crystal City", "Rancho Dominguez"],
     "zip": "90220"
   },
   "90221": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Compton", "E Rncho Dmngz", "East Rancho Dominguez"],
+    "city": ["Compton", "East Rancho Dominguez"],
     "zip": "90221"
   },
   "90222": {
@@ -674,7 +668,7 @@
   "90224": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Compton", "Rancho Dominguez", "Rncho Domingz"],
+    "city": ["Compton", "Rancho Dominguez"],
     "zip": "90224"
   },
   "90230": {
@@ -770,7 +764,7 @@
   "90255": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Huntington Park", "Huntington Pk", "Walnut Park"],
+    "city": ["Huntington Park", "Walnut Park"],
     "zip": "90255"
   },
   "90260": {
@@ -812,13 +806,13 @@
   "90266": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Manhattan Beach", "Manhattan Bch"],
+    "city": "Manhattan Beach",
     "zip": "90266"
   },
   "90267": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Manhattan Beach", "Manhattan Bch"],
+    "city": "Manhattan Beach",
     "zip": "90267"
   },
   "90270": {
@@ -830,7 +824,7 @@
   "90272": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Pacific Palisades", "Pacific Plsds"],
+    "city": "Pacific Palisades",
     "zip": "90272"
   },
   "90274": {
@@ -840,7 +834,6 @@
       "Palos Verdes Peninsula",
       "Palos Verdes Estates",
       "Pls Vrds Est",
-      "Pls Vrds Pnsl",
       "Rllng Hls Est",
       "Rolling Hills",
       "Rolling Hills Estates"
@@ -856,7 +849,6 @@
       "Palos Verdes Peninsula",
       "Pls Vrds Est",
       "Pls Vrds Pnsl",
-      "Rch Palos Vrd",
       "Rllng Hls Est",
       "Rolling Hills Estates"
     ],
@@ -895,7 +887,7 @@
   "90292": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Marina Del Rey", "Marina Dl Rey", "Venice"],
+    "city": ["Marina Del Rey", "Venice"],
     "zip": "90292"
   },
   "90293": {
@@ -913,7 +905,7 @@
   "90295": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Marina Del Rey", "Marina Dl Rey", "Venice"],
+    "city": ["Marina Del Rey", "Venice"],
     "zip": "90295"
   },
   "90296": {
@@ -1243,7 +1235,7 @@
   "90631": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["La Habra", "La Habra Heights", "La Habra Hgts"],
+    "city": ["La Habra", "La Habra Heights"],
     "zip": "90631"
   },
   "90632": {
@@ -1327,13 +1319,13 @@
   "90670": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Santa Fe Springs", "Santa Fe Spgs"],
+    "city": "Santa Fe Springs",
     "zip": "90670"
   },
   "90671": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Santa Fe Springs", "Santa Fe Spgs"],
+    "city": "Santa Fe Springs",
     "zip": "90671"
   },
   "90680": {
@@ -1417,7 +1409,7 @@
   "90716": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Hawaiian Gardens", "Hawaiian Gdns", "Lakewood"],
+    "city": ["Hawaiian Gardens", "Lakewood"],
     "zip": "90716"
   },
   "90717": {
@@ -1753,19 +1745,13 @@
   "91011": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "La Canada Flintridge",
-      "Flintridge",
-      "La Canada",
-      "La Canada Flt",
-      "Pasadena"
-    ],
+    "city": ["La Canada Flintridge", "Flintridge", "La Canada", "Pasadena"],
     "zip": "91011"
   },
   "91012": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["La Canada Flintridge", "La Canada", "La Canada Flt"],
+    "city": ["La Canada Flintridge", "La Canada"],
     "zip": "91012"
   },
   "91016": {
@@ -1813,13 +1799,13 @@
   "91030": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["South Pasadena", "S Pasadena"],
+    "city": "South Pasadena",
     "zip": "91030"
   },
   "91031": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["South Pasadena", "S Pasadena"],
+    "city": "South Pasadena",
     "zip": "91031"
   },
   "91040": {
@@ -2142,7 +2128,6 @@
       "Agoura",
       "Calabasas",
       "Calabasas Hills",
-      "Calabasas Hls",
       "Cornell",
       "Malibu Lake",
       "Oak Park",
@@ -2154,19 +2139,13 @@
   "91302": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Calabasas",
-      "Hidden Hills",
-      "Monte Nido",
-      "Woodland Hills",
-      "Woodland Hls"
-    ],
+    "city": ["Calabasas", "Hidden Hills", "Monte Nido", "Woodland Hills"],
     "zip": "91302"
   },
   "91303": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Canoga Park", "Woodland Hills", "Woodland Hls"],
+    "city": ["Canoga Park", "Woodland Hills"],
     "zip": "91303"
   },
   "91304": {
@@ -2262,7 +2241,7 @@
   "91325": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Northridge", "Sherwood Forest", "Sherwood Frst"],
+    "city": ["Northridge", "Sherwood Forest"],
     "zip": "91325"
   },
   "91326": {
@@ -2340,14 +2319,7 @@
   "91342": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Sylmar",
-      "Kagel Canyon",
-      "Lake View Ter",
-      "Lake View Terrace",
-      "Rancho Cascades",
-      "Rnch Cascades"
-    ],
+    "city": ["Sylmar", "Kagel Canyon", "Lake View Terrace", "Rancho Cascades"],
     "zip": "91342"
   },
   "91343": {
@@ -2383,7 +2355,7 @@
   "91351": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Canyon Country", "Canyon Cntry", "Santa Clarita"],
+    "city": ["Canyon Country", "Santa Clarita"],
     "zip": "91351"
   },
   "91352": {
@@ -2431,7 +2403,7 @@
   "91359": {
     "area": "Rest_Of_California",
     "county": "Los Angeles",
-    "city": ["Westlake Village", "Thousand Oaks", "Westlake Vlg"],
+    "city": ["Westlake Village", "Thousand Oaks"],
     "zip": "91359"
   },
   "91360": {
@@ -2447,8 +2419,7 @@
       "Westlake Village",
       "Hidden Valley",
       "Lake Sherwood",
-      "Thousand Oaks",
-      "Westlake Vlg"
+      "Thousand Oaks"
     ],
     "zip": "91361"
   },
@@ -2467,31 +2438,31 @@
   "91364": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Woodland Hills", "Woodland Hls"],
+    "city": "Woodland Hills",
     "zip": "91364"
   },
   "91365": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Woodland Hills", "Woodland Hls"],
+    "city": "Woodland Hills",
     "zip": "91365"
   },
   "91367": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Woodland Hills", "Woodland Hls"],
+    "city": "Woodland Hills",
     "zip": "91367"
   },
   "91371": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Woodland Hills", "Woodland Hls"],
+    "city": "Woodland Hills",
     "zip": "91371"
   },
   "91372": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Calabasas", "Woodland Hills", "Woodland Hls"],
+    "city": ["Calabasas", "Woodland Hills"],
     "zip": "91372"
   },
   "91376": {
@@ -2515,13 +2486,7 @@
   "91381": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Stevenson Ranch",
-      "Newhall",
-      "Santa Clarita",
-      "Stevenson Rnh",
-      "Valencia"
-    ],
+    "city": ["Stevenson Ranch", "Newhall", "Santa Clarita", "Valencia"],
     "zip": "91381"
   },
   "91382": {
@@ -2551,13 +2516,13 @@
   "91386": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Canyon Country", "Canyon Cntry", "Santa Clarita"],
+    "city": ["Canyon Country", "Santa Clarita"],
     "zip": "91386"
   },
   "91387": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Canyon Country", "Canyon Cntry", "Santa Clarita"],
+    "city": ["Canyon Country", "Santa Clarita"],
     "zip": "91387"
   },
   "91388": {
@@ -2611,7 +2576,7 @@
   "91399": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Woodland Hills", "Woodland Hls", "Calabasas"],
+    "city": ["Woodland Hills", "Calabasas"],
     "zip": "91399"
   },
   "91401": {
@@ -2835,7 +2800,6 @@
     "county": "Los Angeles",
     "city": [
       "North Hollywood",
-      "N Hollywood",
       "Toluca Ter",
       "Toluca Terrace",
       "Valley Village",
@@ -2848,10 +2812,8 @@
     "county": "Los Angeles",
     "city": [
       "North Hollywood",
-      "N Hollywood",
       "Studio City",
       "Toluca Lake",
-      "W Toluca Lake",
       "West Toluca Lake"
     ],
     "zip": "91602"
@@ -2859,25 +2821,25 @@
   "91603": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91603"
   },
   "91604": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Studio City", "N Hollywood", "North Hollywood"],
+    "city": ["Studio City", "North Hollywood"],
     "zip": "91604"
   },
   "91605": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91605"
   },
   "91606": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood", "Valley Glen"],
+    "city": ["North Hollywood", "Valley Glen"],
     "zip": "91606"
   },
   "91607": {
@@ -2889,80 +2851,74 @@
       "North Hollywood",
       "Sherman Village",
       "Sherman Vlg",
-      "Studio City",
-      "Valley Vlg"
+      "Studio City"
     ],
     "zip": "91607"
   },
   "91608": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Universal City",
-      "N Hollywood",
-      "North Hollywood",
-      "Universal Cty"
-    ],
+    "city": ["Universal City", "N Hollywood", "North Hollywood"],
     "zip": "91608"
   },
   "91609": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91609"
   },
   "91610": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Toluca Lake", "N Hollywood", "North Hollywood"],
+    "city": ["Toluca Lake", "North Hollywood"],
     "zip": "91610"
   },
   "91611": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91611"
   },
   "91612": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91612"
   },
   "91614": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Studio City", "N Hollywood", "North Hollywood"],
+    "city": ["Studio City", "North Hollywood"],
     "zip": "91614"
   },
   "91615": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91615"
   },
   "91616": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood"],
+    "city": "North Hollywood",
     "zip": "91616"
   },
   "91617": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Valley Village", "N Hollywood", "North Hollywood", "Valley Vlg"],
+    "city": ["Valley Village", "N Hollywood", "North Hollywood"],
     "zip": "91617"
   },
   "91618": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["North Hollywood", "N Hollywood", "Universal Cty"],
+    "city": ["North Hollywood", "Universal Cty"],
     "zip": "91618"
   },
   "91701": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Rancho Cucamonga", "Alta Loma", "Rch Cucamonga"],
+    "city": ["Rancho Cucamonga", "Alta Loma"],
     "zip": "91701"
   },
   "91702": {
@@ -3040,13 +2996,13 @@
   "91729": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Rancho Cucamonga", "Rch Cucamonga"],
+    "city": "Rancho Cucamonga",
     "zip": "91729"
   },
   "91730": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Rancho Cucamonga", "Rch Cucamonga"],
+    "city": "Rancho Cucamonga",
     "zip": "91730"
   },
   "91731": {
@@ -3064,7 +3020,7 @@
   "91733": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["South El Monte", "El Monte", "S El Monte"],
+    "city": ["South El Monte", "El Monte"],
     "zip": "91733"
   },
   "91734": {
@@ -3082,13 +3038,13 @@
   "91737": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Rancho Cucamonga", "Alta Loma", "Rch Cucamonga"],
+    "city": ["Rancho Cucamonga", "Alta Loma"],
     "zip": "91737"
   },
   "91739": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Rancho Cucamonga", "Etiwanda", "Rch Cucamonga"],
+    "city": ["Rancho Cucamonga", "Etiwanda"],
     "zip": "91739"
   },
   "91740": {
@@ -3122,7 +3078,6 @@
       "Hacienda Heights",
       "City Industry",
       "City Of Industry",
-      "Hacienda Hts",
       "La Puente"
     ],
     "zip": "91745"
@@ -3146,9 +3101,7 @@
       "Rowland Heights",
       "City Industry",
       "City Of Industry",
-      "La Puente",
-      "Rowland Hghts",
-      "Rowland Hgts"
+      "La Puente"
     ],
     "zip": "91748"
   },
@@ -3233,7 +3186,7 @@
   "91766": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Pomona", "Phillips Ranch", "Phillips Rnch"],
+    "city": ["Pomona", "Phillips Ranch"],
     "zip": "91766"
   },
   "91767": {
@@ -3527,13 +3480,13 @@
   "91932": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Imperial Beach", "Imperial Bch"],
+    "city": "Imperial Beach",
     "zip": "91932"
   },
   "91933": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Imperial Beach", "Imperial Bch"],
+    "city": "Imperial Beach",
     "zip": "91933"
   },
   "91934": {
@@ -3671,7 +3624,7 @@
   "92004": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Borrego Springs", "Borrego Spgs"],
+    "city": "Borrego Springs",
     "zip": "92004"
   },
   "92007": {
@@ -3857,13 +3810,13 @@
   "92054": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Oceanside", "Camp Pendleton", "Cmp Pendleton"],
+    "city": ["Oceanside", "Camp Pendleton"],
     "zip": "92054"
   },
   "92055": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Camp Pendleton", "Cmp Pendleton", "Oceanside"],
+    "city": ["Camp Pendleton", "Oceanside"],
     "zip": "92055"
   },
   "92056": {
@@ -3893,7 +3846,7 @@
   "92060": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Palomar Mountain", "Palomar Mtn"],
+    "city": "Palomar Mountain",
     "zip": "92060"
   },
   "92061": {
@@ -3917,13 +3870,13 @@
   "92066": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Ranchita", "Warner Spgs", "Warner Springs"],
+    "city": ["Ranchita", "Warner Springs"],
     "zip": "92066"
   },
   "92067": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Rancho Santa Fe", "Rcho Santa Fe"],
+    "city": "Rancho Santa Fe",
     "zip": "92067"
   },
   "92068": {
@@ -4013,7 +3966,7 @@
   "92086": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Warner Springs", "Warner Spgs"],
+    "city": "Warner Springs",
     "zip": "92086"
   },
   "92088": {
@@ -4031,7 +3984,7 @@
   "92091": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Rancho Santa Fe", "Rcho Santa Fe"],
+    "city": "Rancho Santa Fe",
     "zip": "92091"
   },
   "92092": {
@@ -4253,7 +4206,7 @@
   "92135": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["San Diego", "Nas N Island", "Nas North Island"],
+    "city": ["San Diego", "Nas North Island"],
     "zip": "92135"
   },
   "92136": {
@@ -4565,7 +4518,7 @@
   "92201": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Indio", "Chiriaco Smt", "Chiriaco Summit"],
+    "city": ["Indio", "Chiriaco Summit"],
     "zip": "92201"
   },
   "92202": {
@@ -4655,13 +4608,13 @@
   "92234": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Cathedral City", "Cathedral Cty"],
+    "city": "Cathedral City",
     "zip": "92234"
   },
   "92235": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Cathedral City", "Cathedral Cty"],
+    "city": "Cathedral City",
     "zip": "92235"
   },
   "92236": {
@@ -4679,13 +4632,13 @@
   "92240": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Desert Hot Springs", "Dsrt Hot Spgs"],
+    "city": "Desert Hot Springs",
     "zip": "92240"
   },
   "92241": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Desert Hot Springs", "Dsrt Hot Spgs"],
+    "city": "Desert Hot Springs",
     "zip": "92241"
   },
   "92242": {
@@ -4763,7 +4716,7 @@
   "92256": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Morongo Valley", "Morongo Vly"],
+    "city": "Morongo Valley",
     "zip": "92256"
   },
   "92257": {
@@ -4775,12 +4728,7 @@
   "92258": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": [
-      "North Palm Springs",
-      "N Palm Spgs",
-      "N Palm Springs",
-      "No Palm Springs"
-    ],
+    "city": "North Palm Springs",
     "zip": "92258"
   },
   "92259": {
@@ -4864,29 +4812,19 @@
   "92276": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": [
-      "Thousand Palms",
-      "Cathedral City",
-      "Cathedral Cty",
-      "Thousand Plms"
-    ],
+    "city": ["Thousand Palms", "Cathedral City", "Cathedral Cty"],
     "zip": "92276"
   },
   "92277": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Twentynine Palms", "29 Palms", "Twentynin Plm"],
+    "city": ["Twentynine Palms", "29 Palms"],
     "zip": "92277"
   },
   "92278": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": [
-      "Twentynine Palms",
-      "29 Palms",
-      "Twentynin Plm",
-      "Twentynine Palms Mcb"
-    ],
+    "city": ["Twentynine Palms", "29 Palms", "Twentynine Palms Mcb"],
     "zip": "92278"
   },
   "92280": {
@@ -4922,7 +4860,7 @@
   "92285": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Landers", "Johnson Valley", "Johnson Vly", "Yucca Valley"],
+    "city": ["Landers", "Johnson Valley", "Yucca Valley"],
     "zip": "92285"
   },
   "92286": {
@@ -5042,7 +4980,7 @@
   "92322": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Cedarpines Park", "Cedarpines Pk"],
+    "city": "Cedarpines Park",
     "zip": "92322"
   },
   "92323": {
@@ -5132,7 +5070,7 @@
   "92338": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Ludlow", "Newberry Spgs", "Newberry Springs"],
+    "city": ["Ludlow", "Newberry Springs"],
     "zip": "92338"
   },
   "92339": {
@@ -5150,7 +5088,7 @@
   "92341": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Green Valley Lake", "Green Vly Lk"],
+    "city": "Green Valley Lake",
     "zip": "92341"
   },
   "92342": {
@@ -5192,7 +5130,7 @@
   "92352": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Lake Arrowhead", "Lk Arrowhead"],
+    "city": "Lake Arrowhead",
     "zip": "92352"
   },
   "92354": {
@@ -5204,7 +5142,7 @@
   "92356": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Lucerne Valley", "Lucerne Vly"],
+    "city": "Lucerne Valley",
     "zip": "92356"
   },
   "92357": {
@@ -5240,7 +5178,7 @@
   "92365": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Newberry Springs", "Newberry Spgs"],
+    "city": "Newberry Springs",
     "zip": "92365"
   },
   "92366": {
@@ -5312,12 +5250,7 @@
   "92382": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": [
-      "Running Springs",
-      "Arrowbear Lake",
-      "Arrowbear Lk",
-      "Running Spgs"
-    ],
+    "city": ["Running Springs", "Arrowbear Lake", "Arrowbear Lk"],
     "zip": "92382"
   },
   "92384": {
@@ -5371,7 +5304,7 @@
   "92395": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Victorville", "Spg Valley Lk", "Spring Valley Lake"],
+    "city": ["Victorville", "Spring Valley Lake"],
     "zip": "92395"
   },
   "92397": {
@@ -5395,37 +5328,37 @@
   "92401": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92401"
   },
   "92402": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92402"
   },
   "92403": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92403"
   },
   "92404": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92404"
   },
   "92405": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92405"
   },
   "92406": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92406"
   },
   "92407": {
@@ -5438,7 +5371,6 @@
       "Devore Heights",
       "Devore Hghts",
       "Muscoy",
-      "Sn Bernrdno",
       "Verdemont"
     ],
     "zip": "92407"
@@ -5446,67 +5378,67 @@
   "92408": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92408"
   },
   "92410": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92410"
   },
   "92411": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92411"
   },
   "92412": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92412"
   },
   "92413": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92413"
   },
   "92414": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92414"
   },
   "92415": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92415"
   },
   "92418": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92418"
   },
   "92423": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92423"
   },
   "92424": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92424"
   },
   "92427": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["San Bernardino", "Sn Bernrdno"],
+    "city": "San Bernardino",
     "zip": "92427"
   },
   "92501": {
@@ -5728,7 +5660,7 @@
   "92561": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Mountain Center", "Mountain Ctr"],
+    "city": "Mountain Center",
     "zip": "92561"
   },
   "92562": {
@@ -5788,7 +5720,7 @@
   "92583": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["San Jacinto", "Gilman Hot Springs", "Glmn Hot Spgs"],
+    "city": ["San Jacinto", "Gilman Hot Springs"],
     "zip": "92583"
   },
   "92584": {
@@ -5884,7 +5816,7 @@
   "92605": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92605"
   },
   "92606": {
@@ -5908,7 +5840,7 @@
   "92610": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Foothill Ranch", "El Toro", "Foothill Rnch", "Lake Forest"],
+    "city": ["Foothill Ranch", "El Toro", "Lake Forest"],
     "zip": "92610"
   },
   "92612": {
@@ -5926,7 +5858,7 @@
   "92615": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92615"
   },
   "92616": {
@@ -5968,13 +5900,13 @@
   "92624": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Capistrano Beach", "Capo Beach", "Dana Point"],
+    "city": ["Capistrano Beach", "Dana Point"],
     "zip": "92624"
   },
   "92625": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Corona Del Mar", "Corona Dl Mar"],
+    "city": "Corona Del Mar",
     "zip": "92625"
   },
   "92626": {
@@ -6016,25 +5948,25 @@
   "92646": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92646"
   },
   "92647": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92647"
   },
   "92648": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92648"
   },
   "92649": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Huntington Beach", "Huntingtn Bch"],
+    "city": "Huntington Beach",
     "zip": "92649"
   },
   "92650": {
@@ -6142,7 +6074,7 @@
   "92675": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["San Juan Capistrano", "Mission Viejo", "San Juan Capo"],
+    "city": ["San Juan Capistrano", "Mission Viejo"],
     "zip": "92675"
   },
   "92676": {
@@ -6160,7 +6092,7 @@
   "92678": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Trabuco Canyon", "Trabuco Cyn"],
+    "city": "Trabuco Canyon",
     "zip": "92678"
   },
   "92679": {
@@ -6174,8 +6106,7 @@
       "Portola Hills",
       "Robinson Ranch",
       "Robinson Rnch",
-      "Trabuco",
-      "Trabuco Cyn"
+      "Trabuco"
     ],
     "zip": "92679"
   },
@@ -6200,48 +6131,37 @@
   "92688": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": [
-      "Rancho Santa Margarita",
-      "Rancho Sta Marg",
-      "Rcho Sta Marg",
-      "Rsm"
-    ],
+    "city": ["Rancho Santa Margarita", "Rsm"],
     "zip": "92688"
   },
   "92690": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Mission Viejo", "San Juan Capistrano", "San Juan Capo"],
+    "city": ["Mission Viejo", "San Juan Capistrano"],
     "zip": "92690"
   },
   "92691": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Mission Viejo", "San Juan Capistrano", "San Juan Capo"],
+    "city": ["Mission Viejo", "San Juan Capistrano"],
     "zip": "92691"
   },
   "92692": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Mission Viejo", "San Juan Capistrano", "San Juan Capo"],
+    "city": ["Mission Viejo", "San Juan Capistrano"],
     "zip": "92692"
   },
   "92693": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["San Juan Capistrano", "San Juan Capo"],
+    "city": "San Juan Capistrano",
     "zip": "92693"
   },
   "92694": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": [
-      "Ladera Ranch",
-      "Mission Viejo",
-      "Ran Msn Viejo",
-      "Rancho Mission Viejo",
-      "Rmv"
-    ],
+    "city": ["Ladera Ranch", "Mission Viejo", "Rancho Mission Viejo", "Rmv"],
     "zip": "92694"
   },
   "92697": {
@@ -6301,7 +6221,7 @@
   "92708": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Fountain Valley", "Fountain Vly", "Santa Ana"],
+    "city": ["Fountain Valley", "Santa Ana"],
     "zip": "92708"
   },
   "92709": {
@@ -6337,7 +6257,7 @@
   "92728": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Fountain Valley", "Fountain Vly", "Santa Ana"],
+    "city": ["Fountain Valley", "Santa Ana"],
     "zip": "92728"
   },
   "92735": {
@@ -6709,7 +6629,7 @@
   "92883": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Corona", "Temescal Valley", "Temescal Vly"],
+    "city": ["Corona", "Temescal Valley"],
     "zip": "92883"
   },
   "92885": {
@@ -6799,7 +6719,7 @@
   "93012": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Camarillo", "Santa Rosa Va", "Santa Rosa Valley"],
+    "city": ["Camarillo", "Santa Rosa Valley"],
     "zip": "93012"
   },
   "93013": {
@@ -6907,19 +6827,19 @@
   "93041": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Port Hueneme", "Point Mugu Nawc", "Pt Mugu Nawc"],
+    "city": ["Port Hueneme", "Point Mugu Nawc"],
     "zip": "93041"
   },
   "93042": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Point Mugu Nawc", "Port Hueneme", "Pt Mugu Nawc"],
+    "city": ["Point Mugu Nawc", "Port Hueneme"],
     "zip": "93042"
   },
   "93043": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Port Hueneme Cbc Base", "Port Hueneme", "Prt Hueneme"],
+    "city": ["Port Hueneme Cbc Base", "Port Hueneme"],
     "zip": "93043"
   },
   "93044": {
@@ -7159,7 +7079,7 @@
   "93207": {
     "area": "Rest_Of_California",
     "county": "Tulare",
-    "city": ["California Hot Springs", "Calif Hot Spg"],
+    "city": "California Hot Springs",
     "zip": "93207"
   },
   "93208": {
@@ -7219,7 +7139,7 @@
   "93222": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["Pine Mountain Club", "Frazier Park", "Pine Mtn Clb"],
+    "city": ["Pine Mountain Club", "Frazier Park"],
     "zip": "93222"
   },
   "93223": {
@@ -7291,7 +7211,7 @@
   "93239": {
     "area": "Rest_Of_California",
     "county": "Kings",
-    "city": ["Kettleman City", "Kettleman Cty"],
+    "city": "Kettleman City",
     "zip": "93239"
   },
   "93240": {
@@ -7411,7 +7331,7 @@
   "93262": {
     "area": "Rest_Of_California",
     "county": "Tulare",
-    "city": ["Sequoia National Park", "Seq Natl Pk"],
+    "city": "Sequoia National Park",
     "zip": "93262"
   },
   "93263": {
@@ -7519,7 +7439,7 @@
   "93285": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["Wofford Heights", "Wofford Hts"],
+    "city": "Wofford Heights",
     "zip": "93285"
   },
   "93286": {
@@ -7621,7 +7541,7 @@
   "93313": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["Bakersfield", "Pumpkin Center", "Pumpkin Ctr"],
+    "city": ["Bakersfield", "Pumpkin Center"],
     "zip": "93313"
   },
   "93314": {
@@ -7651,7 +7571,7 @@
   "93383": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["Bakersfield", "Pumpkin Center", "Pumpkin Ctr"],
+    "city": ["Bakersfield", "Pumpkin Center"],
     "zip": "93383"
   },
   "93384": {
@@ -7699,61 +7619,61 @@
   "93401": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93401"
   },
   "93402": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["Los Osos", "San Luis Obispo", "Sn Luis Obisp"],
+    "city": ["Los Osos", "San Luis Obispo"],
     "zip": "93402"
   },
   "93403": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93403"
   },
   "93405": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93405"
   },
   "93406": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93406"
   },
   "93407": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93407"
   },
   "93408": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93408"
   },
   "93409": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93409"
   },
   "93410": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["San Luis Obispo", "Sn Luis Obisp"],
+    "city": "San Luis Obispo",
     "zip": "93410"
   },
   "93412": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["Los Osos", "San Luis Obispo", "Sn Luis Obisp"],
+    "city": ["Los Osos", "San Luis Obispo"],
     "zip": "93412"
   },
   "93420": {
@@ -7849,7 +7769,7 @@
   "93437": {
     "area": "Rest_Of_California",
     "county": "Santa Barbara",
-    "city": ["Lompoc", "Vandenberg AFB", "Vandenbrg AFB"],
+    "city": ["Lompoc", "Vandenberg AFB"],
     "zip": "93437"
   },
   "93438": {
@@ -7897,7 +7817,7 @@
   "93446": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["Paso Robles", "Adelaide", "Heritage Ranch", "Heritage Rnch"],
+    "city": ["Paso Robles", "Adelaide", "Heritage Ranch"],
     "zip": "93446"
   },
   "93447": {
@@ -7939,7 +7859,7 @@
   "93453": {
     "area": "Rest_Of_California",
     "county": "San Luis Obispo",
-    "city": ["Santa Margarita", "Santa Margar"],
+    "city": "Santa Margarita",
     "zip": "93453"
   },
   "93454": {
@@ -8029,13 +7949,13 @@
   "93504": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["California City", "Calif City"],
+    "city": "California City",
     "zip": "93504"
   },
   "93505": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["California City", "Calif City"],
+    "city": "California City",
     "zip": "93505"
   },
   "93510": {
@@ -8063,7 +7983,6 @@
       "Bishop",
       "Chalfant",
       "Chalfant Valley",
-      "Chalfant Vly",
       "Hammil Valley",
       "Swall Meadows"
     ],
@@ -8156,7 +8075,7 @@
   "93532": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Lake Hughes", "Elizabeth Lake", "Elizabeth Lk"],
+    "city": ["Lake Hughes", "Elizabeth Lake"],
     "zip": "93532"
   },
   "93534": {
@@ -8276,7 +8195,7 @@
   "93560": {
     "area": "Rest_Of_California",
     "county": "Kern",
-    "city": ["Rosamond", "Willow Spgs", "Willow Springs"],
+    "city": ["Rosamond", "Willow Springs"],
     "zip": "93560"
   },
   "93561": {
@@ -8285,10 +8204,8 @@
     "city": [
       "Tehachapi",
       "Bear Valley Springs",
-      "Bear Vly Spgs",
       "Golden Hills",
       "Monolith",
-      "Stallion Spgs",
       "Stallion Springs"
     ],
     "zip": "93561"
@@ -8584,7 +8501,7 @@
   "93642": {
     "area": "Rest_Of_California",
     "county": "Fresno",
-    "city": ["Mono Hot Springs", "Mono Hot Spgs", "Shaver Lake"],
+    "city": ["Mono Hot Springs", "Shaver Lake"],
     "zip": "93642"
   },
   "93643": {
@@ -8680,7 +8597,7 @@
   "93661": {
     "area": "Rest_Of_California",
     "county": "Merced",
-    "city": ["Santa Rita Park", "Santa Rita Pk"],
+    "city": "Santa Rita Park",
     "zip": "93661"
   },
   "93662": {
@@ -8698,7 +8615,7 @@
   "93665": {
     "area": "Rest_Of_California",
     "county": "Merced",
-    "city": ["South Dos Palos", "S Dos Palos"],
+    "city": "South Dos Palos",
     "zip": "93665"
   },
   "93666": {
@@ -9130,7 +9047,7 @@
   "93908": {
     "area": "Rest_Of_California",
     "county": "Monterey",
-    "city": ["Salinas", "Corral De Tie", "Corral De Tierra"],
+    "city": ["Salinas", "Corral De Tierra"],
     "zip": "93908"
   },
   "93912": {
@@ -9196,7 +9113,7 @@
   "93928": {
     "area": "Rest_Of_California",
     "county": "Monterey",
-    "city": ["Jolon", "Fort Hunter Liggett", "Ft H Liggett"],
+    "city": ["Jolon", "Fort Hunter Liggett"],
     "zip": "93928"
   },
   "93930": {
@@ -9358,7 +9275,7 @@
   "94022": {
     "area": "Rest_Of_California",
     "county": "Santa Clara",
-    "city": ["Los Altos", "Los Altos Hills", "Los Altos Hls"],
+    "city": ["Los Altos", "Los Altos Hills"],
     "zip": "94022"
   },
   "94023": {
@@ -9370,13 +9287,13 @@
   "94024": {
     "area": "Rest_Of_California",
     "county": "Santa Clara",
-    "city": ["Los Altos", "Los Altos Hills", "Los Altos Hls"],
+    "city": ["Los Altos", "Los Altos Hills"],
     "zip": "94024"
   },
   "94025": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["Menlo Park", "W Menlo Park", "West Menlo Park"],
+    "city": ["Menlo Park", "West Menlo Park"],
     "zip": "94025"
   },
   "94026": {
@@ -9394,7 +9311,7 @@
   "94028": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["Portola Valley", "Menlo Park", "Portola Vally"],
+    "city": ["Portola Valley", "Menlo Park"],
     "zip": "94028"
   },
   "94030": {
@@ -9514,13 +9431,13 @@
   "94080": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["South San Francisco", "S San Fran"],
+    "city": "South San Francisco",
     "zip": "94080"
   },
   "94083": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["South San Francisco", "S San Fran"],
+    "city": "South San Francisco",
     "zip": "94083"
   },
   "94085": {
@@ -10378,7 +10295,7 @@
   "94303": {
     "area": "Rest_Of_California",
     "county": "San Mateo",
-    "city": ["Palo Alto", "E Palo Alto", "East Palo Alto"],
+    "city": ["Palo Alto", "East Palo Alto"],
     "zip": "94303"
   },
   "94304": {
@@ -10450,7 +10367,7 @@
   "94503": {
     "area": "Rest_Of_California",
     "county": "Napa",
-    "city": ["American Canyon", "American Cyn", "Vallejo"],
+    "city": ["American Canyon", "Vallejo"],
     "zip": "94503"
   },
   "94505": {
@@ -10942,7 +10859,7 @@
   "94589": {
     "area": "Rest_Of_California",
     "county": "Solano",
-    "city": ["Vallejo", "American Canyon", "American Cyn"],
+    "city": ["Vallejo", "American Canyon"],
     "zip": "94589"
   },
   "94590": {
@@ -11248,13 +11165,7 @@
   "94801": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "Contra Costa",
-    "city": [
-      "Richmond",
-      "N Richmond",
-      "North Richmond",
-      "Point Richmond",
-      "Pt Richmond"
-    ],
+    "city": ["Richmond", "North Richmond", "Point Richmond", "Pt Richmond"],
     "zip": "94801"
   },
   "94802": {
@@ -11356,7 +11267,7 @@
   "94920": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "Marin",
-    "city": ["Belvedere Tiburon", "Bel Tiburon", "Belvedere", "Tiburon"],
+    "city": ["Belvedere Tiburon", "Belvedere", "Tiburon"],
     "zip": "94920"
   },
   "94922": {
@@ -11530,7 +11441,7 @@
   "94956": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "Marin",
-    "city": ["Point Reyes Station", "Pt Reyes Sta"],
+    "city": "Point Reyes Station",
     "zip": "94956"
   },
   "94957": {
@@ -11776,7 +11687,7 @@
   "95026": {
     "area": "Rest_Of_California",
     "county": "Santa Clara",
-    "city": ["Holy City", "Redwood Est", "Redwood Estates"],
+    "city": ["Holy City", "Redwood Estates"],
     "zip": "95026"
   },
   "95030": {
@@ -11854,13 +11765,13 @@
   "95044": {
     "area": "Rest_Of_California",
     "county": "Santa Clara",
-    "city": ["Redwood Estates", "Redwood Est"],
+    "city": "Redwood Estates",
     "zip": "95044"
   },
   "95045": {
     "area": "Rest_Of_California",
     "county": "San Benito",
-    "city": ["San Juan Bautista", "Sn Jun Batsta"],
+    "city": "San Juan Bautista",
     "zip": "95045"
   },
   "95046": {
@@ -11989,7 +11900,6 @@
     "city": [
       "Watsonville",
       "Corralitos",
-      "La Selva Bch",
       "La Selva Beach",
       "Mt Madonna",
       "Pajaro",
@@ -12204,7 +12114,7 @@
   "95140": {
     "area": "Rest_Of_California",
     "county": "Santa Clara",
-    "city": ["Mount Hamilton", "Mt Hamilton", "San Jose"],
+    "city": ["Mount Hamilton", "San Jose"],
     "zip": "95140"
   },
   "95141": {
@@ -12486,7 +12396,7 @@
   "95226": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Campo Seco", "Valley Spgs", "Valley Springs"],
+    "city": ["Campo Seco", "Valley Springs"],
     "zip": "95226"
   },
   "95227": {
@@ -12528,7 +12438,7 @@
   "95233": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Hathaway Pines", "Hathaway Pnes"],
+    "city": "Hathaway Pines",
     "zip": "95233"
   },
   "95234": {
@@ -12570,13 +12480,13 @@
   "95245": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Mokelumne Hill", "Mokelumne Hl"],
+    "city": "Mokelumne Hill",
     "zip": "95245"
   },
   "95246": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Mountain Ranch", "Mtn Ranch", "Sheep Ranch"],
+    "city": ["Mountain Ranch", "Sheep Ranch"],
     "zip": "95246"
   },
   "95247": {
@@ -12588,7 +12498,7 @@
   "95248": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Rail Road Flat", "Rail Rd Flat"],
+    "city": "Rail Road Flat",
     "zip": "95248"
   },
   "95249": {
@@ -12612,7 +12522,7 @@
   "95252": {
     "area": "Rest_Of_California",
     "county": "Calaveras",
-    "city": ["Valley Springs", "Valley Spgs"],
+    "city": "Valley Springs",
     "zip": "95252"
   },
   "95253": {
@@ -12696,7 +12606,7 @@
   "95306": {
     "area": "Rest_Of_California",
     "county": "Mariposa",
-    "city": ["Catheys Valley", "Catheys Vly"],
+    "city": "Catheys Valley",
     "zip": "95306"
   },
   "95307": {
@@ -12906,7 +12816,7 @@
   "95346": {
     "area": "Rest_Of_California",
     "county": "Tuolumne",
-    "city": ["Mi Wuk Village", "Mi Wuk Vlg"],
+    "city": "Mi Wuk Village",
     "zip": "95346"
   },
   "95347": {
@@ -13136,7 +13046,6 @@
     "county": "Mariposa",
     "city": [
       "Yosemite National Park",
-      "Tuolumne Mdws",
       "Tuolumne Meadows",
       "Wawona",
       "Yosemite Ntpk"
@@ -13146,7 +13055,7 @@
   "95391": {
     "area": "Rest_Of_California",
     "county": "San Joaquin",
-    "city": ["Tracy", "Mountain House", "Mtn House"],
+    "city": ["Tracy", "Mountain House"],
     "zip": "95391"
   },
   "95397": {
@@ -13230,7 +13139,7 @@
   "95416": {
     "area": "Rest_Of_California",
     "county": "Sonoma",
-    "city": ["Boyes Hot Springs", "Boyes Hot Spg"],
+    "city": "Boyes Hot Springs",
     "zip": "95416"
   },
   "95417": {
@@ -13272,13 +13181,13 @@
   "95423": {
     "area": "Rest_Of_California",
     "county": "Lake",
-    "city": ["Clearlake Oaks", "Clearlake Oks"],
+    "city": "Clearlake Oaks",
     "zip": "95423"
   },
   "95424": {
     "area": "Rest_Of_California",
     "county": "Lake",
-    "city": ["Clearlake Park", "Clearlake Pk"],
+    "city": "Clearlake Park",
     "zip": "95424"
   },
   "95425": {
@@ -13506,7 +13415,7 @@
   "95467": {
     "area": "Rest_Of_California",
     "county": "Lake",
-    "city": ["Hidden Valley Lake", "Hidden Vl Lk"],
+    "city": "Hidden Valley Lake",
     "zip": "95467"
   },
   "95468": {
@@ -13524,7 +13433,7 @@
   "95470": {
     "area": "Rest_Of_California",
     "county": "Mendocino",
-    "city": ["Redwood Valley", "Redwood Vly"],
+    "city": "Redwood Valley",
     "zip": "95470"
   },
   "95471": {
@@ -13554,7 +13463,7 @@
   "95480": {
     "area": "Rest_Of_California",
     "county": "Sonoma",
-    "city": ["Stewarts Point", "Stewarts Pt"],
+    "city": "Stewarts Point",
     "zip": "95480"
   },
   "95481": {
@@ -13608,7 +13517,7 @@
   "95493": {
     "area": "Rest_Of_California",
     "county": "Lake",
-    "city": ["Witter Springs", "Upper Lake", "Witter Spgs"],
+    "city": ["Witter Springs", "Upper Lake"],
     "zip": "95493"
   },
   "95494": {
@@ -13728,7 +13637,7 @@
   "95537": {
     "area": "Rest_Of_California",
     "county": "Humboldt",
-    "city": ["Fields Landing", "Fields Ldg"],
+    "city": "Fields Landing",
     "zip": "95537"
   },
   "95538": {
@@ -13956,7 +13865,7 @@
   "95605": {
     "area": "Rest_Of_California",
     "county": "Yolo",
-    "city": ["West Sacramento", "Broderick", "Bryte", "W Sacramento"],
+    "city": ["West Sacramento", "Broderick", "Bryte"],
     "zip": "95605"
   },
   "95606": {
@@ -13986,13 +13895,13 @@
   "95610": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Citrus Heights", "Citrus Hts"],
+    "city": "Citrus Heights",
     "zip": "95610"
   },
   "95611": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Citrus Heights", "Citrus Hts"],
+    "city": "Citrus Heights",
     "zip": "95611"
   },
   "95612": {
@@ -14040,7 +13949,7 @@
   "95619": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["Diamond Springs", "Diamond Spgs"],
+    "city": "Diamond Springs",
     "zip": "95619"
   },
   "95620": {
@@ -14052,7 +13961,7 @@
   "95621": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Citrus Heights", "Citrus Hts"],
+    "city": "Citrus Heights",
     "zip": "95621"
   },
   "95623": {
@@ -14184,7 +14093,7 @@
   "95645": {
     "area": "Rest_Of_California",
     "county": "Yolo",
-    "city": ["Knights Landing", "Knights Lndg"],
+    "city": "Knights Landing",
     "zip": "95645"
   },
   "95646": {
@@ -14232,7 +14141,7 @@
   "95655": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Mather", "Rancho Cordova", "Rncho Cordova"],
+    "city": ["Mather", "Rancho Cordova"],
     "zip": "95655"
   },
   "95656": {
@@ -14256,7 +14165,7 @@
   "95660": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["North Highlands", "N Highlands"],
+    "city": "North Highlands",
     "zip": "95660"
   },
   "95661": {
@@ -14304,7 +14213,7 @@
   "95668": {
     "area": "Rest_Of_California",
     "county": "Sutter",
-    "city": ["Pleasant Grove", "Pleasant Grv"],
+    "city": "Pleasant Grove",
     "zip": "95668"
   },
   "95669": {
@@ -14316,7 +14225,7 @@
   "95670": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Rancho Cordova", "Gold River", "Rncho Cordova"],
+    "city": ["Rancho Cordova", "Gold River"],
     "zip": "95670"
   },
   "95671": {
@@ -14388,13 +14297,13 @@
   "95682": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["Shingle Springs", "Cameron Park", "Latrobe", "Shingle Spgs"],
+    "city": ["Shingle Springs", "Cameron Park", "Latrobe"],
     "zip": "95682"
   },
   "95683": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Sloughhouse", "Rancho Murieta", "Rncho Murieta"],
+    "city": ["Sloughhouse", "Rancho Murieta"],
     "zip": "95683"
   },
   "95684": {
@@ -14442,7 +14351,7 @@
   "95691": {
     "area": "Rest_Of_California",
     "county": "Yolo",
-    "city": ["West Sacramento", "W Sacramento"],
+    "city": "West Sacramento",
     "zip": "95691"
   },
   "95692": {
@@ -14592,13 +14501,13 @@
   "95741": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Rancho Cordova", "Rncho Cordova"],
+    "city": "Rancho Cordova",
     "zip": "95741"
   },
   "95742": {
     "area": "Rest_Of_California",
     "county": "Sacramento",
-    "city": ["Rancho Cordova", "Rncho Cordova"],
+    "city": "Rancho Cordova",
     "zip": "95742"
   },
   "95746": {
@@ -14634,7 +14543,7 @@
   "95762": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["El Dorado Hills", "El Dorado Hls", "Folsom"],
+    "city": ["El Dorado Hills", "Folsom"],
     "zip": "95762"
   },
   "95763": {
@@ -14658,13 +14567,13 @@
   "95798": {
     "area": "Rest_Of_California",
     "county": "Yolo",
-    "city": ["West Sacramento", "W Sacramento"],
+    "city": "West Sacramento",
     "zip": "95798"
   },
   "95799": {
     "area": "Rest_Of_California",
     "county": "Yolo",
-    "city": ["West Sacramento", "W Sacramento"],
+    "city": "West Sacramento",
     "zip": "95799"
   },
   "95811": {
@@ -15060,7 +14969,7 @@
   "95934": {
     "area": "Rest_Of_California",
     "county": "Plumas",
-    "city": ["Crescent Mills", "Crescent Mls"],
+    "city": "Crescent Mills",
     "zip": "95934"
   },
   "95935": {
@@ -15210,7 +15119,7 @@
   "95960": {
     "area": "Rest_Of_California",
     "county": "Nevada",
-    "city": ["North San Juan", "N San Juan"],
+    "city": "North San Juan",
     "zip": "95960"
   },
   "95961": {
@@ -15306,7 +15215,7 @@
   "95977": {
     "area": "Rest_Of_California",
     "county": "Nevada",
-    "city": ["Smartsville", "Big Oak Valley", "Big Oak Vly"],
+    "city": ["Smartsville", "Big Oak Valley"],
     "zip": "95977"
   },
   "95978": {
@@ -15330,7 +15239,7 @@
   "95981": {
     "area": "Rest_Of_California",
     "county": "Yuba",
-    "city": ["Strawberry Valley", "Strawbrry Vly"],
+    "city": "Strawberry Valley",
     "zip": "95981"
   },
   "95982": {
@@ -15474,7 +15383,7 @@
   "96019": {
     "area": "Rest_Of_California",
     "county": "Shasta",
-    "city": ["Shasta Lake", "Central Valley", "Central Vly"],
+    "city": ["Shasta Lake", "Central Valley"],
     "zip": "96019"
   },
   "96020": {
@@ -15522,7 +15431,7 @@
   "96028": {
     "area": "Rest_Of_California",
     "county": "Shasta",
-    "city": ["Fall River Mills", "Fl River Mls"],
+    "city": "Fall River Mills",
     "zip": "96028"
   },
   "96029": {
@@ -15534,7 +15443,7 @@
   "96031": {
     "area": "Rest_Of_California",
     "county": "Siskiyou",
-    "city": ["Forks Of Salmon", "Frk Of Salmon"],
+    "city": "Forks Of Salmon",
     "zip": "96031"
   },
   "96032": {
@@ -15702,7 +15611,7 @@
   "96065": {
     "area": "Rest_Of_California",
     "county": "Shasta",
-    "city": ["Montgomery Creek", "Montgomry Crk"],
+    "city": "Montgomery Creek",
     "zip": "96065"
   },
   "96067": {
@@ -15768,7 +15677,7 @@
   "96079": {
     "area": "Rest_Of_California",
     "county": "Shasta",
-    "city": ["Shasta Lake", "Central Valley", "Central Vly", "Project City"],
+    "city": ["Shasta Lake", "Central Valley", "Project City"],
     "zip": "96079"
   },
   "96080": {
@@ -15780,7 +15689,7 @@
   "96084": {
     "area": "Rest_Of_California",
     "county": "Shasta",
-    "city": ["Round Mountain", "Round Mtn"],
+    "city": "Round Mountain",
     "zip": "96084"
   },
   "96085": {
@@ -15822,7 +15731,7 @@
   "96091": {
     "area": "Rest_Of_California",
     "county": "Trinity",
-    "city": ["Trinity Center", "Trinity Ctr"],
+    "city": "Trinity Center",
     "zip": "96091"
   },
   "96092": {
@@ -15876,13 +15785,7 @@
   "96103": {
     "area": "Rest_Of_California",
     "county": "Plumas",
-    "city": [
-      "Blairsden Graeagle",
-      "Blairsden",
-      "Blrsdn Greagl",
-      "Cromberg",
-      "Graeagle"
-    ],
+    "city": ["Blairsden Graeagle", "Blairsden", "Cromberg", "Graeagle"],
     "zip": "96103"
   },
   "96104": {
@@ -16110,19 +16013,13 @@
   "96145": {
     "area": "Rest_Of_California",
     "county": "Placer",
-    "city": ["Tahoe City", "Alpine Mdws", "Alpine Meadows"],
+    "city": ["Tahoe City", "Alpine Meadows"],
     "zip": "96145"
   },
   "96146": {
     "area": "Rest_Of_California",
     "county": "Placer",
-    "city": [
-      "Olympic Valley",
-      "Alpine Mdws",
-      "Alpine Meadows",
-      "Olympic Vly",
-      "Tahoe City"
-    ],
+    "city": ["Olympic Valley", "Alpine Mdws", "Alpine Meadows", "Tahoe City"],
     "zip": "96146"
   },
   "96148": {
@@ -16134,49 +16031,49 @@
   "96150": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96150"
   },
   "96151": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "Fallen Leaf", "S Lake Tahoe"],
+    "city": ["South Lake Tahoe", "Fallen Leaf"],
     "zip": "96151"
   },
   "96152": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96152"
   },
   "96154": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96154"
   },
   "96155": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96155"
   },
   "96156": {
     "area": "Rest_Of_California",
     "county": "Alpine",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96156"
   },
   "96157": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96157"
   },
   "96158": {
     "area": "Rest_Of_California",
     "county": "El Dorado",
-    "city": ["South Lake Tahoe", "S Lake Tahoe"],
+    "city": "South Lake Tahoe",
     "zip": "96158"
   },
   "96160": {
