@@ -833,8 +833,6 @@
     "city": [
       "Palos Verdes Peninsula",
       "Palos Verdes Estates",
-      "Pls Vrds Est",
-      "Rllng Hls Est",
       "Rolling Hills",
       "Rolling Hills Estates"
     ],
@@ -847,9 +845,6 @@
       "Rancho Palos Verdes",
       "Palos Verdes Estates",
       "Palos Verdes Peninsula",
-      "Pls Vrds Est",
-      "Pls Vrds Pnsl",
-      "Rllng Hls Est",
       "Rolling Hills Estates"
     ],
     "zip": "90275"
@@ -2131,8 +2126,7 @@
       "Cornell",
       "Malibu Lake",
       "Oak Park",
-      "Saratoga Hills",
-      "Saratoga Hls"
+      "Saratoga Hills"
     ],
     "zip": "91301"
   },
@@ -2426,7 +2420,7 @@
   "91362": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Thousand Oaks", "Westlake Village", "Westlake Vlg"],
+    "city": ["Thousand Oaks", "Westlake Village"],
     "zip": "91362"
   },
   "91363": {
@@ -2534,13 +2528,7 @@
   "91390": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Santa Clarita",
-      "Agua Dulce",
-      "Canyon Cntry",
-      "Canyon Country",
-      "Green Valley"
-    ],
+    "city": ["Santa Clarita", "Agua Dulce", "Canyon Country", "Green Valley"],
     "zip": "91390"
   },
   "91392": {
@@ -2798,13 +2786,7 @@
   "91601": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "North Hollywood",
-      "Toluca Ter",
-      "Toluca Terrace",
-      "Valley Village",
-      "Valley Vlg"
-    ],
+    "city": ["North Hollywood", "Toluca Terrace", "Valley Village"],
     "zip": "91601"
   },
   "91602": {
@@ -2847,10 +2829,8 @@
     "county": "Los Angeles",
     "city": [
       "Valley Village",
-      "N Hollywood",
       "North Hollywood",
       "Sherman Village",
-      "Sherman Vlg",
       "Studio City"
     ],
     "zip": "91607"
@@ -2858,7 +2838,7 @@
   "91608": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Universal City", "N Hollywood", "North Hollywood"],
+    "city": ["Universal City", "North Hollywood"],
     "zip": "91608"
   },
   "91609": {
@@ -2906,7 +2886,7 @@
   "91617": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Valley Village", "N Hollywood", "North Hollywood"],
+    "city": ["Valley Village", "North Hollywood"],
     "zip": "91617"
   },
   "91618": {
@@ -4626,7 +4606,7 @@
   "92239": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Desert Center", "Eagle Mountain", "Eagle Mtn"],
+    "city": ["Desert Center", "Eagle Mountain"],
     "zip": "92239"
   },
   "92240": {
@@ -4812,7 +4792,7 @@
   "92276": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["Thousand Palms", "Cathedral City", "Cathedral Cty"],
+    "city": ["Thousand Palms", "Cathedral City"],
     "zip": "92276"
   },
   "92277": {
@@ -5250,7 +5230,7 @@
   "92382": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Running Springs", "Arrowbear Lake", "Arrowbear Lk"],
+    "city": ["Running Springs", "Arrowbear Lake"],
     "zip": "92382"
   },
   "92384": {
@@ -5367,9 +5347,7 @@
     "city": [
       "San Bernardino",
       "Arrowhead Farms",
-      "Arrowhed Farm",
       "Devore Heights",
-      "Devore Hghts",
       "Muscoy",
       "Verdemont"
     ],
@@ -6105,7 +6083,6 @@
       "Lake Forest",
       "Portola Hills",
       "Robinson Ranch",
-      "Robinson Rnch",
       "Trabuco"
     ],
     "zip": "92679"
@@ -11165,7 +11142,7 @@
   "94801": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "Contra Costa",
-    "city": ["Richmond", "North Richmond", "Point Richmond", "Pt Richmond"],
+    "city": ["Richmond", "North Richmond", "Point Richmond"],
     "zip": "94801"
   },
   "94802": {
@@ -16019,7 +15996,7 @@
   "96146": {
     "area": "Rest_Of_California",
     "county": "Placer",
-    "city": ["Olympic Valley", "Alpine Mdws", "Alpine Meadows", "Tahoe City"],
+    "city": ["Olympic Valley", "Alpine Meadows", "Tahoe City"],
     "zip": "96146"
   },
   "96148": {

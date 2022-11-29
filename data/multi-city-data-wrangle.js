@@ -26,15 +26,15 @@ Object.entries(multiCityJson).forEach(([zip, data]) => {
 
       let compareCitySubstring = compareCity;
       let idx = -1;
-      // check for each char in sequence in string
+      // check if city is subsequence of compareCity
       for (const char of city) {
         idx = compareCitySubstring.indexOf(char);
         if (idx === -1) break;
         compareCitySubstring = compareCitySubstring.substring(idx);
       }
-      // is abbreviation if city is not subsequence of compareCity
       isAbbreviation = idx !== -1;
-      break;
+      // don't need to compare against other cities once we know it is an abbreviation
+      if (isAbbreviation) break;
     }
 
     return !isAbbreviation;
