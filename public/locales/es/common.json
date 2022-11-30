@@ -288,6 +288,7 @@
   "submit": "Enviar",
   "yes": "Sí",
   "eligibility-title": "Cuestionario de protecciones",
+  "city-select": "Seleccione en que ciudad vive",
   "zipcode": "{{zip}}",
   "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todas partes de California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
   "zip-label": "¿Cuál es su código postal?",

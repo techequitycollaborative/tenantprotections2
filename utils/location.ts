@@ -106,7 +106,7 @@ export function getPathFromLocation(
     '/zip/' +
     location.zip +
     '/city/' +
-    location.city +
+    location.city.replace(' ', '_') +
     pageString +
     paramString
   );

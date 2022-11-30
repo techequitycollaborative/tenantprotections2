@@ -98,7 +98,7 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
             className="border-2 text-lg border-gray rounded p-3"
           >
             <option value="" selected disabled>
-              {t('Please select which city you live in')}
+              {t('city-select')}
             </option>
             {citiesFromZip(location.zip).map((x, i) => (
               <option value={x} key={i}>

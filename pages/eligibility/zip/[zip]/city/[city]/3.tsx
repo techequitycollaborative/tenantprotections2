@@ -302,7 +302,7 @@ export function makeBuildingTypeChooser() {
         </h2>
         <select
           onChange={onSelect}
-          className="w-full border-2 border-blue rounded py-4 px-4 text-blue"
+          className="w-full border-2 text-lg border-blue rounded py-4 px-4 text-blue"
         >
           <option value="" className="text-blue">
             {t('Select')}

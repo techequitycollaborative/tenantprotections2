@@ -79,7 +79,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           inputMode="numeric"
           pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
           placeholder="90001"
-          className="border-2 rounded border-gray outline-none p-3 my-3"
+          className="border-2 text-lg rounded border-gray outline-none p-3 my-3"
           required
           defaultValue={location?.zip}
         />
@@ -88,10 +88,10 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
             id="city"
             name="city"
             required
-            className="border-2 border-gray rounded p-3"
+            className="border-2 text-lg border-gray rounded p-3"
           >
             <option value="" selected disabled>
-              {t('Please select which city you live in')}
+              {t('city-select')}
             </option>
             {citiesFromZip(location.zip).map((x, i) => (
               <option value={x} key={i}>

@@ -244,7 +244,7 @@ function RentBox(props: RentBoxProps) {
           value={rent}
           onChange={onRentChange}
           placeholder="$1,350"
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          className="bg-gray-lightest border rounded border-gray outline-none text-lg p-3 my-3"
           required
         />
         <span>{rentError}</span>
@@ -256,7 +256,7 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={startDate}
           onChange={onStartDateChange}
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          className="bg-gray-lightest border rounded border-gray outline-none text-lg p-3 my-3"
           required
         />
         <button

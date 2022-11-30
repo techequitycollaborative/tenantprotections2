@@ -6,9 +6,10 @@ import { assertIsString } from './assert';
 export function zipAndCityFromUrl(
   context: GetServerSidePropsContext<ParsedUrlQuery, PreviewData>,
 ) {
-  const { zip, city } = context.query;
+  let { zip, city } = context.query;
   assertIsString(zip);
   assertIsString(city);
+  city = city.replace('_', ' ');
   return {
     zip,
     city,
