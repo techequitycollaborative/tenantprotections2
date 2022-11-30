@@ -66,6 +66,38 @@ export function locationFromZip(zip: string, city?: string): Location {
   return tryEnrichLocation(data, city);
 }
 
+export function getPathFromLocation(
+  base: string,
+  location: FullLocation,
+  page?: string,
+  params?: { [index: string]: string },
+): string {
+  let paramString = '';
+  let pageString = '';
+
+  if (page) {
+    pageString = '/' + page;
+  }
+
+  if (params) {
+    paramString += '?';
+    for (let key in params) {
+      let value = params[key];
+      paramString += key + '=' + value;
+    }
+  }
+  return (
+    '/' +
+    base +
+    '/zip/' +
+    location.zip +
+    '/city/' +
+    location.city +
+    pageString +
+    paramString
+  );
+}
+
 export function lookupRentCap(
   rentCapHistory: RentCapHistory,
   date: Date,

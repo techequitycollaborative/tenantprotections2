@@ -4,14 +4,13 @@ import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
-import { locationFromZip } from '@/utils/location';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
 import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import LinkWrapper from '@/components/link-wrapper';
-import { getEligibilityPath } from '../../../..';
-import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 const LINK_PROPERTY_LOOKUP = 'https://www.propertyshark.com/mason/';
 
@@ -65,7 +64,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     <Layout>
       <EligibilityNav
         backLabel={t('back')}
-        backUrl={getEligibilityPath(props.location)}
+        backUrl={getPathFromLocation('eligibility', props.location)}
         zip={props.location.zip}
         city={props.location.city}
         startOverLabel={t('start-over')}
@@ -75,7 +74,11 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
 
       <h2 className="text-blue text-2xl py-4">{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
-        <Link href={`${getEligibilityPath(props.location)}/3?s=local`}>
+        <Link
+          href={`${getPathFromLocation('eligibility', props.location, '3', {
+            s: 'local',
+          })}`}
+        >
           <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
             {t('answers.before-date', {
               date: new Date(rentControlDate).toLocaleDateString(
@@ -86,14 +89,24 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           </button>
         </Link>
       )}
-      <Link href={`${getEligibilityPath(props.location)}/3?s=statewide`}>
+      <Link
+        href={`${getPathFromLocation('eligibility', props.location, '3', {
+          s: 'statewide',
+        })}`}
+      >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('answers.before-date', {
             date: rentCapDateStr,
           })}
         </button>
       </Link>
-      <Link href={`${getEligibilityPath(props.location)}/ineligible`}>
+      <Link
+        href={`${getPathFromLocation(
+          'eligibility',
+          props.location,
+          'ineligible',
+        )}`}
+      >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('answers.after-date', {
             date: rentCapDateStr,

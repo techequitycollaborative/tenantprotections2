@@ -4,11 +4,10 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
-import { locationFromZip } from '@/utils/location';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
-import { getCalculatorPathFromLocation } from '../../../../../calculator';
-import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 interface Props {
   scope: string;
@@ -79,7 +78,7 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
         ))}
       </div>
       <h3 className="text-blue text-2xl mt-6 mb-4">{t('eligible.footnote')}</h3>
-      <Link href={getCalculatorPathFromLocation(location)}>
+      <Link href={getPathFromLocation('calculator', location)}>
         <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">
           {t('eligible.button')}
         </button>

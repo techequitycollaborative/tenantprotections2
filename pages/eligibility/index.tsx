@@ -7,8 +7,8 @@ import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 
-import { locationFromZip } from '@/utils/location';
-import { zipAndCityFromForm as zipAndCityFromForm } from '../../utils/zip-and-city';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
+import { zipAndCityFromForm as zipAndCityFromForm } from '@/utils/zip-and-city';
 import { Scope } from './zip/[zip]/city/[city]/3';
 
 interface Props {
@@ -26,7 +26,7 @@ const getServerSideProps: GetServerSideProps<Props> =
           location: null,
         },
         redirect: {
-          destination: getEligibilityPath(location),
+          destination: getPathFromLocation('eligibility', location),
         },
       };
     } else {
@@ -118,17 +118,3 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
 };
 
 export default Eligibility;
-
-export function getEligibilityPath(location: FullLocation) {
-  return `/eligibility/zip/${location.zip}/city/${location.city}`;
-}
-export function getEligibilityPathWithScope(
-  zip: string,
-  city: string,
-  scope: Scope,
-) {
-  return `/eligibility/zip/${zip}/city/${city}/eligible?s=${scope}`;
-}
-export function getIneligibilePath(zip: string, city: string) {
-  return `/eligibility/zip/${zip}/city/${city}/ineligible`;
-}

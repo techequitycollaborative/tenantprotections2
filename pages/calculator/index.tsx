@@ -6,8 +6,8 @@ import { FullLocation, Location } from '@/types/location';
 import Layout from '@/components/layout';
 import LinkWrapper from '@/components/link-wrapper';
 
-import { locationFromZip } from '@/utils/location';
-import { zipAndCityFromForm } from '../../utils/zip-and-city';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
+import { zipAndCityFromForm } from '@/utils/zip-and-city';
 
 interface Props {
   location: Location | null;
@@ -24,7 +24,7 @@ const getServerSideProps: GetServerSideProps<Props> =
           location: null,
         },
         redirect: {
-          destination: getCalculatorPathFromLocation(location),
+          destination: getPathFromLocation('calculator', location),
         },
       };
     } else {
@@ -110,7 +110,3 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
 };
 
 export default Calculator;
-
-export function getCalculatorPathFromLocation(location: FullLocation) {
-  return `/calculator/zip/${location.zip}/city/${location.city}`;
-}

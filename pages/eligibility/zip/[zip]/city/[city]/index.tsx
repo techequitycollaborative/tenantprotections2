@@ -5,13 +5,12 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
-import { locationFromZip } from '@/utils/location';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
 import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
-import { getEligibilityPath } from '../../../..';
-import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 interface Props {
   location: FullLocation;
@@ -62,13 +61,15 @@ const Zip: NextPage<Props> = function Zip(props) {
         {t('questions.is-subsidized')}
       </h1>
       <Link
-        href={`${getEligibilityPath(props.location)}/ineligible?t=subsidized`}
+        href={getPathFromLocation('eligibility', props.location, 'ineligible', {
+          t: 'subsidized',
+        })}
       >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('yes')}
         </button>
       </Link>
-      <Link href={`${getEligibilityPath(props.location)}/2`}>
+      <Link href={getPathFromLocation('eligibility', props.location, '2')}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('no')}
         </button>
