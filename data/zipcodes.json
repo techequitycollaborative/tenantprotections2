@@ -236,7 +236,7 @@
   "90040": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Commerce", "Cty Of Cmmrce"],
+    "city": ["Los Angeles", "Commerce"],
     "zip": "90040"
   },
   "90041": {
@@ -434,7 +434,7 @@
   "90073": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Veterans Administration"],
+    "city": "Los Angeles",
     "zip": "90073"
   },
   "90074": {
@@ -536,7 +536,7 @@
   "90091": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Los Angeles", "Commerce", "Cty Of Cmmrce"],
+    "city": ["Los Angeles", "Commerce"],
     "zip": "90091"
   },
   "90093": {
@@ -984,13 +984,13 @@
   "90313": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Inglewood", "General Telephone"],
+    "city": "Inglewood",
     "zip": "90313"
   },
   "90397": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Inglewood", "Shared Firm Zip Code"],
+    "city": "Inglewood",
     "zip": "90397"
   },
   "90398": {
@@ -1128,7 +1128,7 @@
   "90601": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Whittier", "City Industry", "City Of Industry", "Pico Rivera"],
+    "city": ["Whittier", "City Of Industry", "Pico Rivera"],
     "zip": "90601"
   },
   "90602": {
@@ -1740,13 +1740,13 @@
   "91011": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["La Canada Flintridge", "Flintridge", "La Canada", "Pasadena"],
+    "city": ["La Canada Flintridge", "Pasadena"],
     "zip": "91011"
   },
   "91012": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["La Canada Flintridge", "La Canada"],
+    "city": "La Canada Flintridge",
     "zip": "91012"
   },
   "91016": {
@@ -2010,7 +2010,7 @@
   "91191": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Pasadena", "World Vision Inc Brm"],
+    "city": "Pasadena",
     "zip": "91191"
   },
   "91199": {
@@ -2696,7 +2696,7 @@
   "91497": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Van Nuys", "Southern California Gas Comp"],
+    "city": "Van Nuys",
     "zip": "91497"
   },
   "91499": {
@@ -2940,19 +2940,19 @@
   "91714": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["City Of Industry", "City Industry"],
+    "city": "City Of Industry",
     "zip": "91714"
   },
   "91715": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["City Of Industry", "City Industry"],
+    "city": "City Of Industry",
     "zip": "91715"
   },
   "91716": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["City Of Industry", "City Industry"],
+    "city": "City Of Industry",
     "zip": "91716"
   },
   "91722": {
@@ -2994,7 +2994,7 @@
   "91732": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["El Monte", "City Industry", "City Of Industry"],
+    "city": ["El Monte", "City Of Industry"],
     "zip": "91732"
   },
   "91733": {
@@ -3048,7 +3048,7 @@
   "91744": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["La Puente", "City Industry", "City Of Industry"],
+    "city": ["La Puente", "City Of Industry"],
     "zip": "91744"
   },
   "91745": {
@@ -3065,7 +3065,7 @@
   "91746": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["La Puente", "Bassett", "City Industry", "City Of Industry"],
+    "city": ["La Puente", "Bassett", "City Of Industry"],
     "zip": "91746"
   },
   "91747": {
@@ -3077,12 +3077,7 @@
   "91748": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": [
-      "Rowland Heights",
-      "City Industry",
-      "City Of Industry",
-      "La Puente"
-    ],
+    "city": ["Rowland Heights", "City Of Industry", "La Puente"],
     "zip": "91748"
   },
   "91749": {
@@ -3262,7 +3257,7 @@
   "91789": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Walnut", "City Industry", "City Of Industry", "Diamond Bar"],
+    "city": ["Walnut", "City Of Industry", "Diamond Bar"],
     "zip": "91789"
   },
   "91790": {
@@ -3298,13 +3293,13 @@
   "91797": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Pomona", "Bureau Of The Census"],
+    "city": "Pomona",
     "zip": "91797"
   },
   "91798": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Ontario", "Rmx"],
+    "city": "Ontario",
     "zip": "91798"
   },
   "91799": {
@@ -3592,7 +3587,7 @@
   "91990": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Potrero", "Young America"],
+    "city": "Potrero",
     "zip": "91990"
   },
   "92003": {
@@ -3610,7 +3605,7 @@
   "92007": {
     "area": "San_Diego-Carlsbad",
     "county": "San Diego",
-    "city": ["Cardiff By The Sea", "Cardiff"],
+    "city": "Cardiff",
     "zip": "92007"
   },
   "92008": {
@@ -4798,13 +4793,13 @@
   "92277": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Twentynine Palms", "29 Palms"],
+    "city": "Twentynine Palms",
     "zip": "92277"
   },
   "92278": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "San Bernardino",
-    "city": ["Twentynine Palms", "29 Palms", "Twentynine Palms Mcb"],
+    "city": "Twentynine Palms",
     "zip": "92278"
   },
   "92280": {
@@ -5506,7 +5501,7 @@
   "92518": {
     "area": "Riverside-San_Bernardino-Ontario",
     "county": "Riverside",
-    "city": ["March Air Reserve Base", "March Arb", "Riverside"],
+    "city": ["March Air Reserve Base", "Riverside"],
     "zip": "92518"
   },
   "92519": {
@@ -6108,7 +6103,7 @@
   "92688": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Rancho Santa Margarita", "Rsm"],
+    "city": "Rancho Santa Margarita",
     "zip": "92688"
   },
   "92690": {
@@ -6138,7 +6133,7 @@
   "92694": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Orange",
-    "city": ["Ladera Ranch", "Mission Viejo", "Rancho Mission Viejo", "Rmv"],
+    "city": ["Ladera Ranch", "Mission Viejo", "Rancho Mission Viejo"],
     "zip": "92694"
   },
   "92697": {
@@ -6804,19 +6799,19 @@
   "93041": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Port Hueneme", "Point Mugu Nawc"],
+    "city": "Port Hueneme",
     "zip": "93041"
   },
   "93042": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Point Mugu Nawc", "Port Hueneme"],
+    "city": "Port Hueneme",
     "zip": "93042"
   },
   "93043": {
     "area": "Rest_Of_California",
     "county": "Ventura",
-    "city": ["Port Hueneme Cbc Base", "Port Hueneme"],
+    "city": "Port Hueneme",
     "zip": "93043"
   },
   "93044": {
@@ -7230,7 +7225,7 @@
   "93246": {
     "area": "Rest_Of_California",
     "county": "Kings",
-    "city": ["Lemoore", "Lemoore Nas", "Lemoore Naval Air Station"],
+    "city": ["Lemoore", "Lemoore Naval Air Station"],
     "zip": "93246"
   },
   "93247": {
@@ -8064,7 +8059,7 @@
   "93535": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Lancaster", "Hi Vista", "Lake La", "Lake Los Angeles"],
+    "city": ["Lancaster", "Hi Vista", "Lake Los Angeles"],
     "zip": "93535"
   },
   "93536": {
@@ -8124,7 +8119,7 @@
   "93550": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Palmdale", "Lake La", "Lake Los Angeles"],
+    "city": ["Palmdale", "Lake Los Angeles"],
     "zip": "93550"
   },
   "93551": {
@@ -8226,7 +8221,7 @@
   "93591": {
     "area": "Los_Angeles-Long_Beach-Anaheim",
     "county": "Los Angeles",
-    "city": ["Palmdale", "Lake La", "Lake Los Angeles"],
+    "city": ["Palmdale", "Lake Los Angeles"],
     "zip": "93591"
   },
   "93592": {
@@ -8424,7 +8419,7 @@
   "93633": {
     "area": "Rest_Of_California",
     "county": "Tulare",
-    "city": ["Kings Canyon National Pk", "Kcnp", "Kings Canyon"],
+    "city": "Kings Canyon",
     "zip": "93633"
   },
   "93634": {
@@ -9048,7 +9043,7 @@
   "93921": {
     "area": "Rest_Of_California",
     "county": "Monterey",
-    "city": ["Carmel By The Sea", "Carmel", "Carmel By The"],
+    "city": "Carmel",
     "zip": "93921"
   },
   "93922": {
@@ -9132,7 +9127,7 @@
   "93944": {
     "area": "Rest_Of_California",
     "county": "Monterey",
-    "city": ["Monterey", "Presidio Mtry", "Presidio Of Monterey"],
+    "city": "Monterey",
     "zip": "93944"
   },
   "93950": {
@@ -9198,7 +9193,7 @@
   "94013": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["Daly City", "Sf International Service Ctr"],
+    "city": "Daly City",
     "zip": "94013"
   },
   "94014": {
@@ -9210,7 +9205,7 @@
   "94015": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Mateo",
-    "city": ["Daly City", "Broadmoor Vlg"],
+    "city": "Daly City",
     "zip": "94015"
   },
   "94016": {
@@ -9894,7 +9889,7 @@
   "94199": {
     "area": "Oakland-Hayward-San_Francisco",
     "county": "San Francisco",
-    "city": ["San Francisco", "Pacific Area Office"],
+    "city": "San Francisco",
     "zip": "94199"
   },
   "94203": {
@@ -13362,7 +13357,7 @@
   "95462": {
     "area": "Rest_Of_California",
     "county": "Sonoma",
-    "city": ["Monte Rio", "Russian River", "Russian River Mdws"],
+    "city": ["Monte Rio", "Russian River"],
     "zip": "95462"
   },
   "95463": {
@@ -13548,13 +13543,13 @@
   "95519": {
     "area": "Rest_Of_California",
     "county": "Humboldt",
-    "city": "Mckinleyville",
+    "city": "McKinleyville",
     "zip": "95519"
   },
   "95521": {
     "area": "Rest_Of_California",
     "county": "Humboldt",
-    "city": ["Arcata", "Mc Kinleyville", "Mckinleyville"],
+    "city": ["Arcata", "McKinleyville"],
     "zip": "95521"
   },
   "95524": {
@@ -14892,7 +14887,7 @@
   "95923": {
     "area": "Rest_Of_California",
     "county": "Plumas",
-    "city": ["Canyon Dam", "Canyondam"],
+    "city": "Canyon Dam",
     "zip": "95923"
   },
   "95924": {
@@ -15180,7 +15175,7 @@
   "95975": {
     "area": "Rest_Of_California",
     "county": "Nevada",
-    "city": ["Rough And Ready", "Rough Ready"],
+    "city": "Rough And Ready",
     "zip": "95975"
   },
   "95976": {

@@ -54,6 +54,20 @@ function tryEnrichLocation(
   };
 }
 
+export function citiesFromZip(zip: string): string[] {
+  let cities: string[] = [];
+
+  if (zip in zipcodes) {
+    if (typeof zipcodes[zip]['city'] === 'string') {
+      cities.push(zipcodes[zip]['city'] as string);
+    } else {
+      cities = zipcodes[zip]['city'] as string[];
+    }
+  }
+
+  return cities;
+}
+
 export function locationFromZip(zip: string, city?: string): Location {
   if (!(zip in zipcodes)) {
     return { zip, type: 'unknown' };
@@ -64,6 +78,37 @@ export function locationFromZip(zip: string, city?: string): Location {
     type: 'raw',
   };
   return tryEnrichLocation(data, city);
+}
+
+export function getPathFromLocation(
+  base: string,
+  location: FullLocation,
+  page?: string,
+  params?: { [index: string]: string },
+): string {
+  let paramString = '';
+  let pageString = '';
+
+  if (page) {
+    pageString = '/' + page;
+  }
+
+  if (params) {
+    paramString += '?';
+    for (let key in params) {
+      let value = params[key];
+      paramString += key + '=' + value;
+    }
+  }
+  return (
+    base +
+    '/zip/' +
+    location.zip +
+    '/city/' +
+    location.city.replace(' ', '_') +
+    pageString +
+    paramString
+  );
 }
 
 export function lookupRentCap(

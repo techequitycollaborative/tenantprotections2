@@ -7,8 +7,12 @@ import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 
-import { locationFromZip } from '@/utils/location';
-import { zipAndCityFromForm as zipAndCityFromForm } from '../../utils/zip-and-city';
+import {
+  locationFromZip,
+  getPathFromLocation,
+  citiesFromZip,
+} from '@/utils/location';
+import { zipAndCityFromForm as zipAndCityFromForm } from '@/utils/zip-and-city';
 import { Scope } from './zip/[zip]/city/[city]/3';
 
 interface Props {
@@ -26,7 +30,7 @@ const getServerSideProps: GetServerSideProps<Props> =
           location: null,
         },
         redirect: {
-          destination: getEligibilityPath(location),
+          destination: getPathFromLocation('eligibility', location),
         },
       };
     } else {
@@ -74,20 +78,27 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           type="text"
           inputMode="numeric"
           pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
-          placeholder="94110"
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          placeholder="90001"
+          className="border-2 text-lg rounded border-gray outline-none p-3 my-3"
           required
           defaultValue={location?.zip}
         />
         {location?.type === 'raw' && (
-          <input
+          <select
             id="city"
             name="city"
-            type="text"
-            inputMode="text"
-            placeholder="What city do you live in?"
-            className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
-          />
+            required
+            className="border-2 text-lg border-gray rounded p-3"
+          >
+            <option value="" selected disabled>
+              {t('city-select')}
+            </option>
+            {citiesFromZip(location.zip).map((x, i) => (
+              <option value={x} key={i}>
+                {x}
+              </option>
+            ))}
+          </select>
         )}
         <button
           type="submit"
@@ -96,7 +107,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           {t('submit')}
         </button>
         {location?.type === 'unknown' &&
-          `Could not find California ZIP Code ${location.zip}`}
+          t('zip-not-found', { zip: location.zip })}
       </form>
       <Accordion
         title={t('eligibility-more.title')}
@@ -118,17 +129,3 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
 };
 
 export default Eligibility;
-
-export function getEligibilityPath(location: FullLocation) {
-  return `/eligibility/zip/${location.zip}/city/${location.city}`;
-}
-export function getEligibilityPathWithScope(
-  zip: string,
-  city: string,
-  scope: Scope,
-) {
-  return `/eligibility/zip/${zip}/city/${city}/eligible?s=${scope}`;
-}
-export function getIneligibilePath(zip: string, city: string) {
-  return `/eligibility/zip/${zip}/city/${city}/ineligible`;
-}

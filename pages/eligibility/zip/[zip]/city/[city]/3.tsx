@@ -7,18 +7,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState, useEffect } from 'react';
 
 import { FullLocation, YesNoQuestion } from '@/types/location';
-import { locationFromZip } from '@/utils/location';
+import { locationFromZip, getPathFromLocation } from '@/utils/location';
 import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
-import {
-  getEligibilityPath,
-  getEligibilityPathWithScope,
-  getIneligibilePath,
-} from '../../../..';
-import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 export enum Scope {
   LOCAL_SCOPE = 'local',
@@ -35,8 +30,7 @@ interface AdditionalQuestionsSectionProps {
   statewideQuestions: YesNoQuestion[] | undefined;
   statewidePass: boolean;
   baseScope: Scope;
-  zip: string;
-  city: string;
+  location: FullLocation;
 }
 
 function AdditionalQuestionsSection({
@@ -44,8 +38,7 @@ function AdditionalQuestionsSection({
   statewideQuestions,
   statewidePass,
   baseScope,
-  zip,
-  city,
+  location,
 }: AdditionalQuestionsSectionProps) {
   const router = useRouter();
   const emptyQuestion = {
@@ -77,11 +70,17 @@ function AdditionalQuestionsSection({
     if (questions && index >= questions.length - 1) {
       if (currentScope === Scope.LOCAL_SCOPE) {
         // Passed all local questions
-        router.push(getEligibilityPathWithScope(zip, city, Scope.LOCAL_SCOPE));
+        router.push(
+          getPathFromLocation('/eligibility', location, 'eligible', {
+            s: Scope.LOCAL_SCOPE,
+          }),
+        );
       } else {
         // Passed all statewide questions
         router.push(
-          getEligibilityPathWithScope(zip, city, Scope.STATEWIDE_SCOPE),
+          getPathFromLocation('/eligibility', location, 'eligible', {
+            s: Scope.STATEWIDE_SCOPE,
+          }),
         );
       }
     } else {
@@ -96,18 +95,22 @@ function AdditionalQuestionsSection({
       // Failed a local question, fall back to statewide check
       if (statewidePass) {
         router.push(
-          getEligibilityPathWithScope(zip, city, Scope.STATEWIDE_SCOPE),
+          getPathFromLocation('/eligiblity', location, undefined, {
+            s: Scope.STATEWIDE_SCOPE,
+          }),
         );
       } else if (statewideQuestions) {
         questions = statewideQuestions;
         currentScope = Scope.STATEWIDE_SCOPE;
         index = 0;
       } else {
-        router.push(getIneligibilePath(zip, city));
+        router.push(
+          getPathFromLocation('/eligibility', location, 'ineligible'),
+        );
       }
     } else {
       // Failed statewide check
-      router.push(getIneligibilePath(zip, city));
+      router.push(getPathFromLocation('/eligibility', location, 'ineligible'));
     }
   };
 
@@ -184,7 +187,7 @@ export function makeBuildingTypeChooser() {
         return {
           redirect: {
             permanent: false,
-            destination: `${getEligibilityPath(location)}/2`,
+            destination: getPathFromLocation('eligibility', location, '2'),
           },
         };
       }
@@ -221,7 +224,9 @@ export function makeBuildingTypeChooser() {
       if (scope === Scope.LOCAL_SCOPE) {
         if (location.localRules?.passingBuildingTypes.includes(selectedValue)) {
           router.push(
-            getEligibilityPathWithScope(location.zip, location.city, scope),
+            getPathFromLocation('/eligibility', location, 'eligible', {
+              s: scope,
+            }),
           );
           return;
         } else if (location.localRules?.eligibilityQuestions[selectedValue]) {
@@ -241,7 +246,9 @@ export function makeBuildingTypeChooser() {
         // If base scope is statewide, pass; otherwise, defer to allow local check first
         if (scope === Scope.STATEWIDE_SCOPE) {
           router.push(
-            getEligibilityPathWithScope(location.zip, location.city, scope),
+            getPathFromLocation('/eligibility', location, 'eligible', {
+              s: scope,
+            }),
           );
           return;
         } else {
@@ -253,7 +260,9 @@ export function makeBuildingTypeChooser() {
           location.statewideRules.eligibilityQuestions[selectedValue],
         );
       } else {
-        router.push(getIneligibilePath(location.zip, location.city));
+        router.push(
+          getPathFromLocation('/eligibility', location, 'ineligible'),
+        );
         return;
       }
     }
@@ -284,7 +293,7 @@ export function makeBuildingTypeChooser() {
       <Layout>
         <EligibilityNav
           backLabel={t('back')}
-          backUrl={`${getEligibilityPath(location)}/2`}
+          backUrl={getPathFromLocation('/eligibility', location, '2')}
           zip={location.zip}
           city={location.city}
           startOverLabel={t('start-over')}
@@ -297,7 +306,7 @@ export function makeBuildingTypeChooser() {
         </h2>
         <select
           onChange={onSelect}
-          className="w-full border-2 border-blue rounded py-4 px-4 text-blue"
+          className="w-full border-2 text-lg border-blue rounded py-4 px-4 text-blue"
         >
           <option value="" className="text-blue">
             {t('Select')}
@@ -343,8 +352,7 @@ export function makeBuildingTypeChooser() {
             statewideQuestions={statewideQuestions}
             statewidePass={statewidePass}
             baseScope={baseScope}
-            zip={location.zip}
-            city={location.city}
+            location={location}
           />
         )}
       </Layout>

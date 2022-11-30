@@ -12,7 +12,7 @@ import Layout from '@/components/layout';
 import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
 import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
-import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 interface Props {
   location: FullLocation;
@@ -41,7 +41,6 @@ function RentTimeline(props: RentTimelineProps) {
   const t = props.translation;
 
   const handleEdit = function (index: number) {
-    console.log(index, 'inside');
     props.onEditRent(index);
   };
 
@@ -245,7 +244,7 @@ function RentBox(props: RentBoxProps) {
           value={rent}
           onChange={onRentChange}
           placeholder="$1,350"
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          className="bg-gray-lightest border rounded border-gray outline-none text-lg p-3 my-3"
           required
         />
         <span>{rentError}</span>
@@ -257,7 +256,7 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={startDate}
           onChange={onStartDateChange}
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          className="bg-gray-lightest border rounded border-gray outline-none text-lg p-3 my-3"
           required
         />
         <button
