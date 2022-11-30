@@ -114,7 +114,7 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
           {t('submit')}
         </button>
         {location?.type === 'unknown' &&
-          `Could not find California ZIP Code ${location.zip}`}
+          t('zip-not-found', { zip: location.zip })}
       </form>
     </Layout>
   );

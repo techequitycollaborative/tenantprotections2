@@ -101,7 +101,6 @@ export function getPathFromLocation(
     }
   }
   return (
-    '/' +
     base +
     '/zip/' +
     location.zip +

@@ -64,7 +64,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     <Layout>
       <EligibilityNav
         backLabel={t('back')}
-        backUrl={getPathFromLocation('eligibility', props.location)}
+        backUrl={getPathFromLocation('/eligibility', props.location)}
         zip={props.location.zip}
         city={props.location.city}
         startOverLabel={t('start-over')}
@@ -75,7 +75,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
       <h2 className="text-blue text-2xl py-4">{t('questions.when-built')}</h2>
       {typeof rentControlDate !== 'undefined' && (
         <Link
-          href={`${getPathFromLocation('eligibility', props.location, '3', {
+          href={`${getPathFromLocation('/eligibility', props.location, '3', {
             s: 'local',
           })}`}
         >
@@ -90,7 +90,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
         </Link>
       )}
       <Link
-        href={`${getPathFromLocation('eligibility', props.location, '3', {
+        href={`${getPathFromLocation('/eligibility', props.location, '3', {
           s: 'statewide',
         })}`}
       >
@@ -102,7 +102,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
       </Link>
       <Link
         href={`${getPathFromLocation(
-          'eligibility',
+          '/eligibility',
           props.location,
           'ineligible',
         )}`}

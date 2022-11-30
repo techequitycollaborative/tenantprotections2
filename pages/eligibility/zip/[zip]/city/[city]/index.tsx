@@ -61,15 +61,20 @@ const Zip: NextPage<Props> = function Zip(props) {
         {t('questions.is-subsidized')}
       </h1>
       <Link
-        href={getPathFromLocation('eligibility', props.location, 'ineligible', {
-          t: 'subsidized',
-        })}
+        href={getPathFromLocation(
+          '/eligibility',
+          props.location,
+          'ineligible',
+          {
+            t: 'subsidized',
+          },
+        )}
       >
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('yes')}
         </button>
       </Link>
-      <Link href={getPathFromLocation('eligibility', props.location, '2')}>
+      <Link href={getPathFromLocation('/eligibility', props.location, '2')}>
         <button className="w-full border-2 border-blue rounded text-blue text-2xl p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
           {t('no')}
         </button>

@@ -152,7 +152,6 @@
       "Este sitio existe para proporcionar a los inquilinos en California información de alta calidad sobre sus derechos bajo las leyes de California y las ordenanzas locales. Conectamos a los inquilinos con organizaciones sin fines de lucro locales y estatales para ayudarlos a lidiar con los problemas de vivienda en sus comunidades."
     ],
     "title-3": "Más sobre nuestras organizaciones",
-    "title-3": "More about Our Organizations",
     "organizations": {
       "acce-name": "Alliance of Californians for Community Empowerment (ACCE)",
       "acce-text": [
@@ -289,6 +288,7 @@
   "yes": "Sí",
   "eligibility-title": "Cuestionario de protecciones",
   "city-select": "Seleccione en que ciudad vive",
+  "zip-not-found": "No se encontró el código postal de California {{zip}}",
   "zipcode": "{{zip}}",
   "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todas partes de California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
   "zip-label": "¿Cuál es su código postal?",

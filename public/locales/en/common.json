@@ -288,6 +288,7 @@
   "yes": "Yes",
   "eligibility-title": "Protections Quiz",
   "city-select": "Please select which city you live in",
+  "zip-not-found": "Could not find California ZIP Code {{zip}}",
   "zipcode": "{{zip}}",
   "zip-prompt": "The Tenant Protections Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",

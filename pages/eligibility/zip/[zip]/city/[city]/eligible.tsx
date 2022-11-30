@@ -78,7 +78,7 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
         ))}
       </div>
       <h3 className="text-blue text-2xl mt-6 mb-4">{t('eligible.footnote')}</h3>
-      <Link href={getPathFromLocation('calculator', location)}>
+      <Link href={getPathFromLocation('/calculator', location)}>
         <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">
           {t('eligible.button')}
         </button>

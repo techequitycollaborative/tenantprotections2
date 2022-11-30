@@ -71,14 +71,14 @@ function AdditionalQuestionsSection({
       if (currentScope === Scope.LOCAL_SCOPE) {
         // Passed all local questions
         router.push(
-          getPathFromLocation('eligibility', location, 'eligible', {
+          getPathFromLocation('/eligibility', location, 'eligible', {
             s: Scope.LOCAL_SCOPE,
           }),
         );
       } else {
         // Passed all statewide questions
         router.push(
-          getPathFromLocation('eligibility', location, 'eligible', {
+          getPathFromLocation('/eligibility', location, 'eligible', {
             s: Scope.STATEWIDE_SCOPE,
           }),
         );
@@ -95,7 +95,7 @@ function AdditionalQuestionsSection({
       // Failed a local question, fall back to statewide check
       if (statewidePass) {
         router.push(
-          getPathFromLocation('eligiblity', location, undefined, {
+          getPathFromLocation('/eligiblity', location, undefined, {
             s: Scope.STATEWIDE_SCOPE,
           }),
         );
@@ -104,11 +104,13 @@ function AdditionalQuestionsSection({
         currentScope = Scope.STATEWIDE_SCOPE;
         index = 0;
       } else {
-        router.push(getPathFromLocation('eligibility', location, 'ineligible'));
+        router.push(
+          getPathFromLocation('/eligibility', location, 'ineligible'),
+        );
       }
     } else {
       // Failed statewide check
-      router.push(getPathFromLocation('eligibility', location, 'ineligible'));
+      router.push(getPathFromLocation('/eligibility', location, 'ineligible'));
     }
   };
 
@@ -222,7 +224,7 @@ export function makeBuildingTypeChooser() {
       if (scope === Scope.LOCAL_SCOPE) {
         if (location.localRules?.passingBuildingTypes.includes(selectedValue)) {
           router.push(
-            getPathFromLocation('eligibility', location, 'eligible', {
+            getPathFromLocation('/eligibility', location, 'eligible', {
               s: scope,
             }),
           );
@@ -244,7 +246,7 @@ export function makeBuildingTypeChooser() {
         // If base scope is statewide, pass; otherwise, defer to allow local check first
         if (scope === Scope.STATEWIDE_SCOPE) {
           router.push(
-            getPathFromLocation('eligibility', location, 'eligible', {
+            getPathFromLocation('/eligibility', location, 'eligible', {
               s: scope,
             }),
           );
@@ -258,7 +260,9 @@ export function makeBuildingTypeChooser() {
           location.statewideRules.eligibilityQuestions[selectedValue],
         );
       } else {
-        router.push(getPathFromLocation('eligibility', location, 'ineligible'));
+        router.push(
+          getPathFromLocation('/eligibility', location, 'ineligible'),
+        );
         return;
       }
     }
@@ -289,7 +293,7 @@ export function makeBuildingTypeChooser() {
       <Layout>
         <EligibilityNav
           backLabel={t('back')}
-          backUrl={getPathFromLocation('eligibility', location, '2')}
+          backUrl={getPathFromLocation('/eligibility', location, '2')}
           zip={location.zip}
           city={location.city}
           startOverLabel={t('start-over')}
