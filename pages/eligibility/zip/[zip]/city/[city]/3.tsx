@@ -72,7 +72,7 @@ function AdditionalQuestionsSection({
         // Passed all local questions
         router.push(
           getPathFromLocation('eligibility', location, 'eligible', {
-            s: Scope.LOCAL.SCOPE,
+            s: Scope.LOCAL_SCOPE,
           }),
         );
       } else {
@@ -95,7 +95,7 @@ function AdditionalQuestionsSection({
       // Failed a local question, fall back to statewide check
       if (statewidePass) {
         router.push(
-          getPathFromLocation('eligiblity', location, null, {
+          getPathFromLocation('eligiblity', location, undefined, {
             s: Scope.STATEWIDE_SCOPE,
           }),
         );
