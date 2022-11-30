@@ -7,7 +7,11 @@ import Layout from '@/components/layout';
 import Accordion from '@/components/accordion';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 
-import { locationFromZip, getPathFromLocation } from '@/utils/location';
+import {
+  locationFromZip,
+  getPathFromLocation,
+  citiesFromZip,
+} from '@/utils/location';
 import { zipAndCityFromForm as zipAndCityFromForm } from '@/utils/zip-and-city';
 import { Scope } from './zip/[zip]/city/[city]/3';
 
@@ -74,20 +78,27 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           type="text"
           inputMode="numeric"
           pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
-          placeholder="94110"
-          className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
+          placeholder="90001"
+          className="border-2 rounded border-gray outline-none p-3 my-3"
           required
           defaultValue={location?.zip}
         />
         {location?.type === 'raw' && (
-          <input
+          <select
             id="city"
             name="city"
-            type="text"
-            inputMode="text"
-            placeholder="What city do you live in?"
-            className="bg-gray-lightest border rounded border-gray outline-none p-3 my-3"
-          />
+            required
+            className="border-2 border-gray rounded p-3"
+          >
+            <option value="" selected disabled>
+              {t('Please select which city you live in')}
+            </option>
+            {citiesFromZip(location.zip).map((x, i) => (
+              <option value={x} key={i}>
+                {x}
+              </option>
+            ))}
+          </select>
         )}
         <button
           type="submit"

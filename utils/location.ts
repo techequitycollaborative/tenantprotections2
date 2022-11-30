@@ -54,6 +54,20 @@ function tryEnrichLocation(
   };
 }
 
+export function citiesFromZip(zip: string): string[] {
+  let cities: string[] = [];
+
+  if (zip in zipcodes) {
+    if (typeof zipcodes[zip]['city'] === 'string') {
+      cities.push(zipcodes[zip]['city'] as string);
+    } else {
+      cities = zipcodes[zip]['city'] as string[];
+    }
+  }
+
+  return cities;
+}
+
 export function locationFromZip(zip: string, city?: string): Location {
   if (!(zip in zipcodes)) {
     return { zip, type: 'unknown' };
