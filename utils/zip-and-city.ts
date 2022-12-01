@@ -9,7 +9,7 @@ export function zipAndCityFromUrl(
   let { zip, city } = context.query;
   assertIsString(zip);
   assertIsString(city);
-  city = city.replace('_', ' ');
+  city = city.replaceAll('_', ' ');
   return {
     zip,
     city,
