@@ -80,6 +80,7 @@ const Ineligible: NextPage<Props> = function Ineligible({
                 city: location.city,
               })}
             </p>
+            <p className="py-2">{t('ineligible.text-subsidized-p3')}</p>
           </>
         ) : (
           <>

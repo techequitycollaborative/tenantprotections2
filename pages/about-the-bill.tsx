@@ -40,9 +40,6 @@ const AboutTheBill: NextPage = () => {
             }}
           />
         </p>
-        <p className="text-gray-dark text-lg pb-4">
-          {t('about-bill.section1.text2')}
-        </p>
         <ol>
           {(
             t('about-bill.section1.items', {
@@ -62,9 +59,6 @@ const AboutTheBill: NextPage = () => {
         </h2>
         <p className="text-gray-dark text-lg pb-8">
           {t('about-bill.section2.text1')}
-        </p>
-        <p className="text-gray-dark text-lg pb-8">
-          {t('about-bill.section2.text2')}
         </p>
         <h3 className="text-blue text-xl font-bold pb-4">
           {t('about-bill.section2.list1-label')}
@@ -114,96 +108,6 @@ const AboutTheBill: NextPage = () => {
             }}
           />
         </p>
-        <h2 className="text-blue text-2xl font-bold py-4">
-          {t('about-bill.section4.title')}
-        </h2>
-        {(
-          t('about-bill.section4.text', {
-            returnObjects: true,
-          }) as Array<string>
-        ).map((x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
-            {x}
-          </p>
-        ))}
-        <h3 className="text-blue text-xl font-bold py-4">
-          {t('about-bill.section5.title')}
-        </h3>
-        {(
-          t('about-bill.section5.text', {
-            returnObjects: true,
-          }) as Array<string>
-        ).map((x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
-            {x}
-          </p>
-        ))}
-        <h3 className="text-blue text-xl font-bold py-4">
-          {t('about-bill.section6.title')}
-        </h3>
-        <p className="text-gray-dark text-lg pb-8">
-          <Trans
-            i18nKey="about-bill.section6.text1"
-            components={{
-              link1: <LinkWrapper to={LINK_HOUSING_IS_KEY} />,
-            }}
-          />
-        </p>
-        <p className="text-gray-dark text-lg pb-8">
-          <Trans
-            i18nKey="about-bill.section6.text2"
-            components={{
-              link1: <LinkWrapper to={LINK_COVID_RELIEF} />,
-            }}
-          />
-        </p>
-        <p className="text-gray-dark text-lg pb-8">
-          <Trans
-            i18nKey="about-bill.section6.text3"
-            components={{
-              link1: <LinkWrapper to={LINK_COVID_RELIEF_MAP} />,
-            }}
-          />
-        </p>
-        <h2 className="text-blue text-2xl font-bold py-4">
-          {t('about-bill.section7.title')}
-        </h2>
-        <h3 className="text-blue text-xl font-bold py-4">
-          {t('about-bill.section7.subtitle1')}
-        </h3>
-        {(
-          t('about-bill.section7.text1', {
-            returnObjects: true,
-          }) as Array<string>
-        ).map((x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
-            {x}
-          </p>
-        ))}
-        <h3 className="text-blue text-xl font-bold py-4">
-          {t('about-bill.section7.subtitle2')}
-        </h3>
-        {(
-          t('about-bill.section7.text2', {
-            returnObjects: true,
-          }) as Array<string>
-        ).map((x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
-            {x}
-          </p>
-        ))}
-        <h3 className="text-blue text-xl font-bold py-4">
-          {t('about-bill.section7.subtitle3')}
-        </h3>
-        {(
-          t('about-bill.section7.text3', {
-            returnObjects: true,
-          }) as Array<string>
-        ).map((x, i) => (
-          <p key={i} className="text-gray-dark text-lg pb-8 text-left w-full">
-            {x}
-          </p>
-        ))}
       </div>
     </Layout>
   );

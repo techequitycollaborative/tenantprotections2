@@ -121,6 +121,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
                 </li>
               ))}
             </ul>
+            <p className="mt-2">{t('eligibility-more.footer')}</p>
           </div>
         }
       />

@@ -8,6 +8,14 @@ import Layout from '@/components/layout';
 const ACCE_URL = 'https://www.acceaction.org';
 const TEC_URL = 'https://techequitycollaborative.org';
 
+const VOLUNTEERS = [
+  'Emily Thai',
+  'Julie Hoxie',
+  'Jennifer Huynh',
+  'Conrad Shock',
+  'Arushi Bandi',
+];
+
 const getStaticProps: GetStaticProps = async function getStaticProps(context) {
   return {
     props: {
@@ -20,6 +28,12 @@ export { getStaticProps };
 
 const About: NextPage = () => {
   const { t } = useTranslation('common');
+  const vol_string =
+    VOLUNTEERS.slice(0, VOLUNTEERS.length - 1).join(', ') +
+    ' ' +
+    t('and') +
+    ' ' +
+    VOLUNTEERS[VOLUNTEERS.length - 1];
 
   return (
     <Layout>
@@ -34,6 +48,9 @@ const About: NextPage = () => {
             </p>
           ),
         )}
+        <p className="text-gray-dark text-lg pb-8">
+          {t('about.volunteers', { names: vol_string })}
+        </p>
         <h2 className="text-blue text-2xl font-bold py-4 text-center">
           {t('about.title-2')}
         </h2>

@@ -3,7 +3,7 @@
     "title-1": "Tenants, Know Your Rights!",
     "text-1": [
       "How much can your landlord increase your rent?",
-      "The Tenant Protection Act of 2019 protects a majority of California’s renters against unlawful rent increases and unfair evictions. Many cities also have local rent control measures with more restrictive caps on how much your landlord can increase your rent.",
+      "The Tenant Protection Act of 2019 protects a majority of California’s renters against unlawful rent increases and unfair evictions. Many cities also have stronger local rent control measures with lower caps on how much your landlord can increase your rent.",
       "Find out if you're protected by state or local laws."
     ],
     "button-1": "Take protections quiz",
@@ -20,21 +20,21 @@
   },
   "answers": {
     "after-date": "After {{date}}",
-    "before-date": "Before {{date}}"
+    "before-date": "Before {{date}}",
+    "between-dates": "Between {{date1}} and {{date2}}"
   },
   "building-types": {
-    "adu": "ADU",
-    "apartment": "Apartment",
+    "apartment": "Multi-unit property (3 units or more)",
     "condo": "Condo",
     "dorm": "Dorm",
     "duplex": "Duplex",
     "hotel": "Hotel",
-    "senior": "Senior living",
+    "senior": "Senior care facility or adult residential facility",
     "sfh": "Single-family home"
   },
   "questions": {
     "building-type": "What type of building do you live in?",
-    "is-subsidized": "Do you live in subsidized housing?",
+    "is-subsidized": "Do you live in subsidized or public housing?",
     "when-built": "When was your building built?"
   },
   "building-questions": {
@@ -72,8 +72,8 @@
   },
   "eligibility-info": {
     "subsidized": {
-      "title": "What is subsidized housing?",
-      "content": "Subsidized housing is government sponsored economic assistance aimed towards alleviating housing costs and expenses for people with low to moderate incomes. Forms of subsidies include direct housing subsidies, non-profit housing, public housing, rent supplements/vouchers, and other forms of assistance."
+      "title": "What is subsidized or public housing?",
+      "content": "Subsidized or public housing is housing that is paid for in part by government or other sponsored economic assistance for people with low incomes. Subsidies include direct housing subsidies, non-profit housing, public housing, low income tax credit (LIHTC) housing, rent supplements/vouchers, and other forms of assistance or housing based on income qualifications."
     },
     "built": {
       "title": "Find out when your rental was built",
@@ -82,14 +82,13 @@
     "types": {
       "title": "Learn more about building types",
       "content": [
-        "ADU: A self-contained apartment, cottage, or small residential unit, that is located on a property that has a separate main, single-family home, duplex, or other residential unit.",
-        "Apartment: A self-contained housing unit that occupies part of a building.",
-        "Condo: A separately owned unit within a multi-unit building. Condos differ from apartments in that each unit within the building may have a different owner.",
-        "Dorm: Student housing with shared amenities, typically located in a building on a college campus.",
-        "Duplex: A house with two separate units.",
+        "Condo or condominium: A unit within a multi-unit building or complex that can be separately owned and sold. Condos differ from apartments in that each unit on the property may have a different owner, even within the same building.",
+        "Dorm: Student housing with shared amenities that is owned and run by a college or university.",
+        "Duplex: A house or property with two separate units, whether both are part of the same building or standalone structures.",
         "Hotel: A building that provides lodging on a short-term basis. This includes SROs and extended stay properties.",
-        "Senior living: Housing specifically dedicated to older adults, often with shared services or amenities and assisted living.",
-        "Single-family home: A building on a dedicated lot with a single dwelling unit, no shared walls, and one owner."
+        "Multi-unit property (3 units or more): A property with three or more self-contained housing units, whether part of a building or standalone.",
+        "Senior care facility or adult residential facility: Housing specifically dedicated to adults or seniors that also provides assistance with health-related services or daily living activities like feeding, dressing, or bathing.",
+        "Single-family home: A building on a property with a single dwelling unit. There are no other housing units on the property and the one house is not divided into separate apartments."
       ]
     },
     "corp-ownership": {
@@ -107,7 +106,12 @@
       "statewide-max-rent": "Statewide Max Rent",
       "local-max-rent": "{{city}} Max Rent",
       "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
-      "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
+      "rate-explanation": [
+        "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
+        "A rent increase may also be invalid for other reasons, such as a landlord's failure to follow state or local law."
+      ],
+      "rate-explanation-statewide": "Our calculation also does not include any local restrictions on rent increases due to the COVID-19 pandemic, such as a local eviction moratorium.",
+      "rate-explanation-local": "In certain circumstances, such as by filing a petition with the city, a landlord may be permitted to increase the rent over the local rent control amount.",
       "issues": "Having issues with your tenancy?",
       "resources": "Explore our resources",
       "take-quiz": "Take protections quiz"
@@ -136,12 +140,14 @@
     "title-local": "You're protected by {{city}} rent control!",
     "title-statewide": "You're covered by statewide protections!",
     "local-text": [
-      "<b>Congratulations</b>, you are covered by local rent control in {{city}}. This means that there is a limit to how much your landlord can raise your rent. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
-      "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
+      "<b>Congratulations</b>, you are covered by local rent control in {{city}}. This means that there is a limit to how much your landlord can raise your rent. To check whether a rent increase was legal, follow the link below to the rent calculator.",
+      "In addition to local rent control, you may also qualify for the California Tenant Protections Act, which gives you additional rights such as protection from unjust eviction. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support.",
+      "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in."
     ],
     "statewide-text": [
-      "<b>Congratulations</b>, you are covered by the California Tenant Protection Act. This means that there is a limit to how much your landlord can raise your rent, and you are also protected from unjust evictions. To check whether a past rent increase was legal, follow the link below to the rent calculator.",
-      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support."
+      "<b>Congratulations</b>, you are covered by the California Tenant Protection Act. This means that there is a limit to how much your landlord can raise your rent, and you are also protected from unjust evictions. To check whether a rent increase was legal, follow the link below to the rent calculator.",
+      "Remember these aren't your only rights as a tenant, just the ones covered by the Tenant Protection Act. If you are in doubt, or worried about your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support.",
+      "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the state rules apply to your specific situation."
     ],
     "footnote": "Are you being overcharged?",
     "button": "Check the rent calculator"
@@ -150,12 +156,14 @@
     "title": "You may not be protected",
     "text-subsidized-p1": "<bold>Unfortunately</bold>, because you live in subsidized housing you may not be eligible for local or statewide rent caps. However, you may have other legal protections against evictions and rent increases.",
     "text-subsidized-p2": "Eligibility requirements around subsidized housing are complex. If you are concerned about a recent rent increase or other issue with your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support.",
+    "text-subsidized-p3": "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in.",
     "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local or statewide protections, including the Tenant Protection Act’s just cause protection or rent control clauses.",
     "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
     "subtitle": "Why am I not protected?",
     "text-2": [
       "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed before a certain date are often exempt from rent cap laws.",
-      "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply."
+      "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply.",
+      "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in."
     ],
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
@@ -164,12 +172,12 @@
     "title-1": "About Us",
     "text-1": [
       "This updated version of tenantprotections.org is a collaborative project between Alliance of Californians for Community Empowerment (ACCE) and TechEquity Collaborative.",
-      "We are deeply grateful to the many volunteers who generously donated the skills to design, research, and build this website, and to ensure renters in California have access to reliable information about state and local rent control and eviction protection.",
-      "Thank you [NAME], [NAME], [NAME], [NAME] for making this website possible."
+      "We are deeply grateful to the many volunteers who generously donated the skills to design, research, and build this website, and to ensure renters in California have access to reliable information about state and local rent control and eviction protection."
     ],
+    "volunteers": "Thank you {{names}} for making this website possible.",
     "title-2": "Our Mission",
     "text-2": [
-      "This site exists to provide renters in California with high quality information about their rights under both California law and local ordinances. We connect renters with local and state-wide non-profits to help them deal with housing issues in their communities."
+      "This site exists to provide renters in California with high quality information about their rights under both California law and local ordinances. We connect renters with local and statewide non-profits to help them deal with housing issues in their communities."
     ],
     "title-3": "More about Our Organizations",
     "organizations": {
@@ -191,7 +199,7 @@
     "title": "Resources",
     "section1": {
       "title": "Rent Cap and Just Cause Protections",
-      "text": "The Tenant Protections Act extends protections to millions of California renters. <link1>See our explainer for more details about the law</link1>."
+      "text": "The Tenant Protection Act extends protections to millions of California renters. <link1>See our explainer for more details about the law</link1>."
     },
     "section2": {
       "title": "Get Help Defending Your Rights",
@@ -214,7 +222,7 @@
   "about-bill": {
     "title": "What is the Tenant Protection Act",
     "section1": {
-      "text1": "The Tenant Protection Act <link1>(Assembly Bill 1482)</link1> takes effect January 1, 2020 providing unprecedented new protections for a majority of California renters. The law was sponsored by a broad coalition of tenant advocates across the state.",
+      "text1": "The Tenant Protection Act <link1>(Assembly Bill 1482)</link1> took effect January 1, 2020 providing unprecedented new protections for a majority of California renters. The law was sponsored by a broad coalition of tenant advocates across the state.",
       "text2": "Under the Tenant Protection Act, eligible renters are covered in two major ways:",
       "items": [
         "Renters are protected from unjust evictions.",
@@ -223,8 +231,7 @@
     },
     "section2": {
       "title": "Protections from Unjust Evictions",
-      "text1": "As per Senate Bill 91 (SB 91), the eviction protections in AB 1482 are extended to all tenants in California until June 30, 2021. SB 91 also temporarily changes some of the just causes for eviction in AB 1482. See below for more information.",
-      "text2": "Under the Tenant Protection Act, eligible renters are protected from unjust evictions. This means your landlord must have a valid reason for evicting you as outlined below.",
+      "text1": "Under the Tenant Protection Act, eligible renters are protected from unjust evictions. This means your landlord must have a valid reason for evicting you as outlined below.",
       "list1-label": "At Fault",
       "list1-items": [
         "Failure to pay rent.",
@@ -241,7 +248,7 @@
       ],
       "list2-label": "Not At Fault",
       "list2-items": [
-        "Owner or relative move in only where the original lease or a new lease allows for an owner or relative to move in. The eviction must be done by an owner or the owner’s spouse, domestic partner, children, grandchildren, parents, or grandparents. The original lease or new lease must reserve the right to move in an owner or the owner’s spouse, domestic partner, children, grandchildren, parents, or grandparents.",
+        "Owner or relative move in only where the original lease or a new lease allows for an owner or relative to move in. The eviction must be done by an owner or the owner’s spouse, domestic partner, children, grandchildren, parents, or grandparents.",
         "Withdrawal of the unit from the rental market.",
         "Where a city or county agency requires the unit to be vacated due to uninhabitable conditions.",
         "Intent to demolish or substantially remodel a unit. “Substantially remodel” means the replacement or substantial modification of any structural, electrical, plumbing or mechanical system that requires a permit, or the abatement of hazardous material, including lead, mold or asbestos that cannot be reasonably accomplished in a safe manner with the tenant in the unit and that requires the tenant to vacate for more than thirty days. Cosmetic improvements alone, including painting, decorating, and minor repairs, do not qualify, nor does any work that can be done safely with the tenant in the unit."
@@ -249,52 +256,8 @@
     },
     "section3": {
       "title": "Protections Against Unfair Rent Increases",
-      "text1": "Eligible renters are protected against rent increases that exceed 10% in a one year period or the cost of living + 5%, whichever is lower. This is often referred to as a “rent-cap” because it caps the amount your landlord can legally increase your rent year after year.",
+      "text1": "Eligible renters are protected against rent increases that exceed 10% in a one year period or the cost of living + 5%, whichever is lower. This is often referred to as a “rent cap” because it caps the amount your landlord can legally increase your rent year after year.",
       "text2": "If you’re unsure if your rent increase exceeds the limit set by the law, our <link1>rent calculator</link1> can help you do the math."
-    },
-    "section4": {
-      "title": "COVID-19 Tenant Protections",
-      "text": [
-        "Senate Bill (SB) 91, passed on January 28, 2021, extended eviction protections for tenants who have lost income due to the COVID-19 pandemic.",
-        "Rent debt owed between March 2020 through June 30, 2020 is converted into consumer debt and can never be the basis for an eviction (if the tenant follows all requirements). The debt is however, collectable through other means such as small claims and regular civil court. However, the landlord may not seek the debt owed until July 1, 2021.",
-        "Meanwhile, rent assistance is available for tenants to apply for to cover their rent debts during the pandemic. If a tenant receives rent assistance, it may cancel out all debts and they may no longer be at risk of eviction or any kind of collections actions."
-      ]
-    },
-    "section5": {
-      "title": "Is the Rent Cancelled?",
-      "text": [
-        "Sort of. SB 91 created a rental assistance program for tenants under a certain income amount.",
-        "In most areas, landlords participate in the rental assistance program and if they agree to waive 20% of the rent owed, the government program will pay the other 80% of the money owed. If they do, then the tenant’s consumer debt for that period will be gone. This means that rent debt you owe could be entirely cancelled if your landlord agrees to participate in the rent relief program. You can also apply for help paying your utilities.",
-        "If the landlord refuses the program, a tenant will be able to apply to the same fund for 25% of the rent they owe.",
-        "This program may be extended to offer a larger amount of rent assistance and apply it for a longer period of time."
-      ]
-    },
-    "section6": {
-      "title": "How to Apply for Rental Assistance",
-      "text1": "You may qualify for rent relief funds if you owe rent that you could not pay during the COVID-19 pandemic, from April 1, 2020 to June 30, 2021. A full list of eligibility criteria is available <link1>here</link1>.",
-      "text2": "Apply online! The application will ask for your landlord’s email address to notify your landlord to fill out their portion. Both landlords and tenants can fill out the rent relief application <link1>here</link1>.",
-      "text3": "If you live in a city or county that has its own separate rent assistance program, you can apply for rent relief from your local program rather than the state site. A link to your local program is available <link1>here</link1>. Some of these local programs have different terms, such as covering 100% of the rental debt or lower income thresholds."
-    },
-    "section7": {
-      "title": "COVID-19 Eviction Protections",
-      "subtitle1": "1. Tenants must provide a signed declaration of COVID-19 related financial distress",
-      "text1": [
-        "If you can’t pay your rent because of the COVID-19 pandemic ,before filing an eviction lawsuit for failure to pay rent. your landlord must give you a 15-day notice to pay rent or quit The notice will include a hardship declaration form to fill out.",
-        "If you receive a 15-day notice, within 15 days you must give your landlord the signed hardship declaration.",
-        "Even if you have not received a 15-day notice, it is a good idea to give your landlord a copy of the declaration if it applies to you. You should still give it to your landlord again if you receive an eviction notice.",
-        "If you give this declaration to your landlord, we recommend sending it by certified mail so that you have evidence that you send it. You should send this declaration to your landlord each time you receive a 15-day notice to pay rent or quit. Make a copy of the declaration after you sign it and keep proof that you sent this notice each time -- like your certified mail receipt."
-      ],
-      "subtitle2": "2. Paying your Rent",
-      "text2": [
-        "If you owe rent that was due from March 1, 2020 - August 31, 2020: If you return the declaration to your landlord in time, you cannot be evicted for not paying this rent.",
-        "If you owe rent that was due from September 1, 2020 - June 30, 2021: You will need to pay 25% of the total rent between September 2020 and June 2021 no later than June 30, 2021. The other 75% of rent is converted into consumer debt. You may be able to qualify for a rent assistance program through your city, county, or the state that will pay some or all of your back rent, including the 25% payment.",
-        "If you receive an eviction notice or summons for an eviction lawsuit, or notice to vacate, seek legal help immediately."
-      ],
-      "subtitle3": "3. Other Types of Evictions",
-      "text3": [
-        "State law protects tenants from “no cause” evictions until July 1, 2021 by extending the eviction protections in AB 1482.",
-        "Your city or county may also have passed stronger protections than state law for other types of evictions or even for tenants who can’t pay rent."
-      ]
     }
   },
   "navbar": {
@@ -310,11 +273,12 @@
   "city-select": "Please select which city you live in",
   "zip-not-found": "Could not find California ZIP Code {{zip}}",
   "zipcode": "{{zip}}",
-  "zip-prompt": "The Tenant Protections Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
+  "zip-prompt": "The Tenant Protection Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
   "zip-label": "What is your zipcode?",
   "eligibility-more": {
     "title": "Which cities have local protections?",
-    "content": "Here is a list of California cities with local rent control:"
+    "content": "Here is a list of California cities with local rent control:",
+    "footer": "This list was last updated December 7, 2022."
   },
   "back": "BACK",
   "start-over": "START OVER",
