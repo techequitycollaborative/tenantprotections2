@@ -22,7 +22,7 @@
     "after-date": "Después {{date}}",
     "before-date": "Antes de {{date}}"
   },
-  "buildingTypes": {
+  "building-types": {
     "adu": "Unidad de vivienda accesoria",
     "apartments": "Apartamento",
     "condo": "Condominio",
@@ -43,12 +43,32 @@
       "yes": "Corporación o REIT",
       "no": "Individual"
     },
-    "landlord-adu-exemption": "¿Vive el propietario en la propiedad donde se encuentra la ADU?",
     "min-units": "¿La propiedad contiene {{units}} o más unidades?",
-    "landlord-onsite": "¿La propiedad contiene {{units}} o menos unidades y el propietario vive en el lugar?",
-    "landlord-onsite-one-year": "¿La propiedad contiene {{units}} o menos unidades y el propietario ha vivido en el lugar durante al menos un año?",
-    "duplex-landlord-onsite-tenancy-start": "¿Ha vivido el propietario en el lugar desde el comienzo del arrendamiento?",
-    "landlord-shared-exemption": "¿Comparte baño o cocina con el propietario?"
+    "hotels_a": "¿Ha vivido actualmente en este hotel durante {{days}} días seguidos o más?",
+    "hotels_b": {
+      "prompt": "¿El hotel en el que vives ofrece todos estos servicios, incluso si no los usas personalmente?",
+      "yes": "Sí, todas estas características",
+      "no": "No, falta uno o más",
+      "list": [
+        "1. Una entrada controlada por el hotel",
+        "2. Una caja fuerte para objetos de valor",
+        "3. Un servicio telefónico central",
+        "4. Servicios de limpieza, correo y habitaciones",
+        "5. La capacidad de reservar una habitación por menos de 7 días",
+        "6. Un restaurante en las instalaciones del hotel o junto a él que se opera en conexión con el hotel"
+      ]
+    },
+    "hotels_q2": "¿El hotel en el que vive se alquila principalmente por períodos de {{days}} días o más?",
+    "landlord_shared_exemption": "¿Vive en la misma unidad que su arrendador? Esto significa que su casa o apartamento es la residencia principal del arrendador y el arrendador comparte el baño o la cocina con los inquilinos.",
+    "relative_occupancy_q1": "¿Vive en la misma unidad que un miembro de la familia inmediata de su arrendador? Esto significa que su casa o apartamento es la residencia principal del pariente.",
+    "relative_occupancy_q2": "¿Ha vivido el familiar del arrendador en su unidad desde el inicio de su arrendamiento?",
+    "relative_occupancy_wh": "¿Vive en la misma unidad que el cónyuge, padre, abuelo, hermano o hijo del arrendador? Esto significa que su casa o apartamento es la residencia principal del pariente.",
+    "landlord_occupancy": "¿La propiedad contiene {{unidades}} o menos unidades y el propietario vive en el sitio en una de las unidades?",
+    "landlord_occupancy_tenancy": "¿La propiedad contiene {{unidades}} o menos unidades y el propietario ha vivido en el lugar en una de las unidades desde el comienzo de su arrendamiento?",
+    "landlord_occupancy_1year": "¿La propiedad contiene {{unidades}} o menos unidades y el propietario, o el padre, hijo o hermano del propietario ha vivido en el sitio en una de las unidades durante al menos un año?",
+    "berkeley_duplex": "¿Vivía un propietario en una de las unidades el 31 de diciembre de 1979?",
+    "duplex_attached": "¿Las dos unidades en la propiedad están unidas a la misma estructura o separadas?",
+    "duplex_building": "¿Son ambas unidades en la propiedad parte del mismo edificio?"
   },
   "eligibility-info": {
     "subsidized": {

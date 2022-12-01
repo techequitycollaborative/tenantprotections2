@@ -43,12 +43,32 @@
       "yes": "Corporation or REIT",
       "no": "Individual"
     },
-    "landlord-adu-exemption": "Does the owner live on the property where the ADU is located?",
     "min-units": "Does the property contain {{units}} or more units?",
-    "landlord-onsite": "Does the property contain {{units}} or fewer units and the owner live on site?",
-    "landlord-onsite-one-year": "Does the property contain {{units}} or fewer units and has the owner lived on site for at least one year?",
-    "duplex-landlord-onsite-tenancy-start": "Has the owner lived on site since the beginning of the tenancy?",
-    "landlord-shared-exemption": "Do you share a bathroom or kitchen with the owner?"
+    "hotels_a": "Have you currently lived at this hotel for {{days}} days or more in a row?",
+    "hotels_b": {
+      "prompt": "Does the hotel you are living in offer all of these services, even if you don't personally use them?",
+      "yes": "Yes, all of these features",
+      "no": "No, missing one or more",
+      "list": [
+        "1. An entrance that is controlled by the hotel",
+        "2. A safe for valuables",
+        "3. A central phone service",
+        "4. Maid, mail, and room services",
+        "5. The ability to book a room for less than 7 days",
+        "6. A restaurant on the hotel premises or next to it that is operated in connection with the hotel"
+      ]
+    },
+    "hotels_q2": "Is the hotel you live in primarily rented for periods of {{days}} days or more?",
+    "landlord_shared_exemption": "Do you live in the same unit as your landlord? This means that your house or apartment is the landlord's main residence and the landlord shares a bathroom or kitchen with the tenants.",
+    "relative_occupancy_q1": "Do you live in the same unit as an immediate family member of your landlord? This means that your house or apartment is the relative's main residence.",
+    "relative_occupancy_q2": "Has the landlord's family member lived in your unit since the start of your tenancy?",
+    "relative_occupancy_wh": "Do you live in the same unit as your landlord's spouse, parent, grandparent, sibling, or child? This means that your house or apartment is the relative's main residence.",
+    "landlord_occupancy": "Does the property contain {{units}} or fewer units and the owner lives on site in one of the units?",
+    "landlord_occupancy_tenancy": "Does the property contain {{units}} or fewer units and has the owner lived on site in one of the units since the beginning of your tenancy?",
+    "landlord_occupancy_1year": "Does the property contain {{units}} or fewer units and has the owner, or the owner's parent, child, or sibling lived on site in one of the units for at least one year?",
+    "berkeley_duplex": "Did an owner live onsite in one of the units on December 31, 1979?",
+    "duplex_attached": "Are the two units at the property attached to the same structure, or detached?",
+    "duplex_building": "Are both units at the property part of the same building?"
   },
   "eligibility-info": {
     "subsidized": {
