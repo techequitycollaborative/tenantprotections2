@@ -14,43 +14,35 @@ function getPassingBuildingTypes(rules: Rules) {
 
   let hasApartmentQuestions = false;
   let hasDuplexQuestions = false;
-  let hasADUQuestions = false;
 
   // Resolve additional question checks
   if (rules.landlord_shared_exemption) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.relative_occupancy_q1) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.relative_occupancy_q2) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.relative_occupancy_wh) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.landlord_occupancy) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.landlord_occupancy_tenancy) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.landlord_occupancy_1year) {
     hasApartmentQuestions = true;
     hasDuplexQuestions = true;
-    hasADUQuestions = true;
   }
   if (rules.berkeley_duplex) {
     hasDuplexQuestions = true;
@@ -74,9 +66,6 @@ function getPassingBuildingTypes(rules: Rules) {
   }
   if (rules.duplex === ELIGIBLE && !hasDuplexQuestions) {
     passingBuildingTypes.push(BuildingType.Duplex);
-  }
-  if (rules.min_units == 2 && !hasADUQuestions) {
-    passingBuildingTypes.push(BuildingType.ADU);
   }
   if (rules.min_units == 2 && !hasApartmentQuestions) {
     passingBuildingTypes.push(BuildingType.Apartment);
@@ -188,7 +177,6 @@ function getEligibilityQuestions(rules: Rules) {
   let apartmentQuestions = [];
   let condoSFHQuestions = [];
   let duplexQuestions = [];
-  let aduQuestions = [];
   let hotelQuestions = [];
 
   // Condos and SFHs
@@ -214,41 +202,34 @@ function getEligibilityQuestions(rules: Rules) {
   if (rules.landlord_shared_exemption) {
     apartmentQuestions.push(LANDLORD_SHARED_EXEMPTION);
     duplexQuestions.push(LANDLORD_SHARED_EXEMPTION);
-    aduQuestions.push(LANDLORD_SHARED_EXEMPTION);
   }
   if (rules.relative_occupancy_q1) {
     apartmentQuestions.push(RELATIVE_OCCUPANCY_Q1);
     duplexQuestions.push(RELATIVE_OCCUPANCY_Q1);
-    aduQuestions.push(RELATIVE_OCCUPANCY_Q1);
   }
 
   if (rules.relative_occupancy_q2) {
     apartmentQuestions.push(RELATIVE_OCCUPANCY_Q2);
     duplexQuestions.push(RELATIVE_OCCUPANCY_Q2);
-    aduQuestions.push(RELATIVE_OCCUPANCY_Q2);
   }
 
   if (rules.relative_occupancy_wh) {
     apartmentQuestions.push(RELATIVE_OCCUPANCY_WH);
     duplexQuestions.push(RELATIVE_OCCUPANCY_WH);
-    aduQuestions.push(RELATIVE_OCCUPANCY_WH);
   }
 
   // Apartment, Duplex, ADU questions
   if (rules.landlord_occupancy) {
     apartmentQuestions.push(LANDLORD_OCCUPANCY);
     duplexQuestions.push(LANDLORD_OCCUPANCY);
-    aduQuestions.push(LANDLORD_OCCUPANCY);
   }
   if (rules.landlord_occupancy_tenancy) {
     apartmentQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
     duplexQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
-    aduQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
   }
   if (rules.landlord_occupancy_1year) {
     apartmentQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
     duplexQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
-    aduQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
   }
 
   // Duplex questions
@@ -271,11 +252,6 @@ function getEligibilityQuestions(rules: Rules) {
   if (apartmentQuestions.length > 0) {
     Object.assign(eligibilityQuestions, {
       [BuildingType.Apartment]: apartmentQuestions,
-    });
-  }
-  if (aduQuestions.length > 0) {
-    Object.assign(eligibilityQuestions, {
-      [BuildingType.ADU]: aduQuestions,
     });
   }
   if (duplexQuestions.length > 0) {

@@ -124,9 +124,24 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
         </div>
       )}
       <div>
-        <p className="text-blue font-medium py-2 text-md">
-          {t('calculator.alert.rate-explanation')}
-        </p>
+        {(
+          t('calculator.alert.rate-explanation', {
+            returnObjects: true,
+          }) as Array<string>
+        ).map((x, i) => (
+          <p key={i} className="text-blue font-medium py-2 text-md">
+            {x}
+          </p>
+        ))}
+        {localRentCap == undefined ? (
+          <p className="text-blue font-medium py-2 text-md">
+            {t('calculator.alert.rate-explanation-statewide')}
+          </p>
+        ) : (
+          <p className="text-blue font-medium py-2 text-md">
+            {t('calculator.alert.rate-explanation-local')}
+          </p>
+        )}
       </div>
     </div>
   );

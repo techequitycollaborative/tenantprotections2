@@ -322,10 +322,6 @@ export function makeBuildingTypeChooser() {
           <option value="" className="text-blue">
             {t('Select')}
           </option>
-          <option value={BuildingType.ADU}>{t('building-types.adu')}</option>
-          <option value={BuildingType.Apartment}>
-            {t('building-types.apartment')}
-          </option>
           <option value={BuildingType.Condo}>
             {t('building-types.condo')}
           </option>
@@ -335,6 +331,9 @@ export function makeBuildingTypeChooser() {
           </option>
           <option value={BuildingType.Hotel}>
             {t('building-types.hotel')}
+          </option>
+          <option value={BuildingType.Apartment}>
+            {t('building-types.apartment')}
           </option>
           <option value={BuildingType.Senior}>
             {t('building-types.senior')}

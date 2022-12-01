@@ -1,5 +1,4 @@
 export enum BuildingType {
-  ADU = 'adu',
   Apartment = 'apartment',
   Condo = 'condo',
   Dorm = 'dorm',

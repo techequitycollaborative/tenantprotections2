@@ -56,6 +56,10 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   const rentControlDate = props.location.localRules?.builtBeforeMillis;
   const rentCapDate = props.location.statewideRules.builtBeforeMillis;
 
+  const rentControlDateStr = new Date(rentControlDate).toLocaleDateString(
+    i18n.language,
+    DATE_OPTIONS,
+  );
   const rentCapDateStr = new Date(rentCapDate).toLocaleDateString(
     i18n.language,
     DATE_OPTIONS,
@@ -81,28 +85,27 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
         >
           <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
             {t('answers.before-date', {
-              date: new Date(rentControlDate).toLocaleDateString(
-                i18n.language,
-                DATE_OPTIONS,
-              ),
+              date: rentControlDateStr,
             })}
           </button>
         </Link>
       )}
-      {typeof rentControlDate === 'undefined' ||
-        (rentControlDate != rentCapDate && (
-          <Link
-            href={`${getPathFromLocation('/eligibility', props.location, '3', {
-              s: 'statewide',
-            })}`}
-          >
-            <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
-              {t('answers.before-date', {
-                date: rentCapDateStr,
-              })}
-            </button>
-          </Link>
-        ))}
+      {(rentControlDate === 'undefined' || rentControlDate != rentCapDate) && (
+        <Link
+          href={`${getPathFromLocation('/eligibility', props.location, '3', {
+            s: 'statewide',
+          })}`}
+        >
+          <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+            {typeof rentControlDate == 'undefined'
+              ? t('answers.before-date', { date: rentCapDateStr })
+              : t('answers.between-dates', {
+                  date1: rentControlDateStr,
+                  date2: rentCapDateStr,
+                })}
+          </button>
+        </Link>
+      )}
       <Link
         href={`${getPathFromLocation(
           '/eligibility',

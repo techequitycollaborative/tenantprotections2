@@ -3,7 +3,7 @@
     "title-1": "¡Inquilinos, conozcan sus derechos!",
     "text-1": [
       "¿Cuánto puede aumentar su arrendador su alquiler?",
-      "La Ley de Protección de Inquilinos de 2019 protege a la mayoría de los inquilinos de California contra aumentos de alquiler ilegales y desalojos injustos. Muchas ciudades también tienen medidas locales de control de alquileres con topes más restrictivos sobre cuánto puede aumentar su alquiler el arrendador.",
+      "La Ley de Protección de Inquilinos de 2019 protege a la mayoría de los inquilinos de California contra aumentos de alquiler ilegales y desalojos injustos. Muchas ciudades también tienen medidas de control de alquileres locales más estrictas con límites más bajos sobre cuánto puede aumentar su alquiler el arrendador.",
       "Averigüe si está protegido por leyes estatales o locales."
     ],
     "button-1": "Hacer el cuestionario de protecciones",
@@ -20,21 +20,21 @@
   },
   "answers": {
     "after-date": "Después {{date}}",
-    "before-date": "Antes de {{date}}"
+    "before-date": "Antes de {{date}}",
+    "between-dates": "Entre {{date1}} y {{date2}}"
   },
   "building-types": {
-    "adu": "Unidad de vivienda accesoria",
-    "apartments": "Apartamento",
+    "apartments": "Propiedad de unidades múltiples (3 unidades o más)",
     "condo": "Condominio",
     "dorm": "Residencia universitaria",
     "duplex": "Dúplex",
     "hotel": "Hotel",
-    "senior": "Vida para personas mayores",
+    "senior": "Centro de atención para personas mayores o centro residencial para adultos",
     "sfh": "Casa unifamiliar"
   },
   "questions": {
     "building-type": "¿En qué tipo de edificio vive?",
-    "is-subsidized": "¿Vive en vivienda protegida?",
+    "is-subsidized": "¿Vives en viviendas protegidas o públicas?",
     "when-built": "¿Cuándo se construyó su edificio?"
   },
   "building-questions": {
@@ -72,8 +72,8 @@
   },
   "eligibility-info": {
     "subsidized": {
-      "title": "¿Qué es la vivienda protegida?",
-      "content": "La vivienda subsidiada es una asistencia económica patrocinada por el gobierno destinada a aliviar los costos y gastos de vivienda para personas con ingresos bajos a moderados. Las formas de subsidios incluyen subsidios de vivienda directos, vivienda sin fines de lucro, vivienda pública, suplementos/vales de alquiler y otras formas de asistencia."
+      "title": "¿Qué es la vivienda protegida o pública?",
+      "content": "La vivienda subsidiada o pública es vivienda que es pagada en parte por el gobierno u otra asistencia económica patrocinada para personas con bajos ingresos. Los subsidios incluyen subsidios de vivienda directos, vivienda sin fines de lucro, vivienda pública, vivienda con crédito fiscal por bajos ingresos (LIHTC), cupones/complementos de alquiler y otras formas de asistencia o vivienda según las calificaciones de ingresos."
     },
     "built": {
       "title": "Averigüe cuándo se construyó su alquiler",
@@ -82,14 +82,13 @@
     "types": {
       "title": "Obtenga más información sobre los tipos de edificios",
       "content": [
-        "Unidad de vivienda accesoria: Un apartamento independiente, cabaña o unidad residencial pequeña, que se encuentra en una propiedad que tiene una casa principal separada, unifamiliar, dúplex u otra unidad residencial.",
-        "Apartamento: Una unidad de vivienda autónoma que ocupa parte de un edificio.",
-        "Condominio: Una unidad de propiedad separada dentro de un edificio de unidades múltiples. Los condominios se diferencian de los apartamentos en que cada unidad dentro del edificio puede tener un propietario diferente.",
-        "Residencia universitaria: Alojamiento para estudiantes con servicios compartidos, normalmente ubicado en un edificio en un campus universitario.",
-        "Dúplex: Una casa con dos unidades separadas.",
+        "Condominio: Una unidad dentro de un edificio o complejo de unidades múltiples que se puede poseer y vender por separado. Los condominios se diferencian de los apartamentos en que cada unidad de la propiedad puede tener un propietario diferente, incluso dentro del mismo edificio.",
+        "Residencia universitaria: Alojamiento para estudiantes con servicios compartidos que es propiedad y está administrado por un colegio o universidad.",
+        "Dúplex: Una casa o propiedad con dos unidades separadas, ya sea que ambas sean parte del mismo edificio o estructuras independientes.",
         "Hotel: Un edificio que proporciona alojamiento a corto plazo. Esto incluye SRO y propiedades de estadía prolongada.",
-        "Vida para personas mayores: Vivienda específicamente dedicada a adultos mayores, a menudo con servicios o comodidades compartidas y vida asistida.",
-        "Casa unifamiliar: Un edificio en un lote dedicado con una sola unidad de vivienda, sin paredes compartidas y un propietario."
+        "Propiedad de unidades múltiples (3 unidades o más): una propiedad con tres o más unidades de vivienda independientes, ya sea parte de un edificio o independiente.",
+        "Centro de atención para personas mayores o centro residencial para adultos: vivienda específicamente dedicada a adultos o personas mayores que también brinda asistencia con servicios relacionados con la salud o actividades de la vida diaria, como alimentarse, vestirse o bañarse.",
+        "Vivienda unifamiliar: Un edificio en una propiedad con una sola unidad de vivienda. No hay otras unidades de vivienda en la propiedad y la casa no está dividida en apartamentos separados."
       ]
     },
     "corp-ownership": {
@@ -107,7 +106,12 @@
       "statewide-max-rent": "Alquiler máximo en todo el estado",
       "local-max-rent": "Alquiler máximo de {{city}}",
       "max-increase": "{{cap}}% de aumento máximo por año * ${{rent}} =",
-      "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento de la renta.",
+      "rate-explanation": [
+        "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento de la renta.",
+        "Un aumento de la renta también puede no ser válido por otras razones, como el incumplimiento de las leyes locales o estatales por parte del arrendador."
+      ],
+      "rate-explanation-statewide": "Nuestro cálculo tampoco incluye ninguna restricción local sobre los aumentos de alquiler debido a la pandemia de COVID-19, como una moratoria de desalojo local.",
+      "rate-explanation-local": "En ciertas circunstancias, como al presentar una petición ante la ciudad, se le puede permitir al arrendador aumentar el alquiler por encima del monto del control de alquiler local.",
       "issues": "¿Tiene problemas con su arrendamiento?",
       "resources": "Explore nuestros recursos",
       "take-quiz": "Tome la prueba de protecciones"
@@ -136,12 +140,14 @@
     "title-local": "¡Eres protegido por el control de alquiler de {{city}}!",
     "title-statewide": "¡Eres cubierto por las protecciones estatales!",
     "local-text": [
-      "<b>Felicitaciones</b>, está cubierto por el control de alquiler local en {{city}}. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
-      "Además del control de alquiler local, también puede calificar para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
+      "<b>Felicitaciones</b>, está cubierto por el control de alquiler local en {{city}}. Esto significa que hay un límite en cuanto a cuánto puede aumentar el alquiler el arrendador. Para verificar si un aumento de alquiler fue legal, siga el enlace a continuación a la calculadora de alquiler.",
+      "Además del control local de alquileres, también puede calificar para la Ley de Protección de Inquilinos de California, que le brinda derechos adicionales, como protección contra desalojos injustos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda.",
+      "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee verificar cómo se aplican las normas locales a su situación, ya que las diferentes áreas pueden tener exenciones muy específicas según el tipo de propiedad en la que vive. ."
     ],
     "statewide-text": [
-      "<b>Enhorabuena</b>, está cubierto por la Ley de Protección de Inquilinos de California. Esto significa que hay un límite en cuanto a cuánto puede aumentar su arrendador su alquiler, y también está protegido contra desalojos injustos. Para verificar si un aumento de alquiler anterior fue legal, siga el enlace a continuación a la calculadora de alquiler.",
-      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda."
+      "<b>Felicitaciones</b>, está cubierto por la Ley de Protección de Inquilinos de California. Esto significa que hay un límite en cuanto a cuánto puede aumentar su arrendador su alquiler, y también está protegido contra desalojos injustos. Para verificar si un aumento de alquiler fue legal, siga el enlace a continuación a la calculadora de alquiler.",
+      "Recuerde que estos no son sus únicos derechos como inquilino, solo los cubiertos por la Ley de Protección de Inquilinos. Si tiene dudas o está preocupado por su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda.",
+      "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee comprobar cómo se aplican las normas estatales a su situación específica."
     ],
     "footnote": "¿Le están cobrando de más?",
     "button": "Consulte la calculadora de alquiler"
@@ -150,12 +156,14 @@
     "title": "Es posible que usted no sea protegido",
     "text-subsidized-p1": "<bold>Desafortunadamente</bold>, debido a que vive en una vivienda subsidiada, es posible que no sea elegible para los límites de alquiler locales o estatales. Sin embargo, puede tener otras protecciones legales contra desalojos y aumentos de alquiler.",
     "text-subsidized-p2": "Los requisitos de elegibilidad en torno a la vivienda subvencionada son complejos. Si le preocupa un aumento de alquiler reciente u otro problema con su situación de vivienda, comuníquese con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda.",
+    "text-subsidized-p3": "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee verificar cómo se aplican las normas locales a su situación, ya que las diferentes áreas pueden tener exenciones muy específicas según el tipo de propiedad en la que vive. .",
     "text-1-p1": "<bold>Desafortunadamente</bold>, creemos que no está cubierto por las protecciones locales o estatales, incluidas las cláusulas de control de alquileres o de protección de causa justa de la Ley de Protección de Inquilinos.",
     "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>.",
     "subtitle": "¿Por qué no soy protegido?",
     "text-2": [
       "Según las respuestas que proporcionó con respecto a la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que no está cubierto. Los condominios, las viviendas unifamiliares y los edificios construidos antes de una fecha determinada a menudo están exentos de las leyes de tope de alquiler.",
-      "Las ordenanzas varían según la ciudad y se pueden aplicar otras exenciones para el tamaño del edificio, el tipo o el estado de ocupación del propietario."
+      "Las ordenanzas varían según la ciudad y se pueden aplicar otras exenciones para el tamaño del edificio, el tipo o el estado de ocupación del propietario.",
+      "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee verificar cómo se aplican las normas locales a su situación, ya que las diferentes áreas pueden tener exenciones muy específicas según el tipo de propiedad en la que vive. ."
     ],
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explore nuestros recursos"
@@ -164,9 +172,9 @@
     "title-1": "Sobre nosotros",
     "text-1": [
       "Esta versión actualizada de tenantprotections.org es un proyecto colaborativo entre Alliance of Californians for Community Empowerment (ACCE) y TechEquity Collaborative.",
-      "Estamos profundamente agradecidos a los muchos voluntarios que generosamente donaron las habilidades para diseñar, investigar y construir este sitio web, y para garantizar que los inquilinos en California tengan acceso a información fiable sobre el control de alquileres estatal y local, y la protección contra desalojos.",
-      "Gracias [NOMBRE], [NOMBRE], [NOMBRE], [NOMBRE] por hacer posible este sitio web."
+      "Estamos profundamente agradecidos a los muchos voluntarios que generosamente donaron las habilidades para diseñar, investigar y construir este sitio web, y para garantizar que los inquilinos en California tengan acceso a información fiable sobre el control de alquileres estatal y local, y la protección contra desalojos."
     ],
+    "volunteers": "Gracias {{names}} por hacer posible este sitio web.",
     "title-2": "Nuestra misión",
     "text-2": [
       "Este sitio existe para proporcionar a los inquilinos en California información de alta calidad sobre sus derechos bajo las leyes de California y las ordenanzas locales. Conectamos a los inquilinos con organizaciones sin fines de lucro locales y estatales para ayudarlos a lidiar con los problemas de vivienda en sus comunidades."
@@ -214,7 +222,7 @@
   "about-bill": {
     "title": "¿Qué es la Ley de Protección de Inquilinos de 2019?",
     "section1": {
-      "text1": "La Ley de Protección de Inquilinos de 2019 <link1>(Ley de la Asamblea 1482)</link1> entra en vigencia el 1 de enero de 2020 y brinda nuevas protecciones sin precedentes para la mayoría de los inquilinos de California. La ley fue patrocinada por una amplia coalición de defensores de inquilinos en todo el estado.",
+      "text1": "La Ley de Protección de Inquilinos <link1>(Asamblea de Ley 1482)</link1> entró en vigencia el 1 de enero de 2020 y brinda nuevas protecciones sin precedentes para la mayoría de los inquilinos de California. La ley fue patrocinada por una amplia coalición de defensores de inquilinos en todo el estado.",
       "text2": "Según la Ley de Protección del Inquilino de 2019, los inquilinos elegibles están cubiertos de dos maneras principales:",
       "items": [
         "Los inquilinos están protegidos contra desalojos injustos.",
@@ -223,8 +231,7 @@
     },
     "section2": {
       "title": "Protecciones contra desalojos injustos",
-      "text1": "Según el Proyecto de Ley 91 del Senado (SB 91), las protecciones del AB 1482 contra el desalojo se extienden a todos los inquilinos de California hasta el 30 de junio de 2021. La ley SB 91 también cambia temporalmente algunas de las causas justas de desalojo en la ley AB 1482. Véase a continuación para más información.",
-      "text2": "Según la Ley de Protección de Inquilinos de 2019, los inquilinos que sean elegibles están protegidos contra desalojos injustos. Esto significa que su arrendador debe tener una razón válida para desalojarlo como se describe a continuación.",
+      "text1": "Bajo la Ley de Protección de Inquilinos, los inquilinos elegibles están protegidos contra desalojos injustos. Esto significa que su arrendador debe tener una razón válida para desalojarlo, como se describe a continuación.",
       "list1-label": "En caso de culpabilidad",
       "list1-items": [
         "Falta de pago del renta.",
@@ -241,7 +248,7 @@
       ],
       "list2-label": "En caso de inocencia",
       "list2-items": [
-        "El propietario o pariente del propietario se puede mudar dentro de la unidad solo cuando este establecido en el contrato de arrendamiento original o un nuevo contrato lo permita. El desalojo debe ser realizado por un propietario o el cónyuge, pareja doméstica, hijos, nietos, padres o abuelos del propietario. El contrato de arrendamiento original o nuevo contrato debe reservar el derecho de mudarse para el propietario o el cónyuge, pareja doméstica, hijos, nietos, padres o abuelos del propietario.",
+        "El propietario o pariente se mudan solo cuando el contrato de arrendamiento original o un nuevo contrato permite que un propietario o pariente se mude. El desalojo debe ser realizado por un propietario o el cónyuge, pareja de hecho, hijos, nietos, padres o abuelos del propietario.",
         "Retirar la unidad del mercado de renta.",
         "Cuando una agencia de la ciudad o del condado requiere que la unidad sea desocupada debido a condiciones inhabitables.",
         "Intención de demoler o remodelar sustancialmente una unidad. “Remodelación sustancial” significa el reemplazo o modificación sustancial de cualquier sistema estructural, eléctrico, de plomería o mecánico que requiera un permiso, o la eliminación de material peligroso, incluido plomo, moho o asbesto que no se pueda lograr de manera razonable con el inquilino en la unidad y eso requiere que el inquilino desocupe más de treinta días. Las mejoras cosméticas por sí solas, que incluyen pintura, decoración y reparaciones menores, no califican, ni ningún trabajo que se pueda hacer de manera segura con el inquilino en la unidad."
@@ -249,52 +256,8 @@
     },
     "section3": {
       "title": "Protecciones contra aumentos de renta injustos",
-      "text1": "Los inquilinos elegibles están protegidos contra aumentos de renta que exceden el 10% en un período de un año o la inflación + 5%, lo que sea menor. Esto a menudo se conoce como un “límite de renta” porque limita la cantidad que su arrendador puede aumentar legalmente su renta año tras año.",
+      "text1": "Los inquilinos elegibles están protegidos contra aumentos de alquiler que superen el 10 % en un período de un año o el costo de vida + 5 %, lo que sea menor. Esto a menudo se conoce como un “tope de alquiler” porque limita la cantidad que su arrendador puede aumentar legalmente su alquiler año tras año.",
       "text2": "Si no está seguro de si su aumento de renta excede el límite establecido por la ley, nuestra <link1>calculadora de renta</link1> puede ayudarlo a hacer los cálculos."
-    },
-    "section4": {
-      "title": "Protección para los Inquilinos Debido al COVID-19",
-      "text": [
-        "El Proyecto de Ley 91 del Senado (SB 91), aprobada el 28 de enero de 2021, amplió las protecciones en caso de desalojo para los inquilinos que han perdido ingresos debido a la pandemia del COVID-19.",
-        "La deuda de alquiler que se debe entre marzo de 2020 y el 30 de junio de 2020 se convierte en deuda del consumidor y nunca puede ser la base de un desalojo (si el inquilino sigue todos los requisitos). No obstante, la deuda puede cobrarse por otros medios, como las demandas de tribunales para casos menores y civiles ordinarios. Sin embargo, el arrendador no podrá reclamar la deuda hasta el 1 de julio de 2021.",
-        "Mientras tanto, los inquilinos pueden solicitar una ayuda para el alquiler para cubrir sus deudas de alquiler durante la pandemia. Si un inquilino recibe una ayuda para el alquiler, puede anular todas las deudas y ya no corre el riesgo de ser desalojado ni de sufrir ningún tipo de acción de cobro."
-      ]
-    },
-    "section5": {
-      "title": "¿Se Cancela el Alquiler?",
-      "text": [
-        "Más o menos. La ley SB 91 creó un programa de ayuda al alquiler para los inquilinos por debajo de una determinada cantidad de ingresos.",
-        "En la mayoría de las zonas, los arrendadores participan en el programa de ayuda para el alquiler y si aceptan renunciar al 20% del alquiler que se debe, el programa gubernamental pagará el otro 80% del dinero que se debe. Si lo hacen, la deuda de consumo del inquilino por ese período desaparecerá. Esto significa que la deuda de alquiler que usted debe podría ser cancelada por completo si su arrendador acepta participar en el programa de ayuda para el alquiler. También puede solicitar ayuda para pagar los servicios públicos.",
-        "Si el arrendador rechaza el programa, el inquilino podrá solicitar al mismo fondo el 25% del alquiler que debe.",
-        "Este programa puede ampliarse para ofrecer una mayor cantidad de ayuda para el alquiler y aplicarla durante un mayor período de tiempo."
-      ]
-    },
-    "section6": {
-      "title": "Cómo Solicitar la Ayuda para el Alquiler",
-      "text1": "Puede optar por los fondos de ayuda para el alquiler si debe un alquiler que no pudo pagar durante la pandemia del COVID-19, desde el 1 de abril de 2020 hasta el 30 de junio de 2021. La lista completa de requisitos de elegibilidad está disponible <link1>aquí</link1>.",
-      "text2": "¡Aplique en línea! La solicitud le pedirá la dirección de correo electrónico de su arrendador para notificarle que complete su parte. Tanto los arrendadores como los inquilinos pueden completar la solicitud de ayuda para el alquiler <link1>aquí</link1>.",
-      "text3": "Si vive en una ciudad o condado que tiene su propio programa de ayuda para el alquiler, puede solicitar la ayuda para el alquiler a través de su programa local en lugar de hacerlo a través del sitio estatal. <link1>Aquí</link1> encontrará un enlace a su programa local. Algunos de estos programas locales tienen condiciones diferentes, como cubrir el 100% de la deuda de alquiler o límites de ingresos más bajos."
-    },
-    "section7": {
-      "title": "Protección contra el desalojo debido al COVID-19",
-      "subtitle1": "1. Los inquilinos deben presentar una declaración firmada de problemas financieros debido a la pandemia del COVID-19",
-      "text1": [
-        "Si no puede pagar el alquiler debido a la pandemia del COVID-19, antes de presentar una demanda de desalojo por falta de pago del alquiler, el arrendador debe darle una notificación de desalojo de 15 días. El aviso incluirá un formulario de declaración depenuria que deberá completar.",
-        "Si recibe una notificación de 15 días, en el plazo de 15 días debe entregar al arrendador la declaración de penuria firmada.",
-        "Aunque no haya recibido una notificación de 15 días, es conveniente que entregue al arrendador una copia de la declaración si se aplica a usted. Igualmente, debe entregársela nuevamente al arrendador si recibe una notificación de desalojo.",
-        "Si entrega esta declaración al arrendador, le recomendamos que la envíe por correo certificado para que tenga constancia de su envío. Debe enviar esta declaración al arrendador cada vez que reciba una notificación de desalojo de 15 días. Haga una copia de la declaración después de firmarla y guarde una prueba de que ha enviado esta notificación cada vez, como el recibo del correo certificado."
-      ],
-      "subtitle2": "2. Pago del alquiler",
-      "text2": [
-        "Si tiene una deuda de alquiler que debía pagar entre el 1 de marzo de 2020 y el 31 de agosto de 2020: Si devuelve la declaración al arrendador a tiempo, no podrá ser desalojado por no pagar este alquiler.",
-        "Si tiene una deuda de alquiler que debía pagar entre el 1 de septiembre de 2020 y el 30 de junio de 2021: Deberá pagar el 25% del total del alquiler entre septiembre de 2020 y junio de 2021 a más tardar el 30 de junio de 2021. El otro 75% del alquiler se convierte en deuda de consumo. Es posible que pueda optar a un programa de ayuda para el alquiler a través de su ciudad, condado o el estado que pagará parte o la totalidad de su alquiler atrasado, incluido el pago del 25%.",
-        "Si recibe una notificación de desalojo o citación para una demanda de desalojo, o notificación para desocupar la vivienda, busque ayuda legal inmediatamente."
-      ],
-      "subtitle3": "3. Otros tipos de desalojos",
-      "text3": [
-        "La ley estatal protege a los inquilinos de los desalojos “sin causa” hasta el 1 de julio de 2021, extendiendo las protecciones de desalojo en la ley AB 1482.",
-        "Su ciudad o condado también puede haber aprobado protecciones más sólidas que la ley estatal para otros tipos de desalojos o incluso para los inquilinos que no pueden pagar el alquiler."
-      ]
     }
   },
   "navbar": {
@@ -306,15 +269,17 @@
   "no": "No",
   "submit": "Enviar",
   "yes": "Sí",
+  "and": "y",
   "eligibility-title": "Cuestionario de protecciones",
   "city-select": "Seleccione en que ciudad vive",
   "zip-not-found": "No se encontró el código postal de California {{zip}}",
   "zipcode": "{{zip}}",
-  "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todas partes de California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan a usted.",
+  "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en todo California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones se aplican a usted.",
   "zip-label": "¿Cuál es su código postal?",
   "eligibility-more": {
     "title": "¿Qué ciudades tienen protecciones locales?",
-    "content": "Aquí hay una lista de ciudades de California con control de alquiler local:"
+    "content": "Aquí hay una lista de ciudades de California con control de alquiler local:",
+    "footer": "Esta lista se actualizó por última vez el 7 de diciembre de 2022."
   },
   "back": "REGRESAR",
   "start-over": "EMPEZAR DE NUEVO",
