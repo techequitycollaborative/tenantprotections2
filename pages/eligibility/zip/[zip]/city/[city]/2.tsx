@@ -56,10 +56,13 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
   const rentControlDate = props.location.localRules?.builtBeforeMillis;
   const rentCapDate = props.location.statewideRules.builtBeforeMillis;
 
-  const rentControlDateStr = new Date(rentControlDate).toLocaleDateString(
-    i18n.language,
-    DATE_OPTIONS,
-  );
+  const rentControlDateStr =
+    rentControlDate != undefined
+      ? new Date(rentControlDate).toLocaleDateString(
+          i18n.language,
+          DATE_OPTIONS,
+        )
+      : '';
   const rentCapDateStr = new Date(rentCapDate).toLocaleDateString(
     i18n.language,
     DATE_OPTIONS,
@@ -90,7 +93,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           </button>
         </Link>
       )}
-      {(rentControlDate === 'undefined' || rentControlDate != rentCapDate) && (
+      {(rentControlDate == undefined || rentControlDate != rentCapDate) && (
         <Link
           href={`${getPathFromLocation('/eligibility', props.location, '3', {
             s: 'statewide',
