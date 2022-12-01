@@ -51,7 +51,7 @@ function AdditionalQuestionsSection({
   const { t } = useTranslation('common');
 
   let [index, setIndex] = useState(0);
-  let currentScope = baseScope;
+  let [currentScope, setCurrentScope] = useState(baseScope);
   let questions =
     currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
   let question = questions ? questions[index] : emptyQuestion;
@@ -101,7 +101,7 @@ function AdditionalQuestionsSection({
         );
       } else if (statewideQuestions) {
         questions = statewideQuestions;
-        currentScope = Scope.STATEWIDE_SCOPE;
+        setCurrentScope(Scope.STATEWIDE_SCOPE);
         index = 0;
       } else {
         router.push(
@@ -129,6 +129,17 @@ function AdditionalQuestionsSection({
       <p>Checking on eligibility for {currentScope} rules.</p>
       <h2 className="text-blue text-2xl py-4 flex flex-col">
         {t(question.promptKey, question.promptVars)}
+        {question.promptKey.includes('hotels_b')
+          ? (
+              t('building-questions.hotels_b.list', {
+                returnObjects: true,
+              }) as Array<string>
+            ).map((x, i) => (
+              <span key={i} className="text-lg pl-4">
+                {x}
+              </span>
+            ))
+          : null}
         <button
           value="yes"
           onClick={onClick}

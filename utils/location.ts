@@ -36,11 +36,11 @@ function tryEnrichLocation(
   const now = new Date();
   const eligibilityMatrix = EligibilityMatrix();
   const localRules = eligibilityMatrix.local[
-    location.city as keyof typeof eligibilityMatrix.local
+    city as keyof typeof eligibilityMatrix.local
   ] as unknown as EligibilityRules;
   const rentCapMatrix = RentCapMatrix();
   const localRentCap = rentCapMatrix.local[
-    location.city as keyof typeof rentCapMatrix.local
+    city as keyof typeof rentCapMatrix.local
   ] as unknown as RentCapHistory;
 
   return {
@@ -105,7 +105,7 @@ export function getPathFromLocation(
     '/zip/' +
     location.zip +
     '/city/' +
-    location.city.replace(' ', '_') +
+    location.city.replaceAll(' ', '_') +
     pageString +
     paramString
   );

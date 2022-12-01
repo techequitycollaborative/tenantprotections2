@@ -89,17 +89,20 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           </button>
         </Link>
       )}
-      <Link
-        href={`${getPathFromLocation('/eligibility', props.location, '3', {
-          s: 'statewide',
-        })}`}
-      >
-        <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
-          {t('answers.before-date', {
-            date: rentCapDateStr,
-          })}
-        </button>
-      </Link>
+      {typeof rentControlDate === 'undefined' ||
+        (rentControlDate != rentCapDate && (
+          <Link
+            href={`${getPathFromLocation('/eligibility', props.location, '3', {
+              s: 'statewide',
+            })}`}
+          >
+            <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
+              {t('answers.before-date', {
+                date: rentCapDateStr,
+              })}
+            </button>
+          </Link>
+        ))}
       <Link
         href={`${getPathFromLocation(
           '/eligibility',
