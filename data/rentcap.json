@@ -31,6 +31,14 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2022": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-11-10",
+    "end": "2022-12-31",
+    "max_increase": 0.03
+  },
   "bel2022": {
     "geography": "Bell Gardens",
     "area": null,
@@ -103,6 +111,86 @@
     "end": "2020-06-30",
     "max_increase": 0.031
   },
+  "cul2022_5": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-05-01",
+    "end": "2022-12-31",
+    "max_increase": 0.05
+  },
+  "cul2022_4": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-04-01",
+    "end": "2022-04-30",
+    "max_increase": 0.045
+  },
+  "cul2022_3": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-03-01",
+    "end": "2022-03-31",
+    "max_increase": 0.04
+  },
+  "cul2022_2": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-02-01",
+    "end": "2022-02-28",
+    "max_increase": 0.035
+  },
+  "cul2022_1": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-01-01",
+    "end": "2022-01-31",
+    "max_increase": 0.03
+  },
+  "cul2021_3": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2021,
+    "start": "2021-12-01",
+    "end": "2021-12-31",
+    "max_increase": 0.025
+  },
+  "cul2021_2": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2021,
+    "start": "2021-10-01",
+    "end": "2021-11-30",
+    "max_increase": 0.0225
+  },
+  "cul2021_1": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2021,
+    "start": "2021-01-01",
+    "end": "2021-09-30",
+    "max_increase": 0.02
+  },
+  "cul2020": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2020,
+    "start": "2020-10-30",
+    "end": "2020-12-31",
+    "max_increase": 0.0225
+  },
+  "cul2019": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2019,
+    "start": "2019-08-12",
+    "end": "2020-10-29",
+    "max_increase": 0.03
+  },
   "epa2022": {
     "geography": "East Palo Alto",
     "area": null,
@@ -171,33 +259,33 @@
     "geography": "Inglewood",
     "area": null,
     "start_year": 2022,
-    "start": "2022-10-01",
-    "end": "2023-09-30",
-    "max_increase": null
+    "start": "2022-05-01",
+    "end": "2023-04-30",
+    "max_increase": 0.0518
   },
   "ing2021": {
     "geography": "Inglewood",
     "area": null,
     "start_year": 2021,
-    "start": "2021-10-01",
-    "end": "2022-09-30",
-    "max_increase": 0.046
+    "start": "2021-06-09",
+    "end": "2022-04-30",
+    "max_increase": 0.03
   },
   "ing2020": {
     "geography": "Inglewood",
     "area": null,
     "start_year": 2020,
     "start": "2020-10-01",
-    "end": "2021-09-30",
+    "end": "2021-06-08",
     "max_increase": 0.03
   },
   "ing2019": {
     "geography": "Inglewood",
     "area": null,
     "start_year": 2019,
-    "start": "2019-10-01",
+    "start": "2019-12-05",
     "end": "2020-09-30",
-    "max_increase": 0.03
+    "max_increase": 0.0319
   },
   "la2022": {
     "geography": "Los Angeles",
@@ -205,7 +293,7 @@
     "start_year": 2022,
     "start": "2022-07-01",
     "end": "2023-06-30",
-    "max_increase": 0.046
+    "max_increase": 0.05
   },
   "la2021": {
     "geography": "Los Angeles",
@@ -213,7 +301,7 @@
     "start_year": 2021,
     "start": "2021-07-01",
     "end": "2022-06-30",
-    "max_increase": 0.012
+    "max_increase": 0.03
   },
   "la2020": {
     "geography": "Los Angeles",
@@ -229,7 +317,15 @@
     "start_year": 2019,
     "start": "2019-07-01",
     "end": "2020-06-30",
-    "max_increase": 0.039
+    "max_increase": 0.04
+  },
+  "lac2020": {
+    "geography": "Unincorporated LA County",
+    "area": null,
+    "start_year": 2020,
+    "start": "2020-04-01",
+    "end": "2022-12-31",
+    "max_increase": 0.0
   },
   "mtv2022": {
     "geography": "Mountain View",
@@ -431,13 +527,21 @@
     "end": "2019-12-31",
     "max_increase": 0.05
   },
+  "sa2022": {
+    "geography": "Santa Ana",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-09-01",
+    "end": "2023-08-31",
+    "max_increase": 0.03
+  },
   "sm2022": {
     "geography": "Santa Monica",
     "area": null,
     "start_year": 2022,
     "start": "2022-09-01",
     "end": "2023-08-31",
-    "max_increase": 0.0638
+    "max_increase": 0.06
   },
   "sm2021": {
     "geography": "Santa Monica",
@@ -462,6 +566,38 @@
     "start": "2019-09-01",
     "end": "2020-08-31",
     "max_increase": 0.0203
+  },
+  "wh2022": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2022,
+    "start": "2022-09-01",
+    "end": "2023-08-31",
+    "max_increase": 0.03
+  },
+  "wh2021": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2021,
+    "start": "2021-09-01",
+    "end": "2022-08-31",
+    "max_increase": 0.03
+  },
+  "wh2020": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2020,
+    "start": "2020-09-01",
+    "end": "2021-08-31",
+    "max_increase": 0.0075
+  },
+  "wh2019": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2019,
+    "start": "2019-09-01",
+    "end": "2020-08-31",
+    "max_increase": 0.025
   },
   "casf2022": {
     "geography": "Statewide",
