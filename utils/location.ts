@@ -13,7 +13,7 @@ import {
 const ELIGIBLE = 'eligible';
 const EXEMPT = 'exempt';
 
-const UNINCORPORATE_LA_CITY_KEY = 'Unincorporated LA County';
+const UNINCORPORATED_LA_CITY_KEY = 'Unincorporated LA County';
 
 /**
  * Convert RawLocation to FullLocation if only one city within the RawLocation
@@ -36,7 +36,7 @@ function tryEnrichLocation(
 
   const isUnincorporatedLA = unincorporatedAreasLA.includes(city);
   const unincorporatedLAOverride = isUnincorporatedLA
-    ? UNINCORPORATE_LA_CITY_KEY
+    ? UNINCORPORATED_LA_CITY_KEY
     : city;
 
   const now = new Date();
@@ -136,5 +136,7 @@ export function lookupRentCap(
 }
 
 export function unincorporatedLAOverride(location: FullLocation) {
-  return location.isUnincorporatedLA ? UNINCORPORATE_LA_CITY_KEY : location.city;
+  return location.isUnincorporatedLA
+    ? UNINCORPORATED_LA_CITY_KEY
+    : location.city;
 }
