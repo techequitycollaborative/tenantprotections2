@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import { FullLocation } from '@/types/location';
 import { RentHistory } from '@/types/calculator';
-import { lookupRentCap } from '@/utils/location';
+import { lookupRentCap, unincorporatedLAOverride } from '@/utils/location';
 import { getCurrentRent, getPreviousRent } from '@/utils/calculator';
 
 interface Props {
@@ -79,7 +79,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
             <div className="flex flex-col pl-8 pr-24">
               <p>
                 {t('calculator.alert.local-max-rent', {
-                  city: props.location.city,
+                  city: unincorporatedLAOverride(props.location),
                   max: localMaxRentDisplay,
                 })}
               </p>

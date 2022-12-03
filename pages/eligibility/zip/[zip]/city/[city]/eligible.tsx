@@ -4,7 +4,11 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
-import { locationFromZip, getPathFromLocation } from '@/utils/location';
+import {
+  locationFromZip,
+  getPathFromLocation,
+  unincorporatedLAOverride,
+} from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
@@ -60,14 +64,16 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
       />
       <h2 className="text-blue text-2xl font-bold mx-auto mb-6">
         {scope === 'local'
-          ? t('eligible.title-local', { city: location.city })
+          ? t('eligible.title-local', {
+              city: unincorporatedLAOverride(location),
+            })
           : t('eligible.title-statewide')}
       </h2>
       <div className="text-gray-dark text-lg text-justify">
         {(
           t(textKey, {
             returnObjects: true,
-            city: location.city,
+            city: unincorporatedLAOverride(location),
           }) as Array<string>
         ).map((x, i) => (
           <p

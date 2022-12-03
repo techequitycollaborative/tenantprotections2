@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
-import { locationFromZip } from '@/utils/location';
+import { locationFromZip, unincorporatedLAOverride } from '@/utils/location';
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 import LinkWrapper from '@/components/link-wrapper';
@@ -77,7 +77,7 @@ const Ineligible: NextPage<Props> = function Ineligible({
             <p className="py-2">
               {t('ineligible.text-subsidized-p2', {
                 returnObjects: true,
-                city: location.city,
+                city: unincorporatedLAOverride(location),
               })}
             </p>
             <p className="py-2">{t('ineligible.text-subsidized-p3')}</p>
