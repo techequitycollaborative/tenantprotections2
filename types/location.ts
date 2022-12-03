@@ -43,6 +43,7 @@ export interface RawLocation extends RawZipData {
 export interface FullLocation extends ZipData {
   readonly type: 'full';
   city: string;
+  isUnincorporatedLA: boolean,
   statewideRules: EligibilityRules;
   localRules?: EligibilityRules | null;
   statewideRentCap: RentCapHistory;

@@ -9,3 +9,8 @@ declare module '@/data/zipcodes.json' {
   const data: Record<string, RawZipData>;
   export default data;
 }
+
+declare module '@/data/unincorporated-areas-la.txt' {
+  const data: Array<string>;
+  export default data;
+}
