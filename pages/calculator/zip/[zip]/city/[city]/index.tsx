@@ -336,7 +336,7 @@ const Zip: NextPage<Props> = function Zip(props) {
   const [editRow, setEditRow] = useState<RentEntry | undefined>(undefined);
 
   const { t } = useTranslation(['common']);
-  const bannerVisible = true;
+  const bannerVisible = false;
 
   const onAddRent = function (startDate: Date, rent: number) {
     setRentHistory(addRent(rentHistory, startDate, rent));
