@@ -13,6 +13,14 @@ import RentRow from '@/components/rentrow';
 import RentAlert from '@/components/rentalert';
 import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
+import Banner from '@/components/banner';
+
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
 
 interface Props {
   location: FullLocation;
@@ -328,6 +336,7 @@ const Zip: NextPage<Props> = function Zip(props) {
   const [editRow, setEditRow] = useState<RentEntry | undefined>(undefined);
 
   const { t } = useTranslation(['common']);
+  const bannerVisible = false;
 
   const onAddRent = function (startDate: Date, rent: number) {
     setRentHistory(addRent(rentHistory, startDate, rent));
@@ -343,28 +352,37 @@ const Zip: NextPage<Props> = function Zip(props) {
   };
 
   return (
-    <Layout>
-      <h2 className="text-blue text-3xl font-bold my-8">
-        {t('calculator.title')}
-      </h2>
-      <RentTimeline
-        location={props.location}
-        rentHistory={rentHistory}
-        onEditRent={onEditRent}
-        translation={t}
-      />
-      <RentBox
-        rentHistory={rentHistory}
-        onAddRent={onAddRent}
-        translation={t}
-        editRow={editRow}
-      />
-      <Results
-        location={props.location}
-        rentHistory={rentHistory}
-        translation={t}
-      />
-    </Layout>
+    <div>
+      <Layout
+        banner={
+          <Banner
+            visible={bannerVisible}
+            text="Moratorium currently in effect"
+          />
+        }
+      >
+        <h2 className="text-blue text-3xl font-bold my-8">
+          {t('calculator.title')}
+        </h2>
+        <RentTimeline
+          location={props.location}
+          rentHistory={rentHistory}
+          onEditRent={onEditRent}
+          translation={t}
+        />
+        <RentBox
+          rentHistory={rentHistory}
+          onAddRent={onAddRent}
+          translation={t}
+          editRow={editRow}
+        />
+        <Results
+          location={props.location}
+          rentHistory={rentHistory}
+          translation={t}
+        />
+      </Layout>
+    </div>
   );
 };
 

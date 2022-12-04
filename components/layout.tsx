@@ -2,17 +2,21 @@ import { ReactNode } from 'react';
 import Header from './header';
 import Navbar from './navbar';
 import Footer from './footer';
+import Banner from './banner';
 import styles from '@/styles/Home.module.css';
 
 interface Props {
   children?: ReactNode;
+  banner?: ReactNode;
 }
 
-export default function Layout({ children, ...props }: Props) {
+export default function Layout({ children, banner, ...props }: Props) {
   return (
     <div className={styles.container}>
       <Header />
       <Navbar />
+      {banner}
+
       <main
         className={
           styles.main +

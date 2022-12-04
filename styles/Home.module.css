@@ -50,6 +50,13 @@
   display: inline-block;
 }
 
+.banner {
+  background: #f1e0ff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -68,7 +75,8 @@
 }
 
 .title,
-.description {
+.description,
+.banner {
   text-align: center;
 }
 
@@ -135,4 +143,8 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.info-icon {
+  padding-right: 8px;
 }
