@@ -1,7 +1,7 @@
+import unincorporatedAreasLA from '@/data/unincorporated-areas-la.json';
 import zipcodes from '@/data/zipcodes.json';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 import RentCapMatrix from '@/data/rentcap-matrix';
-import { BuildingType } from '@/types/building';
 import {
   RawLocation,
   Location,
@@ -9,10 +9,11 @@ import {
   EligibilityRules,
   RentCapHistory,
 } from '@/types/location';
-import { assertIsString } from './assert';
 
 const ELIGIBLE = 'eligible';
 const EXEMPT = 'exempt';
+
+const UNINCORPORATED_LA_CITY_KEY = 'Unincorporated LA County';
 
 /**
  * Convert RawLocation to FullLocation if only one city within the RawLocation
@@ -33,19 +34,25 @@ function tryEnrichLocation(
     return location;
   }
 
+  const isUnincorporatedLA = unincorporatedAreasLA.includes(city);
+  const unincorporatedLAOverride = isUnincorporatedLA
+    ? UNINCORPORATED_LA_CITY_KEY
+    : city;
+
   const now = new Date();
   const eligibilityMatrix = EligibilityMatrix();
   const localRules = eligibilityMatrix.local[
-    city as keyof typeof eligibilityMatrix.local
-  ] as unknown as EligibilityRules;
+    unincorporatedLAOverride as keyof typeof eligibilityMatrix.local
+  ] as EligibilityRules;
   const rentCapMatrix = RentCapMatrix();
   const localRentCap = rentCapMatrix.local[
-    city as keyof typeof rentCapMatrix.local
-  ] as unknown as RentCapHistory;
+    unincorporatedLAOverride as keyof typeof rentCapMatrix.local
+  ] as RentCapHistory;
 
   return {
     ...location,
     city: city,
+    isUnincorporatedLA,
     type: 'full',
     statewideRules: eligibilityMatrix.statewide,
     localRules: localRules ? localRules : null,
@@ -126,4 +133,10 @@ export function lookupRentCap(
   });
 
   return rate;
+}
+
+export function unincorporatedLAOverride(location: FullLocation) {
+  return location.isUnincorporatedLA
+    ? UNINCORPORATED_LA_CITY_KEY
+    : location.city;
 }
