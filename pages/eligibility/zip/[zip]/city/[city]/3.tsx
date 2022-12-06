@@ -71,7 +71,7 @@ function AdditionalQuestionsSection({
     }
   }, [index, currentScope]);
 
-  const onNextQuestion: React.MouseEventHandler<HTMLAnchorElement> = () => {
+  const onNextQuestion = () => {
     if (questions && index >= questions.length - 1) {
       if (currentScope === Scope.LOCAL_SCOPE) {
         // Passed all local questions
