@@ -220,16 +220,22 @@ function getEligibilityQuestions(rules: Rules) {
 
   // Apartment, Duplex, ADU questions
   if (rules.landlord_occupancy) {
-    apartmentQuestions.push(LANDLORD_OCCUPANCY);
     duplexQuestions.push(LANDLORD_OCCUPANCY);
+    if (rules.landlord_occupancy > 2) {
+      apartmentQuestions.push(LANDLORD_OCCUPANCY);
+    }
   }
   if (rules.landlord_occupancy_tenancy) {
-    apartmentQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
     duplexQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
+    if (rules.landlord_occupancy_tenancy > 2) {
+      apartmentQuestions.push(LANDLORD_OCCUPANCY_TENANCY);
+    }
   }
   if (rules.landlord_occupancy_1year) {
-    apartmentQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
     duplexQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
+    if (rules.landlord_occupancy_1year > 2) {
+      apartmentQuestions.push(LANDLORD_OCCUPANCY_1YEAR);
+    }
   }
 
   // Duplex questions
