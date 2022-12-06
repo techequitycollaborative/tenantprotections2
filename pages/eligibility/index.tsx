@@ -77,7 +77,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           name="zip"
           type="text"
           inputMode="numeric"
-          pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"
+          pattern="^\d{5}?$"
           placeholder="90001"
           className="border-2 text-lg rounded border-gray outline-none p-3 my-3"
           required
