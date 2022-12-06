@@ -61,7 +61,7 @@
     "hotels_q2": "Is the hotel you live in primarily rented for periods of {{days}} days or more?",
     "landlord_shared_exemption": "Do you live in the same unit as your landlord? This means that your house or apartment is the landlord's main residence and the landlord shares a bathroom or kitchen with the tenants.",
     "relative_occupancy_q1": "Do you live in the same unit as an immediate family member of your landlord? This means that your house or apartment is the relative's main residence.",
-    "relative_occupancy_q2": "Has the landlord's family member lived in your unit since the start of your tenancy?",
+    "relative_occupancy_q2": "Have you lived in the same unit as an immediate family member of your landlord since the start of your tenancy? This means that your house or apartment is the relative's main residence.",
     "relative_occupancy_wh": "Do you live in the same unit as your landlord's spouse, parent, grandparent, sibling, or child? This means that your house or apartment is the relative's main residence.",
     "landlord_occupancy": "Does the property contain {{units}} or fewer units and the owner lives on site in one of the units?",
     "landlord_occupancy_tenancy": "Does the property contain {{units}} or fewer units and has the owner lived on site in one of the units since the beginning of your tenancy?",

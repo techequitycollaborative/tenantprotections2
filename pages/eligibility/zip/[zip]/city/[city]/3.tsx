@@ -52,6 +52,8 @@ function AdditionalQuestionsSection({
 
   let [index, setIndex] = useState(0);
   let [currentScope, setCurrentScope] = useState(baseScope);
+  let [passedQuestions, setPassedQuestions] = useState<string[]>([]);
+  let [failedQuestions, setFailedQuestions] = useState<string[]>([]);
   let questions =
     currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
   let question = questions ? questions[index] : emptyQuestion;
@@ -60,13 +62,16 @@ function AdditionalQuestionsSection({
     questions =
       currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
     question = questions ? questions[index] : emptyQuestion;
-  }, [index, questions, currentScope]);
 
-  const onNextQuestion: React.MouseEventHandler<HTMLAnchorElement> = (
-    event,
-  ) => {
-    event.preventDefault();
+    // Handle duplicate questions. If already passed, advance. If already failed, send to ineligible.
+    if (passedQuestions.includes(question.promptKey)) {
+      onNextQuestion();
+    } else if (failedQuestions.includes(question.promptKey)) {
+      router.push(getPathFromLocation('/eligibility', location, 'ineligible'));
+    }
+  }, [index, currentScope]);
 
+  const onNextQuestion: React.MouseEventHandler<HTMLAnchorElement> = () => {
     if (questions && index >= questions.length - 1) {
       if (currentScope === Scope.LOCAL_SCOPE) {
         // Passed all local questions
@@ -90,19 +95,21 @@ function AdditionalQuestionsSection({
 
   const onClick = function click(event: any) {
     if (question.passingAnswer === event.target.value) {
-      onNextQuestion(event);
+      setPassedQuestions([...passedQuestions, question.promptKey]);
+      onNextQuestion();
     } else if (currentScope === Scope.LOCAL_SCOPE) {
       // Failed a local question, fall back to statewide check
+      setFailedQuestions([...failedQuestions, question.promptKey]);
       if (statewidePass) {
         router.push(
-          getPathFromLocation('/eligiblity', location, undefined, {
+          getPathFromLocation('/eligibility', location, 'eligible', {
             s: Scope.STATEWIDE_SCOPE,
           }),
         );
       } else if (statewideQuestions) {
         questions = statewideQuestions;
+        setIndex(0);
         setCurrentScope(Scope.STATEWIDE_SCOPE);
-        index = 0;
       } else {
         router.push(
           getPathFromLocation('/eligibility', location, 'ineligible'),

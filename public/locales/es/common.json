@@ -61,7 +61,7 @@
     "hotels_q2": "¿El hotel en el que vive se alquila principalmente por períodos de {{days}} días o más?",
     "landlord_shared_exemption": "¿Vive en la misma unidad que su arrendador? Esto significa que su casa o apartamento es la residencia principal del arrendador y el arrendador comparte el baño o la cocina con los inquilinos.",
     "relative_occupancy_q1": "¿Vive en la misma unidad que un miembro de la familia inmediata de su arrendador? Esto significa que su casa o apartamento es la residencia principal del pariente.",
-    "relative_occupancy_q2": "¿Ha vivido el familiar del arrendador en su unidad desde el inicio de su arrendamiento?",
+    "relative_occupancy_q2": "¿Ha vivido en la misma unidad que un miembro de la familia inmediata de su arrendador desde el comienzo de su arrendamiento? Esto significa que su casa o apartamento es la residencia principal del pariente.",
     "relative_occupancy_wh": "¿Vive en la misma unidad que el cónyuge, padre/madre, abuelo/a, hermano/a o hijo/a del arrendador? Esto significa que su casa o apartamento es la residencia principal del pariente.",
     "landlord_occupancy": "¿La propiedad contiene {{unidades}} o menos unidades y el propietario reside en una de las unidades?",
     "landlord_occupancy_tenancy": "¿La propiedad contiene {{unidades}} o menos unidades y el propietario ha residido en una de las unidades desde el comienzo de su arrendamiento?",

@@ -85,7 +85,7 @@
     "start_year": 2022,
     "start": "2022-07-01",
     "end": "2023-06-30",
-    "max_increase": 0.08
+    "max_increase": 0.031
   },
   "bev2021": {
     "geography": "Beverly Hills",
