@@ -10,6 +10,9 @@ import Progress from '@/components/progress';
 import LinkWrapper from '@/components/link-wrapper';
 import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 
+const THOUSAND_OAKS_LINK =
+  'https://www.toaks.org/departments/city-clerk/boards-commissions/rent-adjustment-commission';
+
 interface Props {
   buildingType: string;
   location: FullLocation;
@@ -49,7 +52,25 @@ const Ineligible: NextPage<Props> = function Ineligible({
   buildingType,
   location,
 }) {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+
+  const cityString = location.city.replaceAll(' ', '_');
+  const localDisclaimer = i18n.exists(
+    'eligibility-disclaimers.not-covered.' + cityString,
+  )
+    ? t('eligibility-disclaimers.not-covered.' + cityString)
+    : null;
+  const specialDisclaimer = i18n.exists(
+    'eligibility-disclaimers.special.' + cityString,
+  ) ? (
+    <Trans
+      i18nKey={'eligibility-disclaimers.special.' + cityString}
+      components={{
+        link1: <LinkWrapper to={THOUSAND_OAKS_LINK} />,
+      }}
+    />
+  ) : null;
+
   return (
     <Layout>
       <Progress progress="4" margin="mt-6 mb-4" />
@@ -100,6 +121,11 @@ const Ineligible: NextPage<Props> = function Ineligible({
                 }}
               />
             </p>
+            {localDisclaimer ? (
+              <p className="py-2">{localDisclaimer}</p>
+            ) : specialDisclaimer ? (
+              <p className="py-2">{specialDisclaimer}</p>
+            ) : null}
           </>
         )}
       </div>

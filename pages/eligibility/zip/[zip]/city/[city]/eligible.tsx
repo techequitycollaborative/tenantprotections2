@@ -1,6 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
+import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { FullLocation } from '@/types/location';
@@ -12,6 +12,10 @@ import {
 import Layout from '@/components/layout';
 import Progress from '@/components/progress';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
+import LinkWrapper from '@/components/link-wrapper';
+
+const THOUSAND_OAKS_LINK =
+  'https://www.toaks.org/departments/city-clerk/boards-commissions/rent-adjustment-commission';
 
 interface Props {
   scope: string;
@@ -49,8 +53,25 @@ const getServerSideProps: GetServerSideProps =
 export { getServerSideProps };
 
 const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const textKey = 'eligible.' + scope + '-text';
+
+  const cityString = location.city.replaceAll(' ', '_');
+  const localDisclaimer = i18n.exists(
+    'eligibility-disclaimers.covered.' + cityString,
+  )
+    ? t('eligibility-disclaimers.covered.' + cityString)
+    : null;
+  const specialDisclaimer = i18n.exists(
+    'eligibility-disclaimers.special.' + cityString,
+  ) ? (
+    <Trans
+      i18nKey={'eligibility-disclaimers.special.' + cityString}
+      components={{
+        link1: <LinkWrapper to={THOUSAND_OAKS_LINK} />,
+      }}
+    />
+  ) : null;
 
   return (
     <Layout>
@@ -83,6 +104,15 @@ const Eligible: NextPage<Props> = function Eligible({ location, scope }) {
           ></p>
         ))}
       </div>
+      {scope === 'local' && localDisclaimer ? (
+        <p className="py-2 text-gray-dark text-lg text-justify">
+          {localDisclaimer}
+        </p>
+      ) : scope === 'statewide' && specialDisclaimer ? (
+        <p className="py-2 text-gray-dark text-lg text-justify">
+          {specialDisclaimer}
+        </p>
+      ) : null}
       <h3 className="text-blue text-2xl mt-6 mb-4">{t('eligible.footnote')}</h3>
       <Link href={getPathFromLocation('/calculator', location)}>
         <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">

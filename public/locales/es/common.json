@@ -106,12 +106,64 @@
       "statewide-max-rent": "Alquiler máximo en todo el estado",
       "local-max-rent": "Alquiler máximo de {{city}}",
       "max-increase": "{{cap}}% de aumento máximo por año * ${{rent}} =",
-      "rate-explanation": [
-        "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento del alquiler.",
-        "Un aumento del alquiler también puede no ser válido por otras razones, como el incumplimiento de las leyes locales o estatales por parte del arrendador."
-      ],
-      "rate-explanation-statewide": "Nuestro cálculo tampoco incluye ninguna restricción local sobre los aumentos de alquiler debido a la pandemia de COVID-19, como una moratoria de desalojo local.",
-      "rate-explanation-local": "En ciertas circunstancias, como al presentar una petición ante la ciudad, se le puede permitir al arrendador aumentar el alquiler por encima del monto del control de alquiler local.",
+      "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento del alquiler.",
+      "more": {
+        "title": "Más información",
+        "text1": "Un aumento del alquiler también puede no ser válido por otras razones, como el incumplimiento de las leyes locales o estatales por parte del arrendador.",
+        "text2": {
+          "statewide": "Nuestro cálculo tampoco incluye ninguna restricción local sobre los aumentos de alquiler debido a la pandemia de COVID-19, como una moratoria de desalojo local.",
+          "local": "En ciertas circunstancias, como al presentar una petición ante la ciudad, se le puede permitir al arrendador aumentar el alquiler por encima del monto del control de alquiler local."
+        },
+        "state-disclaimer": "Nota: Según la ley que se aplica en su área, se aplicó una reducción del alquiler el 1 de enero de 2020 a los arrendamientos existentes que habían recibido aumentos de alquiler por encima del tope a partir del 15 de marzo de 2019.",
+        "local-disclaimer": {
+          "Alameda": [
+            "Nota: Según la ley que se aplica en su área, se aplicó una reducción del alquiler el 10 de noviembre de 2022 a los arrendamientos existentes que habían recibido aumentos de alquiler por encima del límite el 23 de agosto de 2022 o después."
+          ],
+          "Baldwin_Park": [
+            "Si califica para el control de alquiler local, puede haber un límite más bajo sobre cuánto puede aumentar su alquiler el arrendador. Desafortunadamente, no creemos que la ordenanza local de su ciudad sea lo suficientemente específica como para permitirnos calcular su aumento máximo. Te podemos decir que solo se permiten aumentos de alquiler entre el 1% y el 3%. Para obtener más información, debe comunicarse con el departamento de vivienda de su ciudad."
+          ],
+          "Bell_Gardens": [
+            "En ciertas circunstancias en su ciudad, un propietario puede tener derecho a un aumento mayor de hasta el 3%, pero solo después de cumplir con todos los requisitos, presentar una solicitud ante la ciudad y notificar al inquilino.",
+            "Nota: Según la ley que se aplica en su área, se aplicó una reducción del alquiler el 12 de octubre de 2022 a los arrendamientos existentes que habían recibido aumentos de alquiler por encima del tope."
+          ],
+          "Berkeley": [
+            "Su ciudad permite a los propietarios depositar los aumentos de alquiler no utilizados en ciertas circunstancias y aplicarlos en años posteriores. Esta calculadora no tiene en cuenta la banca. Para obtener más información, comuníquese con el departamento de vivienda local o la junta de alquiler."
+          ],
+          "Beverly_Hills": [
+            "Su ciudad también tiene límites especiales para los aumentos de alquiler desde el 1 de julio de 2022 hasta el 30 de junio de 2023. Estos límites dependen de la cantidad de aumentos anteriores. Para obtener más información, puede comunicarse con la División de Estabilización de Rentas."
+          ],
+          "Commerce": [
+            "Si califica para el control de alquiler local, puede haber un límite más bajo sobre cuánto puede aumentar su alquiler el arrendador. Desafortunadamente, no creemos que la ordenanza local de su ciudad sea lo suficientemente específica como para permitirnos calcular su aumento máximo. Para obtener más información, debe comunicarse con el departamento de vivienda de su ciudad."
+          ],
+          "East_Palo_Alto": [
+            "Su ciudad permite a los propietarios depositar los aumentos de alquiler no utilizados en ciertas circunstancias y aplicarlos en años posteriores. Esta calculadora no tiene en cuenta la banca. Para obtener más información, comuníquese con el departamento de vivienda local o la junta de alquiler."
+          ],
+          "Hayward": [
+            "Su ciudad permite a los propietarios depositar los aumentos de alquiler no utilizados en ciertas circunstancias y aplicarlos en años posteriores. Esta calculadora no tiene en cuenta la banca. Para obtener más información, comuníquese con el departamento de vivienda local o la junta de alquiler.",
+            "Si firmó un contrato de arrendamiento por escrito antes del 26 de julio de 2019, las limitaciones de alquiler pueden aplicarse o no a su arrendamiento. Por favor, busque asesoramiento legal.",
+            "Si recibió un aumento de alquiler superior al 5%, debe presentar una petición para impugnar el aumento. Puedes hacerlo a través de este formulario:"
+          ],
+          "Los_Angeles": [
+            "Un arrendador puede aumentar la renta en una cantidad mayor si el arrendador paga ciertos servicios públicos: En un 1% más si el arrendador paga el servicio de gas. Por un 1% adicional más si el arrendador paga el servicio de electricidad."
+          ],
+          "Unincorporated LA County": [
+            "Según la ley que se aplica en su área, se aplicó una reducción del alquiler el 1 de abril de 2020 a los arrendamientos existentes que habían recibido aumentos de alquiler por encima del límite desde el 11 de septiembre de 2018."
+          ],
+          "Los_Gatos": [
+            "Desafortunadamente, no creemos que la ordenanza local de su ciudad sea lo suficientemente específica como para permitirnos calcular su aumento máximo. Te podemos decir que el incremento mínimo cada año es del 5%. Para obtener más información, debe comunicarse con el departamento de vivienda de su ciudad o con el abogado de la ciudad."
+          ],
+          "Richmond": [
+            "Su ciudad permite a los propietarios depositar los aumentos de alquiler no utilizados en ciertas circunstancias y aplicarlos en años posteriores. Esta calculadora no tiene en cuenta la banca. Para obtener más información, comuníquese con el departamento de vivienda local o la junta de alquiler.",
+            "Nota: Según la ley que se aplica en su área, se aplicará una reducción del alquiler a los arrendamientos existentes que recibieron aumentos de alquiler por encima del nuevo límite del 3 % una vez que se certifiquen los resultados de las elecciones en diciembre de 2022."
+          ],
+          "San_Francisco": [
+            "Su ciudad permite a los propietarios depositar los aumentos de alquiler no utilizados en ciertas circunstancias y aplicarlos en años posteriores. Esta calculadora no tiene en cuenta la banca. Para obtener más información, comuníquese con el departamento de vivienda local o la junta de alquiler."
+          ],
+          "San_Jose": [
+            "Desde el 2 de febrero de 2021 hasta el 30 de junio de 2021, la ciudad de San José congeló el alquiler para los inquilinos de apartamentos con alquiler estabilizado que enviaron una Declaración firmada de dificultades financieras por COVID-19 a su arrendador antes de la fecha en que se habría producido un aumento del alquiler. entrado en vigor."
+          ]
+        }
+      },
       "issues": "¿Tiene problemas con su arrendamiento?",
       "resources": "Explore nuestros recursos",
       "take-quiz": "Responder al cuestionario de protecciones"
@@ -167,6 +219,24 @@
     ],
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explore nuestros recursos"
+  },
+  "eligibility-disclaimers": {
+    "covered": {
+      "Berkeley": "Las reglas de su ciudad para las unidades LIHTC involucran varios factores diferentes que pueden no ser tenidos en cuenta por esta herramienta. Si vive en una unidad asequible de crédito fiscal para viviendas de bajos ingresos (LIHTC), debe consultar con su junta de alquiler local para ver si está cubierto por la ley local.",
+      "Inglewood": "Las reglas de su ciudad con respecto a los hoteles implican varios factores complicados que pueden no tenerse en cuenta en esta herramienta. Si vive en un hotel, debe consultar con su departamento de vivienda local para ver si está cubierto por la ley local.",
+      "Los_Gatos": "Si vive en la misma unidad de alquiler que su arrendador, existe la posibilidad de que no esté cubierto por la ley local según su contrato de arrendamiento. Debe consultar con su departamento de vivienda local para ver si está cubierto por la ley local.",
+      "Richmond": "Los inquilinos de ciertas segundas unidades pequeñas permitidas cuyo arrendador vive en la propiedad en una vivienda unifamiliar no están cubiertos por su ordenanza local. Para averiguar si esta exención se aplica a usted, comuníquese con la junta de alquiler local o el departamento de vivienda.",
+      "San_Francisco": "Las reglas de su ciudad para las unidades LIHTC involucran varios factores diferentes que pueden no ser tenidos en cuenta por esta herramienta. Si vive en una unidad asequible de crédito fiscal para viviendas de bajos ingresos (LIHTC), debe consultar con su junta de alquiler local para ver si está cubierto por la ley local."
+    },
+    "not-covered": {
+      "Hayward": "En su ciudad, algunos dúplex ocupados por el propietario (2 unidades en la propiedad, donde el propietario vive en una unidad), tienen protecciones locales. Si vive en una propiedad de este tipo, debe consultar con su departamento de vivienda local para ver si está cubierto por la ley local. Las reglas de su ciudad para esas unidades involucran varios factores diferentes que pueden no ser tenidos en cuenta por esta herramienta.",
+      "Los_Angeles": "Si vive en una unidad asequible de crédito fiscal para viviendas de bajos ingresos (LIHTC), debe consultar con su junta de alquiler local para ver si está cubierto por la ley local. Las reglas de su ciudad para las unidades LIHTC involucran varios factores diferentes que pueden no ser tenidos en cuenta por esta herramienta.",
+      "Mountain_View": "Si vive en una segunda unidad separada no autorizada, es posible que esté cubierto por las protecciones locales. Debe consultar con el departamento de vivienda de su ciudad o con la junta de alquileres para obtener más información."
+    },
+    "special": {
+      "Palm_Springs": "Si bien Palm Springs tiene un control de alquiler local, se aplica a muy pocos inquilinos. Debe investigar si su alquiler está cubierto por la ordenanza de alquiler de Palm Springs llamando al gobierno de su ciudad.",
+      "Thousand_Oaks": "Si bien Thousand Oaks tiene un control de alquiler local, solo se aplica a una pequeña cantidad de unidades. Si ha vivido en el mismo apartamento desde 1987 o alquila una casa móvil, puede ser elegible. <link1>Consulte aquí para obtener más información</link1>."
+    }
   },
   "about": {
     "title-1": "Sobre nosotros",
