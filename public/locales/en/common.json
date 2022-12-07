@@ -106,12 +106,64 @@
       "statewide-max-rent": "Statewide Max Rent",
       "local-max-rent": "{{city}} Max Rent",
       "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
-      "rate-explanation": [
-        "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
-        "A rent increase may also be invalid for other reasons, such as a landlord's failure to follow state or local law."
-      ],
-      "rate-explanation-statewide": "Our calculation also does not include any local restrictions on rent increases due to the COVID-19 pandemic, such as a local eviction moratorium.",
-      "rate-explanation-local": "In certain circumstances, such as by filing a petition with the city, a landlord may be permitted to increase the rent over the local rent control amount.",
+      "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
+      "more": {
+        "title": "More information",
+        "text1": "A rent increase may be invalid for other reasons, such as a landlord's failure to follow state or local law.",
+        "text2": {
+          "statewide": "Our calculation also does not include any local restrictions on rent increases due to the COVID-19 pandemic, such as a local eviction moratorium.",
+          "local": "In certain circumstances, such as by filing a petition with the city, a landlord may be permitted to increase the rent over the local rent control amount."
+        },
+        "state-disclaimer": "Note: Under the law that applies in your area, a rent rollback was applied on January 1, 2020 to existing tenancies that had received rent increases over the cap on or after March 15, 2019.",
+        "local-disclaimer": {
+          "Alameda": [
+            "Note: Under the law that applies in your area, a rent rollback was applied on November 10, 2022 to existing tenancies that had received rent increases over the cap on or after August 23, 2022."
+          ],
+          "Baldwin_Park": [
+            "If you qualify for local rent control, there may be a lower cap on how much your landlord can increase your rent. Unfortunately, we do not think your city's local ordinance is specific enough to allow us to calculate your maximum increase. We can tell you that only rent increases between 1% and 3% are allowed. For more information, you should contact your city's housing department."
+          ],
+          "Bell_Gardens": [
+            "In certain circumstances in your city, a landlord can be entitled to a larger increase of up to 3%, but only after meeting all requirements, filing an application with the city, and notifying the tenant.",
+            "Note: Under the law that applies in your area, a rent rollback was applied on October 12, 2022 to existing tenancies that had received rent increases over the cap."
+          ],
+          "Berkeley": [
+            "Your city allows landlords to “bank” unused rent increases in certain circumstances and apply them in later years. This calculator does not account for banking. For more information, contact your local housing department or rent board."
+          ],
+          "Beverly_Hills": [
+            "Your city also has special limits on rent increases from July 1, 2022 to June 30, 2023. These limits depend on the amount of past increases. For more information, you can contact the Rent Stabilization Division."
+          ],
+          "Commerce": [
+            "If you qualify for local rent control, there may be a lower cap on how much your landlord can increase your rent. Unfortunately, we do not think your city's local ordinance is specific enough to allow us to calculate your maximum increase. For more information, you should contact your city's housing department."
+          ],
+          "East_Palo_Alto": [
+            "Your city allows landlords to “bank” unused rent increases in certain circumstances and apply them in later years. This calculator does not account for banking. For more information, contact your local housing department or rent board."
+          ],
+          "Hayward": [
+            "Your city allows landlords to “bank” unused rent increases in certain circumstances and apply them in later years. This calculator does not account for banking. For more information, contact your local housing department or rent board.",
+            "If you signed a written lease agreement before July 26, 2019, the rent limitations may or may not apply to your tenancy. Please seek legal advice.",
+            "If you received a rent increase above 5%, you must file a petition to challenge the increase. You can do so using this form:"
+          ],
+          "Los_Angeles": [
+            "A landlord can increase the rent by a higher amount if the landlord pays for certain utilities: By 1% more if the landlord pays for gas service. By an additional 1% more if the landlord pays for electricity service."
+          ],
+          "Unincorporated LA County": [
+            "Under the law that applies in your area, a rent rollback was applied on April 1, 2020 to existing tenancies that had received rent increases over the cap since September 11, 2018."
+          ],
+          "Los_Gatos": [
+            "Unfortunately, we do not think your city's local ordinance is specific enough to allow us to calculate your maximum increase. We can tell you that the minimum increase each year is 5%. For more information, you should contact your city's housing department or city attorney."
+          ],
+          "Richmond": [
+            "Your city allows landlords to “bank” unused rent increases in certain circumstances and apply them in later years. This calculator does not account for banking. For more information, contact your local housing department or rent board.",
+            "Note: Under the law that applies in your area, a rent rollback will be applied to existing tenancies who received rent increases over the new 3% cap once election results are certified in December 2022."
+          ],
+          "San_Francisco": [
+            "Your city allows landlords to “bank” unused rent increases in certain circumstances and apply them in later years. This calculator does not account for banking. For more information, contact your local housing department or rent board."
+          ],
+          "San_Jose": [
+            "From Feb 2, 2021 through June 30, 2021, the City of San Jose had a rent freeze for tenants in rent-stabilized apartments who submitted a signed Declaration of COVID-19 financial distress to their landlord prior to the date a rent increase would have gone into effect."
+          ]
+        }
+      },
       "issues": "Having issues with your tenancy?",
       "resources": "Explore our resources",
       "take-quiz": "Take protections quiz"
@@ -167,6 +219,24 @@
     ],
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
+  },
+  "eligibility-disclaimers": {
+    "covered": {
+      "Berkeley": "Your city's rules for LIHTC units involve several different factors that may not be accounted for by this tool. If you live in a low income housing tax credit (LIHTC) affordable unit, you should check with your local rent board to see if you are covered by local law.",
+      "Inglewood": "Your city's rules regarding hotels involve several complicated factors that may not be accounted for in this tool. If you live in a hotel, you should check with your local housing department to see if you are covered by local law.",
+      "Los_Gatos": "If you live in the same rental unit as your landlord, there is a possibility that you are not covered by the local law depending on your lease. You should check with your local housing department to see if you are covered by local law.",
+      "Richmond": "Tenants of certain permitted small second units whose landlord lives on the property in a single family home are not covered by your local ordinance. To find out if this exemption applies to you, contact your local rent board or housing department.",
+      "San_Francisco": "Your city's rules for LIHTC units involve several different factors that may not be accounted for by this tool. If you live in a low income housing tax credit (LIHTC) affordable unit, you should check with your local rent board to see if you are covered by local law."
+    },
+    "not-covered": {
+      "Hayward": "In your city, some owner-occupied duplexes (2 units at the property, where the landlord lives in one unit), do have local protections. If you live in such a property, you should check with your local housing department to see if you are covered by local law. Your city's rules for those units involve several different factors that may not be accounted for by this tool.",
+      "Los_Angeles": "If you live in a low income housing tax credit (LIHTC) affordable unit, you should check with your local rent board to see if you are covered by local law. Your city's rules for LIHTC units involve several different factors that may not be accounted for by this tool.",
+      "Mountain_View": "If you live in an unpermitted separate second unit, you may be covered by local protections. You should check with your city's housing department or rent board for more information."
+    },
+    "special": {
+      "Palm_Springs": "While Palm Springs has local rent control, it applies to very few tenants. You should investigate if your tenancy is covered by the Palm Springs rent ordinance by calling your city government.",
+      "Thousand_Oaks": "While Thousand Oaks has local rent control, it only applies to a small number of units. If you have lived in the same apartment since 1987 or rent a mobile home, you may be eligible. <link1>See here for more information</link1>."
+    }
   },
   "about": {
     "title-1": "About Us",
