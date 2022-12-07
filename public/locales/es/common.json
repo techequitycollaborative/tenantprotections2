@@ -196,6 +196,10 @@
       "date-high": "Esta fecha es de un futuro demasiado lejano.",
       "date-low": "Ingrese una fecha dentro de los últimos 3 años.",
       "sequence": "Parece que su alquiler no aumentó; Por favor, consulte las fechas y las cantidades."
+    },
+    "moratorium": {
+      "title": "Moratoria vigente a esta fecha",
+      "content": "Si califica para el control de alquiler local en {{city}}, CUALQUIER aumento de alquiler en esta fecha puede ser ilegal. {{city}} tenía una moratoria de desalojo vigente que se aplicaba a las unidades de alquiler controlado. Consulte nuestra página de recursos si necesita ayuda."
     }
   },
   "eligible": {

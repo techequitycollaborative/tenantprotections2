@@ -7,6 +7,7 @@ import { lookupRentCap, unincorporatedLAOverride } from '@/utils/location';
 import { getCurrentRent, getPreviousRent } from '@/utils/calculator';
 import Accordion from '@/components/accordion';
 import LinkWrapper from '@/components/link-wrapper';
+import { activeMoratorium } from '@/data/moratoria';
 
 const LOCAL_DISCLAIMER_OVERRIDES = ['Baldwin_Park', 'Los_Gatos'];
 
@@ -47,6 +48,11 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
       localMaxRentDisplay = localMaxRent.toFixed(2);
     }
   }
+
+  const moratorium = activeMoratorium(
+    props.location.city,
+    currentRentStartDate,
+  );
 
   const cityString = props.location.city.replaceAll(' ', '_');
   const haywardLink = (
@@ -152,6 +158,24 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
           <p className="text-blue font-medium py-2 text-md">
             {t('calculator.alert.rate-explanation')}
           </p>
+          {moratorium.isActive ? (
+            <>
+              <h2 className="text-blue py-2 text-lg font-bold">
+                <img
+                  src="/img/warning-icon.svg"
+                  alt="warning icon"
+                  className="pb-1 pr-2 inline"
+                />
+                {t('calculator.moratorium.title')}
+              </h2>
+              <p className="text-blue font-medium py-2 text-md">
+                {t('calculator.moratorium.content', {
+                  city: props.location.city,
+                  rate: moratorium.cap,
+                })}
+              </p>
+            </>
+          ) : null}
         </div>
       </div>
       <Accordion

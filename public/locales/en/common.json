@@ -196,6 +196,10 @@
       "date-high": "This date is too far in the future.",
       "date-low": "Please enter a date within the past 3 years.",
       "sequence": "It looks like your rent did not increase; please check the dates and amounts."
+    },
+    "moratorium": {
+      "title": "Moratorium in effect on this date",
+      "content": "If you qualify for local rent control in {{city}}, ANY rent increase on this date may be illegal. {{city}} had an eviction moratorium in effect that applied to rent controlled units. Check out our resources page if you need help."
     }
   },
   "eligible": {
