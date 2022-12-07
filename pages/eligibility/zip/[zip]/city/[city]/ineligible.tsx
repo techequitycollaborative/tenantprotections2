@@ -14,7 +14,6 @@ const THOUSAND_OAKS_LINK =
   'https://www.toaks.org/departments/city-clerk/boards-commissions/rent-adjustment-commission';
 
 interface Props {
-  buildingType: string;
   location: FullLocation;
 }
 
@@ -32,15 +31,9 @@ const getServerSideProps: GetServerSideProps =
       };
     }
 
-    let buildingType = context.query.t as string;
-    if (buildingType !== 'subsidized') {
-      buildingType = ''; // If this is empty or malformed, default to blank
-    }
-
     return {
       props: {
         ...(await serverSideTranslations(context.locale!, ['common'])),
-        buildingType,
         location,
       },
     };
@@ -48,10 +41,7 @@ const getServerSideProps: GetServerSideProps =
 
 export { getServerSideProps };
 
-const Ineligible: NextPage<Props> = function Ineligible({
-  buildingType,
-  location,
-}) {
+const Ineligible: NextPage<Props> = function Ineligible({ location }) {
   const { t, i18n } = useTranslation('common');
 
   const cityString = location.city.replaceAll(' ', '_');
@@ -85,68 +75,40 @@ const Ineligible: NextPage<Props> = function Ineligible({
         {t('ineligible.title')}
       </h2>
       <div className="text-gray-dark text-lg text-justify">
-        {buildingType === 'subsidized' ? (
-          <>
-            <p className="py-2">
-              <Trans
-                i18nKey="ineligible.text-subsidized-p1"
-                components={{
-                  bold: <span className="font-bold" />,
-                }}
-              />
+        <p className="py-2">
+          <Trans
+            i18nKey="ineligible.text-1-p1"
+            components={{
+              bold: <span className="font-bold" />,
+            }}
+          />
+        </p>
+        <p className="py-2">
+          <Trans
+            i18nKey="ineligible.text-1-p2"
+            components={{
+              link1: <LinkWrapper to="/resources" />,
+            }}
+          />
+        </p>
+        {localDisclaimer ? (
+          <p className="py-2">{localDisclaimer}</p>
+        ) : specialDisclaimer ? (
+          <p className="py-2">{specialDisclaimer}</p>
+        ) : null}
+      </div>
+      <h3 className="text-blue text-2xl mt-6 mb-2">
+        {t('ineligible.subtitle')}
+      </h3>
+      <div className="text-gray-dark text-lg mb-4 text-justify">
+        {(t('ineligible.text-2', { returnObjects: true }) as Array<string>).map(
+          (x, i) => (
+            <p className="py-2" key={i}>
+              {x}
             </p>
-            <p className="py-2">
-              {t('ineligible.text-subsidized-p2', {
-                returnObjects: true,
-                city: unincorporatedLAOverride(location),
-              })}
-            </p>
-            <p className="py-2">{t('ineligible.text-subsidized-p3')}</p>
-          </>
-        ) : (
-          <>
-            <p className="py-2">
-              <Trans
-                i18nKey="ineligible.text-1-p1"
-                components={{
-                  bold: <span className="font-bold" />,
-                }}
-              />
-            </p>
-            <p className="py-2">
-              <Trans
-                i18nKey="ineligible.text-1-p2"
-                components={{
-                  link1: <LinkWrapper to="/resources" />,
-                }}
-              />
-            </p>
-            {localDisclaimer ? (
-              <p className="py-2">{localDisclaimer}</p>
-            ) : specialDisclaimer ? (
-              <p className="py-2">{specialDisclaimer}</p>
-            ) : null}
-          </>
+          ),
         )}
       </div>
-      {buildingType === 'subsidized' ? (
-        <></>
-      ) : (
-        <>
-          <h3 className="text-blue text-2xl mt-6 mb-2">
-            {t('ineligible.subtitle')}
-          </h3>
-          <div className="text-gray-dark text-lg mb-4 text-justify">
-            {(
-              t('ineligible.text-2', { returnObjects: true }) as Array<string>
-            ).map((x, i) => (
-              <p className="py-2" key={i}>
-                {x}
-              </p>
-            ))}
-          </div>
-        </>
-      )}
       <h3 className="text-blue text-2xl my-4">{t('ineligible.footnote')}</h3>
       <Link href="/resources" className="">
         <button className="w-full bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark">
