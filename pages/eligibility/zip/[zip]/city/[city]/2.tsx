@@ -11,6 +11,7 @@ import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import LinkWrapper from '@/components/link-wrapper';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
+import { Scope } from '@/types/location';
 
 const LINK_PROPERTY_LOOKUP = 'https://www.propertyshark.com/mason/';
 
@@ -23,6 +24,7 @@ const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
 
 interface Props {
   location: FullLocation;
+  scope: Scope | null;
 }
 
 const getServerSideProps: GetServerSideProps<Props> =
@@ -33,18 +35,24 @@ const getServerSideProps: GetServerSideProps<Props> =
 
     if (location.type !== 'full') {
       return {
-        props: { locale, location: null as any },
+        props: { locale, location: null as any, scope: null },
         redirect: {
           destination: '/eligibility',
         },
       };
     }
 
+    // Allow a statewide scope string
+    let scope: Scope | null = null;
+    if (Object.values(Scope).some((scope) => scope == context.query.s)) {
+      scope = context.query.s as Scope;
+    }
+
     return {
       props: {
         ...(await serverSideTranslations(locale, ['common'])),
-        location,
-        city,
+        location: location,
+        scope: scope,
       },
     };
   };
@@ -67,6 +75,12 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
     i18n.language,
     DATE_OPTIONS,
   );
+
+  const showLocalDate =
+    typeof rentControlDate !== 'undefined' &&
+    props.scope != Scope.STATEWIDE_SCOPE;
+  const sameDateCutoff = rentControlDate && rentControlDate == rentCapDate;
+
   return (
     <Layout>
       <EligibilityNav
@@ -80,7 +94,7 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
       <Progress progress="2" />
 
       <h2 className="text-blue text-2xl py-4">{t('questions.when-built')}</h2>
-      {typeof rentControlDate !== 'undefined' && (
+      {showLocalDate && (
         <Link
           href={`${getPathFromLocation('/eligibility', props.location, '3', {
             s: 'local',
@@ -93,14 +107,14 @@ const BuildingDate: NextPage<Props> = function BuildingDate(props) {
           </button>
         </Link>
       )}
-      {(rentControlDate == undefined || rentControlDate != rentCapDate) && (
+      {(!sameDateCutoff || !showLocalDate) && (
         <Link
           href={`${getPathFromLocation('/eligibility', props.location, '3', {
             s: 'statewide',
           })}`}
         >
           <button className="w-full border-2 border-blue rounded text-blue text-2xl text-center p-2 my-2 hover:font-bold active:font-bold active:bg-blue-lightest">
-            {typeof rentControlDate == 'undefined'
+            {!showLocalDate
               ? t('answers.before-date', { date: rentCapDateStr })
               : t('answers.between-dates', {
                   date1: rentControlDateStr,

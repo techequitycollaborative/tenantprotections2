@@ -35,7 +35,9 @@
   "questions": {
     "building-type": "¿En qué tipo de edificio vive?",
     "is-subsidized": "¿Vive en viviendas protegidas o públicas?",
-    "when-built": "¿Cuándo se construyó su edificio?"
+    "when-built": "¿Cuándo se construyó su edificio?",
+    "sec8": "¿Utiliza un vale de vivienda portátil, como un vale de la Sección 8?",
+    "lihtc": "¿Es su edificio una propiedad de crédito fiscal por bajos ingresos (LIHTC)?"
   },
   "building-questions": {
     "corp-ownership": {
@@ -94,6 +96,14 @@
     "corp-ownership": {
       "title": "Aprenda más",
       "content": "Algunas propiedades pertenecen a corporaciones, fideicomisos de inversión en bienes raíces (REIT) u otros tipos de negocios y no reciben las mismas exenciones que los condominios o viviendas unifamiliares propiedad de un individuo. Tenga en cuenta que incluso si su alquiler es administrado por una empresa de administración de propiedades, el propietario de la unidad aún puede ser un individuo."
+    },
+    "sec8": {
+      "title": "¿Qué es un bono de vivienda portátil?",
+      "content": "Un bono de vivienda portátil es un tipo de subsidio que no está vinculado a una dirección en particular, sino que se puede aplicar a diferentes unidades de alquiler. Un ejemplo es un vale de la Sección 8. Esta pregunta le pide que haga clic en Sí si su vale de vivienda es el único tipo de subsidio que utiliza y si no vive en una vivienda pública o de bajos ingresos."
+    },
+    "lihtc": {
+      "title": "¿Qué es una propiedad de crédito fiscal para vivienda de bajos ingresos (LIHTC)?",
+      "content": "Una propiedad LIHTC es una propiedad cuyos ingresos están restringidos a inquilinos por debajo de cierto ingreso, donde el propietario recibe créditos fiscales. Esta pregunta le pide que haga clic en Sí si vive en una propiedad LIHTC y no se aplica ningún otro subsidio de vivienda a su unidad."
     }
   },
   "calculator": {

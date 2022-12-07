@@ -35,7 +35,9 @@
   "questions": {
     "building-type": "What type of building do you live in?",
     "is-subsidized": "Do you live in subsidized or public housing?",
-    "when-built": "When was your building built?"
+    "when-built": "When was your building built?",
+    "sec8": "Do you use a portable housing voucher, such as a Section 8 voucher?",
+    "lihtc": "Is your building a low income tax credit (LIHTC) property?"
   },
   "building-questions": {
     "corp-ownership": {
@@ -94,6 +96,14 @@
     "corp-ownership": {
       "title": "Learn more",
       "content": "Some properties are owned by corporations, real estate investment trusts (REIT), or other types of businesses, and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
+    },
+    "sec8": {
+      "title": "What is a portable housing voucher?",
+      "content": "A portable housing voucher is a type of subsidy that is not tied to a particular address, but can be applied to different rental units. One example is a Section 8 voucher. This question is asking you to click Yes if your housing voucher is the only type of subsidy you use, and you do not otherwise live in low income or public housing."
+    },
+    "lihtc": {
+      "title": "What is a low income housing tax credit (LIHTC) property?",
+      "content": "A LIHTC property is a property that is income restricted to tenants below a certain income, where the landlord receives tax credits. This question is asking you to click Yes if you live at a LIHTC property and no other housing subsidy applies to your unit."
     }
   },
   "calculator": {

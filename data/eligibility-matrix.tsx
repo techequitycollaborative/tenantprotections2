@@ -9,6 +9,13 @@ interface Rules {
   [key: string]: any;
 }
 
+function getSubsidizedExemptions(rules: Rules) {
+  return {
+    sec8: rules.sec8,
+    lihtc: rules.lihtc,
+  };
+}
+
 function getPassingBuildingTypes(rules: Rules) {
   let passingBuildingTypes = [];
 
@@ -292,6 +299,7 @@ function EligibilityMatrix() {
     builtBeforeMillis: Date.UTC(0, 0, 0, 0, 0, 0),
     passingBuildingTypes: [],
     eligibilityQuestions: {},
+    subsidizedExemptions: { sec8: '', lihtc: '' },
   };
 
   let matrix = {
@@ -308,6 +316,11 @@ function EligibilityMatrix() {
     });
     Object.assign(ruleset, {
       eligibilityQuestions: getEligibilityQuestions(
+        (eligibility as any)[geography],
+      ),
+    });
+    Object.assign(ruleset, {
+      subsidizedExemptions: getSubsidizedExemptions(
         (eligibility as any)[geography],
       ),
     });

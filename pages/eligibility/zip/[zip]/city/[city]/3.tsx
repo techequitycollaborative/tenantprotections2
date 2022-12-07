@@ -14,11 +14,7 @@ import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
-
-export enum Scope {
-  LOCAL_SCOPE = 'local',
-  STATEWIDE_SCOPE = 'statewide',
-}
+import { Scope } from '@/types/location';
 
 interface Props {
   location: FullLocation;
