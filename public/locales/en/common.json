@@ -39,8 +39,8 @@
   },
   "building-questions": {
     "corp-ownership": {
-      "prompt": "Do you rent from a corporation, real estate trust, or other kind of business, or is your landlord an individual?",
-      "yes": "Corporation or REIT",
+      "prompt": "Do you rent from a corporation, real estate investment trust (REIT), LP, or LLC (with at least one member being a corporation or REIT), or is your landlord an individual?",
+      "yes": "Corporation, REIT, LP, or LLC",
       "no": "Individual"
     },
     "min-units": "Does the property contain {{units}} or more units?",
@@ -93,7 +93,7 @@
     },
     "corp-ownership": {
       "title": "Learn more",
-      "content": "Some properties are owned by corporations or real estate investment trusts (REIT), and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
+      "content": "Some properties are owned by corporations, real estate investment trusts (REIT), or other types of businesses, and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
     }
   },
   "calculator": {
@@ -260,7 +260,7 @@
       "tec-name": "TechEquity Collaborative",
       "tec-text": [
         "TechEquity Collaborative is a non-profit organization that believes the growing tech-driven economy can and should create opportunity for everyone. TechEquity mobilizes tech workers and companies to address inequities within the tech industry and the inequities caused by the tech industry.",
-        "We educate tech workers on deep structural inequities and bring them into longstanding movements for justice, accelerating the pace of change.",
+        "We educate tech workers on economic equity issues and bring them into longstanding movements for justice, accelerating the pace of change.",
         "In 2019, TechEquity worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
       ]
     }

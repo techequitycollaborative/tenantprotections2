@@ -39,8 +39,8 @@
   },
   "building-questions": {
     "corp-ownership": {
-      "prompt": "¿Le alquila a una corporación, sociedad de bienes raíces u otro tipo de negocio, o el arrendador es un particular?",
-      "yes": "A una corporación o sociedad de inversión en bienes raíces (REIT)",
+      "prompt": "¿Le alquila a una corporación, un fideicomiso de inversión en bienes raíces (REIT), LP o LLC (con al menos un miembro que es una corporación o REIT), o el arrendador es un particular?",
+      "yes": "A una corporación, REIT, LP o LLC",
       "no": "A un particular"
     },
     "min-units": "¿La propiedad contiene {{units}} o más unidades?",
@@ -93,7 +93,7 @@
     },
     "corp-ownership": {
       "title": "Aprenda más",
-      "content": "Algunas propiedades pertenecen a corporaciones o sociedades de inversión en bienes raíces (REIT) y no reciben las mismas exenciones que los condominios o viviendas unifamiliares propiedad de un individuo. Tenga en cuenta que incluso si su alquiler es administrado por una empresa de administración de propiedades, el propietario de la unidad aún puede ser un individuo."
+      "content": "Algunas propiedades pertenecen a corporaciones, fideicomisos de inversión en bienes raíces (REIT) u otros tipos de negocios y no reciben las mismas exenciones que los condominios o viviendas unifamiliares propiedad de un individuo. Tenga en cuenta que incluso si su alquiler es administrado por una empresa de administración de propiedades, el propietario de la unidad aún puede ser un individuo."
     }
   },
   "calculator": {
@@ -260,7 +260,7 @@
       "tec-name": "TechEquity Collaborative",
       "tec-text": [
         "TechEquity Collaborative es una organización sin fines de lucro que cree que la creciente economía impulsada por la tecnología puede y debe crear oportunidades para todos. TechEquity moviliza a los trabajadores y empresas de tecnología para abordar las desigualdades dentro de la industria tecnológica y las desigualdades causadas por la industria tecnológica.",
-        "Educamos a los trabajadores tecnológicos sobre las profundas desigualdades estructurales y los llevamos a movimientos establecidos por la justicia, acelerando el ritmo del cambio.",
+        "Educamos a los trabajadores tecnológicos sobre cuestiones de equidad económica y los llevamos a movimientos establecidos por la justicia, acelerando el ritmo del cambio.",
         "En 2019, TechEquity trabajó con una coalición de socios para copatrocinar la Ley de protección de inquilinos de 2019 (AB 1482)."
       ]
     }
