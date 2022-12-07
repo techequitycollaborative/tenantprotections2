@@ -133,7 +133,6 @@ function AdditionalQuestionsSection({
 
   return (
     <div>
-      <p>Checking on eligibility for {currentScope} rules.</p>
       <h2 className="text-blue text-2xl py-4 flex flex-col">
         {t(question.promptKey, question.promptVars)}
         {question.promptKey.includes('hotels_b')
