@@ -14,7 +14,7 @@ const Header = () => {
       />
       <meta
         name="twitter:image"
-        content="https://tenantprotections.org/img/calculator.svg"
+        content="https://tenantprotections.org/img/calculator.png"
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Tenant Protections" />
@@ -24,7 +24,7 @@ const Header = () => {
       />
       <meta
         property="og:image"
-        content="https://tenantprotections.org/img/calculator.svg"
+        content="https://tenantprotections.org/img/calculator.png"
       />
       <meta property="og:site_name" content="Tenant Protections" />
       <meta property="og:url" content="https://tenantprotections.org" />
