@@ -62,6 +62,7 @@ function RentTimeline(props: RentTimelineProps) {
             alt="house illustration"
             layout="fill"
             objectFit="contain"
+            priority="true"
           />
         </div>
         <div className="flex-col w-2/3 ml-auto">
@@ -74,12 +75,14 @@ function RentTimeline(props: RentTimelineProps) {
               {props.location.city}, CA
               <button className="leading-none">
                 <Link href="/calculator">
-                  <Image
-                    src="/img/edit-icon.svg"
-                    alt="edit button"
-                    width="15"
-                    height="15"
-                  />
+                  <span>
+                    <Image
+                      src="/img/edit-icon.svg"
+                      alt="edit button"
+                      width="15"
+                      height="15"
+                    />
+                  </span>
                 </Link>
               </button>
             </p>
