@@ -251,7 +251,7 @@ function RentBox(props: RentBoxProps) {
           inputMode="numeric"
           value={rent}
           onChange={onRentChange}
-          placeholder="$1,350"
+          placeholder="$"
           className="bg-gray-lightest border rounded border-gray outline-none text-lg p-3 my-3"
           required
         />
