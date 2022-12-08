@@ -13,7 +13,7 @@ const Header = () => {
         content="Tenant pressing buttons on calculator"
       />
       <meta name="twitter:image" content="/img/calculator.svg" />
-      <meta name="twitter:card" content="Calculator" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Tenant Protections" />
       <meta
         property="og:description"
