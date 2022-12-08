@@ -101,14 +101,17 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
             ))}
           </select>
         )}
+        {location?.type === 'unknown' && (
+          <p className="text-red-600 italic mb-4">
+            *{t('zip-not-found', { zip: location.zip })}
+          </p>
+        )}
         <button
           type="submit"
           className="bg-blue border rounded border-blue text-white text-2xl p-2 my-3 hover:bg-blue-light active:bg-blue-dark"
         >
           {t('submit')}
         </button>
-        {location?.type === 'unknown' &&
-          t('zip-not-found', { zip: location.zip })}
       </form>
       <Accordion
         title={t('eligibility-more.title')}
