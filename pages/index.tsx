@@ -26,6 +26,7 @@ const Home: NextPage = () => {
           alt="Tenant pressing buttons on calculator"
           layout="fill"
           objectFit="cover"
+          priority={true}
         />
       </div>
       <h1 className="text-blue text-3xl font-bold py-4 text-center">

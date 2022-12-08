@@ -319,14 +319,6 @@
     "end": "2020-06-30",
     "max_increase": 0.04
   },
-  "lac2020": {
-    "geography": "Unincorporated LA County",
-    "area": null,
-    "start_year": 2020,
-    "start": "2020-04-01",
-    "end": "2022-12-31",
-    "max_increase": 0.0
-  },
   "mtv2022": {
     "geography": "Mountain View",
     "area": null,

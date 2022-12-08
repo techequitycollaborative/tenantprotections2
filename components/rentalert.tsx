@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import { FullLocation } from '@/types/location';
@@ -50,7 +51,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
   }
 
   const moratorium = activeMoratorium(
-    props.location.city,
+    unincorporatedLAOverride(props.location),
     currentRentStartDate,
   );
 
@@ -98,15 +99,18 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
         {localRentCap != undefined && (
           <div className="mb-4">
             <div className="flex flex-row text-blue text-lg font-bold">
-              <img
-                src={
-                  currentRent > localMaxRent
-                    ? '/img/warning-icon.svg'
-                    : '/img/check-icon.svg'
-                }
-                alt="warning icon"
-                className="pt-1 pr-2 absolute"
-              />
+              <div className="pt-1 pr-2 absolute">
+                <Image
+                  src={
+                    currentRent > localMaxRent
+                      ? '/img/warning-icon.svg'
+                      : '/img/check-icon.svg'
+                  }
+                  alt="warning icon"
+                  width="20"
+                  height="20"
+                />
+              </div>
               <div className="flex flex-col pl-8 pr-24">
                 <p>
                   {t('calculator.alert.local-max-rent', {
@@ -130,15 +134,18 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
         {statewideRentCap != undefined && (
           <div className="mb-4">
             <div className="flex flex-row text-blue text-lg font-bold">
-              <img
-                src={
-                  currentRent > statewideMaxRent
-                    ? '/img/warning-icon.svg'
-                    : '/img/check-icon.svg'
-                }
-                alt="warning icon"
-                className="pt-1 pr-2 absolute"
-              />
+              <div className="pt-1 pr-2 absolute">
+                <Image
+                  src={
+                    currentRent > statewideMaxRent
+                      ? '/img/warning-icon.svg'
+                      : '/img/check-icon.svg'
+                  }
+                  alt="warning icon"
+                  width="20"
+                  height="20"
+                />
+              </div>
               <div className="flex flex-col pl-8 pr-24">
                 <p>{t('calculator.alert.statewide-max-rent')}</p>
                 <p className="text-gray font-light text-sm italic">
@@ -161,16 +168,19 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
           {moratorium.isActive ? (
             <>
               <h2 className="text-blue py-2 text-lg font-bold">
-                <img
-                  src="/img/warning-icon.svg"
-                  alt="warning icon"
-                  className="pb-1 pr-2 inline"
-                />
-                {t('calculator.moratorium.title')}
+                <div className="pb-1 pt-1 pr-2 absolute">
+                  <Image
+                    src="/img/warning-icon.svg"
+                    alt="warning icon"
+                    width="20"
+                    height="20"
+                  />
+                </div>
+                <div className="pl-8">{t('calculator.moratorium.title')}</div>
               </h2>
               <p className="text-blue font-medium py-2 text-md">
                 {t('calculator.moratorium.content', {
-                  city: props.location.city,
+                  city: unincorporatedLAOverride(props.location),
                   rate: moratorium.cap,
                 })}
               </p>

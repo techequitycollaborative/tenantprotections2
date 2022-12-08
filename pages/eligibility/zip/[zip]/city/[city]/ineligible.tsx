@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Trans, useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -64,13 +65,14 @@ const Ineligible: NextPage<Props> = function Ineligible({ location }) {
   return (
     <Layout>
       <Progress progress="4" margin="mt-6 mb-4" />
-      <img
-        src="/img/alert-icon.svg"
-        alt="minus sign to signify ineligibility"
-        width="15%"
-        height="15%"
-        className="mx-auto"
-      />
+      <div className="w-16 h-16 md:w-24 md:h-24 relative">
+        <Image
+          src="/img/alert-icon.svg"
+          alt="minus sign to signify ineligibility"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <h2 className="text-blue text-2xl font-bold mx-auto mb-6">
         {t('ineligible.title')}
       </h2>

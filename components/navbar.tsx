@@ -1,4 +1,5 @@
 import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -19,11 +20,14 @@ function Navbar() {
     <nav className="relative bg-blue">
       <div className="flex items-center justify-between">
         <Link href="/">
-          <img
-            src="/img/logo.png"
-            alt="warning icon"
-            className="p-2 pr-0 h-12 cursor-pointer"
-          />
+          <div className="p-2 pr-0 h-12 cursor-pointer">
+            <Image
+              src="/img/logo.png"
+              alt="Tenant Protections logo"
+              width="32"
+              height="32"
+            />
+          </div>
         </Link>
         <div className="pt-1 pb-1 md:ml-2">
           <Link href="/">
