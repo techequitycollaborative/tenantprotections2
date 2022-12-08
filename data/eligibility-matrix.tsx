@@ -40,15 +40,17 @@ function getPassingBuildingTypes(rules: Rules) {
     hasDuplexQuestions = true;
   }
   if (rules.landlord_occupancy) {
-    hasApartmentQuestions = true;
+    rules.landlord_occupancy > 2 ? (hasApartmentQuestions = true) : null;
     hasDuplexQuestions = true;
   }
   if (rules.landlord_occupancy_tenancy) {
-    hasApartmentQuestions = true;
+    rules.landlord_occupancy_tenancy > 2
+      ? (hasApartmentQuestions = true)
+      : null;
     hasDuplexQuestions = true;
   }
   if (rules.landlord_occupancy_1year) {
-    hasApartmentQuestions = true;
+    rules.landlord_occupancy_1year > 2 ? (hasApartmentQuestions = true) : null;
     hasDuplexQuestions = true;
   }
   if (rules.berkeley_duplex) {
