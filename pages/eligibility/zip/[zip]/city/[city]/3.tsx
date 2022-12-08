@@ -55,16 +55,19 @@ function AdditionalQuestionsSection({
   let question = questions ? questions[index] : emptyQuestion;
 
   useEffect(() => {
-    questions =
+    const currentQuestions =
       currentScope === Scope.LOCAL_SCOPE ? localQuestions : statewideQuestions;
-    question = questions ? questions[index] : emptyQuestion;
+    const currentQuestion = currentQuestions
+      ? currentQuestions[index]
+      : emptyQuestion;
 
     // Handle duplicate questions. If already passed, advance. If already failed, send to ineligible.
-    if (passedQuestions.includes(question.promptKey)) {
+    if (passedQuestions.includes(currentQuestion.promptKey)) {
       onNextQuestion();
-    } else if (failedQuestions.includes(question.promptKey)) {
+    } else if (failedQuestions.includes(currentQuestion.promptKey)) {
       router.push(getPathFromLocation('/eligibility', location, 'ineligible'));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, currentScope]);
 
   const onNextQuestion = () => {

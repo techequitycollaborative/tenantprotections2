@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 
 interface Props {
   startDate: Date;
@@ -18,8 +19,8 @@ const RentRow: NextPage<Props> = function RentEntry(props: Props) {
       </p>
 
       <p className="font-medium">${props.rent}</p>
-      <button onClick={props.handleClick}>
-        <img
+      <button onClick={props.handleClick} className="leading-none">
+        <Image
           src="/img/edit-icon.svg"
           alt="edit button"
           width="15"

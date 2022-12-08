@@ -33,6 +33,7 @@ const Resources: NextPage = () => {
           alt="Tenant putting paperwork into envelopes"
           layout="fill"
           objectFit="cover"
+          priority={true}
         />
       </div>
       <h1 className="text-blue text-3xl font-bold pt-4 pb-8">
