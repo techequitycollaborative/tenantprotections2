@@ -125,8 +125,8 @@ export function lookupRentCap(
   let rate = undefined;
 
   rentCapHistory.map((x, i) => {
-    const start = new Date(x.start);
-    const end = new Date(x.end);
+    const start = new Date(x.start + 'T00:00:00');
+    const end = new Date(x.end + 'T00:00:00');
     if (date >= start && date <= end) {
       rate = x.rate;
     }

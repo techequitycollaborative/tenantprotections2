@@ -14,11 +14,7 @@ import Progress from '@/components/progress';
 import EligibilityNav from '@/components/eligibility-navigation';
 import { BuildingType, isBuildingType } from '@/types/building';
 import { zipAndCityFromUrl } from '@/utils/zip-and-city';
-
-export enum Scope {
-  LOCAL_SCOPE = 'local',
-  STATEWIDE_SCOPE = 'statewide',
-}
+import { Scope } from '@/types/location';
 
 interface Props {
   location: FullLocation;
@@ -133,7 +129,6 @@ function AdditionalQuestionsSection({
 
   return (
     <div>
-      <p>Checking on eligibility for {currentScope} rules.</p>
       <h2 className="text-blue text-2xl py-4 flex flex-col">
         {t(question.promptKey, question.promptVars)}
         {question.promptKey.includes('hotels_b')

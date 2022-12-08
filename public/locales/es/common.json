@@ -35,12 +35,14 @@
   "questions": {
     "building-type": "¿En qué tipo de edificio vive?",
     "is-subsidized": "¿Vive en viviendas protegidas o públicas?",
-    "when-built": "¿Cuándo se construyó su edificio?"
+    "when-built": "¿Cuándo se construyó su edificio?",
+    "sec8": "¿Utiliza un vale de vivienda portátil, como un vale de la Sección 8?",
+    "lihtc": "¿Es su edificio una propiedad de crédito fiscal por bajos ingresos (LIHTC)?"
   },
   "building-questions": {
     "corp-ownership": {
-      "prompt": "¿Le alquila a una corporación, sociedad de bienes raíces u otro tipo de negocio, o el arrendador es un particular?",
-      "yes": "A una corporación o sociedad de inversión en bienes raíces (REIT)",
+      "prompt": "¿Le alquila a una corporación, un fideicomiso de inversión en bienes raíces (REIT), LP o LLC (con al menos un miembro que es una corporación o REIT), o el arrendador es un particular?",
+      "yes": "A una corporación, REIT, LP o LLC",
       "no": "A un particular"
     },
     "min-units": "¿La propiedad contiene {{units}} o más unidades?",
@@ -93,7 +95,15 @@
     },
     "corp-ownership": {
       "title": "Aprenda más",
-      "content": "Algunas propiedades pertenecen a corporaciones o sociedades de inversión en bienes raíces (REIT) y no reciben las mismas exenciones que los condominios o viviendas unifamiliares propiedad de un individuo. Tenga en cuenta que incluso si su alquiler es administrado por una empresa de administración de propiedades, el propietario de la unidad aún puede ser un individuo."
+      "content": "Algunas propiedades pertenecen a corporaciones, fideicomisos de inversión en bienes raíces (REIT) u otros tipos de negocios y no reciben las mismas exenciones que los condominios o viviendas unifamiliares propiedad de un individuo. Tenga en cuenta que incluso si su alquiler es administrado por una empresa de administración de propiedades, el propietario de la unidad aún puede ser un individuo."
+    },
+    "sec8": {
+      "title": "¿Qué es un bono de vivienda portátil?",
+      "content": "Un bono de vivienda portátil es un tipo de subsidio que no está vinculado a una dirección en particular, sino que se puede aplicar a diferentes unidades de alquiler. Un ejemplo es un vale de la Sección 8. Esta pregunta le pide que haga clic en Sí si su vale de vivienda es el único tipo de subsidio que utiliza y si no vive en una vivienda pública o de bajos ingresos."
+    },
+    "lihtc": {
+      "title": "¿Qué es una propiedad de crédito fiscal para vivienda de bajos ingresos (LIHTC)?",
+      "content": "Una propiedad LIHTC es una propiedad cuyos ingresos están restringidos a inquilinos por debajo de cierto ingreso, donde el propietario recibe créditos fiscales. Esta pregunta le pide que haga clic en Sí si vive en una propiedad LIHTC y no se aplica ningún otro subsidio de vivienda a su unidad."
     }
   },
   "calculator": {
@@ -186,6 +196,10 @@
       "date-high": "Esta fecha es de un futuro demasiado lejano.",
       "date-low": "Ingrese una fecha dentro de los últimos 3 años.",
       "sequence": "Parece que su alquiler no aumentó; Por favor, consulte las fechas y las cantidades."
+    },
+    "moratorium": {
+      "title": "Moratoria vigente a esta fecha",
+      "content": "Si califica para el control de alquiler local en {{city}}, CUALQUIER aumento de alquiler en esta fecha puede ser ilegal. {{city}} tenía una moratoria de desalojo vigente que se aplicaba a las unidades de alquiler controlado. Consulte nuestra página de recursos si necesita ayuda."
     }
   },
   "eligible": {
@@ -206,9 +220,6 @@
   },
   "ineligible": {
     "title": "Es posible que usted no esté protegido",
-    "text-subsidized-p1": "<bold>Desafortunadamente</bold>, al vivir en una vivienda subsidiada, es posible que no sea elegible para los límites de alquiler locales o estatales. Sin embargo, puede tener otras protecciones legales contra desalojos y aumentos de alquiler.",
-    "text-subsidized-p2": "Los requisitos de elegibilidad en torno a la vivienda subvencionada son complejos. Si le preocupa un aumento de alquiler reciente u otro problema con su situación de vivienda, póngase en contacto con la ciudad de {{city}}, el gobierno de su condado o un grupo local de derechos de los inquilinos para obtener ayuda.",
-    "text-subsidized-p3": "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee verificar cómo se aplican las normas locales a su situación, ya que las diferentes áreas pueden tener exenciones muy específicas según el tipo de propiedad en la que viva.",
     "text-1-p1": "<bold>Desafortunadamente</bold>, creemos que no está cubierto por las protecciones locales o estatales, incluidas las cláusulas de control de alquileres o de protección de causa justa de la Ley de Protección de Inquilinos.",
     "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>.",
     "subtitle": "¿Por qué no estoy protegido?",
@@ -260,7 +271,7 @@
       "tec-name": "TechEquity Collaborative",
       "tec-text": [
         "TechEquity Collaborative es una organización sin fines de lucro que cree que la creciente economía impulsada por la tecnología puede y debe crear oportunidades para todos. TechEquity moviliza a los trabajadores y empresas de tecnología para abordar las desigualdades dentro de la industria tecnológica y las desigualdades causadas por la industria tecnológica.",
-        "Educamos a los trabajadores tecnológicos sobre las profundas desigualdades estructurales y los llevamos a movimientos establecidos por la justicia, acelerando el ritmo del cambio.",
+        "Educamos a los trabajadores tecnológicos sobre cuestiones de equidad económica y los llevamos a movimientos establecidos por la justicia, acelerando el ritmo del cambio.",
         "En 2019, TechEquity trabajó con una coalición de socios para copatrocinar la Ley de protección de inquilinos de 2019 (AB 1482)."
       ]
     }

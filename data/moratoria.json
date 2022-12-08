@@ -1,0 +1,42 @@
+{
+  "Alameda": {
+    "start": "2020-04-30",
+    "end": "2022-06-30",
+    "max_increase": 0.0
+  },
+  "Bell Gardens": {
+    "start": "2022-04-25",
+    "end": "2022-10-12",
+    "max_increase": 0.0
+  },
+  "Beverly Hills": {
+    "start": "2020-03-15",
+    "end": "2022-06-30",
+    "max_increase": 0.0
+  },
+  "Los Angeles": {
+    "start": "2020-03-20",
+    "end": "2024-01-31",
+    "max_increase": 0.0
+  },
+  "Richmond": {
+    "start": "2020-04-21",
+    "end": "2021-09-30",
+    "max_increase": 0.0
+  },
+  "San Jose": {
+    "start": "2020-04-28",
+    "end": "2020-12-31",
+    "max_increase": 0.0
+  },
+  "Unincorporated LA County": {
+    "start": "2020-03-04",
+    "end": "2022-12-31",
+    "max_increase": 0.0
+  },
+  "West Hollywood": {
+    "start": "2020-04-06",
+    "end": "2022-03-01",
+    "max_increase": 0.0
+  }
+}

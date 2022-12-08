@@ -1,6 +1,11 @@
 import { RawZipData } from '@/data/zipcodes.json';
 import { BuildingType } from './building';
 
+export enum Scope {
+  LOCAL_SCOPE = 'local',
+  STATEWIDE_SCOPE = 'statewide',
+}
+
 export interface YesNoQuestion {
   i18nNamespace?: string;
   passingAnswer: 'yes' | 'no';
@@ -18,6 +23,7 @@ export interface EligibilityRules {
   builtBeforeMillis: number;
   passingBuildingTypes: string[];
   eligibilityQuestions: BuildingEligibilityQuestions;
+  subsidizedExemptions: { sec8: string; lihtc: string };
 }
 
 export interface RentCapEntry {
@@ -43,7 +49,7 @@ export interface RawLocation extends RawZipData {
 export interface FullLocation extends ZipData {
   readonly type: 'full';
   city: string;
-  isUnincorporatedLA: boolean,
+  isUnincorporatedLA: boolean;
   statewideRules: EligibilityRules;
   localRules?: EligibilityRules | null;
   statewideRentCap: RentCapHistory;

@@ -13,7 +13,7 @@ import {
   citiesFromZip,
 } from '@/utils/location';
 import { zipAndCityFromForm as zipAndCityFromForm } from '@/utils/zip-and-city';
-import { Scope } from './zip/[zip]/city/[city]/3';
+import { Scope } from '@/types/location';
 
 interface Props {
   location: Location | null;

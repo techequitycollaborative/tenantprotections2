@@ -35,12 +35,14 @@
   "questions": {
     "building-type": "What type of building do you live in?",
     "is-subsidized": "Do you live in subsidized or public housing?",
-    "when-built": "When was your building built?"
+    "when-built": "When was your building built?",
+    "sec8": "Do you use a portable housing voucher, such as a Section 8 voucher?",
+    "lihtc": "Is your building a low income tax credit (LIHTC) property?"
   },
   "building-questions": {
     "corp-ownership": {
-      "prompt": "Do you rent from a corporation, real estate trust, or other kind of business, or is your landlord an individual?",
-      "yes": "Corporation or REIT",
+      "prompt": "Do you rent from a corporation, real estate investment trust (REIT), LP, or LLC (with at least one member being a corporation or REIT), or is your landlord an individual?",
+      "yes": "Corporation, REIT, LP, or LLC",
       "no": "Individual"
     },
     "min-units": "Does the property contain {{units}} or more units?",
@@ -93,7 +95,15 @@
     },
     "corp-ownership": {
       "title": "Learn more",
-      "content": "Some properties are owned by corporations or real estate investment trusts (REIT), and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
+      "content": "Some properties are owned by corporations, real estate investment trusts (REIT), or other types of businesses, and do not receive the same exemptions as condos or single-family homes owned by an individual. Note that even if your rental is managed by a property management company, the owner of the unit may still be an individual."
+    },
+    "sec8": {
+      "title": "What is a portable housing voucher?",
+      "content": "A portable housing voucher is a type of subsidy that is not tied to a particular address, but can be applied to different rental units. One example is a Section 8 voucher. This question is asking you to click Yes if your housing voucher is the only type of subsidy you use, and you do not otherwise live in low income or public housing."
+    },
+    "lihtc": {
+      "title": "What is a low income housing tax credit (LIHTC) property?",
+      "content": "A LIHTC property is a property that is income restricted to tenants below a certain income, where the landlord receives tax credits. This question is asking you to click Yes if you live at a LIHTC property and no other housing subsidy applies to your unit."
     }
   },
   "calculator": {
@@ -186,6 +196,10 @@
       "date-high": "This date is too far in the future.",
       "date-low": "Please enter a date within the past 3 years.",
       "sequence": "It looks like your rent did not increase; please check the dates and amounts."
+    },
+    "moratorium": {
+      "title": "Moratorium in effect on this date",
+      "content": "If you qualify for local rent control in {{city}}, ANY rent increase on this date may be illegal. {{city}} had an eviction moratorium in effect that applied to rent controlled units. Check out our resources page if you need help."
     }
   },
   "eligible": {
@@ -206,9 +220,6 @@
   },
   "ineligible": {
     "title": "You may not be protected",
-    "text-subsidized-p1": "<bold>Unfortunately</bold>, because you live in subsidized housing you may not be eligible for local or statewide rent caps. However, you may have other legal protections against evictions and rent increases.",
-    "text-subsidized-p2": "Eligibility requirements around subsidized housing are complex. If you are concerned about a recent rent increase or other issue with your living situation, reach out to the city of {{city}}, your county government, or a local tenants rights group for support.",
-    "text-subsidized-p3": "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in.",
     "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local or statewide protections, including the Tenant Protection Act’s just cause protection or rent control clauses.",
     "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
     "subtitle": "Why am I not protected?",
@@ -260,7 +271,7 @@
       "tec-name": "TechEquity Collaborative",
       "tec-text": [
         "TechEquity Collaborative is a non-profit organization that believes the growing tech-driven economy can and should create opportunity for everyone. TechEquity mobilizes tech workers and companies to address inequities within the tech industry and the inequities caused by the tech industry.",
-        "We educate tech workers on deep structural inequities and bring them into longstanding movements for justice, accelerating the pace of change.",
+        "We educate tech workers on economic equity issues and bring them into longstanding movements for justice, accelerating the pace of change.",
         "In 2019, TechEquity worked with a coalition of partners to co-sponsor the Tenant Protection Act of 2019 (AB 1482)."
       ]
     }
