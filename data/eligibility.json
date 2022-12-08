@@ -274,7 +274,7 @@
     "senior_care": "exempt",
     "hotels": 31,
     "hotels_q2": null,
-    "landlord_shared_exemption": "exempt (SFH/condo only)",
+    "landlord_shared_exemption": null,
     "relative_occupancy_q1": null,
     "relative_occupancy_q2": null,
     "relative_occupancy_wh": null,

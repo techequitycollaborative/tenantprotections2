@@ -1,6 +1,7 @@
 import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
@@ -55,11 +56,14 @@ function RentTimeline(props: RentTimelineProps) {
   return (
     <div className="w-full">
       <div className="flex flex-row">
-        <img
-          src="/img/house-illustration.svg"
-          alt="house illustration"
-          className="w-24 h-24 mr-8 sm:w-44 sm:h-44"
-        />
+        <div className="w-36 h-32 mr-8 ml-6 md:mr-12 md:ml-0 md:w-48 md:h-44 relative">
+          <Image
+            src="/img/house-illustration.svg"
+            alt="house illustration"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <div className="flex-col w-2/3 ml-auto">
           <p className="text-gray-darkest">ZIPCODE</p>
           <div className="border w-full border-gray-light bg-gray-lightest rounded px-4 py-2">
@@ -68,9 +72,9 @@ function RentTimeline(props: RentTimelineProps) {
             </p>
             <p className="flex flex-row justify-between text-gray-darkest font-light">
               {props.location.city}, CA
-              <button>
+              <button className="leading-none">
                 <Link href="/calculator">
-                  <img
+                  <Image
                     src="/img/edit-icon.svg"
                     alt="edit button"
                     width="15"
