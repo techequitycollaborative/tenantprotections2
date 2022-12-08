@@ -62,7 +62,7 @@ function RentTimeline(props: RentTimelineProps) {
             alt="house illustration"
             layout="fill"
             objectFit="contain"
-            priority="true"
+            priority={true}
           />
         </div>
         <div className="flex-col w-2/3 ml-auto">

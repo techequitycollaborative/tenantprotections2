@@ -58,7 +58,7 @@ const Eligibility: NextPage<Props> = function Eligibility({ location }) {
           alt="Tenant pressing buttons on calculator"
           layout="fill"
           objectFit="cover"
-          priority="true"
+          priority={true}
         />
       </div>
       <h1 className="text-blue text-3xl font-bold pt-4 pb-8 text-center">

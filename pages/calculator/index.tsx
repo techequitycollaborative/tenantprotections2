@@ -55,7 +55,7 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
           alt="Protected apartments in a building with tenants standing outside"
           layout="fill"
           objectFit="cover"
-          priority="true"
+          priority={true}
         />
       </div>
       <h1 className="text-blue text-3xl font-bold pt-4 pb-8 text-center">
