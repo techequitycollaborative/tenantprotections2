@@ -50,7 +50,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
   }
 
   const moratorium = activeMoratorium(
-    props.location.city,
+    unincorporatedLAOverride(props.location),
     currentRentStartDate,
   );
 
@@ -170,7 +170,7 @@ const RentAlert: NextPage<Props> = function RentAlert(props) {
               </h2>
               <p className="text-blue font-medium py-2 text-md">
                 {t('calculator.moratorium.content', {
-                  city: props.location.city,
+                  city: unincorporatedLAOverride(props.location),
                   rate: moratorium.cap,
                 })}
               </p>
