@@ -1,20 +1,21 @@
-import type { GetServerSideProps, NextPage } from 'next';
-import Image from 'next/image';
-import { Trans, useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { FullLocation, Location } from '@/types/location';
 import Layout from '@/components/layout';
 import LinkWrapper from '@/components/link-wrapper';
+import { Location } from '@/types/location';
+import type { GetServerSideProps, NextPage } from 'next';
+import { Trans, useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Image from 'next/image';
 
 import {
-  locationFromZip,
-  getPathFromLocation,
   citiesFromZip,
+  getPathFromLocation,
+  locationFromZip,
 } from '@/utils/location';
 import { zipAndCityFromForm } from '@/utils/zip-and-city';
+import { useState } from 'react';
 
 interface Props {
-  location: Location | null;
+  serverProvidedLocation: Location | null;
 }
 
 const getServerSideProps: GetServerSideProps<Props> =
@@ -25,7 +26,7 @@ const getServerSideProps: GetServerSideProps<Props> =
     if (location?.type === 'full') {
       return {
         props: {
-          location: null,
+          serverProvidedLocation: null,
         },
         redirect: {
           destination: getPathFromLocation('calculator', location),
@@ -35,7 +36,7 @@ const getServerSideProps: GetServerSideProps<Props> =
       return {
         props: {
           ...(await serverSideTranslations(context.locale!)),
-          location,
+          serverProvidedLocation: location,
         },
       };
     }
@@ -45,8 +46,13 @@ export { getServerSideProps };
 
 // For validation pattern source, see:
 // https://css-tricks.com/html-for-zip-codes/
-const Calculator: NextPage<Props> = function Calculator({ location }) {
+const Calculator: NextPage<Props> = function Calculator({
+  serverProvidedLocation,
+}) {
   const { t } = useTranslation();
+  const [location, setLocation] = useState(serverProvidedLocation);
+  const needCitySelection = location?.type === 'raw';
+
   return (
     <Layout>
       <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
@@ -80,17 +86,36 @@ const Calculator: NextPage<Props> = function Calculator({ location }) {
         <label htmlFor="zip" className="text-blue text-2xl">
           {t('zip-label')}
         </label>
-        <input
-          id="zip"
-          name="zip"
-          type="text"
-          inputMode="numeric"
-          pattern="^\d{5}?$"
-          placeholder="90001"
-          className="border-2 text-lg rounded border-gray outline-none p-3 my-3"
-          required
-          defaultValue={location?.zip}
-        />
+        <div className="flex">
+          <input
+            id="zip"
+            name="zip"
+            type="text"
+            inputMode="numeric"
+            pattern="^\d{5}?$"
+            placeholder="90001"
+            className="border-2 text-lg rounded border-gray outline-none p-3 my-3 
+          read-only:bg-slate-50 read-only:text-gray-500 read-only:border-slate-200 read-only:shadow-none
+          flex-auto"
+            required
+            defaultValue={location?.zip}
+            readOnly={needCitySelection}
+          />
+          {needCitySelection && (
+            <button
+              onClick={() => setLocation(null)}
+              className="flex-none hover:click"
+            >
+              <img
+                src="/img/edit-icon.svg"
+                alt="edit button"
+                width="15"
+                height="15"
+                className="m-2"
+              />
+            </button>
+          )}
+        </div>
         {location?.type === 'raw' && (
           <select
             id="city"
