@@ -1,6 +1,6 @@
-import { NextPage } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NextPage } from 'next';
 import { useState } from 'react';
 
 interface Props {
@@ -24,12 +24,12 @@ const Accordion: NextPage<Props> = function Accordion(props) {
           {isActive ? (
             <FontAwesomeIcon
               icon={faChevronDown}
-              className="rotate-360 ease-linear duration-150"
+              className="rotate-180 ease-linear duration-150"
             />
           ) : (
             <FontAwesomeIcon
               icon={faChevronDown}
-              className="rotate-180 ease-linear duration-150"
+              className="rotate-360 ease-linear duration-150"
             />
           )}
         </div>

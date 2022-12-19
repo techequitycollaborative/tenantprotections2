@@ -1,20 +1,20 @@
 import assert from 'assert';
 import { GetServerSideProps, NextPage } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
 import { useState } from 'react';
 
-import { FullLocation } from '@/types/location';
-import { RentEntry, RentHistory } from '@/types/calculator';
-import { locationFromZip } from '@/utils/location';
-import Layout from '@/components/layout';
-import RentRow from '@/components/rentrow';
-import RentAlert from '@/components/rentalert';
-import { addRent, removeRent, getRentHistoryState } from '@/utils/calculator';
-import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 import Banner from '@/components/banner';
+import Layout from '@/components/layout';
+import RentAlert from '@/components/rentalert';
+import RentRow from '@/components/rentrow';
+import { RentEntry, RentHistory } from '@/types/calculator';
+import { FullLocation } from '@/types/location';
+import { addRent, getRentHistoryState, removeRent } from '@/utils/calculator';
+import { locationFromZip } from '@/utils/location';
+import { zipAndCityFromUrl } from '@/utils/zip-and-city';
 
 // The following import prevents a Font Awesome icon server-side rendering bug,
 // where the icons flash from a very large icon down to a properly sized one:
@@ -268,6 +268,11 @@ function RentBox(props: RentBoxProps) {
           id="startDate"
           name="startDate"
           type="date"
+          max={
+            getRentHistoryState(props.rentHistory) === 'partial'
+              ? new Date().toISOString().split('T')[0]
+              : undefined
+          }
           inputMode="numeric"
           value={startDate}
           onChange={onStartDateChange}
