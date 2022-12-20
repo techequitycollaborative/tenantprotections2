@@ -129,6 +129,10 @@ function RentBox(props: RentBoxProps) {
   const [dateError, setDateError] = useState('');
   const t = props.translation;
 
+  const now = new Date();
+  const dateMax = new Date(new Date().setFullYear(now.getFullYear() + 1));
+  const dateMin = new Date(new Date().setFullYear(now.getFullYear() - 3));
+
   const handleSubmit = function (e: any) {
     e.preventDefault();
 
@@ -144,10 +148,6 @@ function RentBox(props: RentBoxProps) {
   const validateForm = function () {
     const parseRent = /(\d+)$/.test(rent) ? Number(rent) : NaN;
     const parseDate = new Date(startDate + 'T00:00:00');
-
-    const now = new Date();
-    const dateMax = new Date(new Date().setFullYear(now.getFullYear() + 1));
-    const dateMin = new Date(new Date().setFullYear(now.getFullYear() - 3));
 
     let pass = true;
 
@@ -268,11 +268,7 @@ function RentBox(props: RentBoxProps) {
           id="startDate"
           name="startDate"
           type="date"
-          max={
-            getRentHistoryState(props.rentHistory) === 'partial'
-              ? new Date().toISOString().split('T')[0]
-              : undefined
-          }
+          max={dateMax.toISOString().split('T')[0]}
           inputMode="numeric"
           value={startDate}
           onChange={onStartDateChange}
