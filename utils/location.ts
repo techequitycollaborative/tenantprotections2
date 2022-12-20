@@ -1,12 +1,12 @@
-import unincorporatedAreasLA from '@/data/unincorporated-areas-la.json';
-import zipcodes from '@/data/zipcodes.json';
 import EligibilityMatrix from '@/data/eligibility-matrix';
 import RentCapMatrix from '@/data/rentcap-matrix';
+import unincorporatedAreasLA from '@/data/unincorporated-areas-la.json';
+import zipcodes from '@/data/zipcodes.json';
 import {
-  RawLocation,
-  Location,
-  FullLocation,
   EligibilityRules,
+  FullLocation,
+  Location,
+  RawLocation,
   RentCapHistory,
 } from '@/types/location';
 
@@ -24,13 +24,18 @@ function tryEnrichLocation(
   location: RawLocation,
   city?: string,
 ): FullLocation | RawLocation {
+  // sanitize city in case of manual invalid zip+city URL entry
   if (!Array.isArray(location.city)) {
-    city = location.city;
+    if (city && location.city !== city) {
+      city = undefined;
+    } else {
+      city = location.city;
+    }
+  } else if (city && !location.city.includes(city)) {
+    city = undefined;
   }
-  if (
-    !city ||
-    (Array.isArray(location.city) && !location.city.includes(city))
-  ) {
+
+  if (!city) {
     return location;
   }
 
