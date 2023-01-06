@@ -220,11 +220,11 @@
   },
   "ineligible": {
     "title": "You may not be protected",
-    "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local or statewide protections, including the Tenant Protection Act’s just cause protection or rent control clauses.",
+    "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local rent control or statewide rent cap protections, including the Tenant Protection Act’s rent control clauses.",
     "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
     "subtitle": "Why am I not protected?",
     "text-2": [
-      "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed before a certain date are often exempt from rent cap laws.",
+      "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed after a certain date are often exempt from rent cap laws.",
       "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply.",
       "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in."
     ],
