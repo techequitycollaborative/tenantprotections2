@@ -96,9 +96,9 @@ const Eligibility: NextPage<Props> = function Eligibility({
           {needCitySelection && (
             <button
               onClick={() => setLocation(null)}
-              className="flex-none hover:click"
+              className="flex-none hover:click px-2 mt-1"
             >
-              <img
+              <Image
                 src="/img/edit-icon.svg"
                 alt="edit button"
                 width="15"

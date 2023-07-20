@@ -130,7 +130,7 @@ function RentBox(props: RentBoxProps) {
   const t = props.translation;
 
   const now = new Date();
-  const dateMax = new Date(new Date().setFullYear(now.getFullYear() + 1));
+  const dateMax = new Date(now.getFullYear(), now.getMonth() + 2, 0);
   const dateMin = new Date(new Date().setFullYear(now.getFullYear() - 3));
 
   const handleSubmit = function (e: any) {
