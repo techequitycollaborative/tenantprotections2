@@ -39,6 +39,14 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2023_5": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-09-14",
+    "end": "2023-11-13",
+    "max_increase": 0.0204
+  },
   "ant2023_4": {
     "geography": "Antioch",
     "area": null,
@@ -171,16 +179,16 @@
     "geography": "Culver City",
     "area": null,
     "start_year": 2023,
-    "start": "2023-07-01",
-    "end": "2023-09-30",
-    "max_increase": 0.05
+    "start": "2023-11-01",
+    "end": "2023-11-30",
+    "max_increase": 0.0475
   },
   "cul2023_1": {
     "geography": "Culver City",
     "area": null,
     "start_year": 2023,
     "start": "2023-01-01",
-    "end": "2023-06-30",
+    "end": "2023-10-31",
     "max_increase": 0.05
   },
   "cul2022_5": {
@@ -404,8 +412,8 @@
     "area": null,
     "start_year": 2023,
     "start": "2023-07-01",
-    "end": "2024-06-30",
-    "max_increase": 0.05
+    "end": "2024-01-31",
+    "max_increase": 0.0
   },
   "la2022": {
     "geography": "Los Angeles",
@@ -735,12 +743,28 @@
     "end": "2023-08-31",
     "max_increase": 0.03
   },
-  "sm2022": {
+  "sm2023": {
+    "geography": "Santa Monica",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-09-01",
+    "end": "2024-08-31",
+    "max_increase": 0.028
+  },
+  "sm2022_2": {
+    "geography": "Santa Monica",
+    "area": null,
+    "start_year": 2022,
+    "start": "2023-02-01",
+    "end": "2023-08-31",
+    "max_increase": 0.008
+  },
+  "sm2022_1": {
     "geography": "Santa Monica",
     "area": null,
     "start_year": 2022,
     "start": "2022-09-01",
-    "end": "2023-08-31",
+    "end": "2023-01-31",
     "max_increase": 0.06
   },
   "sm2021": {
@@ -767,12 +791,20 @@
     "end": "2020-08-31",
     "max_increase": 0.0203
   },
-  "wh2023": {
+  "wh2023_2": {
     "geography": "West Hollywood",
     "area": null,
     "start_year": 2023,
     "start": "2023-09-01",
     "end": "2024-08-31",
+    "max_increase": 0.025
+  },
+  "wh2023_1": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-03-01",
+    "end": "2023-08-31",
     "max_increase": 0.03
   },
   "wh2022": {
@@ -780,8 +812,8 @@
     "area": null,
     "start_year": 2022,
     "start": "2022-09-01",
-    "end": "2023-08-31",
-    "max_increase": 0.03
+    "end": "2023-02-28",
+    "max_increase": 0.06
   },
   "wh2021": {
     "geography": "West Hollywood",
