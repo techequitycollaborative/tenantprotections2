@@ -199,12 +199,14 @@ function getEligibilityQuestions(rules: Rules) {
   }
 
   // Hotels
-  if (rules.hotels > 0) {
-    hotelQuestions.push(HOTELS_A);
-  }
-  hotelQuestions.push(HOTELS_B);
-  if (rules.hotels_q2) {
-    hotelQuestions.push(HOTELS_Q2);
+  if (rules.hotels || rules.hotels_q2) {
+    if (rules.hotels > 0) {
+      hotelQuestions.push(HOTELS_A);
+    }
+    hotelQuestions.push(HOTELS_B);
+    if (rules.hotels_q2) {
+      hotelQuestions.push(HOTELS_Q2);
+    }
   }
 
   // Condo, SFH, Apartment, Duplex, ADU questions
