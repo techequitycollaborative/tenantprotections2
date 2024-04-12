@@ -39,6 +39,30 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2023_8": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-03-12",
+    "end": "2024-05-12",
+    "max_increase": 0.0144
+  },
+  "ant2023_7": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-01-11",
+    "end": "2024-03-11",
+    "max_increase": 0.0156
+  },
+  "ant2023_6": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-11-14",
+    "end": "2024-01-10",
+    "max_increase": 0.0168
+  },
   "ant2023_5": {
     "geography": "Antioch",
     "area": null,
@@ -87,6 +111,14 @@
     "end": "2023-01-12",
     "max_increase": 0.03
   },
+  "bel2023": {
+    "geography": "Bell Gardens",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-11-01",
+    "end": "2024-10-31",
+    "max_increase": 0.019
+  },
   "bel2022": {
     "geography": "Bell Gardens",
     "area": null,
@@ -94,6 +126,14 @@
     "start": "2022-10-12",
     "end": "2023-10-31",
     "max_increase": 0.0395
+  },
+  "ber2024": {
+    "geography": "Berkeley",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "max_increase": 0.019
   },
   "ber2023": {
     "geography": "Berkeley",
@@ -174,6 +214,46 @@
     "start": "2019-07-01",
     "end": "2020-06-30",
     "max_increase": 0.031
+  },
+  "cul2024_4": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-05-01",
+    "end": "2024-05-31",
+    "max_increase": 0.03
+  },
+  "cul2024_3": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-04-01",
+    "end": "2024-04-30",
+    "max_increase": 0.0325
+  },
+  "cul2024_2": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-02-01",
+    "end": "2024-03-31",
+    "max_increase": 0.035
+  },
+  "cul2024_1": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-01-31",
+    "max_increase": 0.04
+  },
+  "cul2023_3": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2023,
+    "start": "2023-12-01",
+    "end": "2023-12-31",
+    "max_increase": 0.0425
   },
   "cul2023_2": {
     "geography": "Culver City",
@@ -327,6 +407,14 @@
     "end": "2023-08-31",
     "max_increase": 0.03
   },
+  "hay2024": {
+    "geography": "Hayward",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "max_increase": 0.05
+  },
   "hay2023": {
     "geography": "Hayward",
     "area": null,
@@ -406,6 +494,14 @@
     "start": "2019-12-05",
     "end": "2020-09-30",
     "max_increase": 0.0319
+  },
+  "la2024": {
+    "geography": "Los Angeles",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-02-01",
+    "end": "2024-06-30",
+    "max_increase": 0.04
   },
   "la2023": {
     "geography": "Los Angeles",
@@ -647,6 +743,14 @@
     "end": "2020-06-30",
     "max_increase": 0.083
   },
+  "sf2024": {
+    "geography": "San Francisco",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-03-01",
+    "end": "2025-02-28",
+    "max_increase": 0.017
+  },
   "sf2023": {
     "geography": "San Francisco",
     "area": null,
@@ -686,6 +790,14 @@
     "start": "2019-03-01",
     "end": "2020-02-29",
     "max_increase": 0.026
+  },
+  "sj2024": {
+    "geography": "San Jose",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-01-01",
+    "end": "2024-12-31",
+    "max_increase": 0.05
   },
   "sj2023": {
     "geography": "San Jose",
