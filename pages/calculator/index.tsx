@@ -14,6 +14,20 @@ import {
 import { zipAndCityFromForm } from '@/utils/zip-and-city';
 import { useState } from 'react';
 
+// Adding in a maintenance banner message (8.14.24)
+function MaintenanceBanner() {
+  return (
+    <div className="maintenance-banner">
+      <p>
+        Note: Our rent calculator is under maintenance and is currently
+        impacting results from June 2024 onward. This should be back to full
+        functionality soon. If you have any questions please reach out to
+        info@techequity.us. Thank you for your patience!
+      </p>
+    </div>
+  );
+}
+
 interface Props {
   serverProvidedLocation: Location | null;
 }
@@ -55,6 +69,8 @@ const Calculator: NextPage<Props> = function Calculator({
 
   return (
     <Layout>
+      {/* Maintenance Banner inserted below */}
+      <MaintenanceBanner />
       <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
         <Image
           src="/img/apartment.svg"
