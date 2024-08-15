@@ -15,9 +15,13 @@ import { zipAndCityFromForm } from '@/utils/zip-and-city';
 import { useState } from 'react';
 
 // Adding in a maintenance banner message (8.14.24)
-function MaintenanceBanner({ className }): JSX.Element {
+import React from 'react';
+
+function MaintenanceBanner({ className }: { className?: string }): JSX.Element {
   return (
-    <div className={`maintenance-banner ${className}`}>
+    <div className={`maintenance-banner ${className || ''}`}>
+      {' '}
+      {/* Ensure className is optional and defaults to empty string if not provided */}
       <p>
         Note: Our rent calculator is under maintenance and is currently
         impacting results from June 2024 onward. This should be back to full
