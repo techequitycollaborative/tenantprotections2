@@ -15,7 +15,7 @@ import { zipAndCityFromForm } from '@/utils/zip-and-city';
 import { useState } from 'react';
 
 // Adding in a maintenance banner message (8.14.24)
-function MaintenanceBanner({ className }) {
+function MaintenanceBanner({ className }): JSX.Element {
   return (
     <div className={`maintenance-banner ${className}`}>
       <p>
