@@ -71,7 +71,8 @@ const Calculator: NextPage<Props> = function Calculator({
     <Layout>
       {/* Maintenance Banner inserted below */}
       <MaintenanceBanner />
-      <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
+      {/* Updated margin top of image below to mt-8 in order to add more padding for mobile viewing */}
+      <div className="w-44 h-32 md:w-80 md:h-60 mt-8 md:mt-8 relative">
         <Image
           src="/img/apartment.svg"
           alt="Protected apartments in a building with tenants standing outside"
