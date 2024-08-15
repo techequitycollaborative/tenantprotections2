@@ -166,7 +166,7 @@ select:hover {
   top: 0; /* Position at the top of the viewport */
   left: 0; /* Start from the left edge of the viewport */
   width: 100%; /* Full width */
-  background-color: #a9cfef; /* Light blue background color */
+  background-color: #ddedfa; /* Light blue background color */
   padding: 20px; /* Some padding */
   text-align: center; /* Centered text */
   /* Optional: Keep a high z-index if necessary */
