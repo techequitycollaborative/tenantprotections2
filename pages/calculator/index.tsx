@@ -15,9 +15,9 @@ import { zipAndCityFromForm } from '@/utils/zip-and-city';
 import { useState } from 'react';
 
 // Adding in a maintenance banner message (8.14.24)
-function MaintenanceBanner() {
+function MaintenanceBanner({ className }) {
   return (
-    <div className="maintenance-banner">
+    <div className={`maintenance-banner ${className}`}>
       <p>
         Note: Our rent calculator is under maintenance and is currently
         impacting results from June 2024 onward. This should be back to full
@@ -26,10 +26,6 @@ function MaintenanceBanner() {
       </p>
     </div>
   );
-}
-
-interface Props {
-  serverProvidedLocation: Location | null;
 }
 
 const getServerSideProps: GetServerSideProps<Props> =
@@ -70,7 +66,8 @@ const Calculator: NextPage<Props> = function Calculator({
   return (
     <Layout>
       {/* Maintenance Banner inserted below */}
-      <MaintenanceBanner />
+      <MaintenanceBanner className="mb-10" />{' '}
+      {/* Make 10 larger number for more padding between banner and image */}
       <div className="w-44 h-32 md:w-80 md:h-60 mt-0 md:mt-6 relative">
         <Image
           src="/img/apartment.svg"
