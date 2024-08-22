@@ -84,12 +84,12 @@ const About: NextPage = () => {
             {x}
           </p>
         ))}
-        <div className="w-52 h-36 mt-2 relative m-auto">
+        <div className="w-64 h-36 mt-2 relative m-auto">
           <Image
             src="/img/techequity-logo.png"
             alt="TechEquity Logo"
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
         <h3 className="text-blue text-xl font-bold py-2 text-center">
