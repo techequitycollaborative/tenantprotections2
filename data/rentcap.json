@@ -47,6 +47,14 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2024_5": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-09-11",
+    "end": "2024-11-11",
+    "max_increase": 0.0162
+  },
   "ant2024_4": {
     "geography": "Antioch",
     "area": null,
@@ -135,6 +143,14 @@
     "end": "2023-01-12",
     "max_increase": 0.03
   },
+  "bel2024": {
+    "geography": "Bell Gardens",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-11-01",
+    "end": "2025-10-31",
+    "max_increase": 0.0195
+  },
   "bel2023": {
     "geography": "Bell Gardens",
     "area": null,
@@ -199,6 +215,14 @@
     "end": "2019-12-31",
     "max_increase": 0.025
   },
+  "bev2024": {
+    "geography": "Beverly Hills",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-07-01",
+    "end": "2025-06-30",
+    "max_increase": 0.039
+  },
   "bev2023": {
     "geography": "Beverly Hills",
     "area": null,
@@ -238,6 +262,14 @@
     "start": "2019-07-01",
     "end": "2020-06-30",
     "max_increase": 0.031
+  },
+  "cul2024_6": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-10-01",
+    "end": "2024-12-31",
+    "max_increase": 0.0325
   },
   "cul2024_5": {
     "geography": "Culver City",
@@ -718,6 +750,14 @@
     "start": "2022-06-04",
     "end": "2030-12-31",
     "max_increase": 0.04
+  },
+  "pas2024": {
+    "geography": "Pasadena",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-10-01",
+    "end": "2025-09-30",
+    "max_increase": 0.03
   },
   "pas2023": {
     "geography": "Pasadena",
