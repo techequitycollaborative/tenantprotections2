@@ -175,6 +175,14 @@
     "end": "2023-10-31",
     "max_increase": 0.0395
   },
+  "ber2025": {
+    "geography": "Berkeley",
+    "area": null,
+    "start_year": 2025,
+    "start": "2024-01-01",
+    "end": "2025-12-31",
+    "max_increase": 0.021
+  },
   "ber2024": {
     "geography": "Berkeley",
     "area": null,
@@ -270,6 +278,14 @@
     "start": "2019-07-01",
     "end": "2020-06-30",
     "max_increase": 0.031
+  },
+  "cul2025_1": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-01-01",
+    "end": "2025-02-28",
+    "max_increase": 0.0325
   },
   "cul2024_6": {
     "geography": "Culver City",
@@ -494,6 +510,14 @@
     "start": "2022-12-02",
     "end": "2023-08-31",
     "max_increase": 0.03
+  },
+  "hay2025": {
+    "geography": "Hayward",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "max_increase": 0.05
   },
   "hay2024": {
     "geography": "Hayward",
@@ -775,6 +799,14 @@
     "end": "2024-09-30",
     "max_increase": 0.0275
   },
+  "pom2024": {
+    "geography": "Pomona",
+    "area": null,
+    "start_year": 2024,
+    "start": "2024-08-01",
+    "end": "2025-07-31",
+    "max_increase": 0.04
+  },
   "pom2023": {
     "geography": "Pomona",
     "area": null,
@@ -934,6 +966,14 @@
     "start": "2019-03-01",
     "end": "2020-02-29",
     "max_increase": 0.026
+  },
+  "sj2025": {
+    "geography": "San Jose",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "max_increase": 0.05
   },
   "sj2024": {
     "geography": "San Jose",
