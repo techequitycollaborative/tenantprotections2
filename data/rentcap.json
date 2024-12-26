@@ -1213,7 +1213,7 @@
     "start_year": 2024,
     "start": "2024-08-01",
     "end": "2025-07-31",
-    "max_increase": 0.088
+    "max_increase": 0.086
   },
   "casd2023": {
     "geography": "Statewide",
@@ -1221,7 +1221,7 @@
     "start_year": 2023,
     "start": "2023-08-01",
     "end": "2024-07-31",
-    "max_increase": 0.092
+    "max_increase": 0.1
   },
   "casd2022": {
     "geography": "Statewide",
@@ -1237,7 +1237,7 @@
     "start_year": 2021,
     "start": "2021-08-01",
     "end": "2022-07-31",
-    "max_increase": 0.09
+    "max_increase": 0.091
   },
   "casd2020": {
     "geography": "Statewide",
@@ -1245,7 +1245,7 @@
     "start_year": 2020,
     "start": "2020-08-01",
     "end": "2021-07-31",
-    "max_increase": 0.06
+    "max_increase": 0.068
   },
   "casd2019": {
     "geography": "Statewide",
@@ -1253,7 +1253,7 @@
     "start_year": 2019,
     "start": "2019-08-01",
     "end": "2020-07-31",
-    "max_increase": 0.083
+    "max_increase": 0.072
   },
   "cariv2024": {
     "geography": "Statewide",
@@ -1261,7 +1261,7 @@
     "start_year": 2024,
     "start": "2024-08-01",
     "end": "2025-07-31",
-    "max_increase": 0.088
+    "max_increase": 0.093
   },
   "cariv2023": {
     "geography": "Statewide",
@@ -1269,7 +1269,7 @@
     "start_year": 2023,
     "start": "2023-08-01",
     "end": "2024-07-31",
-    "max_increase": 0.092
+    "max_increase": 0.096
   },
   "cariv2022": {
     "geography": "Statewide",
@@ -1285,7 +1285,7 @@
     "start_year": 2021,
     "start": "2021-08-01",
     "end": "2022-07-31",
-    "max_increase": 0.09
+    "max_increase": 0.086
   },
   "cariv2020": {
     "geography": "Statewide",
@@ -1293,7 +1293,7 @@
     "start_year": 2020,
     "start": "2020-08-01",
     "end": "2021-07-31",
-    "max_increase": 0.06
+    "max_increase": 0.073
   },
   "cariv2019": {
     "geography": "Statewide",
@@ -1301,7 +1301,7 @@
     "start_year": 2019,
     "start": "2019-08-01",
     "end": "2020-07-31",
-    "max_increase": 0.083
+    "max_increase": 0.078
   },
   "cala2024": {
     "geography": "Statewide",
