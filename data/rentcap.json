@@ -287,12 +287,20 @@
     "end": "2020-06-30",
     "max_increase": 0.031
   },
+  "cul2025_2": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-04-01",
+    "end": "2025-04-30",
+    "max_increase": 0.035
+  },
   "cul2025_1": {
     "geography": "Culver City",
     "area": null,
     "start_year": 2025,
     "start": "2025-01-01",
-    "end": "2025-02-28",
+    "end": "2025-03-31",
     "max_increase": 0.0325
   },
   "cul2024_6": {
@@ -926,6 +934,14 @@
     "start": "2019-09-12",
     "end": "2020-06-30",
     "max_increase": 0.083
+  },
+  "sf2025": {
+    "geography": "San Francisco",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-03-01",
+    "end": "2026-02-28",
+    "max_increase": 0.014
   },
   "sf2024": {
     "geography": "San Francisco",
