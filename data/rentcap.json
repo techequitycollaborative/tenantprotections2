@@ -47,6 +47,14 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2025_2": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-03-13",
+    "end": "2025-05-13",
+    "max_increase": 0.0162
+  },
   "ant2025_1": {
     "geography": "Antioch",
     "area": null,
