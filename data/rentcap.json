@@ -47,6 +47,14 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2025_3": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-05-14",
+    "end": "2025-07-15",
+    "max_increase": 0.0078
+  },
   "ant2025_2": {
     "geography": "Antioch",
     "area": null,
@@ -295,12 +303,20 @@
     "end": "2020-06-30",
     "max_increase": 0.031
   },
+  "cul2025_3": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-06-01",
+    "end": "2025-07-31",
+    "max_increase": 0.0325
+  },
   "cul2025_2": {
     "geography": "Culver City",
     "area": null,
     "start_year": 2025,
     "start": "2025-04-01",
-    "end": "2025-04-30",
+    "end": "2025-05-31",
     "max_increase": 0.035
   },
   "cul2025_1": {
