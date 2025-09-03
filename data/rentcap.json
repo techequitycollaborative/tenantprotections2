@@ -1,4 +1,12 @@
 {
+  "ala2025": {
+    "geography": "Alameda",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.01
+  },
   "ala2024": {
     "geography": "Alameda",
     "area": null,
@@ -46,6 +54,14 @@
     "start": "2019-09-01",
     "end": "2020-08-31",
     "max_increase": 0.028
+  },
+  "ant2025_4": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-07-16",
+    "end": "2025-09-11",
+    "max_increase": 0.009
   },
   "ant2025_3": {
     "geography": "Antioch",
@@ -255,6 +271,14 @@
     "end": "2019-12-31",
     "max_increase": 0.025
   },
+  "bev2025": {
+    "geography": "Beverly Hills",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-07-01",
+    "end": "2026-06-30",
+    "max_increase": 0.03
+  },
   "bev2024": {
     "geography": "Beverly Hills",
     "area": null,
@@ -302,6 +326,14 @@
     "start": "2019-07-01",
     "end": "2020-06-30",
     "max_increase": 0.031
+  },
+  "cul2025_4": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2025-10-31",
+    "max_increase": 0.03
   },
   "cul2025_3": {
     "geography": "Culver City",
@@ -655,6 +687,14 @@
     "end": "2020-09-30",
     "max_increase": 0.0319
   },
+  "la2025": {
+    "geography": "Los Angeles",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-07-01",
+    "end": "2026-06-30",
+    "max_increase": 0.03
+  },
   "la2024_2": {
     "geography": "Los Angeles",
     "area": null,
@@ -719,6 +759,14 @@
     "end": "2022-12-31",
     "max_increase": 0.0
   },
+  "mtv2025": {
+    "geography": "Mountain View",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.016
+  },
   "mtv2024": {
     "geography": "Mountain View",
     "area": null,
@@ -766,6 +814,14 @@
     "start": "2019-09-01",
     "end": "2020-08-31",
     "max_increase": 0.035
+  },
+  "oak2025": {
+    "geography": "Oakland",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.008
   },
   "oak2024": {
     "geography": "Oakland",
@@ -839,6 +895,14 @@
     "end": "2024-09-30",
     "max_increase": 0.0275
   },
+  "pom2025": {
+    "geography": "Pomona",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.04
+  },
   "pom2024": {
     "geography": "Pomona",
     "area": null,
@@ -862,6 +926,14 @@
     "start": "2022-08-01",
     "end": "2023-07-31",
     "max_increase": 0.04
+  },
+  "ric2025": {
+    "geography": "Richmond",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.0162
   },
   "ric2024": {
     "geography": "Richmond",
@@ -910,6 +982,14 @@
     "start": "2019-09-01",
     "end": "2020-08-31",
     "max_increase": 0.035
+  },
+  "sac2025": {
+    "geography": "Sacramento",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-07-01",
+    "end": "2026-06-30",
+    "max_increase": 0.077
   },
   "sac2024": {
     "geography": "Sacramento",
@@ -1071,6 +1151,14 @@
     "end": "2019-12-31",
     "max_increase": 0.05
   },
+  "sa2025": {
+    "geography": "Santa Ana",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.0242
+  },
   "sa2024": {
     "geography": "Santa Ana",
     "area": null,
@@ -1094,6 +1182,14 @@
     "start": "2022-09-01",
     "end": "2023-08-31",
     "max_increase": 0.03
+  },
+  "sm2025": {
+    "geography": "Santa Monica",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.023
   },
   "sm2024": {
     "geography": "Santa Monica",
@@ -1151,6 +1247,14 @@
     "end": "2020-08-31",
     "max_increase": 0.0203
   },
+  "wh2025": {
+    "geography": "West Hollywood",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-09-01",
+    "end": "2026-08-31",
+    "max_increase": 0.0225
+  },
   "wh2024": {
     "geography": "West Hollywood",
     "area": null,
@@ -1207,6 +1311,14 @@
     "end": "2020-08-31",
     "max_increase": 0.025
   },
+  "casf2025": {
+    "geography": "Statewide",
+    "area": "Oakland-Hayward-San_Francisco",
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.063
+  },
   "casf2024": {
     "geography": "Statewide",
     "area": "Oakland-Hayward-San_Francisco",
@@ -1254,6 +1366,14 @@
     "start": "2019-08-01",
     "end": "2020-07-31",
     "max_increase": 0.09
+  },
+  "casd2025": {
+    "geography": "Statewide",
+    "area": "San_Diego-Carlsbad",
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.088
   },
   "casd2024": {
     "geography": "Statewide",
@@ -1303,6 +1423,14 @@
     "end": "2020-07-31",
     "max_increase": 0.072
   },
+  "cariv2025": {
+    "geography": "Statewide",
+    "area": "Riverside-San_Bernardino-Ontario",
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.075
+  },
   "cariv2024": {
     "geography": "Statewide",
     "area": "Riverside-San_Bernardino-Ontario",
@@ -1351,6 +1479,14 @@
     "end": "2020-07-31",
     "max_increase": 0.078
   },
+  "cala2025": {
+    "geography": "Statewide",
+    "area": "Los_Angeles-Long_Beach-Anaheim",
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.08
+  },
   "cala2024": {
     "geography": "Statewide",
     "area": "Los_Angeles-Long_Beach-Anaheim",
@@ -1398,6 +1534,14 @@
     "start": "2019-08-01",
     "end": "2020-07-31",
     "max_increase": 0.083
+  },
+  "cagen2025": {
+    "geography": "Statewide",
+    "area": "Rest_Of_California",
+    "start_year": 2025,
+    "start": "2025-08-01",
+    "end": "2026-07-31",
+    "max_increase": 0.077
   },
   "cagen2024": {
     "geography": "Statewide",
