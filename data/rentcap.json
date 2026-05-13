@@ -591,6 +591,14 @@
     "end": "2020-10-29",
     "max_increase": 0.03
   },
+  "epa2025": {
+    "geography": "East Palo Alto",
+    "area": null,
+    "start_year": 2025,
+    "start": "2025-07-01",
+    "end": "2026-06-30",
+    "max_increase": 0.022
+  },
   "epa2024": {
     "geography": "East Palo Alto",
     "area": null,
