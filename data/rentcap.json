@@ -55,6 +55,22 @@
     "end": "2020-08-31",
     "max_increase": 0.028
   },
+  "ant2026_3": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-07-15",
+    "end": "2026-09-11",
+    "max_increase": 0.0228
+  },
+  "ant2026_2": {
+    "geography": "Antioch",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-05-13",
+    "end": "2026-07-14",
+    "max_increase": 0.0228
+  },
   "ant2026_1": {
     "geography": "Antioch",
     "area": null,
@@ -311,6 +327,14 @@
     "end": "2019-12-31",
     "max_increase": 0.025
   },
+  "bev2026": {
+    "geography": "Beverly Hills",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-07-01",
+    "end": "2027-06-30",
+    "max_increase": 0.036
+  },
   "bev2025": {
     "geography": "Beverly Hills",
     "area": null,
@@ -366,6 +390,14 @@
     "start": "2019-07-01",
     "end": "2020-06-30",
     "max_increase": 0.031
+  },
+  "cul2026_6": {
+    "geography": "Culver City",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-06-01",
+    "end": "2026-06-30",
+    "max_increase": 0.0325
   },
   "cul2026_5": {
     "geography": "Culver City",
@@ -591,6 +623,14 @@
     "end": "2020-10-29",
     "max_increase": 0.03
   },
+  "epa2026": {
+    "geography": "East Palo Alto",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-07-01",
+    "end": "2027-06-30",
+    "max_increase": 0.02
+  },
   "epa2025": {
     "geography": "East Palo Alto",
     "area": null,
@@ -782,6 +822,14 @@
     "start": "2019-12-05",
     "end": "2020-09-30",
     "max_increase": 0.0319
+  },
+  "la2026": {
+    "geography": "Los Angeles",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-07-01",
+    "end": "2027-06-30",
+    "max_increase": 0.037
   },
   "la2025": {
     "geography": "Los Angeles",
@@ -1086,6 +1134,14 @@
     "start": "2019-09-01",
     "end": "2020-08-31",
     "max_increase": 0.035
+  },
+  "sac2026": {
+    "geography": "Sacramento",
+    "area": null,
+    "start_year": 2026,
+    "start": "2026-07-01",
+    "end": "2027-06-30",
+    "max_increase": 0.086
   },
   "sac2025": {
     "geography": "Sacramento",
