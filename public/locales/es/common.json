@@ -224,10 +224,12 @@
     "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>.",
     "subtitle": "¿Por qué no estoy protegido?",
     "text-2": [
-      "Según las respuestas que proporcionó con respecto a la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que no está cubierto. Los condominios, las viviendas unifamiliares y los edificios construidos después de una fecha determinada a menudo están exentos de las leyes de tope de alquiler.",
-      "Las ordenanzas varían según la ciudad y se pueden aplicar otras exenciones para el tamaño del edificio, el tipo o el estado de ocupación del propietario.",
-      "Si vive en una vivienda subvencionada, un centro de atención para personas mayores o un centro residencial para adultos, es posible que desee verificar cómo se aplican las normas locales a su situación, ya que las diferentes áreas pueden tener exenciones muy específicas según el tipo de propiedad en la que viva."
+      "Según las respuestas que proporcionó sobre la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que las protecciones de la Ley de Protección de Inquilinos no se le aplican. Los condominios, las viviendas unifamiliares y los edificios construidos después de cierta fecha suelen estar exentos de las leyes que limitan los aumentos de alquiler y las condiciones bajo las cuales un propietario puede desalojar a alguien.",
+      "Sin embargo, podría haber una razón técnica por la que la Ley de Protección de Inquilinos sí se aplica a su unidad. Por ejemplo, si el propietario no le entrega un aviso por escrito sobre una exención basada en el tipo de vivienda, o no lo incluye en su contrato de arrendamiento por escrito, es posible que usted siga cubierto por la Ley de Protección de Inquilinos hasta que el propietario corrija ese defecto.",
+      "Esta herramienta debe usarse como primer paso en su proceso de búsqueda de información. Le recomendamos verificar cualquier resultado que obtenga a través de este cuestionario.",
+      "También es importante tener en cuenta las normas locales. Esto es especialmente relevante si usted vive en una vivienda subvencionada, en un centro de atención para personas mayores o en un centro residencial para adultos. Le conviene verificar cómo se aplican esas normas a su caso, ya que las exenciones pueden variar mucho según el área y el tipo de propiedad en la que viva."
     ],
+    "text-2-p5": "Puede encontrar otros recursos en <link3>Tenant Power Toolkit (versión en español)</link3> y en el sitio de <link2>ACCE</link2>.",
     "footnote": "¿Aún tiene problemas con su arrendamiento?",
     "button": "Explore nuestros recursos"
   },

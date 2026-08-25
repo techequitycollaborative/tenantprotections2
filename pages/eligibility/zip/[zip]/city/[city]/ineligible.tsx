@@ -14,6 +14,12 @@ import { zipAndCityFromUrl } from '../../../../../../utils/zip-and-city';
 const THOUSAND_OAKS_LINK =
   'https://www.toaks.org/departments/city-clerk/boards-commissions/rent-adjustment-commission';
 
+const TENANT_POWER_TOOLKIT_LINK_EN = 'https://tenantpowertoolkit.org/';
+
+const TENANT_POWER_TOOLKIT_LINK_ES = 'https://tenantpowertoolkit.org/es/';
+
+const ACCE_LINK = 'https://www.acceinstitute.org/renterhelp';
+
 interface Props {
   location: FullLocation;
 }
@@ -110,6 +116,16 @@ const Ineligible: NextPage<Props> = function Ineligible({ location }) {
             </p>
           ),
         )}
+        <p className="py-2">
+          <Trans
+            i18nKey="ineligible.text-2-p5"
+            components={{
+              link1: <LinkWrapper to={TENANT_POWER_TOOLKIT_LINK_EN} />,
+              link2: <LinkWrapper to={ACCE_LINK} />,
+              link3: <LinkWrapper to={TENANT_POWER_TOOLKIT_LINK_ES} />,
+            }}
+          />
+        </p>
       </div>
       <h3 className="text-blue text-2xl my-4">{t('ineligible.footnote')}</h3>
       <Link href="/resources" className="">
