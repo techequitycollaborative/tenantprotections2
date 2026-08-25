@@ -224,10 +224,12 @@
     "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
     "subtitle": "Why am I not protected?",
     "text-2": [
-      "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe you are not covered. Condos, single-family homes, and buildings constructed after a certain date are often exempt from rent cap laws.",
-      "Ordinances vary by city and other exemptions for building size, type, or landlord occupancy status may apply.",
-      "If you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in."
+      "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe the safeguards of the Tenant Protection Act do not apply to you. Condos, single-family homes, and buildings constructed after a certain date are often exempt from laws that limit rent increases and that limit the conditions under which a landlord can evict someone. ",
+      "Nevertheless, there may be a technical reason that results in the Tenant Protection Act applying to your unit. For example, if a landlord does not provide to the tenant a written notice of an exemption based on housing type to a tenant or include it in the written lease, the tenant may still be covered by the Tenant Protection Act until the landlord cures the defect.",
+      "This tool should be used as a first step in your information journey. We advise verification of any results obtained from this quiz. ",
+      "Local rules are also important to consider. Especially if you live in subsidized housing, a senior care facility, or an adult residential facility, you may want to double check how the local rules apply to your situation, as different areas may have very specific exemptions depending on the type of property you live in."
     ],
+    "text-2-p5": "Other resources can be found at the <link1>Tenant Power Toolkit</link1> and <link2>ACCE</link2> website.",
     "footnote": "Still have issues with your tenancy?",
     "button": "Explore our resources"
   },
