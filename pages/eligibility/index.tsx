@@ -70,6 +70,7 @@ const Eligibility: NextPage<Props> = function Eligibility({
         {t('eligibility-title')}
       </h1>
       <p className="text-gray-dark text-lg pb-8">{t('zip-prompt')}</p>
+      <p className="text-gray-dark text-lg pb-8">{t('zip-disclaimer')}</p>
       <form
         action="eligibility"
         method="post"
