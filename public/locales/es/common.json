@@ -4,7 +4,8 @@
     "text-1": [
       "¿Cuánto puede aumentar su arrendador su alquiler?",
       "La Ley de Protección de Inquilinos de 2019 protege a la mayoría de los inquilinos de California contra aumentos de alquiler ilegales y desalojos injustos. Muchas ciudades también tienen medidas de control de alquileres locales más estrictas con límites más bajos sobre cuánto puede aumentar su alquiler el arrendador.",
-      "Averigüe si está protegido por leyes estatales o locales."
+      "Averigüe si está protegido por leyes estatales o locales.",
+      "Tenga en cuenta que TechEquity está en proceso de actualizar los estatutos locales de control de alquileres incluidos en esta herramienta. Este cuestionario fue actualizado por última vez en 2022. Si su jurisdicción aprobó protecciones para el control de alquileres desde entonces, es posible que los resultados de este cuestionario no sean precisos. Por favor, verifique la información que recibe aquí hasta que se haya completado la actualización."
     ],
     "button-1": "Hacer el cuestionario de protecciones",
     "title-2": "Verifique el aumento de su alquiler",
@@ -109,19 +110,20 @@
   "calculator": {
     "title": "Calculadora de alquiler",
     "text1": "Si recibió un aumento de alquiler, puede usar nuestra calculadora para ayudarle a determinar cuál es el aumento permitido según la ley y si su aumento de alquiler supera el límite.",
-    "text2": "¡Antes de usar esta calculadora, asegúrese de <link1>verificar su elegibilidad</link1> aquí!",
+    "text2": "¡Antes de usar esta calculadora, asegúrese de <link1>verificar su elegibilidad</link1> aquí!*",
+    "disclaimer2": "*Nota: este cuestionario de elegibilidad no incluye las jurisdicciones que hayan aprobado protecciones para el control de alquileres después de 2022. Por favor, verifique con los recursos locales para determinar su elegibilidad hasta que actualicemos este sitio.",
     "alert": {
       "legal": "Este aumento de alquiler parece legal bajo el control de alquiler estatal y local.",
       "illegal": "Este aumento de alquiler puede ser ilegal si cumple los requisitos para para el control de alquiler estatal o local.",
       "statewide-max-rent": "Alquiler máximo en todo el estado",
       "local-max-rent": "Alquiler máximo de {{city}}",
       "max-increase": "{{cap}}% de aumento máximo por año * ${{rent}} =",
-      "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento del alquiler.",
+      "rate-explanation": "Las tarifas estatales y locales utilizan fórmulas que incluyen la inflación anual y dependen de la fecha del aumento del alquiler. Esta evaluación puede ser inexacta si su jurisdicción aprobó protecciones para el control de alquileres después de 2022. Le recomendamos que verifique con los recursos locales hasta que actualicemos este sitio.",
       "more": {
         "title": "Más información",
         "text1": "Un aumento del alquiler también puede no ser válido por otras razones, como el incumplimiento de las leyes locales o estatales por parte del arrendador.",
         "text2": {
-          "statewide": "Nuestro cálculo tampoco incluye ninguna restricción local sobre los aumentos de alquiler debido a la pandemia de COVID-19, como una moratoria de desalojo local.",
+          "statewide": "Nuestro cálculo tampoco incluye ninguna restricción local sobre los aumentos de alquiler debido a la pandemia de COVID-19, como una moratoria de desalojo local. Además, actualmente no incluye las jurisdicciones que aprobaron leyes locales de control de alquileres después de 2022.",
           "local": "En ciertas circunstancias, como al presentar una petición ante la ciudad, se le puede permitir al arrendador aumentar el alquiler por encima del monto del control de alquiler local."
         },
         "state-disclaimer": "Nota: Según la ley que se aplica en su área, se aplicó una reducción del alquiler el 1 de enero de 2020 a los arrendamientos existentes que habían recibido aumentos de alquiler por encima del tope a partir del 15 de marzo de 2019.",
@@ -221,7 +223,7 @@
   "ineligible": {
     "title": "Es posible que usted no esté protegido",
     "text-1-p1": "<bold>Desafortunadamente</bold>, creemos que no está cubierto por el control de alquiler local o las protecciones de límite de alquiler estatal, incluidas las cláusulas de control de alquiler de la Ley de Protección de Inquilinos.",
-    "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>.",
+    "text-1-p2": "Sin embargo, es posible que tenga otros derechos. Si tiene problemas con su situación de vivienda, consulte <link1>estos recursos</link1>. También, este cuestionario fue actualizado por última vez en 2022. Si su jurisdicción aprobó protecciones para el control de alquileres desde entonces, es posible que los resultados de este cuestionario no sean precisos. Por favor, verifique la información que recibe aquí hasta que se haya completado la actualización.",
     "subtitle": "¿Por qué no estoy protegido?",
     "text-2": [
       "Según las respuestas que proporcionó sobre la fecha de construcción de su edificio y el tipo de vivienda que alquila, creemos que las protecciones de la Ley de Protección de Inquilinos no se le aplican. Los condominios, las viviendas unifamiliares y los edificios construidos después de cierta fecha suelen estar exentos de las leyes que limitan los aumentos de alquiler y las condiciones bajo las cuales un propietario puede desalojar a alguien.",
@@ -359,9 +361,10 @@
   "zip-not-found": "No se encontró el código postal de California {{zip}}",
   "zipcode": "{{zip}}",
   "zip-prompt": "La Ley de Protección de Inquilinos cubre a los inquilinos elegibles en toda California. Según el lugar donde viva, es posible que también se apliquen las leyes locales. Su código postal nos ayuda a determinar qué protecciones le amparan.",
+  "zip-disclaimer": "*Tenga en cuenta que TechEquity está en proceso de actualizar los estatutos locales de control de alquileres incluidos en esta herramienta. Este cuestionario fue actualizado por última vez en 2022. Si su jurisdicción aprobó protecciones para el control de alquileres desde entonces, es posible que los resultados de este cuestionario no sean precisos. Por favor, verifique la información que recibe aquí hasta que se haya completado la actualización.",
   "zip-label": "¿Cuál es su código postal?",
   "eligibility-more": {
-    "title": "¿Qué ciudades tienen protecciones locales?",
+    "title": "¿Qué ciudades tienen protecciones locales?*",
     "content": "Aquí hay una lista de ciudades de California con control de alquiler local:",
     "footer": "Esta lista se actualizó por última vez el 7 de diciembre de 2022."
   },
