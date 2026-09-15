@@ -4,7 +4,8 @@
     "text-1": [
       "How much can your landlord increase your rent?",
       "The Tenant Protection Act of 2019 protects a majority of California’s renters against unlawful rent increases and unfair evictions. Many cities also have stronger local rent control measures with lower caps on how much your landlord can increase your rent.",
-      "Find out if you're protected by state or local laws."
+      "Find out if you're protected by state or local laws.",
+      "Please note, TechEquity is currently updating the local rent control statutes included in this tool. The current quiz was last updated in 2022. If your jurisdiction passed rent control protections since then, your results on this quiz may not be accurate. Please double check the information you receive here until an update has been completed."
     ],
     "button-1": "Take protections quiz",
     "title-2": "Check Your Rent Increase",
@@ -109,19 +110,20 @@
   "calculator": {
     "title": "Rent Calculator",
     "text1": "If you received a rent increase, you can use our calculator to help you determine what the allowable increase is under the law, and if your rent increase exceeds the limit.",
-    "text2": "Before using this calculator make sure you <link1>check your eligibility</link1> here!",
+    "text2": "Before using this calculator make sure you <link1>check your eligibility</link1> here!*",
+    "disclaimer2": "*Note: this eligibility quiz does not include jurisdictions that may have passed rent control protections after 2022. Please double check with local resources to determine your eligibility until this site is updated.",
     "alert": {
       "legal": "This rent increase looks legal under state and local rent control.",
       "illegal": "This rent increase may be illegal if you qualify for state or local rent control.",
       "statewide-max-rent": "Statewide Max Rent",
       "local-max-rent": "{{city}} Max Rent",
       "max-increase": "{{cap}}% max increase per year * ${{rent}} =",
-      "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase.",
+      "rate-explanation": "State and local rates use formulas that include yearly inflation and depend on the date of the rent increase. This assessment may be inaccurate if your jurisdiction passed rent control protections after 2022. We advise you to double check with local resources until this site is updated.",
       "more": {
         "title": "More information",
         "text1": "A rent increase may be invalid for other reasons, such as a landlord's failure to follow state or local law.",
         "text2": {
-          "statewide": "Our calculation also does not include any local restrictions on rent increases due to the COVID-19 pandemic, such as a local eviction moratorium.",
+          "statewide": "Our calculation also does not include any local restrictions on rent increases due to the COVID-19 pandemic, such as a local eviction moratorium. Moreover, it does not currently include jurisdictions that passed local rent control laws after 2022. ",
           "local": "In certain circumstances, such as by filing a petition with the city, a landlord may be permitted to increase the rent over the local rent control amount."
         },
         "state-disclaimer": "Note: Under the law that applies in your area, a rent rollback was applied on January 1, 2020 to existing tenancies that had received rent increases over the cap on or after March 15, 2019.",
@@ -221,7 +223,7 @@
   "ineligible": {
     "title": "You may not be protected",
     "text-1-p1": "<bold>Unfortunately</bold>, we think that you are not covered by local rent control or statewide rent cap protections, including the Tenant Protection Act’s rent control clauses.",
-    "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>.",
+    "text-1-p2": "However, you may have other rights. If you are having issues with your housing situation check out <link1>these resources</link1>. Additionally, this quiz was last updated in 2022. If your jurisdiction passed rent control protections since then, your results on this quiz may not be accurate. Please double check the information you receive here until an update has been completed.",
     "subtitle": "Why am I not protected?",
     "text-2": [
       "Based on the answers you provided regarding your building construction date and the type of housing you rent, we believe the safeguards of the Tenant Protection Act do not apply to you. Condos, single-family homes, and buildings constructed after a certain date are often exempt from laws that limit rent increases and that limit the conditions under which a landlord can evict someone. ",
@@ -358,6 +360,7 @@
   "zip-not-found": "Could not find California ZIP Code {{zip}}",
   "zipcode": "{{zip}}",
   "zip-prompt": "The Tenant Protection Act covers eligible renters everywhere in California. Depending on where you live, local laws may also apply. Your zip code helps us figure out which protections apply to you.",
+  "zip-disclaimer": "*Please note, TechEquity is currently updating the local rent control statutes included in this tool. The current quiz was last updated in 2022. If your jurisdiction passed rent control protections since then, your results on this quiz may not be accurate. Please double check the information you receive here until an update has been completed.",
   "zip-label": "What is your zipcode?",
   "eligibility-more": {
     "title": "Which cities have local protections?",

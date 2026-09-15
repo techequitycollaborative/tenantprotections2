@@ -95,6 +95,7 @@ const Calculator: NextPage<Props> = function Calculator({
             }}
           />
         </p>
+        <p className="mb-4">{t('calculator.disclaimer2')}</p>
       </div>
       <form
         action="calculator"
