@@ -12,7 +12,7 @@ const LINK_LAW_HELP_CA_ES = 'https://es.lawhelpca.org/issues/housing';
 const LINK_ACCE_EN = 'https://www.acceaction.org/renterhelp';
 const LINK_ACCE_ES = 'https://www.acceaction.org/renterhelp#googtrans(en%7Ces)';
 const LINK_TENANTS_TOGETHER =
-  'https://tenantstogether.org/resources-for-tenants/local-resource-directory/';
+  'https://tenantstogether.org/resources-for-tenants/';
 const LINK_HOUSING_NOW = 'https://www.housingnowca.org';
 const LINK_KNOW_YOUR_RIGHTS = 'https://www.housingnowca.org/knowyourrights';
 
