@@ -7,8 +7,12 @@ import Layout from '@/components/layout';
 import LinkWrapper from '@/components/link-wrapper';
 
 const LINK_ABOUT_THE_BILL = '/about-the-bill';
+const LINK_LAW_HELP_CA_EN = 'https://www.lawhelpca.org/issues/housing';
+const LINK_LAW_HELP_CA_ES = 'https://es.lawhelpca.org/issues/housing';
+const LINK_ACCE_EN = 'https://www.acceaction.org/renterhelp';
+const LINK_ACCE_ES = 'https://www.acceaction.org/renterhelp#googtrans(en%7Ces)';
 const LINK_TENANTS_TOGETHER =
-  'https://www.tenantstogether.org/resource-directory';
+  'https://tenantstogether.org/resources-for-tenants/local-resource-directory/';
 const LINK_HOUSING_NOW = 'https://www.housingnowca.org';
 const LINK_KNOW_YOUR_RIGHTS = 'https://www.housingnowca.org/knowyourrights';
 
@@ -70,7 +74,11 @@ const Resources: NextPage = () => {
           <Trans
             i18nKey="resources.section4.text"
             components={{
-              link1: <LinkWrapper to={LINK_TENANTS_TOGETHER} />,
+              link1: <LinkWrapper to={LINK_LAW_HELP_CA_EN} />,
+              link2: <LinkWrapper to={LINK_LAW_HELP_CA_ES} />,
+              link3: <LinkWrapper to={LINK_ACCE_EN} />,
+              link4: <LinkWrapper to={LINK_ACCE_ES} />,
+              link5: <LinkWrapper to={LINK_TENANTS_TOGETHER} />,
             }}
           />
         </p>
